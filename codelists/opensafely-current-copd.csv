@@ -1,0 +1,116 @@
+CTV3ID,CTV3PreferredTermDesc,CTV3Source
+H3...,Chronic obstructive lung disease,CTV3Map_Code_And_Term
+H3...,Chronic obstructive lung disease,CTV3Map_Code_Only
+H31..,Chronic bronchitis,CTV3Map_Code_And_Term
+H310.,Simple chronic bronchitis,CTV3Map_Code_And_Term
+H3100,Simple chronic bronchitis,CTV3_Children
+H310z,Simple chronic bronchitis NOS,CTV3Map_Code_And_Term
+H311.,Mucopurulent chronic bronchitis,CTV3Map_Code_And_Term
+H3110,Purulent chronic bronchitis,CTV3_Children
+H311z,Mucopurulent chronic bronchitis NOS,CTV3Map_Code_And_Term
+H3121,Emphysematous bronchitis,CTV3Map_Code_And_Term
+H3122,Acute exacerbation of chronic obstructive airways disease,CTV3Map_Code_And_Term
+H312z,Obstructive chronic bronchitis NOS,CTV3Map_Code_And_Term
+H313.,Mixed simple and mucopurulent chronic bronchitis,CTV3Map_Code_And_Term
+H31y.,Other chronic bronchitis,CTV3Map_Code_And_Term
+H31yz,Other chronic bronchitis NOS,CTV3Map_Code_And_Term
+H31z.,Chronic bronchitis NOS,CTV3Map_Code_And_Term
+H32..,Emphysema,CTV3Map_Code_And_Term
+H320.,Chronic bullous emphysema,CTV3Map_Code_And_Term
+H3200,Segmental bullous emphysema,CTV3Map_Code_And_Term
+H3201,Zonal bullous emphysema,CTV3Map_Code_And_Term
+H3202,Giant bullous emphysema,CTV3Map_Code_And_Term
+H3203,(Bullous emphysema with collapse) or (tension pneumatocoele),High_Level_SNOMED
+H320z,Chronic bullous emphysema NOS,CTV3Map_Code_And_Term
+H321.,Panlobular emphysema,CTV3Map_Code_And_Term
+H322.,Centrilobular emphysema,CTV3Map_Code_And_Term
+H32y.,Other emphysema,CTV3Map_Code_And_Term
+H32y0,Acute vesicular emphysema,CTV3Map_Code_And_Term
+H32y1,Emphysema: [acute interstitial] or [atrophic - senile],QOF
+H32z.,Emphysema NOS,CTV3Map_Code_And_Term
+H3y..,Other specified chronic obstructive airways disease,CTV3Map_Code_And_Term
+H3y..,Other specified chronic obstructive airways disease,CTV3Map_Code_Only
+H3y0.,Chronic obstruct pulmonary dis with acute lower resp infectn,CTV3Map_Code_And_Term
+H3y1.,"Chron obstruct pulmonary dis wth acute exacerbation, unspec",CTV3_Children
+H3z..,Chronic obstructive airways disease NOS,CTV3Map_Code_And_Term
+H3z..,Chronic obstructive airways disease NOS,CTV3Map_Code_Only
+H4640,Chronic emphysema due to chemical fumes,CTV3Map_Code_And_Term
+Hyu30,[X]Other emphysema,CTV3Map_Code_And_Term
+Hyu31,[X]Other specified chronic obstructive pulmonary disease,CTV3Map_Code_And_Term
+X101i,"Chron obstruct pulmonary dis wth acute exacerbation, unspec",CTV3Map_Code_And_Term
+X101j,Occupational chronic bronchitis,CTV3_Children
+X101n,Pulmonary emphysema,CTV3_Children
+X101o,Pulmonary emphysema in alpha-1 PI deficiency,CTV3_Children
+X101p,Toxic emphysema,CTV3_Children
+X101r,Scar emphysema,CTV3_Children
+XE0YP,Other emphysema NOS,CTV3Map_Code_And_Term
+XaEIV,Mild chronic obstructive pulmonary disease,CTV3Map_Code_And_Term
+XaEIW,Moderate chronic obstructive pulmonary disease,CTV3Map_Code_And_Term
+XaEIY,Severe chronic obstructive pulmonary disease,CTV3Map_Code_And_Term
+XaIND,End stage chronic obstructive airways disease,CTV3Map_Code_And_Term
+XaIQT,Chronic obstructive pulmonary disease monitoring,CTV3Map_Code_And_Term
+XaIQg,Interstitial pulmonary emphysema,CTV3Map_Code_And_Term
+XaIQg,Interstitial pulmonary emphysema,CTV3Map_Code_Only
+XaIRO,Chronic obstructive pulmonary disease monitoring due,CTV3Map_Code_And_Term
+XaIUt,COPD self-management plan given,CTV3Map_Code_And_Term
+XaIes,Chronic obstructive pulmonary disease follow-up,CTV3Map_Code_And_Term
+XaIes,Chronic obstructive pulmonary disease follow-up,CTV3Map_Code_Only
+XaIet,Chronic obstructive pulmonary disease annual review,CTV3Map_Code_And_Term
+XaIu7,Chronic obstructive pulmonary disease monitoring by nurse,CTV3Map_Code_And_Term
+XaIu8,Chronic obstructive pulmonary disease monitoring by doctor,CTV3Map_Code_And_Term
+XaJFu,Admit COPD emergency,CTV3Map_Code_And_Term
+XaJYf,Chronic obstructive pulmonary disease clini management plan,CTV3Map_Code_And_Term
+XaJlS,Chronic obstructive pulmonary disease monitoring admin,CTV3Map_Code_And_Term
+XaJlT,Chronic obstructive pulmonary disease monitoring 1st letter,CTV3Map_Code_And_Term
+XaJlU,Chronic obstructive pulmonary disease monitoring 2nd letter,CTV3Map_Code_And_Term
+XaJlV,Chronic obstructive pulmonary disease monitoring 3rd letter,CTV3Map_Code_And_Term
+XaJlW,Chronic obstructive pulmonary disease monitoring verb invite,CTV3Map_Code_And_Term
+XaJlY,Chronic obstructive pulmonary disease monitor phone invite,CTV3Map_Code_And_Term
+XaK8Q,Chronic obstructive pulmonary disease finding,QOF
+XaK8R,COPD accident and emergency attendance since last visit,CTV3Map_Code_And_Term
+XaK8S,Emergency COPD admission since last appointment,CTV3Map_Code_And_Term
+XaK8U,Number of COPD exacerbations in past year,CTV3Map_Code_And_Term
+XaKv8,Chronic obstructive pulmonary disease disturbs sleep,CTV3Map_Code_And_Term
+XaKv9,Chronic obstructive pulmonary disease does not disturb sleep,CTV3Map_Code_And_Term
+XaKzy,Multiple COPD emergency hospital admissions,CTV3Map_Code_And_Term
+XaLqj,Health education - chronic obstructive pulmonary disease,CTV3Map_Code_And_Term
+XaN4a,Very severe chronic obstructive pulmonary disease,CTV3Map_Code_And_Term
+XaPZH,COPD patient unsuitable for pulmonary rehabilitation,CTV3Map_Code_And_Term
+XaPZH,COPD patient unsuitable for pulmonary rehabilitation,CTV3Map_Code_Only
+XaPls,Referred for COPD structured smoking assessment,CTV3Map_Code_And_Term
+XaPls,Referred for COPD structured smoking assessment,CTV3Map_Code_Only
+XaPlu,COPD structured smoking assessment declined,CTV3Map_Code_And_Term
+XaPlu,COPD structured smoking assessment declined,CTV3Map_Code_Only
+XaPzu,At risk of chronic obstructive pulmonary diseas exacerbation,CTV3Map_Code_And_Term
+XaRCG,Step down change in COPD management plan,CTV3_Children
+XaRCH,Step up change in COPD management plan,CTV3_Children
+XaW9D,Issue of chronic obstructive pulmonary disease rescue pack,CTV3Map_Code_And_Term
+XaXCa,Chronic obstructive pulmonary disease 3 monthly review,CTV3Map_Code_And_Term
+XaXCb,Chronic obstructive pulmonary disease 6 monthly review,CTV3Map_Code_And_Term
+XaXnt,GP OOH service notified of COPD care plan,CTV3Map_Code_And_Term
+XaXzy,Preferred place of care for next exacerbation of COPD,CTV3Map_Code_And_Term
+XaY05,Chronic obstructiv pulmonary disease medication optimisation,CTV3Map_Code_And_Term
+XaY0w,Referral to COPD community nursing team,CTV3Map_Code_And_Term
+XaYZO,COPD self-management plan review,CTV3Map_Code_And_Term
+XaYbA,COPD self-management plan agreed,CTV3Map_Code_And_Term
+XaZ6U,On chronic obstructive pulmonary disease supprtv cre pathway,CTV3Map_Code_And_Term
+XaZ6U,On chronic obstructive pulmonary disease supprtv cre pathway,CTV3Map_Code_Only
+XaZ8t,Has chronic obstructive pulmonary disease care plan,CTV3Map_Code_And_Term
+XaZd1,Acute non-infective exacerbation of COPD,CTV3_Children
+XaZee,Chronic obstructive pulmonary disease care pathway,CTV3Map_Code_And_Term
+XaZoz,Seen in chronic obstructive pulmonary disease clinic,CTV3Map_Code_And_Term
+XaavA,Shared care chronic obstructive pulmonary disease monitoring,CTV3_Children
+Xac33,Asthma-chronic obstructive pulmonary disease overlap syndrom,CTV3Map_Code_And_Term
+Xac8s,Telehealth chronic obstructive pulmonary disease monitoring,CTV3Map_Code_And_Term
+XafhZ,COPD monitoring email invitation,QOF
+Xafhe,COPD monitring short message service text message invitation,QOF
+Xafir,COPD monitoring SMS text message first invitation,QOF
+Xafit,COPD monitoring SMS text message second invitation,QOF
+Xafiu,COPD monitoring SMS text message third invitation,QOF
+Y1f1b,Chronic obstructive pulmonary disease monitoring invitation,QOF
+Y1f94,Quality and Outcomes Framework chronic obstructive pulmonary disease quality indicator-related care invitation (procedure),QOF
+H582.,Compensatory emphysema,CTV3Map_Code_And_Term
+XE0YM,Purulent chronic bronchitis,CTV3Map_Code_And_Term
+XE0ZN,Chronic: [bronchitis NOS] or [tracheobronchitis],CTV3_Children
+Xa35l,Acute infective exacerbation chronic obstruct airway disease,CTV3_Children
+XE0YN,Bullous emphysema with collapse,CTV3Map_Code_And_Term

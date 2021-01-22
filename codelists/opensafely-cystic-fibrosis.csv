@@ -1,0 +1,29 @@
+CTV3ID,CTV3PreferredTermDesc,CTV3Source
+PK35.,Kartageners syndrome,High_Level_SNOMED
+X101X,Inherited mucociliary clearance defect,High_Level_SNOMED
+X101Z,Primary ciliary dyskinesia,High_Level_SNOMED
+X101a,Primary ciliary dyskinesia - transposn ciliary microtubules,High_Level_SNOMED
+X101b,Immotile cilia syndrome due to defective radial spokes,High_Level_SNOMED
+X101c,Immotile cilia syndrome due to excessively long cilia,High_Level_SNOMED
+X101d,Young's syndrome,QOF
+X101e,Rutland ciliary disorientation syndrome,High_Level_SNOMED
+C370.,Cystic fibrosis,CTV3Map_Code_And_Term
+C370.,Cystic fibrosis,CTV3Map_Code_Only
+C3700,Cystic fibrosis with no meconium ileus,CTV3Map_Code_And_Term
+C3701,Meconium ileus in cystic fibrosis,CTV3Map_Code_And_Term
+C3701,Meconium ileus in cystic fibrosis,CTV3Map_Code_Only
+C3702,Cystic fibrosis with pulmonary manifestations,CTV3Map_Code_And_Term
+C3703,Cystic fibrosis with intestinal manifestations,CTV3Map_Code_And_Term
+C370z,Cystic fibrosis NOS,CTV3Map_Code_And_Term
+X309R,Cystic fibrosis of pancreas,High_Level_SNOMED
+XaBDb,Cystic fibrosis with other manifestations,CTV3Map_Code_And_Term
+XaBDb,Cystic fibrosis with other manifestations,CTV3Map_Code_Only
+XaMzI,Cystic fibrosis related diabetes mellitus,QOF
+XaQvd,Cystic fibrosis annual review,CTV3Map_Code_And_Term
+XaREX,Arthropathy in cystic fibrosis,CTV3Map_Code_And_Term
+XaREZ,Cystic fibrosis with distal intestinal obstruction syndrome,CTV3Map_Code_And_Term
+XaREa,Liver disease due to cystic fibrosis,CTV3Map_Code_And_Term
+XaREd,Fibrosing colonopathy,CTV3Map_Code_And_Term
+XaXi9,Cystic fibrosis related cirrhosis,CTV3Map_Code_And_Term
+XaZr7,Exacerbation of cystic fibrosis,CTV3Map_Code_And_Term
+Y2710,Cystic fibrosis positive,CTV3_Children

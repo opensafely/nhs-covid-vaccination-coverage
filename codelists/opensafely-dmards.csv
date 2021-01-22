@@ -1,0 +1,1069 @@
+obj_type,vpid,snomed_id,bnf_code,dmd_name,bnf_name,form_route
+amp,317431008,7311000001104,0105010E0AAAAAA,Sulfasalazine 500mg tablets (A A H Pharmaceuticals Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,236111000001102,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Mylan),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,236511000001106,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Kent Pharmaceuticals Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,245311000001106,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Actavis UK Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,681011000001104,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Alliance Healthcare (Distribution) Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,7036811000001101,0105010E0AAAAAA,Sulfasalazine 500mg tablets (IVAX Pharmaceuticals UK Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,10649711000001102,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Teva UK Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,11427611000001108,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Almus Pharmaceuticals Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,13725511000001102,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Ranbaxy (UK) Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,17802411000001105,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Phoenix Healthcare Distribution Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,20327211000001107,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Genesis Pharmaceuticals Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,21903411000001108,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Waymade Healthcare Plc),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,28917711000001101,0105010E0AAAAAA,Sulfasalazine 500mg tablets (Crescent Pharma Ltd),Sulfasalazine 500mg tablets,tablet.oral
+amp,317431008,30118011000001101,0105010E0AAAAAA,Sulfasalazine 500mg tablets (DE Pharmaceuticals),Sulfasalazine 500mg tablets,tablet.oral
+amp,330040008,140911000001101,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (A A H Pharmaceuticals Ltd),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,180711000001106,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Kent Pharmaceuticals Ltd),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,215611000001109,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Actavis UK Ltd),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,422811000001105,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Alliance Healthcare (Distribution) Ltd),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,9104011000001107,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Mylan),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,15177111000001102,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Sigma Pharmaceuticals Plc),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,17801611000001102,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Phoenix Healthcare Distribution Ltd),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,21299311000001104,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Teva UK Ltd),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,21902411000001104,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Waymade Healthcare Plc),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,30117711000001100,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (DE Pharmaceuticals),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,30916611000001109,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Mawdsley-Brooks & Company Ltd),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,330040008,37150811000001109,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets (Genesis Pharmaceuticals Ltd),Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+amp,317430009,20143911000001101,0105010E0AAAEAE,Sulfasalazine 250mg/5ml oral suspension (Special Order),Sulfasalazine 250mg/5ml oral suspension,suspension.oral
+amp,13395911000001101,13389711000001100,0105010E0AAAJAJ,Sulfasalazine 500mg/5ml oral suspension (Special Order),Sulfasalazine 500mg/5ml oral suspension,suspension.oral
+amp,13395711000001103,13389111000001101,0105010E0AAAKAK,Sulfasalazine 125mg/5ml oral suspension (Special Order),Sulfasalazine 125mg/5ml oral suspension,suspension.oral
+amp,13395811000001106,13389411000001106,0105010E0AAALAL,Sulfasalazine 200mg/5ml oral suspension (Special Order),Sulfasalazine 200mg/5ml oral suspension,suspension.oral
+amp,13395611000001107,13388811000001101,0105010E0AAANAN,Sulfasalazine 100mg/5ml oral suspension (Special Order),Sulfasalazine 100mg/5ml oral suspension,suspension.oral
+amp,16247411000001106,16223911000001109,0105010E0AAAPAP,Sulfasalazine 250mg/5ml oral suspension sugar free (Rosemont Pharmaceuticals Ltd),Sulfasalazine 250mg/5ml oral suspension sugar free,suspension.oral
+amp,16247411000001106,16641711000001106,0105010E0AAAPAP,Sulfasalazine 250mg/5ml oral suspension sugar free (Alliance Healthcare (Distribution) Ltd),Sulfasalazine 250mg/5ml oral suspension sugar free,suspension.oral
+amp,16247411000001106,16733811000001106,0105010E0AAAPAP,Sulfasalazine 250mg/5ml oral suspension sugar free (A A H Pharmaceuticals Ltd),Sulfasalazine 250mg/5ml oral suspension sugar free,suspension.oral
+amp,16247411000001106,21903111000001103,0105010E0AAAPAP,Sulfasalazine 250mg/5ml oral suspension sugar free (Waymade Healthcare Plc),Sulfasalazine 250mg/5ml oral suspension sugar free,suspension.oral
+amp,16247411000001106,37816511000001105,0105010E0AAAPAP,Sulfasalazine 250mg/5ml oral suspension sugar free (DE Pharmaceuticals),Sulfasalazine 250mg/5ml oral suspension sugar free,suspension.oral
+amp,317431008,189511000001109,0105010E0BBAAAA,Salazopyrin 500mg tablets (Pfizer Ltd),Salazopyrin 500mg tablets,tablet.oral
+amp,330040008,198211000001102,0105010E0BBABAB,Salazopyrin EN-Tabs 500mg (Pfizer Ltd),Salazopyrin EN-Tabs 500mg,tabletgastro-resistant.oral
+amp,317432001,51611000001107,0105010E0BBACAC,Salazopyrin 500mg suppositories (Pfizer Ltd),Salazopyrin 500mg suppositories,suppository.rectal
+amp,317433006,426911000001101,0105010E0BBADAD,Salazopyrin 3g/100ml enema (Pfizer Ltd),Salazopyrin 3g/100ml enema,suspensionenema.rectal
+amp,317430009,40211000001102,0105010E0BBAEAE,Salazopyrin 250mg/5ml oral suspension (Pfizer Ltd),Salazopyrin 250mg/5ml oral suspension,suspension.oral
+amp,330040008,499211000001108,0105010E0BCABAB,Sulazine EC 500mg tablets (Genesis Pharmaceuticals Ltd),Sulazine EC 500mg tablets (Genesis Pharm),tabletgastro-resistant.oral
+amp,330040008,23447211000001104,0105010E0BCACAB,Sulazine EC 500mg tablets (Teva UK Ltd),Sulazine EC 500mg tablets (Teva),tabletgastro-resistant.oral
+amp,326873001,22519811000001102,0801030L0AAAAAA,Mercaptopurine 50mg tablets (Aspen Pharma Trading Ltd),Mercaptopurine 50mg tablets,tablet.oral
+amp,326873001,22673711000001106,0801030L0AAAAAA,Mercaptopurine 50mg tablets (Alliance Healthcare (Distribution) Ltd),Mercaptopurine 50mg tablets,tablet.oral
+amp,326873001,34468011000001101,0801030L0AAAAAA,Mercaptopurine 50mg tablets (A A H Pharmaceuticals Ltd),Mercaptopurine 50mg tablets,tablet.oral
+amp,18430611000001102,18413011000001107,0801030L0AAABAB,Mercaptopurine 10mg tablets (Special Order),Mercaptopurine 10mg tablets,tablet.oral
+amp,18430611000001102,36476511000001106,0801030L0AAABAB,Mercaptopurine 10mg tablets (Imported (Germany)),Mercaptopurine 10mg tablets,tablet.oral
+amp,12701611000001102,12695511000001106,0801030L0AAACAC,Mercaptopurine 5mg/5ml oral suspension (Special Order),Mercaptopurine 5mg/5ml oral suspension,suspension.oral
+amp,12701511000001101,12695311000001100,0801030L0AAAFAF,Mercaptopurine 50mg/5ml oral suspension (Special Order),Mercaptopurine 50mg/5ml oral suspension,suspension.oral
+amp,8796611000001103,8759711000001105,0801030L0AAAGAG,Mercaptopurine 10mg capsules (Special Order),Mercaptopurine 10mg capsules,capsule.oral
+amp,8663711000001106,8613411000001101,0801030L0AAAHAH,Mercaptopurine 25mg/5ml oral suspension (Special Order),Mercaptopurine 25mg/5ml oral suspension,suspension.oral
+amp,12701711000001106,12696211000001102,0801030L0AAAIAI,Mercaptopurine 75mg/5ml oral suspension (Special Order),Mercaptopurine 75mg/5ml oral suspension,suspension.oral
+amp,20556311000001100,20538611000001107,0801030L0AAAJAJ,Mercaptopurine 25mg tablets (Special Order),Mercaptopurine 25mg tablets,tablet.oral
+amp,20921111000001100,20886411000001102,0801030L0AAAKAK,Mercaptopurine 45mg/5ml oral suspension (Special Order),Mercaptopurine 45mg/5ml oral suspension,suspension.oral
+amp,22154611000001102,22101211000001108,0801030L0AAALAL,Mercaptopurine 25mg capsules (Special Order),Mercaptopurine 25mg capsules,capsule.oral
+amp,28366311000001107,28279111000001101,0801030L0AAAMAM,Mercaptopurine 30mg capsules (Special Order),Mercaptopurine 30mg capsules,capsule.oral
+amp,28415311000001105,28397011000001105,0801030L0AAANAN,Mercaptopurine 75mg tablets (Special Order),Mercaptopurine 75mg tablets,tablet.oral
+amp,31535311000001101,31508511000001107,0801030L0AAAPAP,Mercaptopurine 75mg capsules (Special Order),Mercaptopurine 75mg capsules,capsule.oral
+amp,8663611000001102,8612811000001107,0801030L0AAAQAQ,Mercaptopurine 100mg/5ml oral suspension (Special Order),Mercaptopurine 20mg/ml oral suspension,suspension.oral
+amp,36595711000001109,36582811000001109,0801030L0AAARAR,Mercaptopurine 20mg capsules (Special Order),Mercaptopurine 20mg capsules,capsule.oral
+amp,36979111000001107,36959911000001107,0801030L0AAASAS,Mercaptopurine 12.5mg capsules (Special Order),Mercaptopurine 12.5mg capsules,capsule.oral
+amp,326873001,3832911000001101,0801030L0BBAAAA,Puri-Nethol 50mg tablets (Aspen Pharma Trading Ltd),Puri-Nethol 50mg tablets,tablet.oral
+amp,8663611000001102,21969411000001109,0801030L0BCABAQ,Xaluprine 20mg/ml oral suspension (Nova Laboratories Ltd),Xaluprine 20mg/ml oral suspension,suspension.oral
+amp,326873001,37572111000001106,0801030L0BDAAAA,Hanixol 50mg tablets (Fontus Health Ltd),Hanixol 50mg tablets,tablet.oral
+amp,36033611000001107,3612511000001105,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033611000001107,3612511000001105,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033611000001107,3612511000001105,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033611000001107,3612511000001105,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033611000001107,3614611000001101,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033611000001107,3614611000001101,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033611000001107,3614611000001101,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033611000001107,3614611000001101,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033611000001107,3614911000001107,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033611000001107,3614911000001107,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033611000001107,3614911000001107,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033611000001107,3614911000001107,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033211000001105,3622611000001102,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intramuscular
+amp,36033211000001105,3622611000001102,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intravenous
+amp,36033211000001105,3622611000001102,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intraarterial
+amp,36033211000001105,3622611000001102,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninfusion.intravenous
+amp,36033211000001105,3622911000001108,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Pfizer Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intramuscular
+amp,36033211000001105,3622911000001108,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Pfizer Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intravenous
+amp,36033211000001105,3622911000001108,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Pfizer Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intraarterial
+amp,36033211000001105,3622911000001108,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Pfizer Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninfusion.intravenous
+amp,36033211000001105,3623211000001105,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intramuscular
+amp,36033211000001105,3623211000001105,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intravenous
+amp,36033211000001105,3623211000001105,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intraarterial
+amp,36033211000001105,3623211000001105,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninfusion.intravenous
+amp,36033211000001105,3623611000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Advanz Pharma),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intramuscular
+amp,36033211000001105,3623611000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Advanz Pharma),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intravenous
+amp,36033211000001105,3623611000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Advanz Pharma),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intraarterial
+amp,36033211000001105,3623611000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Advanz Pharma),Methotrexate 500mg/20ml solution for injection vials,solutioninfusion.intravenous
+amp,36033211000001105,10988211000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Teva UK Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intramuscular
+amp,36033211000001105,10988211000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Teva UK Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intravenous
+amp,36033211000001105,10988211000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Teva UK Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intraarterial
+amp,36033211000001105,10988211000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Teva UK Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninfusion.intravenous
+amp,36033211000001105,14966811000001106,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (hameln pharma Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intramuscular
+amp,36033211000001105,14966811000001106,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (hameln pharma Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intravenous
+amp,36033211000001105,14966811000001106,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (hameln pharma Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intraarterial
+amp,36033211000001105,14966811000001106,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (hameln pharma Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninfusion.intravenous
+amp,36033211000001105,27952411000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intramuscular
+amp,36033211000001105,27952411000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intravenous
+amp,36033211000001105,27952411000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intraarterial
+amp,36033211000001105,27952411000001107,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 500mg/20ml solution for injection vials,solutioninfusion.intravenous
+amp,36033311000001102,3610011000001101,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraventricular cardiac
+amp,36033311000001102,3610011000001101,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033311000001102,3610011000001101,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033311000001102,3610011000001101,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033311000001102,3610011000001101,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninfusion.intravenous
+amp,36033311000001102,3610011000001101,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033311000001102,3612811000001108,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraventricular cardiac
+amp,36033311000001102,3612811000001108,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033311000001102,3612811000001108,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033311000001102,3612811000001108,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033311000001102,3612811000001108,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninfusion.intravenous
+amp,36033311000001102,3612811000001108,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Pfizer Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033311000001102,3613311000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraventricular cardiac
+amp,36033311000001102,3613311000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033311000001102,3613311000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033311000001102,3613311000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033311000001102,3613311000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninfusion.intravenous
+amp,36033311000001102,3613311000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033311000001102,3615611000001100,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Advanz Pharma),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraventricular cardiac
+amp,36033311000001102,3615611000001100,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Advanz Pharma),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033311000001102,3615611000001100,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Advanz Pharma),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033311000001102,3615611000001100,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Advanz Pharma),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033311000001102,3615611000001100,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Advanz Pharma),Methotrexate 50mg/2ml solution for injection vials,solutioninfusion.intravenous
+amp,36033311000001102,3615611000001100,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Advanz Pharma),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033311000001102,10988011000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Teva UK Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraventricular cardiac
+amp,36033311000001102,10988011000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Teva UK Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033311000001102,10988011000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Teva UK Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033311000001102,10988011000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Teva UK Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033311000001102,10988011000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Teva UK Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninfusion.intravenous
+amp,36033311000001102,10988011000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Teva UK Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033311000001102,15138411000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (hameln pharma Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraventricular cardiac
+amp,36033311000001102,15138411000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (hameln pharma Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033311000001102,15138411000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (hameln pharma Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033311000001102,15138411000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (hameln pharma Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033311000001102,15138411000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (hameln pharma Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninfusion.intravenous
+amp,36033311000001102,15138411000001109,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (hameln pharma Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033311000001102,28991611000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraventricular cardiac
+amp,36033311000001102,28991611000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intramuscular
+amp,36033311000001102,28991611000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intravenous
+amp,36033311000001102,28991611000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraarterial
+amp,36033311000001102,28991611000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninfusion.intravenous
+amp,36033311000001102,28991611000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intrathecal
+amp,36033111000001104,3621611000001108,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intramuscular
+amp,36033111000001104,3621611000001108,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intravenous
+amp,36033111000001104,3621611000001108,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intraarterial
+amp,36033111000001104,3621611000001108,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intrathecal
+amp,36033111000001104,3621811000001107,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (Advanz Pharma),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intramuscular
+amp,36033111000001104,3621811000001107,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (Advanz Pharma),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intravenous
+amp,36033111000001104,3621811000001107,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (Advanz Pharma),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intraarterial
+amp,36033111000001104,3621811000001107,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (Advanz Pharma),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intrathecal
+amp,36033111000001104,3622011000001109,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intramuscular
+amp,36033111000001104,3622011000001109,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intravenous
+amp,36033111000001104,3622011000001109,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intraarterial
+amp,36033111000001104,3622011000001109,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intrathecal
+amp,9469411000001104,9457411000001101,0801030P0AABPBP,Methotrexate 5mg/0.2ml solution for injection pre-filled syringes (Special Order),Methotrexate 5mg/0.2ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9469411000001104,9457411000001101,0801030P0AABPBP,Methotrexate 5mg/0.2ml solution for injection pre-filled syringes (Special Order),Methotrexate 5mg/0.2ml inj pre-filled syringes,solutioninfusion.intravenous
+amp,9469411000001104,9457411000001101,0801030P0AABPBP,Methotrexate 5mg/0.2ml solution for injection pre-filled syringes (Special Order),Methotrexate 5mg/0.2ml inj pre-filled syringes,solutioninjection.intrathecal
+amp,9469411000001104,9457411000001101,0801030P0AABPBP,Methotrexate 5mg/0.2ml solution for injection pre-filled syringes (Special Order),Methotrexate 5mg/0.2ml inj pre-filled syringes,solutioninfusion.intraarterial
+amp,9469011000001108,9450111000001105,0801030P0AACGCG,Methotrexate 30mg/1.2ml solution for injection pre-filled syringes (Special Order),Methotrexate 30mg/1.2ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9469011000001108,9450111000001105,0801030P0AACGCG,Methotrexate 30mg/1.2ml solution for injection pre-filled syringes (Special Order),Methotrexate 30mg/1.2ml inj pre-filled syringes,solutioninfusion.intravenous
+amp,9469011000001108,9450111000001105,0801030P0AACGCG,Methotrexate 30mg/1.2ml solution for injection pre-filled syringes (Special Order),Methotrexate 30mg/1.2ml inj pre-filled syringes,solutioninjection.intrathecal
+amp,9469011000001108,9450111000001105,0801030P0AACGCG,Methotrexate 30mg/1.2ml solution for injection pre-filled syringes (Special Order),Methotrexate 30mg/1.2ml inj pre-filled syringes,solutioninfusion.intraarterial
+amp,36032911000001108,3618611000001106,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intramuscular
+amp,36032911000001108,3618611000001106,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intravenous
+amp,36032911000001108,3618611000001106,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intraarterial
+amp,36032911000001108,3619211000001104,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (Pfizer Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intramuscular
+amp,36032911000001108,3619211000001104,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (Pfizer Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intravenous
+amp,36032911000001108,3619211000001104,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (Pfizer Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intraarterial
+amp,36032911000001108,3619511000001101,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intramuscular
+amp,36032911000001108,3619511000001101,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intravenous
+amp,36032911000001108,3619511000001101,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intraarterial
+amp,36032911000001108,9561911000001100,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (Wockhardt UK Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intramuscular
+amp,36032911000001108,9561911000001100,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (Wockhardt UK Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intravenous
+amp,36032911000001108,9561911000001100,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (Wockhardt UK Ltd),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intraarterial
+amp,36032911000001108,37733011000001104,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (medac UK),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intramuscular
+amp,36032911000001108,37733011000001104,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (medac UK),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intravenous
+amp,36032911000001108,37733011000001104,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials (medac UK),Methotrexate 1g/10ml solution for injection vials,solutioninjection.intraarterial
+amp,36033511000001108,3615811000001101,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (A A H Pharmaceuticals Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intramuscular
+amp,36033511000001108,3615811000001101,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (A A H Pharmaceuticals Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intravenous
+amp,36033511000001108,3615811000001101,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (A A H Pharmaceuticals Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intraarterial
+amp,36033511000001108,3616411000001107,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (Pfizer Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intramuscular
+amp,36033511000001108,3616411000001107,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (Pfizer Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intravenous
+amp,36033511000001108,3616411000001107,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (Pfizer Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intraarterial
+amp,36033511000001108,3616911000001104,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intramuscular
+amp,36033511000001108,3616911000001104,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intravenous
+amp,36033511000001108,3616911000001104,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intraarterial
+amp,36033511000001108,9562111000001108,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (Wockhardt UK Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intramuscular
+amp,36033511000001108,9562111000001108,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (Wockhardt UK Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intravenous
+amp,36033511000001108,9562111000001108,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (Wockhardt UK Ltd),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intraarterial
+amp,36033511000001108,37733211000001109,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (medac UK),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intramuscular
+amp,36033511000001108,37733211000001109,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (medac UK),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intravenous
+amp,36033511000001108,37733211000001109,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials (medac UK),Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intraarterial
+amp,36033011000001100,3624511000001106,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intramuscular
+amp,36033011000001100,3624511000001106,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intravenous
+amp,36033011000001100,3624511000001106,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intraarterial
+amp,36033011000001100,3624511000001106,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (A A H Pharmaceuticals Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninfusion.intravenous
+amp,36033011000001100,3624711000001101,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intramuscular
+amp,36033011000001100,3624711000001101,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intravenous
+amp,36033011000001100,3624711000001101,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intraarterial
+amp,36033011000001100,3624711000001101,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninfusion.intravenous
+amp,36033011000001100,3625011000001104,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Advanz Pharma),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intramuscular
+amp,36033011000001100,3625011000001104,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Advanz Pharma),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intravenous
+amp,36033011000001100,3625011000001104,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Advanz Pharma),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intraarterial
+amp,36033011000001100,3625011000001104,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Advanz Pharma),Methotrexate 1g/40ml solution for injection vials,solutioninfusion.intravenous
+amp,36033011000001100,11091011000001108,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Teva UK Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intramuscular
+amp,36033011000001100,11091011000001108,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Teva UK Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intravenous
+amp,36033011000001100,11091011000001108,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Teva UK Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intraarterial
+amp,36033011000001100,11091011000001108,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Teva UK Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninfusion.intravenous
+amp,36033011000001100,27951711000001108,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intramuscular
+amp,36033011000001100,27951711000001108,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intravenous
+amp,36033011000001100,27951711000001108,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninjection.intraarterial
+amp,36033011000001100,27951711000001108,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials (Accord Healthcare Ltd),Methotrexate 1g/40ml solution for injection vials,solutioninfusion.intravenous
+amp,36033411000001109,3620611000001103,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials (A A H Pharmaceuticals Ltd),Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intramuscular
+amp,36033411000001109,3620611000001103,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials (A A H Pharmaceuticals Ltd),Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intravenous
+amp,36033411000001109,3620611000001103,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials (A A H Pharmaceuticals Ltd),Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intraarterial
+amp,36033411000001109,3620811000001104,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intramuscular
+amp,36033411000001109,3620811000001104,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intravenous
+amp,36033411000001109,3620811000001104,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials (Alliance Healthcare (Distribution) Ltd),Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intraarterial
+amp,36033411000001109,3621111000001100,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials (Advanz Pharma),Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intramuscular
+amp,36033411000001109,3621111000001100,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials (Advanz Pharma),Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intravenous
+amp,36033411000001109,3621111000001100,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials (Advanz Pharma),Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intraarterial
+amp,9469211000001103,9448511000001101,0801030P0AADNDN,Methotrexate 35mg/1.4ml solution for injection pre-filled syringes (Special Order),Methotrexate 35mg/1.4ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9469211000001103,9448511000001101,0801030P0AADNDN,Methotrexate 35mg/1.4ml solution for injection pre-filled syringes (Special Order),Methotrexate 35mg/1.4ml inj pre-filled syringes,solutioninfusion.intravenous
+amp,9469211000001103,9448511000001101,0801030P0AADNDN,Methotrexate 35mg/1.4ml solution for injection pre-filled syringes (Special Order),Methotrexate 35mg/1.4ml inj pre-filled syringes,solutioninjection.intrathecal
+amp,9469211000001103,9448511000001101,0801030P0AADNDN,Methotrexate 35mg/1.4ml solution for injection pre-filled syringes (Special Order),Methotrexate 35mg/1.4ml inj pre-filled syringes,solutioninfusion.intraarterial
+amp,9468911000001104,9451611000001107,0801030P0AADRDR,Methotrexate 27.5mg/1.1ml solution for injection pre-filled syringes (Special Order),Methotrexate 27.5mg/1.1ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468911000001104,9451611000001107,0801030P0AADRDR,Methotrexate 27.5mg/1.1ml solution for injection pre-filled syringes (Special Order),Methotrexate 27.5mg/1.1ml inj pre-filled syringes,solutioninfusion.intravenous
+amp,9468911000001104,9451611000001107,0801030P0AADRDR,Methotrexate 27.5mg/1.1ml solution for injection pre-filled syringes (Special Order),Methotrexate 27.5mg/1.1ml inj pre-filled syringes,solutioninjection.intrathecal
+amp,9468911000001104,9451611000001107,0801030P0AADRDR,Methotrexate 27.5mg/1.1ml solution for injection pre-filled syringes (Special Order),Methotrexate 27.5mg/1.1ml inj pre-filled syringes,solutioninfusion.intraarterial
+amp,9469311000001106,9448011000001109,0801030P0AADVDV,Methotrexate 50mg/2ml solution for injection pre-filled syringes (Special Order),Methotrexate 50mg/2ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9469311000001106,9448011000001109,0801030P0AADVDV,Methotrexate 50mg/2ml solution for injection pre-filled syringes (Special Order),Methotrexate 50mg/2ml inj pre-filled syringes,solutioninfusion.intravenous
+amp,9469311000001106,9448011000001109,0801030P0AADVDV,Methotrexate 50mg/2ml solution for injection pre-filled syringes (Special Order),Methotrexate 50mg/2ml inj pre-filled syringes,solutioninjection.intrathecal
+amp,9469311000001106,9448011000001109,0801030P0AADVDV,Methotrexate 50mg/2ml solution for injection pre-filled syringes (Special Order),Methotrexate 50mg/2ml inj pre-filled syringes,solutioninfusion.intraarterial
+amp,9469111000001109,9449511000001107,0801030P0AAEAEA,Methotrexate 32.5mg/1.3ml solution for injection pre-filled syringes (Special Order),Methotrexate 32.5mg/1.3ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9469111000001109,9449511000001107,0801030P0AAEAEA,Methotrexate 32.5mg/1.3ml solution for injection pre-filled syringes (Special Order),Methotrexate 32.5mg/1.3ml inj pre-filled syringes,solutioninfusion.intravenous
+amp,9469111000001109,9449511000001107,0801030P0AAEAEA,Methotrexate 32.5mg/1.3ml solution for injection pre-filled syringes (Special Order),Methotrexate 32.5mg/1.3ml inj pre-filled syringes,solutioninjection.intrathecal
+amp,9469111000001109,9449511000001107,0801030P0AAEAEA,Methotrexate 32.5mg/1.3ml solution for injection pre-filled syringes (Special Order),Methotrexate 32.5mg/1.3ml inj pre-filled syringes,solutioninfusion.intraarterial
+amp,14967911000001103,14966611000001107,0801030P0AAFDFD,Methotrexate 25mg/3ml solution for injection pre-filled syringes (Special Order),Methotrexate 25mg/3ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,14967911000001103,14966611000001107,0801030P0AAFDFD,Methotrexate 25mg/3ml solution for injection pre-filled syringes (Special Order),Methotrexate 25mg/3ml inj pre-filled syringes,solutioninfusion.intravenous
+amp,14967911000001103,14966611000001107,0801030P0AAFDFD,Methotrexate 25mg/3ml solution for injection pre-filled syringes (Special Order),Methotrexate 25mg/3ml inj pre-filled syringes,solutioninfusion.intraarterial
+amp,9468611000001105,9453111000001103,0801030P0AAFEFE,Methotrexate 20mg/0.8ml solution for injection pre-filled syringes (Special Order),Methotrexate 20mg/0.8ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468611000001105,9453111000001103,0801030P0AAFEFE,Methotrexate 20mg/0.8ml solution for injection pre-filled syringes (Special Order),Methotrexate 20mg/0.8ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468711000001101,9452811000001102,0801030P0AAFFFF,Methotrexate 22.5mg/0.9ml solution for injection pre-filled syringes (Special Order),Methotrexate 22.5mg/0.9ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468711000001101,9452811000001102,0801030P0AAFFFF,Methotrexate 22.5mg/0.9ml solution for injection pre-filled syringes (Special Order),Methotrexate 22.5mg/0.9ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468811000001109,9452311000001106,0801030P0AAFGFG,Methotrexate 25mg/1ml solution for injection pre-filled syringes (Special Order),Methotrexate 25mg/1ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468811000001109,9452311000001106,0801030P0AAFGFG,Methotrexate 25mg/1ml solution for injection pre-filled syringes (Special Order),Methotrexate 25mg/1ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468211000001108,9455911000001104,0801030P0AAFHFH,Methotrexate 10mg/0.4ml solution for injection pre-filled syringes (Special Order),Methotrexate 10mg/0.4ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468211000001108,9455911000001104,0801030P0AAFHFH,Methotrexate 10mg/0.4ml solution for injection pre-filled syringes (Special Order),Methotrexate 10mg/0.4ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9469511000001100,9456611000001100,0801030P0AAFIFI,Methotrexate 7.5mg/0.3ml solution for injection pre-filled syringes (Special Order),Methotrexate 7.5mg/0.3ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9469511000001100,9456611000001100,0801030P0AAFIFI,Methotrexate 7.5mg/0.3ml solution for injection pre-filled syringes (Special Order),Methotrexate 7.5mg/0.3ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468311000001100,9455211000001108,0801030P0AAFJFJ,Methotrexate 12.5mg/0.5ml solution for injection pre-filled syringes (Special Order),Methotrexate 12.5mg/0.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468311000001100,9455211000001108,0801030P0AAFJFJ,Methotrexate 12.5mg/0.5ml solution for injection pre-filled syringes (Special Order),Methotrexate 12.5mg/0.5ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468411000001107,9454211000001107,0801030P0AAFKFK,Methotrexate 15mg/0.6ml solution for injection pre-filled syringes (Special Order),Methotrexate 15mg/0.6ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468411000001107,9454211000001107,0801030P0AAFKFK,Methotrexate 15mg/0.6ml solution for injection pre-filled syringes (Special Order),Methotrexate 15mg/0.6ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468511000001106,9453611000001106,0801030P0AAFLFL,Methotrexate 17.5mg/0.7ml solution for injection pre-filled syringes (Special Order),Methotrexate 17.5mg/0.7ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468511000001106,9453611000001106,0801030P0AAFLFL,Methotrexate 17.5mg/0.7ml solution for injection pre-filled syringes (Special Order),Methotrexate 17.5mg/0.7ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468611000001105,31406711000001106,0801030P0BEAAFE,Zlatal 20mg/0.8ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 20mg/0.8ml solution for injection pre-filled syringes,solutioninjection.subcutaneous
+amp,9468611000001105,31406711000001106,0801030P0BEAAFE,Zlatal 20mg/0.8ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 20mg/0.8ml solution for injection pre-filled syringes,solutioninjection.intramuscular
+amp,9468711000001101,31407211000001102,0801030P0BEABFF,Zlatal 22.5mg/0.9ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 22.5mg/0.9ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468711000001101,31407211000001102,0801030P0BEABFF,Zlatal 22.5mg/0.9ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 22.5mg/0.9ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468811000001109,31407411000001103,0801030P0BEACFG,Zlatal 25mg/1ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 25mg/1ml solution for injection pre-filled syringes,solutioninjection.subcutaneous
+amp,9468811000001109,31407411000001103,0801030P0BEACFG,Zlatal 25mg/1ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 25mg/1ml solution for injection pre-filled syringes,solutioninjection.intramuscular
+amp,9468211000001108,31407911000001106,0801030P0BEADFH,Zlatal 10mg/0.4ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 10mg/0.4ml solution for injection pre-filled syringes,solutioninjection.subcutaneous
+amp,9468211000001108,31407911000001106,0801030P0BEADFH,Zlatal 10mg/0.4ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 10mg/0.4ml solution for injection pre-filled syringes,solutioninjection.intramuscular
+amp,9469511000001100,31408511000001100,0801030P0BEAEFI,Zlatal 7.5mg/0.3ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 7.5mg/0.3ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9469511000001100,31408511000001100,0801030P0BEAEFI,Zlatal 7.5mg/0.3ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 7.5mg/0.3ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468311000001100,31409011000001103,0801030P0BEAFFJ,Zlatal 12.5mg/0.5ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 12.5mg/0.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468311000001100,31409011000001103,0801030P0BEAFFJ,Zlatal 12.5mg/0.5ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 12.5mg/0.5ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,9468411000001107,31409611000001105,0801030P0BEAGFK,Zlatal 15mg/0.6ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 15mg/0.6ml solution for injection pre-filled syringes,solutioninjection.subcutaneous
+amp,9468411000001107,31409611000001105,0801030P0BEAGFK,Zlatal 15mg/0.6ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 15mg/0.6ml solution for injection pre-filled syringes,solutioninjection.intramuscular
+amp,9468511000001106,31410211000001104,0801030P0BEAHFL,Zlatal 17.5mg/0.7ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 17.5mg/0.7ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,9468511000001106,31410211000001104,0801030P0BEAHFL,Zlatal 17.5mg/0.7ml solution for injection pre-filled syringes (Nordic Pharma Ltd),Zlatal 17.5mg/0.7ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,34168411000001106,34161711000001105,0801030P0BFAAFM,Nordimet 7.5mg/0.3ml solution for injection pre-filled pens (Nordic Pharma Ltd),Nordimet 7.5mg/0.3ml solution for injection pre-filled pens,solutioninjection.subcutaneous
+amp,34167711000001101,34162611000001107,0801030P0BFABFN,Nordimet 10mg/0.4ml solution for injection pre-filled pens (Nordic Pharma Ltd),Nordimet 10mg/0.4ml solution for injection pre-filled pens,solutioninjection.subcutaneous
+amp,34167811000001109,34162911000001101,0801030P0BFACFP,Nordimet 12.5mg/0.5ml solution for injection pre-filled pens (Nordic Pharma Ltd),Nordimet 12.5mg/0.5ml solution for injection pre-filled pens,solutioninjection.subcutaneous
+amp,34167911000001104,34163211000001104,0801030P0BFADFQ,Nordimet 15mg/0.6ml solution for injection pre-filled pens (Nordic Pharma Ltd),Nordimet 15mg/0.6ml solution for injection pre-filled pens,solutioninjection.subcutaneous
+amp,34168011000001102,34163511000001101,0801030P0BFAEFR,Nordimet 17.5mg/0.7ml solution for injection pre-filled pens (Nordic Pharma Ltd),Nordimet 17.5mg/0.7ml solution for injection pre-filled pens,solutioninjection.subcutaneous
+amp,34168111000001101,34163811000001103,0801030P0BFAFFS,Nordimet 20mg/0.8ml solution for injection pre-filled pens (Nordic Pharma Ltd),Nordimet 20mg/0.8ml solution for injection pre-filled pens,solutioninjection.subcutaneous
+amp,34168211000001107,34164111000001107,0801030P0BFAGFT,Nordimet 22.5mg/0.9ml solution for injection pre-filled pens (Nordic Pharma Ltd),Nordimet 22.5mg/0.9ml solution for injection pre-filled pens,solutioninjection.subcutaneous
+amp,34168311000001104,34164411000001102,0801030P0BFAHFU,Nordimet 25mg/1ml solution for injection pre-filled pens (Nordic Pharma Ltd),Nordimet 25mg/1ml solution for injection pre-filled pens,solutioninjection.subcutaneous
+amp,327071005,338311000001105,0802010G0AAADAD,Azathioprine 25mg tablets (Kent Pharmaceuticals Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,544611000001107,0802010G0AAADAD,Azathioprine 25mg tablets (Mylan),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,611111000001100,0802010G0AAADAD,Azathioprine 25mg tablets (Alliance Healthcare (Distribution) Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,744711000001104,0802010G0AAADAD,Azathioprine 25mg tablets (A A H Pharmaceuticals Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,3695011000001108,0802010G0AAADAD,Azathioprine 25mg tablets (IVAX Pharmaceuticals UK Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,5866911000001101,0802010G0AAADAD,Azathioprine 25mg tablets (Actavis UK Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,8388611000001100,0802010G0AAADAD,Azathioprine 25mg tablets (Teva UK Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,13740711000001100,0802010G0AAADAD,Azathioprine 25mg tablets (Tillomed Laboratories Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,15070411000001103,0802010G0AAADAD,Azathioprine 25mg tablets (Sigma Pharmaceuticals Plc),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,17789111000001105,0802010G0AAADAD,Azathioprine 25mg tablets (Phoenix Healthcare Distribution Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,21780411000001106,0802010G0AAADAD,Azathioprine 25mg tablets (Waymade Healthcare Plc),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,22614111000001101,0802010G0AAADAD,Azathioprine 25mg tablets (DE Pharmaceuticals),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,24505211000001107,0802010G0AAADAD,Azathioprine 25mg tablets (Sandoz Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327071005,29997811000001108,0802010G0AAADAD,Azathioprine 25mg tablets (Mawdsley-Brooks & Company Ltd),Azathioprine 25mg tablets,tablet.oral
+amp,327070006,41911000001104,0802010G0AAAEAE,Azathioprine 50mg tablets (A A H Pharmaceuticals Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,178511000001107,0802010G0AAAEAE,Azathioprine 50mg tablets (IVAX Pharmaceuticals UK Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,339911000001103,0802010G0AAAEAE,Azathioprine 50mg tablets (Actavis UK Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,428011000001101,0802010G0AAAEAE,Azathioprine 50mg tablets (Sandoz Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,715511000001100,0802010G0AAAEAE,Azathioprine 50mg tablets (Teva UK Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,843311000001103,0802010G0AAAEAE,Azathioprine 50mg tablets (Mylan),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,863111000001105,0802010G0AAAEAE,Azathioprine 50mg tablets (Kent Pharmaceuticals Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,888811000001106,0802010G0AAAEAE,Azathioprine 50mg tablets (Alliance Healthcare (Distribution) Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,10288111000001102,0802010G0AAAEAE,Azathioprine 50mg tablets (Focus Pharmaceuticals Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,13386711000001105,0802010G0AAAEAE,Azathioprine 50mg tablets (Arrow Generics Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,13740911000001103,0802010G0AAAEAE,Azathioprine 50mg tablets (Tillomed Laboratories Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,15070611000001100,0802010G0AAAEAE,Azathioprine 50mg tablets (Sigma Pharmaceuticals Plc),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,17790011000001100,0802010G0AAAEAE,Azathioprine 50mg tablets (Phoenix Healthcare Distribution Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,18280311000001100,0802010G0AAAEAE,Azathioprine 50mg tablets (Strides Pharma UK Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,18497511000001105,0802010G0AAAEAE,Azathioprine 50mg tablets (Almus Pharmaceuticals Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,21780711000001100,0802010G0AAAEAE,Azathioprine 50mg tablets (Waymade Healthcare Plc),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,22615211000001108,0802010G0AAAEAE,Azathioprine 50mg tablets (DE Pharmaceuticals),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,27990111000001105,0802010G0AAAEAE,Azathioprine 50mg tablets (Ennogen Healthcare Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,29998111000001100,0802010G0AAAEAE,Azathioprine 50mg tablets (Mawdsley-Brooks & Company Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,36105511000001109,0802010G0AAAEAE,Azathioprine 50mg tablets (Ennogen Pharma Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,327070006,37077111000001106,0802010G0AAAEAE,Azathioprine 50mg tablets (Relonchem Ltd),Azathioprine 50mg tablets,tablet.oral
+amp,8791311000001100,8733511000001103,0802010G0AAAHAH,Azathioprine 10mg capsules (Special Order),Azathioprine 10mg capsules,capsule.oral
+amp,8308511000001103,8274811000001106,0802010G0AAAPAP,Azathioprine 50mg/5ml oral solution (Special Order),Azathioprine 50mg/5ml oral solution,solution.oral
+amp,8308711000001108,8272311000001109,0802010G0AAAQAQ,Azathioprine 40mg/5ml oral solution (Special Order),Azathioprine 40mg/5ml oral liquid,solution.oral
+amp,8308611000001104,8277711000001105,0802010G0AAAQAQ,Azathioprine 40mg/5ml oral suspension (Special Order),Azathioprine 40mg/5ml oral liquid,suspension.oral
+amp,8282111000001104,8262811000001108,0802010G0AAARAR,Azathioprine 10mg/5ml oral solution (Special Order),Azathioprine 10mg/5ml oral liquid,solution.oral
+amp,8282211000001105,8264111000001109,0802010G0AAARAR,Azathioprine 10mg/5ml oral suspension (Special Order),Azathioprine 10mg/5ml oral liquid,suspension.oral
+amp,8284011000001106,8268711000001102,0802010G0AAASAS,Azathioprine 25mg/5ml oral solution (Special Order),Azathioprine 25mg/5ml oral solution,solution.oral
+amp,8307911000001109,8279411000001108,0802010G0AAATAT,Azathioprine 75mg/5ml oral solution (Special Order),Azathioprine 75mg/5ml oral liquid,solution.oral
+amp,8307811000001104,8280411000001108,0802010G0AAATAT,Azathioprine 75mg/5ml oral suspension (Special Order),Azathioprine 75mg/5ml oral liquid,suspension.oral
+amp,8283111000001105,8263111000001107,0802010G0AAAUAU,Azathioprine 15mg/5ml oral solution (Special Order),Azathioprine 15mg/5ml oral liquid,solution.oral
+amp,8283211000001104,8264311000001106,0802010G0AAAUAU,Azathioprine 15mg/5ml oral suspension (Special Order),Azathioprine 15mg/5ml oral liquid,suspension.oral
+amp,8281911000001107,8259811000001108,0802010G0AAAVAV,Azathioprine 100mg/5ml oral solution (Special Order),Azathioprine 100mg/5ml oral solution,solution.oral
+amp,8283811000001103,8267211000001105,0802010G0AAAWAW,Azathioprine 20mg/5ml oral solution (Special Order),Azathioprine 20mg/5ml oral solution,solution.oral
+amp,12080511000001109,12068711000001104,0802010G0AAAXAX,Azathioprine 125mg/5ml oral suspension (Special Order),Azathioprine 125mg/5ml oral liquid,suspension.oral
+amp,12080411000001105,12069011000001106,0802010G0AAAXAX,Azathioprine 125mg/5ml oral solution (Special Order),Azathioprine 125mg/5ml oral liquid,solution.oral
+amp,8308311000001109,8273411000001106,0802010G0AAAYAY,Azathioprine 5mg/5ml oral solution (Special Order),Azathioprine 5mg/5ml oral liquid,solution.oral
+amp,8308211000001101,8275911000001102,0802010G0AAAYAY,Azathioprine 5mg/5ml oral suspension (Special Order),Azathioprine 5mg/5ml oral liquid,suspension.oral
+amp,12211911000001100,12212311000001105,0802010G0AABABA,Azathioprine 45mg/5ml oral suspension (Special Order),Azathioprine 45mg/5ml oral liquid,suspension.oral
+amp,12221811000001102,12215411000001106,0802010G0AABABA,Azathioprine 45mg/5ml oral solution (Special Order),Azathioprine 45mg/5ml oral liquid,solution.oral
+amp,12222411000001109,12214811000001107,0802010G0AABBBB,Azathioprine 7mg/5ml oral suspension (Special Order),Azathioprine 7mg/5ml oral liquid,suspension.oral
+amp,12222311000001102,12217811000001103,0802010G0AABBBB,Azathioprine 7mg/5ml oral solution (Special Order),Azathioprine 7mg/5ml oral liquid,solution.oral
+amp,8284211000001101,8268511000001107,0802010G0AABCBC,Azathioprine 30mg/5ml oral solution (Special Order),Azathioprine 30mg/5ml oral liquid,solution.oral
+amp,8308811000001100,8269111000001105,0802010G0AABCBC,Azathioprine 30mg/5ml oral suspension (Special Order),Azathioprine 30mg/5ml oral liquid,suspension.oral
+amp,8283311000001107,8264611000001101,0802010G0AABDBD,Azathioprine 17.5mg/5ml oral solution (Special Order),Azathioprine 17.5mg/5ml oral liquid,solution.oral
+amp,8283411000001100,8266011000001103,0802010G0AABDBD,Azathioprine 17.5mg/5ml oral suspension (Special Order),Azathioprine 17.5mg/5ml oral liquid,suspension.oral
+amp,12097311000001101,12093611000001103,0802010G0AABEBE,Azathioprine 35mg/5ml oral suspension (Special Order),Azathioprine 35mg/5ml oral liquid,suspension.oral
+amp,12097211000001109,12093911000001109,0802010G0AABEBE,Azathioprine 35mg/5ml oral solution (Special Order),Azathioprine 35mg/5ml oral liquid,solution.oral
+amp,12211811000001105,12209611000001109,0802010G0AABFBF,Azathioprine 37.5mg/5ml oral suspension (Special Order),Azathioprine 37.5mg/5ml oral liquid,suspension.oral
+amp,12211711000001102,12210411000001104,0802010G0AABFBF,Azathioprine 37.5mg/5ml oral solution (Special Order),Azathioprine 37.5mg/5ml oral liquid,solution.oral
+amp,8308111000001107,8288511000001105,0802010G0AABGBG,Azathioprine 60mg/5ml oral solution (Special Order),Azathioprine 60mg/5ml oral liquid,solution.oral
+amp,8308011000001106,8290111000001102,0802010G0AABGBG,Azathioprine 60mg/5ml oral suspension (Special Order),Azathioprine 60mg/5ml oral liquid,suspension.oral
+amp,12097111000001103,12093011000001105,0802010G0AABIBI,Azathioprine 200mg/5ml oral suspension (Special Order),Azathioprine 200mg/5ml oral liquid,suspension.oral
+amp,12097011000001104,12093311000001108,0802010G0AABIBI,Azathioprine 200mg/5ml oral solution (Special Order),Azathioprine 200mg/5ml oral liquid,solution.oral
+amp,12080711000001104,12070311000001107,0802010G0AABJBJ,Azathioprine 175mg/5ml oral suspension (Special Order),Azathioprine 175mg/5ml oral liquid,suspension.oral
+amp,12080611000001108,12070911000001108,0802010G0AABJBJ,Azathioprine 175mg/5ml oral solution (Special Order),Azathioprine 175mg/5ml oral liquid,solution.oral
+amp,12096911000001103,12092411000001105,0802010G0AABKBK,Azathioprine 17mg/5ml oral suspension (Special Order),Azathioprine 17mg/5ml oral liquid,suspension.oral
+amp,12096811000001108,12092711000001104,0802010G0AABKBK,Azathioprine 17mg/5ml oral solution (Special Order),Azathioprine 17mg/5ml oral liquid,solution.oral
+amp,8791511000001106,8742911000001104,0802010G0AABPBP,Azathioprine 5mg capsules (Special Order),Azathioprine 5mg capsules,capsule.oral
+amp,8791411000001107,8743211000001102,0802010G0AABRBR,Azathioprine 30mg capsules (Special Order),Azathioprine 30mg capsules,capsule.oral
+amp,8282511000001108,8265411000001103,0802010G0AABSBS,Azathioprine 12mg/5ml oral solution (Special Order),Azathioprine 12mg/5ml oral liquid,solution.oral
+amp,8282611000001107,8266211000001108,0802010G0AABSBS,Azathioprine 12mg/5ml oral suspension (Special Order),Azathioprine 12mg/5ml oral liquid,suspension.oral
+amp,12222011000001100,12213811000001109,0802010G0AABTBT,Azathioprine 4mg/5ml oral suspension (Special Order),Azathioprine 4mg/5ml oral liquid,suspension.oral
+amp,12221911000001107,12216011000001106,0802010G0AABTBT,Azathioprine 4mg/5ml oral solution (Special Order),Azathioprine 4mg/5ml oral liquid,solution.oral
+amp,8282311000001102,8260411000001105,0802010G0AABXBX,Azathioprine 120mg/5ml oral solution (Special Order),Azathioprine 120mg/5ml oral liquid,solution.oral
+amp,8282411000001109,8260811000001107,0802010G0AABXBX,Azathioprine 120mg/5ml oral suspension (Special Order),Azathioprine 120mg/5ml oral liquid,suspension.oral
+amp,8282911000001101,8261211000001100,0802010G0AABYBY,Azathioprine 150mg/5ml oral solution (Special Order),Azathioprine 150mg/5ml oral liquid,solution.oral
+amp,8283011000001109,8262911000001103,0802010G0AABYBY,Azathioprine 150mg/5ml oral suspension (Special Order),Azathioprine 150mg/5ml oral liquid,suspension.oral
+amp,12222211000001105,12214511000001109,0802010G0AABZBZ,Azathioprine 70mg/5ml oral suspension (Special Order),Azathioprine 70mg/5ml oral liquid,suspension.oral
+amp,12222111000001104,12217411000001100,0802010G0AABZBZ,Azathioprine 70mg/5ml oral solution (Special Order),Azathioprine 70mg/5ml oral liquid,solution.oral
+amp,8283511000001101,8265911000001106,0802010G0AACBCB,Azathioprine 2.5mg/5ml oral solution (Special Order),Azathioprine 2.5mg/5ml oral liquid,solution.oral
+amp,8283611000001102,8267811000001106,0802010G0AACBCB,Azathioprine 2.5mg/5ml oral suspension (Special Order),Azathioprine 2.5mg/5ml oral liquid,suspension.oral
+amp,12222611000001107,12215111000001101,0802010G0AACCCC,Azathioprine 80mg/5ml oral suspension (Special Order),Azathioprine 80mg/5ml oral liquid,suspension.oral
+amp,12222511000001108,12218111000001106,0802010G0AACCCC,Azathioprine 80mg/5ml oral solution (Special Order),Azathioprine 80mg/5ml oral liquid,solution.oral
+amp,8307711000001107,8291411000001103,0802010G0AACDCD,Azathioprine 90mg/5ml oral solution (Special Order),Azathioprine 90mg/5ml oral liquid,solution.oral
+amp,8307511000001102,8292211000001109,0802010G0AACDCD,Azathioprine 90mg/5ml oral suspension (Special Order),Azathioprine 90mg/5ml oral liquid,suspension.oral
+amp,8282711000001103,8262111000001101,0802010G0AACECE,Azathioprine 13mg/5ml oral solution (Special Order),Azathioprine 13mg/5ml oral liquid,solution.oral
+amp,8282811000001106,8263511000001103,0802010G0AACECE,Azathioprine 13mg/5ml oral suspension (Special Order),Azathioprine 13mg/5ml oral liquid,suspension.oral
+amp,16035911000001102,16012511000001109,0802010G0AACGCG,Azathioprine 250mg/5ml oral solution (Special Order),Azathioprine 250mg/5ml oral liquid,solution.oral
+amp,16036011000001105,16014711000001109,0802010G0AACGCG,Azathioprine 250mg/5ml oral suspension (Special Order),Azathioprine 250mg/5ml oral liquid,suspension.oral
+amp,8308411000001102,8278511000001101,0802010G0AACHCH,Azathioprine 50mg/5ml oral suspension (Drug Tariff Special Order),Azathioprine 50mg/5ml oral suspension,suspension.oral
+amp,8284111000001107,8269711000001106,0802010G0AACICI,Azathioprine 25mg/5ml oral suspension (Drug Tariff Special Order),Azathioprine 25mg/5ml oral suspension,suspension.oral
+amp,8282011000001100,8260111000001100,0802010G0AACJCJ,Azathioprine 100mg/5ml oral suspension (Drug Tariff Special Order),Azathioprine 100mg/5ml oral suspension,suspension.oral
+amp,8283911000001108,8268111000001103,0802010G0AACKCK,Azathioprine 20mg/5ml oral suspension (Drug Tariff Special Order),Azathioprine 20mg/5ml oral suspension,suspension.oral
+amp,31002111000001104,31000011000001104,0802010G0AACLCL,Azathioprine 65mg/5ml oral suspension (Special Order),Azathioprine 65mg/5ml oral suspension,suspension.oral
+amp,327071005,284711000001102,0802010G0BCAAAD,Imuran 25mg tablets (Aspen Pharma Trading Ltd),Imuran 25mg tablets,tablet.oral
+amp,327070006,675711000001108,0802010G0BCABAE,Imuran 50mg tablets (Aspen Pharma Trading Ltd),Imuran 50mg tablets,tablet.oral
+amp,327072003,906711000001106,0802010G0BCACAA,Imuran 50mg powder for solution for injection vials (Aspen Pharma Trading Ltd),Imuran 50mg powder for solution for injection vials,solutioninjection.intravenous
+amp,327070006,318611000001108,0802010G0BEAAAE,Immunoprin 50mg tablets (Ashbourne Pharmaceuticals Ltd),Immunoprin 50mg tablets,tablet.oral
+amp,327070006,26658011000001100,0802010G0BHAAAE,Azapress 50mg tablets (Ennogen Pharma Ltd),Azapress 50mg tablets,tablet.oral
+amp,327104000,18164311000001107,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Actavis UK Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,18310411000001102,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (A A H Pharmaceuticals Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,18342411000001105,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Alliance Healthcare (Distribution) Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,18464211000001103,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Accord Healthcare Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,18477711000001105,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Dr Reddy's Laboratories (UK) Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,18622711000001109,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Phoenix Healthcare Distribution Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,18728911000001102,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Sigma Pharmaceuticals Plc),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,20312011000001106,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Sandoz Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,21808611000001106,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Waymade Healthcare Plc),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,21842611000001101,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Cubic Pharmaceuticals Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,22352411000001100,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (AM Distributions (Yorkshire) Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,22409911000001101,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (DE Pharmaceuticals),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,22605811000001106,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Colorama Pharmaceuticals Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,23218811000001105,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (J M McGill Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,23958811000001104,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Niche Pharma Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,24028011000001102,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (CST Pharma Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,24571011000001105,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Mawdsley-Brooks & Company Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,25881711000001105,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Icarus Pharmaceuticals Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327104000,32424411000001104,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules (Kent Pharmaceuticals Ltd),Mycophenolate mofetil 250mg capsules,capsule.oral
+amp,327106003,18164511000001101,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Actavis UK Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,18310611000001104,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (A A H Pharmaceuticals Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,18342611000001108,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Alliance Healthcare (Distribution) Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,18412111000001102,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Mylan),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,18464411000001104,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Accord Healthcare Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,18477511000001100,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Dr Reddy's Laboratories (UK) Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,18622911000001106,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Phoenix Healthcare Distribution Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,18730111000001104,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Sigma Pharmaceuticals Plc),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,19429811000001107,0802010M0AAABAB,Mycophenolate motefil 500mg tablets (Wockhardt UK Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,20312211000001101,0802010M0AAABAB,Mycophenolate motefil 500mg tablets (Sandoz Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,21808811000001105,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Waymade Healthcare Plc),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,22464411000001109,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Arrow Generics Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,24405511000001101,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (DE Pharmaceuticals),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,30849511000001103,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Mawdsley-Brooks & Company Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,32424611000001101,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Kent Pharmaceuticals Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,327106003,35725211000001106,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets (Tillomed Laboratories Ltd),Mycophenolate mofetil 500mg tablets,tablet.oral
+amp,13000511000001100,12986311000001108,0802010M0AAACAC,Mycophenolate mofetil 250mg/5ml oral suspension (Special Order),Mycophenolate mofetil 250mg/5ml oral suspension,suspension.oral
+amp,13000611000001101,12987211000001103,0802010M0AAADAD,Mycophenolate mofetil 300mg/5ml oral suspension (Special Order),Mycophenolate mofetil 300mg/5ml oral suspension,suspension.oral
+amp,13000711000001105,12988111000001105,0802010M0AAAEAE,Mycophenolate mofetil 500mg/5ml oral suspension (Special Order),Mycophenolate mofetil 500mg/5ml oral suspension,suspension.oral
+amp,13000311000001106,12984311000001102,0802010M0AAAGAG,Mycophenolate mofetil 100mg/5ml oral suspension (Special Order),Mycophenolate mofetil 100mg/5ml oral suspension,suspension.oral
+amp,327109005,33341411000001104,0802010M0AAAHAH,Mycophenolate mofetil 500mg powder for concentrate for solution for infusion vials (Accord Healthcare Ltd),Mycophenolate mofetil 500mg inf vials,solutioninfusion.intravenous
+amp,13000411000001104,12984911000001101,0802010M0AAAIAI,Mycophenolate mofetil 125mg/5ml oral suspension (Special Order),Mycophenolate mofetil 125mg/5ml oral suspension,suspension.oral
+amp,327104000,3659911000001102,0802010M0BBAAAA,CellCept 250mg capsules (Roche Products Ltd),CellCept 250mg capsules,capsule.oral
+amp,327106003,3661611000001102,0802010M0BBABAB,CellCept 500mg tablets (Roche Products Ltd),CellCept 500mg tablets,tablet.oral
+amp,327109005,4346311000001104,0802010M0BBADAH,CellCept 500mg powder for solution for infusion vials (Roche Products Ltd),CellCept 500mg powder for solution for infusion vials,solutioninfusion.intravenous
+amp,4897811000001103,4881311000001100,0802010M0BBAEAJ,CellCept 1g/5ml oral suspension (Roche Products Ltd),CellCept 1g/5ml oral suspension,suspension.oral
+amp,4897811000001103,4881311000001100,0802010M0BBAEAJ,CellCept 1g/5ml oral suspension (Roche Products Ltd),CellCept 1g/5ml oral suspension,suspension.gastroenteral
+amp,327106003,18163911000001106,0802010M0BCAAAB,Myfenax 500mg tablets (Teva UK Ltd),Myfenax 500mg tablets,tablet.oral
+amp,327104000,18164111000001105,0802010M0BCABAA,Myfenax 250mg capsules (Teva UK Ltd),Myfenax 250mg capsules,capsule.oral
+amp,327104000,18166911000001100,0802010M0BDAAAA,Arzip 250mg capsules (Zentiva),Arzip 250mg capsules,capsule.oral
+amp,327106003,18166711000001102,0802010M0BDABAB,Arzip 500mg tablets (Zentiva),Arzip 500mg tablets,tablet.oral
+amp,327082002,16550511000001102,0802020G0AAACAC,Ciclosporin 25mg capsules (A A H Pharmaceuticals Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,17856611000001101,0802020G0AAACAC,Ciclosporin 25mg capsules (Phoenix Healthcare Distribution Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,21263111000001101,0802020G0AAACAC,Ciclosporin 25mg capsules (Sigma Pharmaceuticals Plc),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,21835711000001102,0802020G0AAACAC,Ciclosporin 25mg capsules (Cubic Pharmaceuticals Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,22408311000001108,0802020G0AAACAC,Ciclosporin 25mg capsules (DE Pharmaceuticals),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,22604211000001109,0802020G0AAACAC,Ciclosporin 25mg capsules (Colorama Pharmaceuticals Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,23428411000001104,0802020G0AAACAC,Ciclosporin 25mg capsules (J M McGill Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,23936511000001102,0802020G0AAACAC,Ciclosporin 25mg capsules (Niche Pharma Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,24157711000001107,0802020G0AAACAC,Ciclosporin 25mg capsules (Ethigen Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,24519911000001104,0802020G0AAACAC,Ciclosporin 25mg capsules (Mawdsley-Brooks & Company Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,25694011000001104,0802020G0AAACAC,Ciclosporin 25mg capsules (Icarus Pharmaceuticals Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,26021211000001109,0802020G0AAACAC,Ciclosporin 25mg capsules (Ennogen Healthcare Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327082002,28122711000001107,0802020G0AAACAC,Ciclosporin 25mg capsules (Pharma-z Ltd),Ciclosporin 25mg capsules,capsule.oral
+amp,327083007,16550911000001109,0802020G0AAADAD,Ciclosporin 100mg capsules (A A H Pharmaceuticals Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,17857011000001106,0802020G0AAADAD,Ciclosporin 100mg capsules (Phoenix Healthcare Distribution Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,21263511000001105,0802020G0AAADAD,Ciclosporin 100mg capsules (Sigma Pharmaceuticals Plc),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,21835311000001101,0802020G0AAADAD,Ciclosporin 100mg capsules (Cubic Pharmaceuticals Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,22408711000001107,0802020G0AAADAD,Ciclosporin 100mg capsules (DE Pharmaceuticals),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,22604011000001104,0802020G0AAADAD,Ciclosporin 100mg capsules (Colorama Pharmaceuticals Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,23428211000001103,0802020G0AAADAD,Ciclosporin 100mg capsules (J M McGill Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,23936311000001108,0802020G0AAADAD,Ciclosporin 100mg capsules (Niche Pharma Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,24113511000001103,0802020G0AAADAD,Ciclosporin 100mg capsules (Lexon (UK) Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,24158111000001107,0802020G0AAADAD,Ciclosporin 100mg capsules (Ethigen Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,24520311000001104,0802020G0AAADAD,Ciclosporin 100mg capsules (Mawdsley-Brooks & Company Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,25695111000001104,0802020G0AAADAD,Ciclosporin 100mg capsules (Icarus Pharmaceuticals Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,26019111000001108,0802020G0AAADAD,Ciclosporin 100mg capsules (Ennogen Healthcare Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327083007,28122211000001100,0802020G0AAADAD,Ciclosporin 100mg capsules (Pharma-z Ltd),Ciclosporin 100mg capsules,capsule.oral
+amp,327085000,16550711000001107,0802020G0AAAFAF,Ciclosporin 50mg capsules (A A H Pharmaceuticals Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,17856811000001102,0802020G0AAAFAF,Ciclosporin 50mg capsules (Phoenix Healthcare Distribution Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,21263311000001104,0802020G0AAAFAF,Ciclosporin 50mg capsules (Sigma Pharmaceuticals Plc),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,21835511000001107,0802020G0AAAFAF,Ciclosporin 50mg capsules (Cubic Pharmaceuticals Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,22408511000001102,0802020G0AAAFAF,Ciclosporin 50mg capsules (DE Pharmaceuticals),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,22604411000001108,0802020G0AAAFAF,Ciclosporin 50mg capsules (Colorama Pharmaceuticals Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,23428611000001101,0802020G0AAAFAF,Ciclosporin 50mg capsules (J M McGill Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,23936711000001107,0802020G0AAAFAF,Ciclosporin 50mg capsules (Niche Pharma Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,24157911000001109,0802020G0AAAFAF,Ciclosporin 50mg capsules (Ethigen Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,24520111000001101,0802020G0AAAFAF,Ciclosporin 50mg capsules (Mawdsley-Brooks & Company Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,25694711000001102,0802020G0AAAFAF,Ciclosporin 50mg capsules (Icarus Pharmaceuticals Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,26022211000001102,0802020G0AAAFAF,Ciclosporin 50mg capsules (Ennogen Healthcare Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,327085000,28123311000001103,0802020G0AAAFAF,Ciclosporin 50mg capsules (Pharma-z Ltd),Ciclosporin 50mg capsules,capsule.oral
+amp,36139311000001109,3490711000001103,0802020G0BBAAAG,Sandimmun 100mg/ml oral solution (Novartis Pharmaceuticals UK Ltd),Sandimmun 100mg/ml oral solution,solution.oral
+amp,36139511000001103,88611000001108,0802020G0BBABAE,Sandimmun 250mg/5ml concentrate for solution for infusion ampoules (Novartis Pharmaceuticals UK Ltd),Sandimmun 250mg/5ml concentrate for inf ampoules,solutioninfusion.intravenous
+amp,36140311000001101,911911000001101,0802020G0BBACAA,Sandimmun 50mg/1ml concentrate for solution for infusion ampoules (Novartis Pharmaceuticals UK Ltd),Sandimmun 50mg/1ml concentrate for inf ampoules,solutioninfusion.intravenous
+amp,327082002,347811000001104,0802020G0BBADAC,Sandimmun 25mg capsules (Novartis Pharmaceuticals UK Ltd),Sandimmun 25mg capsules,capsule.oral
+amp,327083007,172611000001109,0802020G0BBAEAD,Sandimmun 100mg capsules (Novartis Pharmaceuticals UK Ltd),Sandimmun 100mg capsules,capsule.oral
+amp,327085000,638611000001108,0802020G0BBAFAF,Sandimmun 50mg capsules (Novartis Pharmaceuticals UK Ltd),Sandimmun 50mg capsules,capsule.oral
+amp,36139311000001109,3490411000001109,0802020G0BCAAAG,Neoral 100mg/ml oral solution (Novartis Pharmaceuticals UK Ltd),Neoral 100mg/ml oral solution,solution.oral
+amp,327082002,660811000001100,0802020G0BCABAC,Neoral 25mg capsules (Novartis Pharmaceuticals UK Ltd),Neoral 25mg capsules,capsule.oral
+amp,327085000,319211000001101,0802020G0BCACAF,Neoral 50mg capsules (Novartis Pharmaceuticals UK Ltd),Neoral 50mg capsules,capsule.oral
+amp,327083007,456811000001107,0802020G0BCADAD,Neoral 100mg capsules (Novartis Pharmaceuticals UK Ltd),Neoral 100mg capsules,capsule.oral
+amp,327090002,303511000001103,0802020G0BCAEAH,Neoral 10mg capsules (Novartis Pharmaceuticals UK Ltd),Neoral 10mg capsules,capsule.oral
+amp,327082002,16306511000001107,0802020G0BEAAAC,Deximune 25mg capsules (Dexcel-Pharma Ltd),Deximune 25mg capsules,capsule.oral
+amp,327085000,16306711000001102,0802020G0BEABAF,Deximune 50mg capsules (Dexcel-Pharma Ltd),Deximune 50mg capsules,capsule.oral
+amp,327083007,16306911000001100,0802020G0BEACAD,Deximune 100mg capsules (Dexcel-Pharma Ltd),Deximune 100mg capsules,capsule.oral
+amp,327082002,17666911000001105,0802020G0BFAAAC,Capimune 25mg capsules (Mylan),Capimune 25mg capsules,capsule.oral
+amp,327085000,17665611000001109,0802020G0BFABAF,Capimune 50mg capsules (Mylan),Capimune 50mg capsules,capsule.oral
+amp,327083007,17665811000001108,0802020G0BFACAD,Capimune 100mg capsules (Mylan),Capimune 100mg capsules,capsule.oral
+amp,327083007,19376911000001102,0802020G0BGAAAD,Capsorin 100mg capsules (Morningside Healthcare Ltd),Capsorin 100mg capsules,capsule.oral
+amp,327085000,19377111000001102,0802020G0BGABAF,Capsorin 50mg capsules (Morningside Healthcare Ltd),Capsorin 50mg capsules,capsule.oral
+amp,327082002,19377311000001100,0802020G0BGACAC,Capsorin 25mg capsules (Morningside Healthcare Ltd),Capsorin 25mg capsules,capsule.oral
+amp,36139311000001109,35206711000001106,0802020G0BGADAG,Capsorin 100mg/ml oral solution (Morningside Healthcare Ltd),Capsorin 100mg/ml oral solution,solution.oral
+amp,327082002,28335911000001108,0802020G0BHAAAC,Vanquoral 25mg capsules (Teva UK Ltd),Vanquoral 25mg capsules,capsule.oral
+amp,327085000,28337411000001106,0802020G0BHABAF,Vanquoral 50mg capsules (Teva UK Ltd),Vanquoral 50mg capsules,capsule.oral
+amp,327083007,28338911000001102,0802020G0BHACAD,Vanquoral 100mg capsules (Teva UK Ltd),Vanquoral 100mg capsules,capsule.oral
+amp,327090002,29934611000001109,0802020G0BHADAH,Vanquoral 10mg capsules (Teva UK Ltd),Vanquoral 10mg capsules,capsule.oral
+amp,330026007,483011000001100,1001030F0AAAEAE,Penicillamine 125mg tablets (Alliance Healthcare (Distribution) Ltd),Penicillamine 125mg tablets,tablet.oral
+amp,330026007,498611000001101,1001030F0AAAEAE,Penicillamine 125mg tablets (Kent Pharmaceuticals Ltd),Penicillamine 125mg tablets,tablet.oral
+amp,330026007,690211000001104,1001030F0AAAEAE,Penicillamine 125mg tablets (Teva UK Ltd),Penicillamine 125mg tablets,tablet.oral
+amp,330026007,745811000001108,1001030F0AAAEAE,Penicillamine 125mg tablets (Mylan),Penicillamine 125mg tablets,tablet.oral
+amp,330026007,841011000001102,1001030F0AAAEAE,Penicillamine 125mg tablets (Actavis UK Ltd),Penicillamine 125mg tablets,tablet.oral
+amp,330026007,900111000001107,1001030F0AAAEAE,Penicillamine 125mg tablets (A A H Pharmaceuticals Ltd),Penicillamine 125mg tablets,tablet.oral
+amp,330026007,17953911000001107,1001030F0AAAEAE,Penicillamine 125mg tablets (Phoenix Healthcare Distribution Ltd),Penicillamine 125mg tablets,tablet.oral
+amp,330026007,21842511000001100,1001030F0AAAEAE,Penicillamine 125mg tablets (Waymade Healthcare Plc),Penicillamine 125mg tablets,tablet.oral
+amp,330026007,29983111000001105,1001030F0AAAEAE,Penicillamine 125mg tablets (Sigma Pharmaceuticals Plc),Penicillamine 125mg tablets,tablet.oral
+amp,330026007,30074711000001109,1001030F0AAAEAE,Penicillamine 125mg tablets (DE Pharmaceuticals),Penicillamine 125mg tablets,tablet.oral
+amp,330027003,41411000001107,1001030F0AAAFAF,Penicillamine 250mg tablets (Mylan),Penicillamine 250mg tablets,tablet.oral
+amp,330027003,336111000001109,1001030F0AAAFAF,Penicillamine 250mg tablets (A A H Pharmaceuticals Ltd),Penicillamine 250mg tablets,tablet.oral
+amp,330027003,366611000001106,1001030F0AAAFAF,Penicillamine 250mg tablets (Teva UK Ltd),Penicillamine 250mg tablets,tablet.oral
+amp,330027003,764611000001101,1001030F0AAAFAF,Penicillamine 250mg tablets (Alliance Healthcare (Distribution) Ltd),Penicillamine 250mg tablets,tablet.oral
+amp,330027003,795511000001101,1001030F0AAAFAF,Penicillamine 250mg tablets (Actavis UK Ltd),Penicillamine 250mg tablets,tablet.oral
+amp,330027003,939011000001105,1001030F0AAAFAF,Penicillamine 250mg tablets (Kent Pharmaceuticals Ltd),Penicillamine 250mg tablets,tablet.oral
+amp,330027003,17954111000001106,1001030F0AAAFAF,Penicillamine 250mg tablets (Phoenix Healthcare Distribution Ltd),Penicillamine 250mg tablets,tablet.oral
+amp,330027003,21842911000001107,1001030F0AAAFAF,Penicillamine 250mg tablets (Waymade Healthcare Plc),Penicillamine 250mg tablets,tablet.oral
+amp,330027003,30074911000001106,1001030F0AAAFAF,Penicillamine 250mg tablets (DE Pharmaceuticals),Penicillamine 250mg tablets,tablet.oral
+amp,13005111000001101,12986711000001107,1001030F0AAAIAI,Penicillamine 250mg/5ml oral solution (Special Order),Penicillamine 250mg/5ml oral solution,solution.oral
+amp,13005011000001102,12986111000001106,1001030F0AAAJAJ,Penicillamine 125mg/5ml oral solution (Special Order),Penicillamine 125mg/5ml oral solution,solution.oral
+amp,13005211000001107,12987611000001101,1001030F0AAAKAK,Penicillamine 50mg/5ml oral solution (Special Order),Penicillamine 50mg/5ml oral solution,solution.oral
+amp,33596211000001104,33579311000001108,1001030F0AAALAL,Penicillamine 250mg/5ml oral suspension (Special Order),Penicillamine 250mg/5ml oral suspension,suspension.oral
+amp,330026007,98511000001108,1001030F0BBABAE,Distamine 125mg tablets (Alliance Pharmaceuticals Ltd),Distamine 125mg tablets,tablet.oral
+amp,330027003,13711000001108,1001030F0BBACAF,Distamine 250mg tablets (Alliance Pharmaceuticals Ltd),Distamine 250mg tablets,tablet.oral
+amp,37281111000001101,37270111000001102,1001030F0BDAAAM,Metalcaptase gastro-resistant 150mg tablets (Imported (Germany)),Metalcaptase gastro-resistant 150mg tablets,tabletgastro-resistant.oral
+amp,37281511000001105,37270911000001104,1001030F0BDABAN,Metalcaptase gastro-resistant 300mg tablets (Imported (Germany)),Metalcaptase gastro-resistant 300mg tablets,tabletgastro-resistant.oral
+amp,35924511000001100,679611000001101,1001030J0BBACAC,Myocrisin 10mg/0.5ml solution for injection ampoules (Sanofi),Myocrisin 10mg/0.5ml solution for injection ampoules,solutioninjection.intramuscular-deep
+amp,35924611000001101,494311000001101,1001030J0BBADAD,Myocrisin 20mg/0.5ml solution for injection ampoules (Sanofi),Myocrisin 20mg/0.5ml solution for injection ampoules,solutioninjection.intramuscular-deep
+amp,35924711000001105,786611000001108,1001030J0BBAEAE,Myocrisin 50mg/0.5ml solution for injection ampoules (Sanofi),Myocrisin 50mg/0.5ml solution for injection ampoules,solutioninjection.intramuscular-deep
+amp,330057007,18172711000001109,1001030L0AAAAAA,Leflunomide 10mg tablets (medac UK),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,18342011000001101,1001030L0AAAAAA,Leflunomide 10mg tablets (Alliance Healthcare (Distribution) Ltd),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,18756811000001107,1001030L0AAAAAA,Leflunomide 10mg tablets (A A H Pharmaceuticals Ltd),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,18810411000001100,1001030L0AAAAAA,Leflunomide 10mg tablets (Teva UK Ltd),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,19783111000001102,1001030L0AAAAAA,Leflunomide 10mg tablets (Actavis UK Ltd),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,20290211000001108,1001030L0AAAAAA,Leflunomide 10mg tablets (Sandoz Ltd),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,20839511000001103,1001030L0AAAAAA,Leflunomide 10mg tablets (Aspire Pharma Ltd),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,20914411000001104,1001030L0AAAAAA,Leflunomide 10mg tablets (Zentiva),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,22063011000001107,1001030L0AAAAAA,Leflunomide 10mg tablets (Waymade Healthcare Plc),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,24116711000001101,1001030L0AAAAAA,Leflunomide 10mg tablets (Morningside Healthcare Ltd),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,24363111000001104,1001030L0AAAAAA,Leflunomide 10mg tablets (DE Pharmaceuticals),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,29884411000001106,1001030L0AAAAAA,Leflunomide 10mg tablets (Sigma Pharmaceuticals Plc),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,30219011000001109,1001030L0AAAAAA,Leflunomide 10mg tablets (Mawdsley-Brooks & Company Ltd),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,33592411000001101,1001030L0AAAAAA,Leflunomide 10mg tablets (Mylan),Leflunomide 10mg tablets,tablet.oral
+amp,330057007,37574311000001101,1001030L0AAAAAA,Leflunomide 10mg tablets (Relonchem Ltd),Leflunomide 10mg tablets,tablet.oral
+amp,330058002,18172911000001106,1001030L0AAABAB,Leflunomide 20mg tablets (medac UK),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,18342211000001106,1001030L0AAABAB,Leflunomide 20mg tablets (Alliance Healthcare (Distribution) Ltd),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,18757211000001108,1001030L0AAABAB,Leflunomide 20mg tablets (A A H Pharmaceuticals Ltd),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,18812611000001101,1001030L0AAABAB,Leflunomide 20mg tablets (Teva UK Ltd),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,19783511000001106,1001030L0AAABAB,Leflunomide 20mg tablets (Actavis UK Ltd),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,20290411000001107,1001030L0AAABAB,Leflunomide 20mg tablets (Sandoz Ltd),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,20839811000001100,1001030L0AAABAB,Leflunomide 20mg tablets (Aspire Pharma Ltd),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,20914611000001101,1001030L0AAABAB,Leflunomide 20mg tablets (Zentiva),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,22063211000001102,1001030L0AAABAB,Leflunomide 20mg tablets (Waymade Healthcare Plc),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,24116911000001104,1001030L0AAABAB,Leflunomide 20mg tablets (Morningside Healthcare Ltd),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,24363311000001102,1001030L0AAABAB,Leflunomide 20mg tablets (DE Pharmaceuticals),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,29884611000001109,1001030L0AAABAB,Leflunomide 20mg tablets (Sigma Pharmaceuticals Plc),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,33592811000001104,1001030L0AAABAB,Leflunomide 20mg tablets (Mylan),Leflunomide 20mg tablets,tablet.oral
+amp,330058002,37574511000001107,1001030L0AAABAB,Leflunomide 20mg tablets (Relonchem Ltd),Leflunomide 20mg tablets,tablet.oral
+amp,24408011000001101,24376811000001107,1001030L0AAADAD,Leflunomide 15mg tablets (medac UK),Leflunomide 15mg tablets,tablet.oral
+amp,24408011000001101,24775211000001101,1001030L0AAADAD,Leflunomide 15mg tablets (Alliance Healthcare (Distribution) Ltd),Leflunomide 15mg tablets,tablet.oral
+amp,330057007,499111000001102,1001030L0BBAAAA,Arava 10mg tablets (Sanofi),Arava 10mg tablets,tablet.oral
+amp,330058002,62411000001105,1001030L0BBABAB,Arava 20mg tablets (Sanofi),Arava 20mg tablets,tablet.oral
+amp,330059005,404111000001101,1001030L0BBACAC,Arava 100mg tablets (Sanofi),Arava 100mg tablets,tablet.oral
+amp,12817011000001104,12800611000001105,1001030U0AAAAAA,Methotrexate 25mg/5ml oral suspension (Special Order),Methotrexate 25mg/5ml oral liquid,suspension.oral
+amp,12816911000001103,12800911000001104,1001030U0AAAAAA,Methotrexate 25mg/5ml oral solution (Special Order),Methotrexate 25mg/5ml oral liquid,solution.oral
+amp,326874007,167911000001107,1001030U0AAABAB,Methotrexate 2.5mg tablets (Kent Pharmaceuticals Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,201811000001107,1001030U0AAABAB,Methotrexate 2.5mg tablets (A A H Pharmaceuticals Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,383711000001107,1001030U0AAABAB,Methotrexate 2.5mg tablets (Pfizer Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,683611000001105,1001030U0AAABAB,Methotrexate 2.5mg tablets (Advanz Pharma),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,706911000001103,1001030U0AAABAB,Methotrexate 2.5mg tablets (Alliance Healthcare (Distribution) Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,11026411000001101,1001030U0AAABAB,Methotrexate 2.5mg tablets (Wockhardt UK Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,14962511000001107,1001030U0AAABAB,Methotrexate 2.5mg tablets (Orion Pharma (UK) Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,20310611000001100,1001030U0AAABAB,Methotrexate 2.5mg tablets (Sandoz Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,21796211000001108,1001030U0AAABAB,Methotrexate 2.5mg tablets (Waymade Healthcare Plc),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,22222311000001101,1001030U0AAABAB,Methotrexate 2.5mg tablets (Teva UK Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,24136011000001106,1001030U0AAABAB,Methotrexate 2.5mg tablets (Morningside Healthcare Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,24381611000001105,1001030U0AAABAB,Methotrexate 2.5mg tablets (DE Pharmaceuticals),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,29918911000001101,1001030U0AAABAB,Methotrexate 2.5mg tablets (Sigma Pharmaceuticals Plc),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,34956611000001101,1001030U0AAABAB,Methotrexate 2.5mg tablets (Almus Pharmaceuticals Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326874007,37273211000001103,1001030U0AAABAB,Methotrexate 2.5mg tablets (Mawdsley-Brooks & Company Ltd),Methotrexate 2.5mg tablets,tablet.oral
+amp,326875008,136411000001105,1001030U0AAACAC,Methotrexate 10mg tablets (Alliance Healthcare (Distribution) Ltd),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,191111000001100,1001030U0AAACAC,Methotrexate 10mg tablets (Pfizer Ltd),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,928011000001103,1001030U0AAACAC,Methotrexate 10mg tablets (A A H Pharmaceuticals Ltd),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,11026611000001103,1001030U0AAACAC,Methotrexate 10mg tablets (Wockhardt UK Ltd),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,14963911000001107,1001030U0AAACAC,Methotrexate 10mg tablets (Orion Pharma (UK) Ltd),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,15109411000001107,1001030U0AAACAC,Methotrexate 10mg tablets (Sigma Pharmaceuticals Plc),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,20310811000001101,1001030U0AAACAC,Methotrexate 10mg tablets (Sandoz Ltd),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,21796511000001106,1001030U0AAACAC,Methotrexate 10mg tablets (Waymade Healthcare Plc),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,22222111000001103,1001030U0AAACAC,Methotrexate 10mg tablets (Teva UK Ltd),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,24135711000001100,1001030U0AAACAC,Methotrexate 10mg tablets (Morningside Healthcare Ltd),Methotrexate 10mg tablets,tablet.oral
+amp,326875008,24381411000001107,1001030U0AAACAC,Methotrexate 10mg tablets (DE Pharmaceuticals),Methotrexate 10mg tablets,tablet.oral
+amp,8665611000001103,8622711000001105,1001030U0AAAEAE,Methotrexate 2.5mg/5ml oral solution (Special Order),Methotrexate 2.5mg/5ml oral liquid,solution.oral
+amp,8665711000001107,8624211000001107,1001030U0AAAEAE,Methotrexate 2.5mg/5ml oral suspension (Special Order),Methotrexate 2.5mg/5ml oral liquid,suspension.oral
+amp,8665811000001104,8625911000001104,1001030U0AAAFAF,Methotrexate 5mg/5ml oral solution (Special Order),Methotrexate 5mg/5ml oral liquid,solution.oral
+amp,8665911000001109,8626511000001104,1001030U0AAAFAF,Methotrexate 5mg/5ml oral suspension (Special Order),Methotrexate 5mg/5ml oral liquid,suspension.oral
+amp,8664911000001105,8618111000001102,1001030U0AAAHAH,Methotrexate 10mg/5ml oral solution (Special Order),Methotrexate 10mg/5ml oral liquid,solution.oral
+amp,8665011000001105,8618811000001109,1001030U0AAAHAH,Methotrexate 10mg/5ml oral suspension (Special Order),Methotrexate 10mg/5ml oral liquid,suspension.oral
+amp,8666011000001101,8625811000001109,1001030U0AAAIAI,Methotrexate 7.5mg/5ml oral solution (Special Order),Methotrexate 7.5mg/5ml oral liquid,solution.oral
+amp,8666111000001100,8626411000001103,1001030U0AAAIAI,Methotrexate 7.5mg/5ml oral suspension (Special Order),Methotrexate 7.5mg/5ml oral liquid,suspension.oral
+amp,12817211000001109,12801211000001102,1001030U0AAAJAJ,Methotrexate 3.75mg/5ml oral suspension (Special Order),Methotrexate 3.75mg/5ml oral liquid,suspension.oral
+amp,12817111000001103,12801511000001104,1001030U0AAAJAJ,Methotrexate 3.75mg/5ml oral solution (Special Order),Methotrexate 3.75mg/5ml oral liquid,solution.oral
+amp,8665111000001106,8619311000001106,1001030U0AAAKAK,Methotrexate 12.5mg/5ml oral solution (Special Order),Methotrexate 12.5mg/5ml oral liquid,solution.oral
+amp,8665211000001100,8619611000001101,1001030U0AAAKAK,Methotrexate 12.5mg/5ml oral suspension (Special Order),Methotrexate 12.5mg/5ml oral liquid,suspension.oral
+amp,12814611000001100,12796411000001109,1001030U0AAALAL,Methotrexate 1mg/5ml oral suspension (Special Order),Methotrexate 1mg/5ml oral liquid,suspension.oral
+amp,12814511000001104,12796711000001103,1001030U0AAALAL,Methotrexate 1mg/5ml oral solution (Special Order),Methotrexate 1mg/5ml oral liquid,solution.oral
+amp,12815711000001108,12805111000001105,1001030U0AAAMAM,Methotrexate 7mg/5ml oral suspension (Special Order),Methotrexate 7mg/5ml oral liquid,suspension.oral
+amp,12815611000001104,12805711000001106,1001030U0AAAMAM,Methotrexate 7mg/5ml oral solution (Special Order),Methotrexate 7mg/5ml oral liquid,solution.oral
+amp,12815111000001107,12802611000001106,1001030U0AAANAN,Methotrexate 50mg/5ml oral suspension (Special Order),Methotrexate 50mg/5ml oral liquid,suspension.oral
+amp,12817511000001107,12803011000001108,1001030U0AAANAN,Methotrexate 50mg/5ml oral solution (Special Order),Methotrexate 50mg/5ml oral liquid,solution.oral
+amp,12815911000001105,12806311000001102,1001030U0AAAPAP,Methotrexate 8mg/5ml oral suspension (Special Order),Methotrexate 8mg/5ml oral liquid,suspension.oral
+amp,12815811000001100,12806611000001107,1001030U0AAAPAP,Methotrexate 8mg/5ml oral solution (Special Order),Methotrexate 8mg/5ml oral liquid,solution.oral
+amp,12815511000001103,12804011000001105,1001030U0AAAQAQ,Methotrexate 750micrograms/5ml oral suspension (Special Order),Methotrexate 750micrograms/5ml oral liquid,suspension.oral
+amp,12815411000001102,12804611000001103,1001030U0AAAQAQ,Methotrexate 750micrograms/5ml oral solution (Special Order),Methotrexate 750micrograms/5ml oral liquid,solution.oral
+amp,8665311000001108,8619911000001107,1001030U0AAARAR,Methotrexate 15mg/5ml oral solution (Special Order),Methotrexate 15mg/5ml oral liquid,solution.oral
+amp,8665411000001101,8620311000001107,1001030U0AAARAR,Methotrexate 15mg/5ml oral suspension (Special Order),Methotrexate 15mg/5ml oral liquid,suspension.oral
+amp,12814011000001107,12793711000001105,1001030U0AAASAS,Methotrexate 12mg/5ml oral suspension (Special Order),Methotrexate 12mg/5ml oral liquid,suspension.oral
+amp,12813911000001109,12794011000001105,1001030U0AAASAS,Methotrexate 12mg/5ml oral solution (Special Order),Methotrexate 12mg/5ml oral liquid,solution.oral
+amp,12814211000001102,12794311000001108,1001030U0AAATAT,Methotrexate 17.5mg/5ml oral suspension (Special Order),Methotrexate 17.5mg/5ml oral liquid,suspension.oral
+amp,12814111000001108,12794611000001103,1001030U0AAATAT,Methotrexate 17.5mg/5ml oral solution (Special Order),Methotrexate 17.5mg/5ml oral liquid,solution.oral
+amp,12817411000001108,12801911000001106,1001030U0AAAUAU,Methotrexate 4mg/5ml oral suspension (Special Order),Methotrexate 4mg/5ml oral liquid,suspension.oral
+amp,12817311000001101,12802211000001109,1001030U0AAAUAU,Methotrexate 4mg/5ml oral solution (Special Order),Methotrexate 4mg/5ml oral liquid,solution.oral
+amp,12814811000001101,12798211000001106,1001030U0AAAVAV,Methotrexate 20mg/5ml oral suspension (Special Order),Methotrexate 20mg/5ml oral liquid,suspension.oral
+amp,12814711000001109,12798611000001108,1001030U0AAAVAV,Methotrexate 20mg/5ml oral solution (Special Order),Methotrexate 20mg/5ml oral liquid,solution.oral
+amp,12815311000001109,12803311000001106,1001030U0AAAWAW,Methotrexate 6mg/5ml oral suspension (Special Order),Methotrexate 6mg/5ml oral liquid,suspension.oral
+amp,12815211000001101,12803611000001101,1001030U0AAAWAW,Methotrexate 6mg/5ml oral solution (Special Order),Methotrexate 6mg/5ml oral liquid,solution.oral
+amp,12814411000001103,12795811000001103,1001030U0AAAXAX,Methotrexate 18mg/5ml oral suspension (Special Order),Methotrexate 18mg/5ml oral liquid,suspension.oral
+amp,12814311000001105,12796111000001104,1001030U0AAAXAX,Methotrexate 18mg/5ml oral solution (Special Order),Methotrexate 18mg/5ml oral liquid,solution.oral
+amp,12815011000001106,12799711000001108,1001030U0AAAYAY,Methotrexate 22.5mg/5ml oral suspension (Special Order),Methotrexate 22.5mg/5ml oral liquid,suspension.oral
+amp,12814911000001106,12800111000001102,1001030U0AAAYAY,Methotrexate 22.5mg/5ml oral solution (Special Order),Methotrexate 22.5mg/5ml oral liquid,solution.oral
+amp,30799911000001104,30595111000001100,1001030U0AACFCF,Methotrexate 2mg/ml oral solution sugar free (Rosemont Pharmaceuticals Ltd),Methotrexate 2mg/ml oral solution sugar free,solution.oral
+amp,30799911000001104,30985211000001103,1001030U0AACFCF,Methotrexate 2mg/ml oral solution sugar free (Alliance Healthcare (Distribution) Ltd),Methotrexate 2mg/ml oral solution sugar free,solution.oral
+amp,30799911000001104,31065011000001106,1001030U0AACFCF,Methotrexate 2mg/ml oral solution sugar free (A A H Pharmaceuticals Ltd),Methotrexate 2mg/ml oral solution sugar free,solution.oral
+amp,30799911000001104,37450711000001102,1001030U0AACFCF,Methotrexate 2mg/ml oral solution sugar free (DE Pharmaceuticals),Methotrexate 2mg/ml oral solution sugar free,solution.oral
+amp,326874007,644711000001108,1001030U0BDAAAB,Maxtrex 2.5mg tablets (Pfizer Ltd),Maxtrex 2.5mg tablets,tablet.oral
+amp,326875008,322011000001106,1001030U0BDABAC,Maxtrex 10mg tablets (Pfizer Ltd),Maxtrex 10mg tablets,tablet.oral
+amp,10676011000001109,10672611000001103,1001030U0BEAAAZ,Metoject 7.5mg/0.75ml solution for injection pre-filled syringes (medac UK),Metoject 7.5mg/0.75ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,10676011000001109,10672611000001103,1001030U0BEAAAZ,Metoject 7.5mg/0.75ml solution for injection pre-filled syringes (medac UK),Metoject 7.5mg/0.75ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,10676011000001109,10672611000001103,1001030U0BEAAAZ,Metoject 7.5mg/0.75ml solution for injection pre-filled syringes (medac UK),Metoject 7.5mg/0.75ml inj pre-filled syringes,solutioninjection.intravenous
+amp,10675811000001106,10673511000001109,1001030U0BEABBA,Metoject 20mg/2ml solution for injection pre-filled syringes (medac UK),Metoject 20mg/2ml solution for injection pre-filled syringes,solutioninjection.subcutaneous
+amp,10675811000001106,10673511000001109,1001030U0BEABBA,Metoject 20mg/2ml solution for injection pre-filled syringes (medac UK),Metoject 20mg/2ml solution for injection pre-filled syringes,solutioninjection.intramuscular
+amp,10675811000001106,10673511000001109,1001030U0BEABBA,Metoject 20mg/2ml solution for injection pre-filled syringes (medac UK),Metoject 20mg/2ml solution for injection pre-filled syringes,solutioninjection.intravenous
+amp,10675611000001107,10672911000001109,1001030U0BEACBB,Metoject 10mg/1ml solution for injection pre-filled syringes (medac UK),Metoject 10mg/1ml solution for injection pre-filled syringes,solutioninjection.subcutaneous
+amp,10675611000001107,10672911000001109,1001030U0BEACBB,Metoject 10mg/1ml solution for injection pre-filled syringes (medac UK),Metoject 10mg/1ml solution for injection pre-filled syringes,solutioninjection.intramuscular
+amp,10675611000001107,10672911000001109,1001030U0BEACBB,Metoject 10mg/1ml solution for injection pre-filled syringes (medac UK),Metoject 10mg/1ml solution for injection pre-filled syringes,solutioninjection.intravenous
+amp,10675711000001103,10673211000001106,1001030U0BEADBC,Metoject 15mg/1.5ml solution for injection pre-filled syringes (medac UK),Metoject 15mg/1.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,10675711000001103,10673211000001106,1001030U0BEADBC,Metoject 15mg/1.5ml solution for injection pre-filled syringes (medac UK),Metoject 15mg/1.5ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,10675711000001103,10673211000001106,1001030U0BEADBC,Metoject 15mg/1.5ml solution for injection pre-filled syringes (medac UK),Metoject 15mg/1.5ml inj pre-filled syringes,solutioninjection.intravenous
+amp,10675911000001101,10674011000001104,1001030U0BEAEBD,Metoject 25mg/2.5ml solution for injection pre-filled syringes (medac UK),Metoject 25mg/2.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,10675911000001101,10674011000001104,1001030U0BEAEBD,Metoject 25mg/2.5ml solution for injection pre-filled syringes (medac UK),Metoject 25mg/2.5ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,10675911000001101,10674011000001104,1001030U0BEAEBD,Metoject 25mg/2.5ml solution for injection pre-filled syringes (medac UK),Metoject 25mg/2.5ml inj pre-filled syringes,solutioninjection.intravenous
+amp,15518311000001104,15513111000001105,1001030U0BEAFBE,Metoject 7.5mg/0.15ml solution for injection pre-filled syringes (medac UK),Metoject 7.5mg/0.15ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15518311000001104,15513111000001105,1001030U0BEAFBE,Metoject 7.5mg/0.15ml solution for injection pre-filled syringes (medac UK),Metoject 7.5mg/0.15ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15518311000001104,15513111000001105,1001030U0BEAFBE,Metoject 7.5mg/0.15ml solution for injection pre-filled syringes (medac UK),Metoject 7.5mg/0.15ml inj pre-filled syringes,solutioninjection.intravenous
+amp,15517911000001104,15513411000001100,1001030U0BEAGBF,Metoject 10mg/0.2ml solution for injection pre-filled syringes (medac UK),Metoject 10mg/0.2ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15517911000001104,15513411000001100,1001030U0BEAGBF,Metoject 10mg/0.2ml solution for injection pre-filled syringes (medac UK),Metoject 10mg/0.2ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15517911000001104,15513411000001100,1001030U0BEAGBF,Metoject 10mg/0.2ml solution for injection pre-filled syringes (medac UK),Metoject 10mg/0.2ml inj pre-filled syringes,solutioninjection.intravenous
+amp,15518011000001102,15513711000001106,1001030U0BEAHBG,Metoject 15mg/0.3ml solution for injection pre-filled syringes (medac UK),Metoject 15mg/0.3ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15518011000001102,15513711000001106,1001030U0BEAHBG,Metoject 15mg/0.3ml solution for injection pre-filled syringes (medac UK),Metoject 15mg/0.3ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15518011000001102,15513711000001106,1001030U0BEAHBG,Metoject 15mg/0.3ml solution for injection pre-filled syringes (medac UK),Metoject 15mg/0.3ml inj pre-filled syringes,solutioninjection.intravenous
+amp,15518111000001101,15514311000001109,1001030U0BEAIBH,Metoject 20mg/0.4ml solution for injection pre-filled syringes (medac UK),Metoject 20mg/0.4ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15518111000001101,15514311000001109,1001030U0BEAIBH,Metoject 20mg/0.4ml solution for injection pre-filled syringes (medac UK),Metoject 20mg/0.4ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15518111000001101,15514311000001109,1001030U0BEAIBH,Metoject 20mg/0.4ml solution for injection pre-filled syringes (medac UK),Metoject 20mg/0.4ml inj pre-filled syringes,solutioninjection.intravenous
+amp,15518211000001107,15514011000001106,1001030U0BEAJBI,Metoject 25mg/0.5ml solution for injection pre-filled syringes (medac UK),Metoject 25mg/0.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15518211000001107,15514011000001106,1001030U0BEAJBI,Metoject 25mg/0.5ml solution for injection pre-filled syringes (medac UK),Metoject 25mg/0.5ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15518211000001107,15514011000001106,1001030U0BEAJBI,Metoject 25mg/0.5ml solution for injection pre-filled syringes (medac UK),Metoject 25mg/0.5ml inj pre-filled syringes,solutioninjection.intravenous
+amp,18245711000001104,18208411000001106,1001030U0BEAKBJ,Metoject 30mg/0.6ml solution for injection pre-filled syringes (medac UK),Metoject 30mg/0.6ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,18245711000001104,18208411000001106,1001030U0BEAKBJ,Metoject 30mg/0.6ml solution for injection pre-filled syringes (medac UK),Metoject 30mg/0.6ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,18245711000001104,18208411000001106,1001030U0BEAKBJ,Metoject 30mg/0.6ml solution for injection pre-filled syringes (medac UK),Metoject 30mg/0.6ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19231311000001104,19224611000001108,1001030U0BEALBK,Metoject 12.5mg/0.25ml solution for injection pre-filled syringes (medac UK),Metoject 12.5mg/0.25ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19231311000001104,19224611000001108,1001030U0BEALBK,Metoject 12.5mg/0.25ml solution for injection pre-filled syringes (medac UK),Metoject 12.5mg/0.25ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19231311000001104,19224611000001108,1001030U0BEALBK,Metoject 12.5mg/0.25ml solution for injection pre-filled syringes (medac UK),Metoject 12.5mg/0.25ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19231411000001106,19225111000001101,1001030U0BEAMBL,Metoject 17.5mg/0.35ml solution for injection pre-filled syringes (medac UK),Metoject 17.5mg/0.35ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19231411000001106,19225111000001101,1001030U0BEAMBL,Metoject 17.5mg/0.35ml solution for injection pre-filled syringes (medac UK),Metoject 17.5mg/0.35ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19231411000001106,19225111000001101,1001030U0BEAMBL,Metoject 17.5mg/0.35ml solution for injection pre-filled syringes (medac UK),Metoject 17.5mg/0.35ml inj pre-filled syringes,solutioninfusion.intravenous
+amp,19231511000001105,19225411000001106,1001030U0BEANBM,Metoject 22.5mg/0.45ml solution for injection pre-filled syringes (medac UK),Metoject 22.5mg/0.45ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19231511000001105,19225411000001106,1001030U0BEANBM,Metoject 22.5mg/0.45ml solution for injection pre-filled syringes (medac UK),Metoject 22.5mg/0.45ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19231511000001105,19225411000001106,1001030U0BEANBM,Metoject 22.5mg/0.45ml solution for injection pre-filled syringes (medac UK),Metoject 22.5mg/0.45ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19231611000001109,19225811000001108,1001030U0BEAPBN,Metoject 27.5mg/0.55ml solution for injection pre-filled syringes (medac UK),Metoject 27.5mg/0.55ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19231611000001109,19225811000001108,1001030U0BEAPBN,Metoject 27.5mg/0.55ml solution for injection pre-filled syringes (medac UK),Metoject 27.5mg/0.55ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19231611000001109,19225811000001108,1001030U0BEAPBN,Metoject 27.5mg/0.55ml solution for injection pre-filled syringes (medac UK),Metoject 27.5mg/0.55ml inj pre-filled syringes,solutioninjection.intravenous
+amp,24594611000001105,24591111000001100,1001030U0BEAQBV,Metoject PEN 17.5mg/0.35ml solution for injection pre-filled pens (medac UK),Metoject PEN 17.5mg/0.35ml inj pre-filled pens,solutioninjection.subcutaneous
+amp,24594711000001101,24590811000001104,1001030U0BEARBW,Metoject PEN 20mg/0.4ml solution for injection pre-filled pens (medac UK),Metoject PEN 20mg/0.4ml inj pre-filled pens,solutioninjection.subcutaneous
+amp,24594811000001109,24590411000001101,1001030U0BEASBX,Metoject PEN 22.5mg/0.45ml solution for injection pre-filled pens (medac UK),Metoject PEN 22.5mg/0.45ml inj pre-filled pens,solutioninjection.subcutaneous
+amp,24595211000001109,24588411000001102,1001030U0BEATBY,Metoject PEN 7.5mg/0.15ml solution for injection pre-filled pens (medac UK),Metoject PEN 7.5mg/0.15ml inj pre-filled pens,solutioninjection.subcutaneous
+amp,24595011000001104,24589011000001101,1001030U0BEAUBZ,Metoject PEN 27.5mg/0.55ml solution for injection pre-filled pens (medac UK),Metoject PEN 27.5mg/0.55ml inj pre-filled pens,solutioninjection.subcutaneous
+amp,24595111000001103,24588711000001108,1001030U0BEAVCA,Metoject PEN 30mg/0.6ml solution for injection pre-filled pens (medac UK),Metoject PEN 30mg/0.6ml inj pre-filled pens,solutioninjection.subcutaneous
+amp,24594911000001104,24589311000001103,1001030U0BEAWCB,Metoject PEN 25mg/0.5ml solution for injection pre-filled pens (medac UK),Metoject PEN 25mg/0.5ml inj pre-filled pens,solutioninjection.subcutaneous
+amp,24594511000001106,24589611000001108,1001030U0BEAXCC,Metoject PEN 15mg/0.3ml solution for injection pre-filled pens (medac UK),Metoject PEN 15mg/0.3ml inj pre-filled pens,solutioninjection.subcutaneous
+amp,24594411000001107,24589911000001102,1001030U0BEAYCD,Metoject PEN 12.5mg/0.25ml solution for injection pre-filled pens (medac UK),Metoject PEN 12.5mg/0.25ml inj pre-filled pens,solutioninjection.subcutaneous
+amp,24594311000001100,24590211000001100,1001030U0BEAZCE,Metoject PEN 10mg/0.2ml solution for injection pre-filled pens (medac UK),Metoject PEN 10mg/0.2ml inj pre-filled pens,solutioninfusion.subcutaneous
+amp,10676011000001109,19953911000001102,1001030U0BFAAAZ,Ebetrex 7.5mg/0.75ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 7.5mg/0.75ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,10676011000001109,19953911000001102,1001030U0BFAAAZ,Ebetrex 7.5mg/0.75ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 7.5mg/0.75ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,10676011000001109,19953911000001102,1001030U0BFAAAZ,Ebetrex 7.5mg/0.75ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 7.5mg/0.75ml inj pre-filled syringes,solutioninjection.intravenous
+amp,10675611000001107,19954111000001103,1001030U0BFABBB,Ebetrex 10mg/1ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 10mg/1ml solution for injection pre-filled syringes,solutioninjection.subcutaneous
+amp,10675611000001107,19954111000001103,1001030U0BFABBB,Ebetrex 10mg/1ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 10mg/1ml solution for injection pre-filled syringes,solutioninjection.intramuscular
+amp,10675611000001107,19954111000001103,1001030U0BFABBB,Ebetrex 10mg/1ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 10mg/1ml solution for injection pre-filled syringes,solutioninjection.intravenous
+amp,10675711000001103,19954411000001108,1001030U0BFACBC,Ebetrex 15mg/1.5ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 15mg/1.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,10675711000001103,19954411000001108,1001030U0BFACBC,Ebetrex 15mg/1.5ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 15mg/1.5ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,10675711000001103,19954411000001108,1001030U0BFACBC,Ebetrex 15mg/1.5ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 15mg/1.5ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19976111000001107,19955711000001103,1001030U0BFADBP,Ebetrex 25mg/1.25ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 25mg/1.25ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19976111000001107,19955711000001103,1001030U0BFADBP,Ebetrex 25mg/1.25ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 25mg/1.25ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19976111000001107,19955711000001103,1001030U0BFADBP,Ebetrex 25mg/1.25ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 25mg/1.25ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19976211000001101,19972411000001103,1001030U0BFAFBR,Ebetrex 30mg/1.5ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 30mg/1.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19976211000001101,19972411000001103,1001030U0BFAFBR,Ebetrex 30mg/1.5ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 30mg/1.5ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19976211000001101,19972411000001103,1001030U0BFAFBR,Ebetrex 30mg/1.5ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 30mg/1.5ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19976011000001106,19956011000001109,1001030U0BFAGBS,Ebetrex 20mg/1ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 20mg/1ml solution for injection pre-filled syringes,solutioninjection.subcutaneous
+amp,19976011000001106,19956011000001109,1001030U0BFAGBS,Ebetrex 20mg/1ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 20mg/1ml solution for injection pre-filled syringes,solutioninjection.intramuscular
+amp,19976011000001106,19956011000001109,1001030U0BFAGBS,Ebetrex 20mg/1ml solution for injection pre-filled syringes (Sandoz Ltd),Ebetrex 20mg/1ml solution for injection pre-filled syringes,solutioninjection.intravenous
+amp,24595211000001109,34776411000001105,1001030U0BGAABY,Methofill 7.5mg/0.15ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill 7.5mg/0.15ml inj pre-filled injector,solutioninjection.subcutaneous
+amp,24594311000001100,34776911000001102,1001030U0BGABCE,Methofill 10mg/0.2ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill10mg/0.2ml inj pre-filled injector,solutioninfusion.subcutaneous
+amp,24594411000001107,34777311000001100,1001030U0BGACCD,Methofill 12.5mg/0.25ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill 12.5mg/0.25ml inj pre-filled injector,solutioninjection.subcutaneous
+amp,24594511000001106,34777111000001102,1001030U0BGADCC,Methofill 15mg/0.3ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill 15mg/0.3ml inj pre-filled injector,solutioninjection.subcutaneous
+amp,24594611000001105,34777611000001105,1001030U0BGAEBV,Methofill 17.5mg/0.35ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill 17.5mg/0.35ml inj pre-filled injector,solutioninjection.subcutaneous
+amp,24594711000001101,34777811000001109,1001030U0BGAFBW,Methofill 20mg/0.4ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill 20mg/0.4ml inj pre-filled injector,solutioninjection.subcutaneous
+amp,24594811000001109,34778011000001102,1001030U0BGAGBX,Methofill 22.5mg/0.45ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill 22.5mg/0.45ml inj pre-filled injector,solutioninjection.subcutaneous
+amp,24594911000001104,34778211000001107,1001030U0BGAHCB,Methofill 25mg/0.5ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill 25mg/0.5ml inj pre-filled injector,solutioninjection.subcutaneous
+amp,24595011000001104,34778411000001106,1001030U0BGAIBZ,Methofill 27.5mg/0.55ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill 27.5mg/0.55ml inj pre-filled injector,solutioninjection.subcutaneous
+amp,24595111000001103,34778611000001109,1001030U0BGAJCA,Methofill 30mg/0.6ml solution for injection pre-filled injector (Accord Healthcare Ltd),Methofill 30mg/0.6ml inj pre-filled injector,solutioninjection.subcutaneous
+amp,15518311000001104,37571111000001101,1001030U0BGAKBE,Methofill 7.5mg/0.15ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 7.5mg/0.15ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15518311000001104,37571111000001101,1001030U0BGAKBE,Methofill 7.5mg/0.15ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 7.5mg/0.15ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15518311000001104,37571111000001101,1001030U0BGAKBE,Methofill 7.5mg/0.15ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 7.5mg/0.15ml inj pre-filled syringes,solutioninjection.intravenous
+amp,15517911000001104,37571311000001104,1001030U0BGALBF,Methofill 10mg/0.2ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 10mg/0.2ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15517911000001104,37571311000001104,1001030U0BGALBF,Methofill 10mg/0.2ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 10mg/0.2ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15517911000001104,37571311000001104,1001030U0BGALBF,Methofill 10mg/0.2ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 10mg/0.2ml inj pre-filled syringes,solutioninjection.intravenous
+amp,15518011000001102,37571711000001100,1001030U0BGAMBG,Methofill 15mg/0.3ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 15mg/0.3ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15518011000001102,37571711000001100,1001030U0BGAMBG,Methofill 15mg/0.3ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 15mg/0.3ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15518011000001102,37571711000001100,1001030U0BGAMBG,Methofill 15mg/0.3ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 15mg/0.3ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19231411000001106,37571911000001103,1001030U0BGANBL,Methofill 17.5mg/0.35ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 17.5mg/0.35ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19231411000001106,37571911000001103,1001030U0BGANBL,Methofill 17.5mg/0.35ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 17.5mg/0.35ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19231411000001106,37571911000001103,1001030U0BGANBL,Methofill 17.5mg/0.35ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 17.5mg/0.35ml inj pre-filled syringes,solutioninfusion.intravenous
+amp,15518111000001101,37572311000001108,1001030U0BGAPBH,Methofill 20mg/0.4ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 20mg/0.4ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15518111000001101,37572311000001108,1001030U0BGAPBH,Methofill 20mg/0.4ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 20mg/0.4ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15518111000001101,37572311000001108,1001030U0BGAPBH,Methofill 20mg/0.4ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 20mg/0.4ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19231511000001105,37572511000001102,1001030U0BGAQBM,Methofill 22.5mg/0.45ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 22.5mg/0.45ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19231511000001105,37572511000001102,1001030U0BGAQBM,Methofill 22.5mg/0.45ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 22.5mg/0.45ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19231511000001105,37572511000001102,1001030U0BGAQBM,Methofill 22.5mg/0.45ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 22.5mg/0.45ml inj pre-filled syringes,solutioninjection.intravenous
+amp,15518211000001107,37572711000001107,1001030U0BGARBI,Methofill 25mg/0.5ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 25mg/0.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,15518211000001107,37572711000001107,1001030U0BGARBI,Methofill 25mg/0.5ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 25mg/0.5ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,15518211000001107,37572711000001107,1001030U0BGARBI,Methofill 25mg/0.5ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 25mg/0.5ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19231611000001109,37572911000001109,1001030U0BGASBN,Methofill 27.5mg/0.55ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 27.5mg/0.55ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19231611000001109,37572911000001109,1001030U0BGASBN,Methofill 27.5mg/0.55ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 27.5mg/0.55ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19231611000001109,37572911000001109,1001030U0BGASBN,Methofill 27.5mg/0.55ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 27.5mg/0.55ml inj pre-filled syringes,solutioninjection.intravenous
+amp,18245711000001104,37573111000001100,1001030U0BGATBJ,Methofill 30mg/0.6ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 30mg/0.6ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,18245711000001104,37573111000001100,1001030U0BGATBJ,Methofill 30mg/0.6ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 30mg/0.6ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,18245711000001104,37573111000001100,1001030U0BGATBJ,Methofill 30mg/0.6ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 30mg/0.6ml inj pre-filled syringes,solutioninjection.intravenous
+amp,19231311000001104,37571511000001105,1001030U0BGAUBK,Methofill 12.5mg/0.25ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 12.5mg/0.25ml inj pre-filled syringes,solutioninjection.subcutaneous
+amp,19231311000001104,37571511000001105,1001030U0BGAUBK,Methofill 12.5mg/0.25ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 12.5mg/0.25ml inj pre-filled syringes,solutioninjection.intramuscular
+amp,19231311000001104,37571511000001105,1001030U0BGAUBK,Methofill 12.5mg/0.25ml solution for injection pre-filled syringes (Accord Healthcare Ltd),Methofill 12.5mg/0.25ml inj pre-filled syringes,solutioninjection.intravenous
+amp,30799911000001104,34871011000001105,1001030U0BHAACF,Jylamvo 2mg/ml oral solution (Intrapharm Laboratories Ltd),Jylamvo 2mg/ml oral solution,solution.oral
+vmp,317431008,317431008,0105010E0AAAAAA,Sulfasalazine 500mg tablets,Sulfasalazine 500mg tablets,tablet.oral
+vmp,330040008,330040008,0105010E0AAABAB,Sulfasalazine 500mg gastro-resistant tablets,Sulfasalazine 500mg gastro-resistant tablets,tabletgastro-resistant.oral
+vmp,317432001,317432001,0105010E0AAACAC,Sulfasalazine 500mg suppositories,Sulfasalazine 500mg suppositories,suppository.rectal
+vmp,317433006,317433006,0105010E0AAADAD,Sulfasalazine 3g/100ml retention enema,Sulfasalazine 3g/100ml retention enema,suspensionenema.rectal
+vmp,317430009,317430009,0105010E0AAAEAE,Sulfasalazine 250mg/5ml oral suspension,Sulfasalazine 250mg/5ml oral suspension,suspension.oral
+vmp,13395911000001101,13395911000001101,0105010E0AAAJAJ,Sulfasalazine 500mg/5ml oral suspension,Sulfasalazine 500mg/5ml oral suspension,suspension.oral
+vmp,13395711000001103,13395711000001103,0105010E0AAAKAK,Sulfasalazine 125mg/5ml oral suspension,Sulfasalazine 125mg/5ml oral suspension,suspension.oral
+vmp,13395811000001106,13395811000001106,0105010E0AAALAL,Sulfasalazine 200mg/5ml oral suspension,Sulfasalazine 200mg/5ml oral suspension,suspension.oral
+vmp,13395611000001107,13395611000001107,0105010E0AAANAN,Sulfasalazine 100mg/5ml oral suspension,Sulfasalazine 100mg/5ml oral suspension,suspension.oral
+vmp,16247411000001106,16247411000001106,0105010E0AAAPAP,Sulfasalazine 250mg/5ml oral suspension sugar free,Sulfasalazine 250mg/5ml oral suspension sugar free,suspension.oral
+vmp,326873001,326873001,0801030L0AAAAAA,Mercaptopurine 50mg tablets,Mercaptopurine 50mg tablets,tablet.oral
+vmp,18430611000001102,18430611000001102,0801030L0AAABAB,Mercaptopurine 10mg tablets,Mercaptopurine 10mg tablets,tablet.oral
+vmp,12701611000001102,12701611000001102,0801030L0AAACAC,Mercaptopurine 5mg/5ml oral suspension,Mercaptopurine 5mg/5ml oral suspension,suspension.oral
+vmp,12701511000001101,12701511000001101,0801030L0AAAFAF,Mercaptopurine 50mg/5ml oral suspension,Mercaptopurine 50mg/5ml oral suspension,suspension.oral
+vmp,8796611000001103,8796611000001103,0801030L0AAAGAG,Mercaptopurine 10mg capsules,Mercaptopurine 10mg capsules,capsule.oral
+vmp,8663711000001106,8663711000001106,0801030L0AAAHAH,Mercaptopurine 25mg/5ml oral suspension,Mercaptopurine 25mg/5ml oral suspension,suspension.oral
+vmp,12701711000001106,12701711000001106,0801030L0AAAIAI,Mercaptopurine 75mg/5ml oral suspension,Mercaptopurine 75mg/5ml oral suspension,suspension.oral
+vmp,20556311000001100,20556311000001100,0801030L0AAAJAJ,Mercaptopurine 25mg tablets,Mercaptopurine 25mg tablets,tablet.oral
+vmp,20921111000001100,20921111000001100,0801030L0AAAKAK,Mercaptopurine 45mg/5ml oral suspension,Mercaptopurine 45mg/5ml oral suspension,suspension.oral
+vmp,22154611000001102,22154611000001102,0801030L0AAALAL,Mercaptopurine 25mg capsules,Mercaptopurine 25mg capsules,capsule.oral
+vmp,28366311000001107,28366311000001107,0801030L0AAAMAM,Mercaptopurine 30mg capsules,Mercaptopurine 30mg capsules,capsule.oral
+vmp,28415311000001105,28415311000001105,0801030L0AAANAN,Mercaptopurine 75mg tablets,Mercaptopurine 75mg tablets,tablet.oral
+vmp,31535311000001101,31535311000001101,0801030L0AAAPAP,Mercaptopurine 75mg capsules,Mercaptopurine 75mg capsules,capsule.oral
+vmp,8663611000001102,8663611000001102,0801030L0AAAQAQ,Mercaptopurine 20mg/ml oral suspension,Mercaptopurine 20mg/ml oral suspension,suspension.oral
+vmp,36595711000001109,36595711000001109,0801030L0AAARAR,Mercaptopurine 20mg capsules,Mercaptopurine 20mg capsules,capsule.oral
+vmp,36979111000001107,36979111000001107,0801030L0AAASAS,Mercaptopurine 12.5mg capsules,Mercaptopurine 12.5mg capsules,capsule.oral
+vmp,36033611000001107,36033611000001107,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials,Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intramuscular
+vmp,36033611000001107,36033611000001107,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials,Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intravenous
+vmp,36033611000001107,36033611000001107,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials,Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intraarterial
+vmp,36033611000001107,36033611000001107,0801030P0AAAIAI,Methotrexate 5mg/2ml solution for injection vials,Methotrexate 5mg/2ml solution for injection vials,solutioninjection.intrathecal
+vmp,36033211000001105,36033211000001105,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials,Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intramuscular
+vmp,36033211000001105,36033211000001105,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials,Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intravenous
+vmp,36033211000001105,36033211000001105,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials,Methotrexate 500mg/20ml solution for injection vials,solutioninjection.intraarterial
+vmp,36033211000001105,36033211000001105,0801030P0AAAKAK,Methotrexate 500mg/20ml solution for injection vials,Methotrexate 500mg/20ml solution for injection vials,solutioninfusion.intravenous
+vmp,36033311000001102,36033311000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials,Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraventricular cardiac
+vmp,36033311000001102,36033311000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials,Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intramuscular
+vmp,36033311000001102,36033311000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials,Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intravenous
+vmp,36033311000001102,36033311000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials,Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intraarterial
+vmp,36033311000001102,36033311000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials,Methotrexate 50mg/2ml solution for injection vials,solutioninfusion.intravenous
+vmp,36033311000001102,36033311000001102,0801030P0AAANAN,Methotrexate 50mg/2ml solution for injection vials,Methotrexate 50mg/2ml solution for injection vials,solutioninjection.intrathecal
+vmp,36033111000001104,36033111000001104,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials,Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intramuscular
+vmp,36033111000001104,36033111000001104,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials,Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intravenous
+vmp,36033111000001104,36033111000001104,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials,Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intraarterial
+vmp,36033111000001104,36033111000001104,0801030P0AAASAS,Methotrexate 200mg/8ml solution for injection vials,Methotrexate 200mg/8ml solution for injection vials,solutioninjection.intrathecal
+vmp,9469411000001104,9469411000001104,0801030P0AABPBP,Methotrexate 5mg/0.2ml solution for injection pre-filled syringes,Methotrexate 5mg/0.2ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9469411000001104,9469411000001104,0801030P0AABPBP,Methotrexate 5mg/0.2ml solution for injection pre-filled syringes,Methotrexate 5mg/0.2ml inj pre-filled syringes,solutioninfusion.intravenous
+vmp,9469411000001104,9469411000001104,0801030P0AABPBP,Methotrexate 5mg/0.2ml solution for injection pre-filled syringes,Methotrexate 5mg/0.2ml inj pre-filled syringes,solutioninjection.intrathecal
+vmp,9469411000001104,9469411000001104,0801030P0AABPBP,Methotrexate 5mg/0.2ml solution for injection pre-filled syringes,Methotrexate 5mg/0.2ml inj pre-filled syringes,solutioninfusion.intraarterial
+vmp,9469011000001108,9469011000001108,0801030P0AACGCG,Methotrexate 30mg/1.2ml solution for injection pre-filled syringes,Methotrexate 30mg/1.2ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9469011000001108,9469011000001108,0801030P0AACGCG,Methotrexate 30mg/1.2ml solution for injection pre-filled syringes,Methotrexate 30mg/1.2ml inj pre-filled syringes,solutioninfusion.intravenous
+vmp,9469011000001108,9469011000001108,0801030P0AACGCG,Methotrexate 30mg/1.2ml solution for injection pre-filled syringes,Methotrexate 30mg/1.2ml inj pre-filled syringes,solutioninjection.intrathecal
+vmp,9469011000001108,9469011000001108,0801030P0AACGCG,Methotrexate 30mg/1.2ml solution for injection pre-filled syringes,Methotrexate 30mg/1.2ml inj pre-filled syringes,solutioninfusion.intraarterial
+vmp,36032911000001108,36032911000001108,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials,Methotrexate 1g/10ml solution for injection vials,solutioninjection.intramuscular
+vmp,36032911000001108,36032911000001108,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials,Methotrexate 1g/10ml solution for injection vials,solutioninjection.intravenous
+vmp,36032911000001108,36032911000001108,0801030P0AACKCK,Methotrexate 1g/10ml solution for injection vials,Methotrexate 1g/10ml solution for injection vials,solutioninjection.intraarterial
+vmp,36033511000001108,36033511000001108,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials,Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intramuscular
+vmp,36033511000001108,36033511000001108,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials,Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intravenous
+vmp,36033511000001108,36033511000001108,0801030P0AACSCS,Methotrexate 5g/50ml solution for infusion vials,Methotrexate 5g/50ml solution for infusion vials,solutioninjection.intraarterial
+vmp,36033011000001100,36033011000001100,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials,Methotrexate 1g/40ml solution for injection vials,solutioninjection.intramuscular
+vmp,36033011000001100,36033011000001100,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials,Methotrexate 1g/40ml solution for injection vials,solutioninjection.intravenous
+vmp,36033011000001100,36033011000001100,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials,Methotrexate 1g/40ml solution for injection vials,solutioninjection.intraarterial
+vmp,36033011000001100,36033011000001100,0801030P0AACTCT,Methotrexate 1g/40ml solution for injection vials,Methotrexate 1g/40ml solution for injection vials,solutioninfusion.intravenous
+vmp,36033411000001109,36033411000001109,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials,Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intramuscular
+vmp,36033411000001109,36033411000001109,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials,Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intravenous
+vmp,36033411000001109,36033411000001109,0801030P0AACUCU,Methotrexate 5g/200ml solution for infusion vials,Methotrexate 5g/200ml solution for infusion vials,solutioninjection.intraarterial
+vmp,9469211000001103,9469211000001103,0801030P0AADNDN,Methotrexate 35mg/1.4ml solution for injection pre-filled syringes,Methotrexate 35mg/1.4ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9469211000001103,9469211000001103,0801030P0AADNDN,Methotrexate 35mg/1.4ml solution for injection pre-filled syringes,Methotrexate 35mg/1.4ml inj pre-filled syringes,solutioninfusion.intravenous
+vmp,9469211000001103,9469211000001103,0801030P0AADNDN,Methotrexate 35mg/1.4ml solution for injection pre-filled syringes,Methotrexate 35mg/1.4ml inj pre-filled syringes,solutioninjection.intrathecal
+vmp,9469211000001103,9469211000001103,0801030P0AADNDN,Methotrexate 35mg/1.4ml solution for injection pre-filled syringes,Methotrexate 35mg/1.4ml inj pre-filled syringes,solutioninfusion.intraarterial
+vmp,9468911000001104,9468911000001104,0801030P0AADRDR,Methotrexate 27.5mg/1.1ml solution for injection pre-filled syringes,Methotrexate 27.5mg/1.1ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9468911000001104,9468911000001104,0801030P0AADRDR,Methotrexate 27.5mg/1.1ml solution for injection pre-filled syringes,Methotrexate 27.5mg/1.1ml inj pre-filled syringes,solutioninfusion.intravenous
+vmp,9468911000001104,9468911000001104,0801030P0AADRDR,Methotrexate 27.5mg/1.1ml solution for injection pre-filled syringes,Methotrexate 27.5mg/1.1ml inj pre-filled syringes,solutioninjection.intrathecal
+vmp,9468911000001104,9468911000001104,0801030P0AADRDR,Methotrexate 27.5mg/1.1ml solution for injection pre-filled syringes,Methotrexate 27.5mg/1.1ml inj pre-filled syringes,solutioninfusion.intraarterial
+vmp,9469311000001106,9469311000001106,0801030P0AADVDV,Methotrexate 50mg/2ml solution for injection pre-filled syringes,Methotrexate 50mg/2ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9469311000001106,9469311000001106,0801030P0AADVDV,Methotrexate 50mg/2ml solution for injection pre-filled syringes,Methotrexate 50mg/2ml inj pre-filled syringes,solutioninfusion.intravenous
+vmp,9469311000001106,9469311000001106,0801030P0AADVDV,Methotrexate 50mg/2ml solution for injection pre-filled syringes,Methotrexate 50mg/2ml inj pre-filled syringes,solutioninjection.intrathecal
+vmp,9469311000001106,9469311000001106,0801030P0AADVDV,Methotrexate 50mg/2ml solution for injection pre-filled syringes,Methotrexate 50mg/2ml inj pre-filled syringes,solutioninfusion.intraarterial
+vmp,9469111000001109,9469111000001109,0801030P0AAEAEA,Methotrexate 32.5mg/1.3ml solution for injection pre-filled syringes,Methotrexate 32.5mg/1.3ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9469111000001109,9469111000001109,0801030P0AAEAEA,Methotrexate 32.5mg/1.3ml solution for injection pre-filled syringes,Methotrexate 32.5mg/1.3ml inj pre-filled syringes,solutioninfusion.intravenous
+vmp,9469111000001109,9469111000001109,0801030P0AAEAEA,Methotrexate 32.5mg/1.3ml solution for injection pre-filled syringes,Methotrexate 32.5mg/1.3ml inj pre-filled syringes,solutioninjection.intrathecal
+vmp,9469111000001109,9469111000001109,0801030P0AAEAEA,Methotrexate 32.5mg/1.3ml solution for injection pre-filled syringes,Methotrexate 32.5mg/1.3ml inj pre-filled syringes,solutioninfusion.intraarterial
+vmp,14967911000001103,14967911000001103,0801030P0AAFDFD,Methotrexate 25mg/3ml solution for injection pre-filled syringes,Methotrexate 25mg/3ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,14967911000001103,14967911000001103,0801030P0AAFDFD,Methotrexate 25mg/3ml solution for injection pre-filled syringes,Methotrexate 25mg/3ml inj pre-filled syringes,solutioninfusion.intravenous
+vmp,14967911000001103,14967911000001103,0801030P0AAFDFD,Methotrexate 25mg/3ml solution for injection pre-filled syringes,Methotrexate 25mg/3ml inj pre-filled syringes,solutioninfusion.intraarterial
+vmp,9468611000001105,9468611000001105,0801030P0AAFEFE,Methotrexate 20mg/0.8ml solution for injection pre-filled syringes,Methotrexate 20mg/0.8ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,9468611000001105,9468611000001105,0801030P0AAFEFE,Methotrexate 20mg/0.8ml solution for injection pre-filled syringes,Methotrexate 20mg/0.8ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9468711000001101,9468711000001101,0801030P0AAFFFF,Methotrexate 22.5mg/0.9ml solution for injection pre-filled syringes,Methotrexate 22.5mg/0.9ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,9468711000001101,9468711000001101,0801030P0AAFFFF,Methotrexate 22.5mg/0.9ml solution for injection pre-filled syringes,Methotrexate 22.5mg/0.9ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9468811000001109,9468811000001109,0801030P0AAFGFG,Methotrexate 25mg/1ml solution for injection pre-filled syringes,Methotrexate 25mg/1ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,9468811000001109,9468811000001109,0801030P0AAFGFG,Methotrexate 25mg/1ml solution for injection pre-filled syringes,Methotrexate 25mg/1ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9468211000001108,9468211000001108,0801030P0AAFHFH,Methotrexate 10mg/0.4ml solution for injection pre-filled syringes,Methotrexate 10mg/0.4ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,9468211000001108,9468211000001108,0801030P0AAFHFH,Methotrexate 10mg/0.4ml solution for injection pre-filled syringes,Methotrexate 10mg/0.4ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9469511000001100,9469511000001100,0801030P0AAFIFI,Methotrexate 7.5mg/0.3ml solution for injection pre-filled syringes,Methotrexate 7.5mg/0.3ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,9469511000001100,9469511000001100,0801030P0AAFIFI,Methotrexate 7.5mg/0.3ml solution for injection pre-filled syringes,Methotrexate 7.5mg/0.3ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9468311000001100,9468311000001100,0801030P0AAFJFJ,Methotrexate 12.5mg/0.5ml solution for injection pre-filled syringes,Methotrexate 12.5mg/0.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,9468311000001100,9468311000001100,0801030P0AAFJFJ,Methotrexate 12.5mg/0.5ml solution for injection pre-filled syringes,Methotrexate 12.5mg/0.5ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9468411000001107,9468411000001107,0801030P0AAFKFK,Methotrexate 15mg/0.6ml solution for injection pre-filled syringes,Methotrexate 15mg/0.6ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,9468411000001107,9468411000001107,0801030P0AAFKFK,Methotrexate 15mg/0.6ml solution for injection pre-filled syringes,Methotrexate 15mg/0.6ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,9468511000001106,9468511000001106,0801030P0AAFLFL,Methotrexate 17.5mg/0.7ml solution for injection pre-filled syringes,Methotrexate 17.5mg/0.7ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,9468511000001106,9468511000001106,0801030P0AAFLFL,Methotrexate 17.5mg/0.7ml solution for injection pre-filled syringes,Methotrexate 17.5mg/0.7ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,34168411000001106,34168411000001106,0801030P0AAFMFM,Methotrexate 7.5mg/0.3ml solution for injection pre-filled disposable devices,Methotrexate 7.5mg/0.3ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,34167711000001101,34167711000001101,0801030P0AAFNFN,Methotrexate 10mg/0.4ml solution for injection pre-filled disposable devices,Methotrexate 10mg/0.4ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,34167811000001109,34167811000001109,0801030P0AAFPFP,Methotrexate 12.5mg/0.5ml solution for injection pre-filled disposable devices,Methotrexate 12.5mg/0.5ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,34167911000001104,34167911000001104,0801030P0AAFQFQ,Methotrexate 15mg/0.6ml solution for injection pre-filled disposable devices,Methotrexate 15mg/0.6ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,34168011000001102,34168011000001102,0801030P0AAFRFR,Methotrexate 17.5mg/0.7ml solution for injection pre-filled disposable devices,Methotrexate 17.5mg/0.7ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,34168111000001101,34168111000001101,0801030P0AAFSFS,Methotrexate 20mg/0.8ml solution for injection pre-filled disposable devices,Methotrexate 20mg/0.8ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,34168211000001107,34168211000001107,0801030P0AAFTFT,Methotrexate 22.5mg/0.9ml solution for injection pre-filled disposable devices,Methotrexate 22.5mg/0.9ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,34168311000001104,34168311000001104,0801030P0AAFUFU,Methotrexate 25mg/1ml solution for injection pre-filled disposable devices,Methotrexate 25mg/1ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,327072003,327072003,0802010G0AAAAAA,Azathioprine 50mg powder for solution for injection vials,Azathioprine 50mg powder for solution for injection vials,solutioninjection.intravenous
+vmp,327071005,327071005,0802010G0AAADAD,Azathioprine 25mg tablets,Azathioprine 25mg tablets,tablet.oral
+vmp,327070006,327070006,0802010G0AAAEAE,Azathioprine 50mg tablets,Azathioprine 50mg tablets,tablet.oral
+vmp,8791311000001100,8791311000001100,0802010G0AAAHAH,Azathioprine 10mg capsules,Azathioprine 10mg capsules,capsule.oral
+vmp,8308511000001103,8308511000001103,0802010G0AAAPAP,Azathioprine 50mg/5ml oral solution,Azathioprine 50mg/5ml oral solution,solution.oral
+vmp,8308611000001104,8308611000001104,0802010G0AAAQAQ,Azathioprine 40mg/5ml oral suspension,Azathioprine 40mg/5ml oral liquid,suspension.oral
+vmp,8308711000001108,8308711000001108,0802010G0AAAQAQ,Azathioprine 40mg/5ml oral solution,Azathioprine 40mg/5ml oral liquid,solution.oral
+vmp,8282111000001104,8282111000001104,0802010G0AAARAR,Azathioprine 10mg/5ml oral solution,Azathioprine 10mg/5ml oral liquid,solution.oral
+vmp,8282211000001105,8282211000001105,0802010G0AAARAR,Azathioprine 10mg/5ml oral suspension,Azathioprine 10mg/5ml oral liquid,suspension.oral
+vmp,8284011000001106,8284011000001106,0802010G0AAASAS,Azathioprine 25mg/5ml oral solution,Azathioprine 25mg/5ml oral solution,solution.oral
+vmp,8307811000001104,8307811000001104,0802010G0AAATAT,Azathioprine 75mg/5ml oral suspension,Azathioprine 75mg/5ml oral liquid,suspension.oral
+vmp,8307911000001109,8307911000001109,0802010G0AAATAT,Azathioprine 75mg/5ml oral solution,Azathioprine 75mg/5ml oral liquid,solution.oral
+vmp,8283111000001105,8283111000001105,0802010G0AAAUAU,Azathioprine 15mg/5ml oral solution,Azathioprine 15mg/5ml oral liquid,solution.oral
+vmp,8283211000001104,8283211000001104,0802010G0AAAUAU,Azathioprine 15mg/5ml oral suspension,Azathioprine 15mg/5ml oral liquid,suspension.oral
+vmp,8281911000001107,8281911000001107,0802010G0AAAVAV,Azathioprine 100mg/5ml oral solution,Azathioprine 100mg/5ml oral solution,solution.oral
+vmp,8283811000001103,8283811000001103,0802010G0AAAWAW,Azathioprine 20mg/5ml oral solution,Azathioprine 20mg/5ml oral solution,solution.oral
+vmp,12080411000001105,12080411000001105,0802010G0AAAXAX,Azathioprine 125mg/5ml oral solution,Azathioprine 125mg/5ml oral liquid,solution.oral
+vmp,12080511000001109,12080511000001109,0802010G0AAAXAX,Azathioprine 125mg/5ml oral suspension,Azathioprine 125mg/5ml oral liquid,suspension.oral
+vmp,8308211000001101,8308211000001101,0802010G0AAAYAY,Azathioprine 5mg/5ml oral suspension,Azathioprine 5mg/5ml oral liquid,suspension.oral
+vmp,8308311000001109,8308311000001109,0802010G0AAAYAY,Azathioprine 5mg/5ml oral solution,Azathioprine 5mg/5ml oral liquid,solution.oral
+vmp,12211911000001100,12211911000001100,0802010G0AABABA,Azathioprine 45mg/5ml oral suspension,Azathioprine 45mg/5ml oral liquid,suspension.oral
+vmp,12221811000001102,12221811000001102,0802010G0AABABA,Azathioprine 45mg/5ml oral solution,Azathioprine 45mg/5ml oral liquid,solution.oral
+vmp,12222311000001102,12222311000001102,0802010G0AABBBB,Azathioprine 7mg/5ml oral solution,Azathioprine 7mg/5ml oral liquid,solution.oral
+vmp,12222411000001109,12222411000001109,0802010G0AABBBB,Azathioprine 7mg/5ml oral suspension,Azathioprine 7mg/5ml oral liquid,suspension.oral
+vmp,8284211000001101,8284211000001101,0802010G0AABCBC,Azathioprine 30mg/5ml oral solution,Azathioprine 30mg/5ml oral liquid,solution.oral
+vmp,8308811000001100,8308811000001100,0802010G0AABCBC,Azathioprine 30mg/5ml oral suspension,Azathioprine 30mg/5ml oral liquid,suspension.oral
+vmp,8283311000001107,8283311000001107,0802010G0AABDBD,Azathioprine 17.5mg/5ml oral solution,Azathioprine 17.5mg/5ml oral liquid,solution.oral
+vmp,8283411000001100,8283411000001100,0802010G0AABDBD,Azathioprine 17.5mg/5ml oral suspension,Azathioprine 17.5mg/5ml oral liquid,suspension.oral
+vmp,12097211000001109,12097211000001109,0802010G0AABEBE,Azathioprine 35mg/5ml oral solution,Azathioprine 35mg/5ml oral liquid,solution.oral
+vmp,12097311000001101,12097311000001101,0802010G0AABEBE,Azathioprine 35mg/5ml oral suspension,Azathioprine 35mg/5ml oral liquid,suspension.oral
+vmp,12211711000001102,12211711000001102,0802010G0AABFBF,Azathioprine 37.5mg/5ml oral solution,Azathioprine 37.5mg/5ml oral liquid,solution.oral
+vmp,12211811000001105,12211811000001105,0802010G0AABFBF,Azathioprine 37.5mg/5ml oral suspension,Azathioprine 37.5mg/5ml oral liquid,suspension.oral
+vmp,8308011000001106,8308011000001106,0802010G0AABGBG,Azathioprine 60mg/5ml oral suspension,Azathioprine 60mg/5ml oral liquid,suspension.oral
+vmp,8308111000001107,8308111000001107,0802010G0AABGBG,Azathioprine 60mg/5ml oral solution,Azathioprine 60mg/5ml oral liquid,solution.oral
+vmp,12097011000001104,12097011000001104,0802010G0AABIBI,Azathioprine 200mg/5ml oral solution,Azathioprine 200mg/5ml oral liquid,solution.oral
+vmp,12097111000001103,12097111000001103,0802010G0AABIBI,Azathioprine 200mg/5ml oral suspension,Azathioprine 200mg/5ml oral liquid,suspension.oral
+vmp,12080611000001108,12080611000001108,0802010G0AABJBJ,Azathioprine 175mg/5ml oral solution,Azathioprine 175mg/5ml oral liquid,solution.oral
+vmp,12080711000001104,12080711000001104,0802010G0AABJBJ,Azathioprine 175mg/5ml oral suspension,Azathioprine 175mg/5ml oral liquid,suspension.oral
+vmp,12096811000001108,12096811000001108,0802010G0AABKBK,Azathioprine 17mg/5ml oral solution,Azathioprine 17mg/5ml oral liquid,solution.oral
+vmp,12096911000001103,12096911000001103,0802010G0AABKBK,Azathioprine 17mg/5ml oral suspension,Azathioprine 17mg/5ml oral liquid,suspension.oral
+vmp,8791511000001106,8791511000001106,0802010G0AABPBP,Azathioprine 5mg capsules,Azathioprine 5mg capsules,capsule.oral
+vmp,8791411000001107,8791411000001107,0802010G0AABRBR,Azathioprine 30mg capsules,Azathioprine 30mg capsules,capsule.oral
+vmp,8282511000001108,8282511000001108,0802010G0AABSBS,Azathioprine 12mg/5ml oral solution,Azathioprine 12mg/5ml oral liquid,solution.oral
+vmp,8282611000001107,8282611000001107,0802010G0AABSBS,Azathioprine 12mg/5ml oral suspension,Azathioprine 12mg/5ml oral liquid,suspension.oral
+vmp,12221911000001107,12221911000001107,0802010G0AABTBT,Azathioprine 4mg/5ml oral solution,Azathioprine 4mg/5ml oral liquid,solution.oral
+vmp,12222011000001100,12222011000001100,0802010G0AABTBT,Azathioprine 4mg/5ml oral suspension,Azathioprine 4mg/5ml oral liquid,suspension.oral
+vmp,8282311000001102,8282311000001102,0802010G0AABXBX,Azathioprine 120mg/5ml oral solution,Azathioprine 120mg/5ml oral liquid,solution.oral
+vmp,8282411000001109,8282411000001109,0802010G0AABXBX,Azathioprine 120mg/5ml oral suspension,Azathioprine 120mg/5ml oral liquid,suspension.oral
+vmp,8282911000001101,8282911000001101,0802010G0AABYBY,Azathioprine 150mg/5ml oral solution,Azathioprine 150mg/5ml oral liquid,solution.oral
+vmp,8283011000001109,8283011000001109,0802010G0AABYBY,Azathioprine 150mg/5ml oral suspension,Azathioprine 150mg/5ml oral liquid,suspension.oral
+vmp,12222111000001104,12222111000001104,0802010G0AABZBZ,Azathioprine 70mg/5ml oral solution,Azathioprine 70mg/5ml oral liquid,solution.oral
+vmp,12222211000001105,12222211000001105,0802010G0AABZBZ,Azathioprine 70mg/5ml oral suspension,Azathioprine 70mg/5ml oral liquid,suspension.oral
+vmp,8283511000001101,8283511000001101,0802010G0AACBCB,Azathioprine 2.5mg/5ml oral solution,Azathioprine 2.5mg/5ml oral liquid,solution.oral
+vmp,8283611000001102,8283611000001102,0802010G0AACBCB,Azathioprine 2.5mg/5ml oral suspension,Azathioprine 2.5mg/5ml oral liquid,suspension.oral
+vmp,12222511000001108,12222511000001108,0802010G0AACCCC,Azathioprine 80mg/5ml oral solution,Azathioprine 80mg/5ml oral liquid,solution.oral
+vmp,12222611000001107,12222611000001107,0802010G0AACCCC,Azathioprine 80mg/5ml oral suspension,Azathioprine 80mg/5ml oral liquid,suspension.oral
+vmp,8307511000001102,8307511000001102,0802010G0AACDCD,Azathioprine 90mg/5ml oral suspension,Azathioprine 90mg/5ml oral liquid,suspension.oral
+vmp,8307711000001107,8307711000001107,0802010G0AACDCD,Azathioprine 90mg/5ml oral solution,Azathioprine 90mg/5ml oral liquid,solution.oral
+vmp,8282711000001103,8282711000001103,0802010G0AACECE,Azathioprine 13mg/5ml oral solution,Azathioprine 13mg/5ml oral liquid,solution.oral
+vmp,8282811000001106,8282811000001106,0802010G0AACECE,Azathioprine 13mg/5ml oral suspension,Azathioprine 13mg/5ml oral liquid,suspension.oral
+vmp,16035911000001102,16035911000001102,0802010G0AACGCG,Azathioprine 250mg/5ml oral solution,Azathioprine 250mg/5ml oral liquid,solution.oral
+vmp,16036011000001105,16036011000001105,0802010G0AACGCG,Azathioprine 250mg/5ml oral suspension,Azathioprine 250mg/5ml oral liquid,suspension.oral
+vmp,8308411000001102,8308411000001102,0802010G0AACHCH,Azathioprine 50mg/5ml oral suspension,Azathioprine 50mg/5ml oral suspension,suspension.oral
+vmp,8284111000001107,8284111000001107,0802010G0AACICI,Azathioprine 25mg/5ml oral suspension,Azathioprine 25mg/5ml oral suspension,suspension.oral
+vmp,8282011000001100,8282011000001100,0802010G0AACJCJ,Azathioprine 100mg/5ml oral suspension,Azathioprine 100mg/5ml oral suspension,suspension.oral
+vmp,8283911000001108,8283911000001108,0802010G0AACKCK,Azathioprine 20mg/5ml oral suspension,Azathioprine 20mg/5ml oral suspension,suspension.oral
+vmp,31002111000001104,31002111000001104,0802010G0AACLCL,Azathioprine 65mg/5ml oral suspension,Azathioprine 65mg/5ml oral suspension,suspension.oral
+vmp,327104000,327104000,0802010M0AAAAAA,Mycophenolate mofetil 250mg capsules,Mycophenolate mofetil 250mg capsules,capsule.oral
+vmp,327106003,327106003,0802010M0AAABAB,Mycophenolate mofetil 500mg tablets,Mycophenolate mofetil 500mg tablets,tablet.oral
+vmp,13000511000001100,13000511000001100,0802010M0AAACAC,Mycophenolate mofetil 250mg/5ml oral suspension,Mycophenolate mofetil 250mg/5ml oral suspension,suspension.oral
+vmp,13000611000001101,13000611000001101,0802010M0AAADAD,Mycophenolate mofetil 300mg/5ml oral suspension,Mycophenolate mofetil 300mg/5ml oral suspension,suspension.oral
+vmp,13000711000001105,13000711000001105,0802010M0AAAEAE,Mycophenolate mofetil 500mg/5ml oral suspension,Mycophenolate mofetil 500mg/5ml oral suspension,suspension.oral
+vmp,13000311000001106,13000311000001106,0802010M0AAAGAG,Mycophenolate mofetil 100mg/5ml oral suspension,Mycophenolate mofetil 100mg/5ml oral suspension,suspension.oral
+vmp,327109005,327109005,0802010M0AAAHAH,Mycophenolate mofetil 500mg powder for solution for infusion vials,Mycophenolate mofetil 500mg inf vials,solutioninfusion.intravenous
+vmp,13000411000001104,13000411000001104,0802010M0AAAIAI,Mycophenolate mofetil 125mg/5ml oral suspension,Mycophenolate mofetil 125mg/5ml oral suspension,suspension.oral
+vmp,4897811000001103,4897811000001103,0802010M0AAAJAJ,Mycophenolate mofetil 1g/5ml oral suspension sugar free,Mycophenolate mofetil 1g/5ml oral suspension sugar free,suspension.oral
+vmp,4897811000001103,4897811000001103,0802010M0AAAJAJ,Mycophenolate mofetil 1g/5ml oral suspension sugar free,Mycophenolate mofetil 1g/5ml oral suspension sugar free,suspension.gastroenteral
+vmp,36140311000001101,36140311000001101,0802020G0AAAAAA,Ciclosporin 50mg/1ml solution for infusion ampoules,Ciclosporin 50mg/1ml solution for infusion ampoules,solutioninfusion.intravenous
+vmp,327082002,327082002,0802020G0AAACAC,Ciclosporin 25mg capsules,Ciclosporin 25mg capsules,capsule.oral
+vmp,327083007,327083007,0802020G0AAADAD,Ciclosporin 100mg capsules,Ciclosporin 100mg capsules,capsule.oral
+vmp,36139511000001103,36139511000001103,0802020G0AAAEAE,Ciclosporin 250mg/5ml solution for infusion ampoules,Ciclosporin 250mg/5ml solution for infusion ampoules,solutioninfusion.intravenous
+vmp,327085000,327085000,0802020G0AAAFAF,Ciclosporin 50mg capsules,Ciclosporin 50mg capsules,capsule.oral
+vmp,36139311000001109,36139311000001109,0802020G0AAAGAG,Ciclosporin 100mg/ml oral solution sugar free,Ciclosporin 100mg/ml oral solution sugar free,solution.oral
+vmp,327090002,327090002,0802020G0AAAHAH,Ciclosporin 10mg capsules,Ciclosporin 10mg capsules,capsule.oral
+vmp,330026007,330026007,1001030F0AAAEAE,Penicillamine 125mg tablets,Penicillamine 125mg tablets,tablet.oral
+vmp,330027003,330027003,1001030F0AAAFAF,Penicillamine 250mg tablets,Penicillamine 250mg tablets,tablet.oral
+vmp,13005111000001101,13005111000001101,1001030F0AAAIAI,Penicillamine 250mg/5ml oral solution,Penicillamine 250mg/5ml oral solution,solution.oral
+vmp,13005011000001102,13005011000001102,1001030F0AAAJAJ,Penicillamine 125mg/5ml oral solution,Penicillamine 125mg/5ml oral solution,solution.oral
+vmp,13005211000001107,13005211000001107,1001030F0AAAKAK,Penicillamine 50mg/5ml oral solution,Penicillamine 50mg/5ml oral solution,solution.oral
+vmp,33596211000001104,33596211000001104,1001030F0AAALAL,Penicillamine 250mg/5ml oral suspension,Penicillamine 250mg/5ml oral suspension,suspension.oral
+vmp,37281111000001101,37281111000001101,1001030F0AAAMAM,Penicillamine gastro-resistant 150mg tablets,Penicillamine gastro-resistant 150mg tablets,tabletgastro-resistant.oral
+vmp,37281511000001105,37281511000001105,1001030F0AAANAN,Penicillamine gastro-resistant 300mg tablets,Penicillamine gastro-resistant 300mg tablets,tabletgastro-resistant.oral
+vmp,35924511000001100,35924511000001100,1001030J0AAACAC,Sodium aurothiomalate 10mg/0.5ml solution for injection ampoules,Sodium aurothiomalate 10mg/0.5ml inj ampoules,solutioninjection.intramuscular-deep
+vmp,35924611000001101,35924611000001101,1001030J0AAADAD,Sodium aurothiomalate 20mg/0.5ml solution for injection ampoules,Sodium aurothiomalate 20mg/0.5ml inj ampoules,solutioninjection.intramuscular-deep
+vmp,35924711000001105,35924711000001105,1001030J0AAAEAE,Sodium aurothiomalate 50mg/0.5ml solution for injection ampoules,Sodium aurothiomalate 50mg/0.5ml inj ampoules,solutioninjection.intramuscular-deep
+vmp,330057007,330057007,1001030L0AAAAAA,Leflunomide 10mg tablets,Leflunomide 10mg tablets,tablet.oral
+vmp,330058002,330058002,1001030L0AAABAB,Leflunomide 20mg tablets,Leflunomide 20mg tablets,tablet.oral
+vmp,330059005,330059005,1001030L0AAACAC,Leflunomide 100mg tablets,Leflunomide 100mg tablets,tablet.oral
+vmp,24408011000001101,24408011000001101,1001030L0AAADAD,Leflunomide 15mg tablets,Leflunomide 15mg tablets,tablet.oral
+vmp,12816911000001103,12816911000001103,1001030U0AAAAAA,Methotrexate 25mg/5ml oral solution,Methotrexate 25mg/5ml oral liquid,solution.oral
+vmp,12817011000001104,12817011000001104,1001030U0AAAAAA,Methotrexate 25mg/5ml oral suspension,Methotrexate 25mg/5ml oral liquid,suspension.oral
+vmp,326874007,326874007,1001030U0AAABAB,Methotrexate 2.5mg tablets,Methotrexate 2.5mg tablets,tablet.oral
+vmp,326875008,326875008,1001030U0AAACAC,Methotrexate 10mg tablets,Methotrexate 10mg tablets,tablet.oral
+vmp,8665611000001103,8665611000001103,1001030U0AAAEAE,Methotrexate 2.5mg/5ml oral solution,Methotrexate 2.5mg/5ml oral liquid,solution.oral
+vmp,8665711000001107,8665711000001107,1001030U0AAAEAE,Methotrexate 2.5mg/5ml oral suspension,Methotrexate 2.5mg/5ml oral liquid,suspension.oral
+vmp,8665811000001104,8665811000001104,1001030U0AAAFAF,Methotrexate 5mg/5ml oral solution,Methotrexate 5mg/5ml oral liquid,solution.oral
+vmp,8665911000001109,8665911000001109,1001030U0AAAFAF,Methotrexate 5mg/5ml oral suspension,Methotrexate 5mg/5ml oral liquid,suspension.oral
+vmp,8664911000001105,8664911000001105,1001030U0AAAHAH,Methotrexate 10mg/5ml oral solution,Methotrexate 10mg/5ml oral liquid,solution.oral
+vmp,8665011000001105,8665011000001105,1001030U0AAAHAH,Methotrexate 10mg/5ml oral suspension,Methotrexate 10mg/5ml oral liquid,suspension.oral
+vmp,8666011000001101,8666011000001101,1001030U0AAAIAI,Methotrexate 7.5mg/5ml oral solution,Methotrexate 7.5mg/5ml oral liquid,solution.oral
+vmp,8666111000001100,8666111000001100,1001030U0AAAIAI,Methotrexate 7.5mg/5ml oral suspension,Methotrexate 7.5mg/5ml oral liquid,suspension.oral
+vmp,12817111000001103,12817111000001103,1001030U0AAAJAJ,Methotrexate 3.75mg/5ml oral solution,Methotrexate 3.75mg/5ml oral liquid,solution.oral
+vmp,12817211000001109,12817211000001109,1001030U0AAAJAJ,Methotrexate 3.75mg/5ml oral suspension,Methotrexate 3.75mg/5ml oral liquid,suspension.oral
+vmp,8665111000001106,8665111000001106,1001030U0AAAKAK,Methotrexate 12.5mg/5ml oral solution,Methotrexate 12.5mg/5ml oral liquid,solution.oral
+vmp,8665211000001100,8665211000001100,1001030U0AAAKAK,Methotrexate 12.5mg/5ml oral suspension,Methotrexate 12.5mg/5ml oral liquid,suspension.oral
+vmp,12814511000001104,12814511000001104,1001030U0AAALAL,Methotrexate 1mg/5ml oral solution,Methotrexate 1mg/5ml oral liquid,solution.oral
+vmp,12814611000001100,12814611000001100,1001030U0AAALAL,Methotrexate 1mg/5ml oral suspension,Methotrexate 1mg/5ml oral liquid,suspension.oral
+vmp,12815611000001104,12815611000001104,1001030U0AAAMAM,Methotrexate 7mg/5ml oral solution,Methotrexate 7mg/5ml oral liquid,solution.oral
+vmp,12815711000001108,12815711000001108,1001030U0AAAMAM,Methotrexate 7mg/5ml oral suspension,Methotrexate 7mg/5ml oral liquid,suspension.oral
+vmp,12815111000001107,12815111000001107,1001030U0AAANAN,Methotrexate 50mg/5ml oral suspension,Methotrexate 50mg/5ml oral liquid,suspension.oral
+vmp,12817511000001107,12817511000001107,1001030U0AAANAN,Methotrexate 50mg/5ml oral solution,Methotrexate 50mg/5ml oral liquid,solution.oral
+vmp,12815811000001100,12815811000001100,1001030U0AAAPAP,Methotrexate 8mg/5ml oral solution,Methotrexate 8mg/5ml oral liquid,solution.oral
+vmp,12815911000001105,12815911000001105,1001030U0AAAPAP,Methotrexate 8mg/5ml oral suspension,Methotrexate 8mg/5ml oral liquid,suspension.oral
+vmp,12815411000001102,12815411000001102,1001030U0AAAQAQ,Methotrexate 750micrograms/5ml oral solution,Methotrexate 750micrograms/5ml oral liquid,solution.oral
+vmp,12815511000001103,12815511000001103,1001030U0AAAQAQ,Methotrexate 750micrograms/5ml oral suspension,Methotrexate 750micrograms/5ml oral liquid,suspension.oral
+vmp,8665311000001108,8665311000001108,1001030U0AAARAR,Methotrexate 15mg/5ml oral solution,Methotrexate 15mg/5ml oral liquid,solution.oral
+vmp,8665411000001101,8665411000001101,1001030U0AAARAR,Methotrexate 15mg/5ml oral suspension,Methotrexate 15mg/5ml oral liquid,suspension.oral
+vmp,12813911000001109,12813911000001109,1001030U0AAASAS,Methotrexate 12mg/5ml oral solution,Methotrexate 12mg/5ml oral liquid,solution.oral
+vmp,12814011000001107,12814011000001107,1001030U0AAASAS,Methotrexate 12mg/5ml oral suspension,Methotrexate 12mg/5ml oral liquid,suspension.oral
+vmp,12814111000001108,12814111000001108,1001030U0AAATAT,Methotrexate 17.5mg/5ml oral solution,Methotrexate 17.5mg/5ml oral liquid,solution.oral
+vmp,12814211000001102,12814211000001102,1001030U0AAATAT,Methotrexate 17.5mg/5ml oral suspension,Methotrexate 17.5mg/5ml oral liquid,suspension.oral
+vmp,12817311000001101,12817311000001101,1001030U0AAAUAU,Methotrexate 4mg/5ml oral solution,Methotrexate 4mg/5ml oral liquid,solution.oral
+vmp,12817411000001108,12817411000001108,1001030U0AAAUAU,Methotrexate 4mg/5ml oral suspension,Methotrexate 4mg/5ml oral liquid,suspension.oral
+vmp,12814711000001109,12814711000001109,1001030U0AAAVAV,Methotrexate 20mg/5ml oral solution,Methotrexate 20mg/5ml oral liquid,solution.oral
+vmp,12814811000001101,12814811000001101,1001030U0AAAVAV,Methotrexate 20mg/5ml oral suspension,Methotrexate 20mg/5ml oral liquid,suspension.oral
+vmp,12815211000001101,12815211000001101,1001030U0AAAWAW,Methotrexate 6mg/5ml oral solution,Methotrexate 6mg/5ml oral liquid,solution.oral
+vmp,12815311000001109,12815311000001109,1001030U0AAAWAW,Methotrexate 6mg/5ml oral suspension,Methotrexate 6mg/5ml oral liquid,suspension.oral
+vmp,12814311000001105,12814311000001105,1001030U0AAAXAX,Methotrexate 18mg/5ml oral solution,Methotrexate 18mg/5ml oral liquid,solution.oral
+vmp,12814411000001103,12814411000001103,1001030U0AAAXAX,Methotrexate 18mg/5ml oral suspension,Methotrexate 18mg/5ml oral liquid,suspension.oral
+vmp,12814911000001106,12814911000001106,1001030U0AAAYAY,Methotrexate 22.5mg/5ml oral solution,Methotrexate 22.5mg/5ml oral liquid,solution.oral
+vmp,12815011000001106,12815011000001106,1001030U0AAAYAY,Methotrexate 22.5mg/5ml oral suspension,Methotrexate 22.5mg/5ml oral liquid,suspension.oral
+vmp,10676011000001109,10676011000001109,1001030U0AAAZAZ,Methotrexate 7.5mg/0.75ml solution for injection pre-filled syringes,Methotrexate 7.5mg/0.75ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,10676011000001109,10676011000001109,1001030U0AAAZAZ,Methotrexate 7.5mg/0.75ml solution for injection pre-filled syringes,Methotrexate 7.5mg/0.75ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,10676011000001109,10676011000001109,1001030U0AAAZAZ,Methotrexate 7.5mg/0.75ml solution for injection pre-filled syringes,Methotrexate 7.5mg/0.75ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,10675811000001106,10675811000001106,1001030U0AABABA,Methotrexate 20mg/2ml solution for injection pre-filled syringes,Methotrexate 20mg/2ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,10675811000001106,10675811000001106,1001030U0AABABA,Methotrexate 20mg/2ml solution for injection pre-filled syringes,Methotrexate 20mg/2ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,10675811000001106,10675811000001106,1001030U0AABABA,Methotrexate 20mg/2ml solution for injection pre-filled syringes,Methotrexate 20mg/2ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,10675611000001107,10675611000001107,1001030U0AABBBB,Methotrexate 10mg/1ml solution for injection pre-filled syringes,Methotrexate 10mg/1ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,10675611000001107,10675611000001107,1001030U0AABBBB,Methotrexate 10mg/1ml solution for injection pre-filled syringes,Methotrexate 10mg/1ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,10675611000001107,10675611000001107,1001030U0AABBBB,Methotrexate 10mg/1ml solution for injection pre-filled syringes,Methotrexate 10mg/1ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,10675711000001103,10675711000001103,1001030U0AABCBC,Methotrexate 15mg/1.5ml solution for injection pre-filled syringes,Methotrexate 15mg/1.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,10675711000001103,10675711000001103,1001030U0AABCBC,Methotrexate 15mg/1.5ml solution for injection pre-filled syringes,Methotrexate 15mg/1.5ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,10675711000001103,10675711000001103,1001030U0AABCBC,Methotrexate 15mg/1.5ml solution for injection pre-filled syringes,Methotrexate 15mg/1.5ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,10675911000001101,10675911000001101,1001030U0AABDBD,Methotrexate 25mg/2.5ml solution for injection pre-filled syringes,Methotrexate 25mg/2.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,10675911000001101,10675911000001101,1001030U0AABDBD,Methotrexate 25mg/2.5ml solution for injection pre-filled syringes,Methotrexate 25mg/2.5ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,10675911000001101,10675911000001101,1001030U0AABDBD,Methotrexate 25mg/2.5ml solution for injection pre-filled syringes,Methotrexate 25mg/2.5ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,15518311000001104,15518311000001104,1001030U0AABEBE,Methotrexate 7.5mg/0.15ml solution for injection pre-filled syringes,Methotrexate 7.5mg/0.15ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,15518311000001104,15518311000001104,1001030U0AABEBE,Methotrexate 7.5mg/0.15ml solution for injection pre-filled syringes,Methotrexate 7.5mg/0.15ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,15518311000001104,15518311000001104,1001030U0AABEBE,Methotrexate 7.5mg/0.15ml solution for injection pre-filled syringes,Methotrexate 7.5mg/0.15ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,15517911000001104,15517911000001104,1001030U0AABFBF,Methotrexate 10mg/0.2ml solution for injection pre-filled syringes,Methotrexate 10mg/0.2ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,15517911000001104,15517911000001104,1001030U0AABFBF,Methotrexate 10mg/0.2ml solution for injection pre-filled syringes,Methotrexate 10mg/0.2ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,15517911000001104,15517911000001104,1001030U0AABFBF,Methotrexate 10mg/0.2ml solution for injection pre-filled syringes,Methotrexate 10mg/0.2ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,15518011000001102,15518011000001102,1001030U0AABGBG,Methotrexate 15mg/0.3ml solution for injection pre-filled syringes,Methotrexate 15mg/0.3ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,15518011000001102,15518011000001102,1001030U0AABGBG,Methotrexate 15mg/0.3ml solution for injection pre-filled syringes,Methotrexate 15mg/0.3ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,15518011000001102,15518011000001102,1001030U0AABGBG,Methotrexate 15mg/0.3ml solution for injection pre-filled syringes,Methotrexate 15mg/0.3ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,15518111000001101,15518111000001101,1001030U0AABHBH,Methotrexate 20mg/0.4ml solution for injection pre-filled syringes,Methotrexate 20mg/0.4ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,15518111000001101,15518111000001101,1001030U0AABHBH,Methotrexate 20mg/0.4ml solution for injection pre-filled syringes,Methotrexate 20mg/0.4ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,15518111000001101,15518111000001101,1001030U0AABHBH,Methotrexate 20mg/0.4ml solution for injection pre-filled syringes,Methotrexate 20mg/0.4ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,15518211000001107,15518211000001107,1001030U0AABIBI,Methotrexate 25mg/0.5ml solution for injection pre-filled syringes,Methotrexate 25mg/0.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,15518211000001107,15518211000001107,1001030U0AABIBI,Methotrexate 25mg/0.5ml solution for injection pre-filled syringes,Methotrexate 25mg/0.5ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,15518211000001107,15518211000001107,1001030U0AABIBI,Methotrexate 25mg/0.5ml solution for injection pre-filled syringes,Methotrexate 25mg/0.5ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,18245711000001104,18245711000001104,1001030U0AABJBJ,Methotrexate 30mg/0.6ml solution for injection pre-filled syringes,Methotrexate 30mg/0.6ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,18245711000001104,18245711000001104,1001030U0AABJBJ,Methotrexate 30mg/0.6ml solution for injection pre-filled syringes,Methotrexate 30mg/0.6ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,18245711000001104,18245711000001104,1001030U0AABJBJ,Methotrexate 30mg/0.6ml solution for injection pre-filled syringes,Methotrexate 30mg/0.6ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,19231311000001104,19231311000001104,1001030U0AABKBK,Methotrexate 12.5mg/0.25ml solution for injection pre-filled syringes,Methotrexate 12.5mg/0.25ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,19231311000001104,19231311000001104,1001030U0AABKBK,Methotrexate 12.5mg/0.25ml solution for injection pre-filled syringes,Methotrexate 12.5mg/0.25ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,19231311000001104,19231311000001104,1001030U0AABKBK,Methotrexate 12.5mg/0.25ml solution for injection pre-filled syringes,Methotrexate 12.5mg/0.25ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,19231411000001106,19231411000001106,1001030U0AABLBL,Methotrexate 17.5mg/0.35ml solution for injection pre-filled syringes,Methotrexate 17.5mg/0.35ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,19231411000001106,19231411000001106,1001030U0AABLBL,Methotrexate 17.5mg/0.35ml solution for injection pre-filled syringes,Methotrexate 17.5mg/0.35ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,19231411000001106,19231411000001106,1001030U0AABLBL,Methotrexate 17.5mg/0.35ml solution for injection pre-filled syringes,Methotrexate 17.5mg/0.35ml inj pre-filled syringes,solutioninfusion.intravenous
+vmp,19231511000001105,19231511000001105,1001030U0AABMBM,Methotrexate 22.5mg/0.45ml solution for injection pre-filled syringes,Methotrexate 22.5mg/0.45ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,19231511000001105,19231511000001105,1001030U0AABMBM,Methotrexate 22.5mg/0.45ml solution for injection pre-filled syringes,Methotrexate 22.5mg/0.45ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,19231511000001105,19231511000001105,1001030U0AABMBM,Methotrexate 22.5mg/0.45ml solution for injection pre-filled syringes,Methotrexate 22.5mg/0.45ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,19231611000001109,19231611000001109,1001030U0AABNBN,Methotrexate 27.5mg/0.55ml solution for injection pre-filled syringes,Methotrexate 27.5mg/0.55ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,19231611000001109,19231611000001109,1001030U0AABNBN,Methotrexate 27.5mg/0.55ml solution for injection pre-filled syringes,Methotrexate 27.5mg/0.55ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,19231611000001109,19231611000001109,1001030U0AABNBN,Methotrexate 27.5mg/0.55ml solution for injection pre-filled syringes,Methotrexate 27.5mg/0.55ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,19976111000001107,19976111000001107,1001030U0AABPBP,Methotrexate 25mg/1.25ml solution for injection pre-filled syringes,Methotrexate 25mg/1.25ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,19976111000001107,19976111000001107,1001030U0AABPBP,Methotrexate 25mg/1.25ml solution for injection pre-filled syringes,Methotrexate 25mg/1.25ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,19976111000001107,19976111000001107,1001030U0AABPBP,Methotrexate 25mg/1.25ml solution for injection pre-filled syringes,Methotrexate 25mg/1.25ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,19976211000001101,19976211000001101,1001030U0AABRBR,Methotrexate 30mg/1.5ml solution for injection pre-filled syringes,Methotrexate 30mg/1.5ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,19976211000001101,19976211000001101,1001030U0AABRBR,Methotrexate 30mg/1.5ml solution for injection pre-filled syringes,Methotrexate 30mg/1.5ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,19976211000001101,19976211000001101,1001030U0AABRBR,Methotrexate 30mg/1.5ml solution for injection pre-filled syringes,Methotrexate 30mg/1.5ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,19976011000001106,19976011000001106,1001030U0AABSBS,Methotrexate 20mg/1ml solution for injection pre-filled syringes,Methotrexate 20mg/1ml inj pre-filled syringes,solutioninjection.subcutaneous
+vmp,19976011000001106,19976011000001106,1001030U0AABSBS,Methotrexate 20mg/1ml solution for injection pre-filled syringes,Methotrexate 20mg/1ml inj pre-filled syringes,solutioninjection.intramuscular
+vmp,19976011000001106,19976011000001106,1001030U0AABSBS,Methotrexate 20mg/1ml solution for injection pre-filled syringes,Methotrexate 20mg/1ml inj pre-filled syringes,solutioninjection.intravenous
+vmp,24594611000001105,24594611000001105,1001030U0AABVBV,Methotrexate 17.5mg/0.35ml solution for injection pre-filled disposable devices,Methotrexate 17.5mg/0.35ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,24594711000001101,24594711000001101,1001030U0AABWBW,Methotrexate 20mg/0.4ml solution for injection pre-filled disposable devices,Methotrexate 20mg/0.4ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,24594811000001109,24594811000001109,1001030U0AABXBX,Methotrexate 22.5mg/0.45ml solution for injection pre-filled disposable devices,Methotrexate 22.5mg/0.45ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,24595211000001109,24595211000001109,1001030U0AABYBY,Methotrexate 7.5mg/0.15ml solution for injection pre-filled disposable devices,Methotrexate 7.5mg/0.15ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,24595011000001104,24595011000001104,1001030U0AABZBZ,Methotrexate 27.5mg/0.55ml solution for injection pre-filled disposable devices,Methotrexate 27.5mg/0.55ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,24595111000001103,24595111000001103,1001030U0AACACA,Methotrexate 30mg/0.6ml solution for injection pre-filled disposable devices,Methotrexate 30mg/0.6ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,24594911000001104,24594911000001104,1001030U0AACBCB,Methotrexate 25mg/0.5ml solution for injection pre-filled disposable devices,Methotrexate 25mg/0.5ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,24594511000001106,24594511000001106,1001030U0AACCCC,Methotrexate 15mg/0.3ml solution for injection pre-filled disposable devices,Methotrexate 15mg/0.3ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,24594411000001107,24594411000001107,1001030U0AACDCD,Methotrexate 12.5mg/0.25ml solution for injection pre-filled disposable devices,Methotrexate 12.5mg/0.25ml inj pre-filled disposable devices,solutioninjection.subcutaneous
+vmp,24594311000001100,24594311000001100,1001030U0AACECE,Methotrexate 10mg/0.2ml solution for injection pre-filled disposable devices,Methotrexate 10mg/0.2ml inj pre-filled disposable devices,solutioninfusion.subcutaneous
+vmp,30799911000001104,30799911000001104,1001030U0AACFCF,Methotrexate 2mg/ml oral solution sugar free,Methotrexate 2mg/ml oral solution sugar free,solution.oral

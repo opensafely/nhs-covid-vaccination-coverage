@@ -1,0 +1,26 @@
+dmd_type,dmd_id,dmd_name,bnf_code
+VMP,4694411000001103,"Adrenaline (base) 150micrograms/0.3ml (1 in 2,000) solution for injection pre-filled disposable devices",0304030C0AAA2A2
+VMP,35895211000001103,"Adrenaline (base) 300micrograms/0.3ml (1 in 1,000) solution for injection pre-filled disposable devices",0304030C0AAA3A3
+VMP,4981211000001101,"Adrenaline (base) 500micrograms/0.5ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AAAIAI
+VMP,20122711000001109,"Adrenaline (base) 1mg/1ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AAAYAY
+AMP,20120611000001101,"Adrenaline (base) 1mg/1ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AAAYAY
+AMP,20120811000001102,"Adrenaline (base) 1mg/1ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AAAYAY
+AMP,20121011000001104,"Adrenaline (base) 1mg/1ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AAAYAY
+AMP,20121211000001109,"Adrenaline (base) for anaphylaxis 1mg/1ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AAAYAY
+VMP,35895611000001101,"Adrenaline (base) 5mg/5ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AABBBB
+AMP,4570811000001109,"Adrenaline (base) 5mg/5ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AABBBB
+AMP,4571211000001102,"Adrenaline (base) 5mg/5ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AABBBB
+AMP,4571011000001107,"Adrenaline (base) 5mg/5ml (1 in 1,000) solution for injection pre-filled syringes",0304030C0AABBBB
+VMP,16525211000001105,Adrenaline (base) 500micrograms/0.3ml (1 in 600) solution for injection pre-filled disposable devices,0304030C0AABEBE
+VMP,18289911000001105,"Adrenaline (base) 150micrograms/0.15ml (1 in 1,000) solution for injection pre-filled disposable devices",0304030C0AABFBF
+VMP,23471611000001105,"Adrenaline (base) 500micrograms/0.5ml (1 in 1,000) solution for injection pre-filled disposable devices",0304030C0AABGBG
+AMP,4686411000001107,"EpiPen Jr. 150micrograms/0.3ml (1 in 2,000) solution for injection auto-injectors",0304030C0BEAAA2
+AMP,4719411000001108,"EpiPen 300micrograms/0.3ml (1 in 1,000) solution for injection auto-injectors",0304030C0BEABA3
+AMP,4719711000001102,"Anapen 300micrograms/0.3ml (1 in 1,000) solution for injection auto-injectors",0304030C0BGAAA3
+AMP,4686111000001102,"Anapen Junior 150micrograms/0.3ml (1 in 2,000) solution for injection auto-injectors",0304030C0BGABA2
+AMP,16461411000001109,Anapen 500micrograms/0.3ml (1 in 600) solution for injection auto-injectors,0304030C0BGACBE
+AMP,18267711000001102,"Jext 150micrograms/0.15ml (1 in 1,000) solution for injection auto-injectors",0304030C0BHAABF
+AMP,18262811000001107,"Jext 300micrograms/0.3ml (1 in 1,000) solution for injection auto-injectors",0304030C0BHABA3
+AMP,23415411000001104,"Emerade 150micrograms/0.15ml (1 in 1,000) solution for injection auto-injectors",0304030C0BIAABF
+AMP,23415811000001102,"Emerade 300micrograms/0.3ml (1 in 1,000) solution for injection auto-injectors",0304030C0BIABA3
+AMP,23420111000001107,"Emerade 500micrograms/0.5ml (1 in 1,000) solution for injection auto-injectors",0304030C0BIACBG
