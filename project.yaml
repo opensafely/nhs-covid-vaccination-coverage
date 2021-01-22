@@ -1,20 +1,21 @@
 version: '3.0'
 
 expectations:
-  population_size: 1000
+  population_size: 10000
 
 actions:
 
-  generate_study_population:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition
+  generate_delivery_cohort:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_delivery
     outputs:
       highly_sensitive:
-        cohort: output/input.csv
+        cohort: output/input_delivery.csv
 
-  run_model:
-    run: stata-mp:latest analysis/model.do
-    needs: [generate_study_population]
+  generate_notebook:
+    run: jupyter:latest jupyter nbconvert /workspace/notebooks/population_characteristics.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400
+
+    needs: [generate_delivery_cohort]
     outputs:
       moderately_sensitive:
-        log: logs/model.log
-
+        notebook: output/population_characteristics.html 
+        
