@@ -11,12 +11,6 @@ actions:
       highly_sensitive:
         cohort: output/input_delivery.csv
 
-  generate_eligibility_cohort:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_eligibility
-    outputs:
-      highly_sensitive:
-        cohort: output/input_eligibility.csv
-
   generate_notebook:
     run: jupyter:latest jupyter nbconvert /workspace/notebooks/population_characteristics.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400
 
@@ -25,10 +19,3 @@ actions:
       moderately_sensitive:
         notebook: output/population_characteristics.html 
         
-  generate_notebook_stp:
-    run: jupyter:latest jupyter nbconvert /workspace/notebooks/stp_breakdown.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400
-
-    needs: [generate_delivery_cohort]
-    outputs:
-      moderately_sensitive:
-        notebook: output/stp_breakdown.html 
