@@ -160,12 +160,17 @@ def show_chart(filepath, *, stp=False, subfolder="", title="on"):
             title_string = title_string.replace(v, f"{variable_renaming[v]}")
         title_string = title_string.replace(" by","\n ### by").replace(".svg","")
         display(Markdown(f"### {title_string}"))
+        if (stp==True) & ~any(s in filepath for s in ["overall","sex","Index of Multiple Deprivation"]):
+            display(Markdown(f"Zero percentages may represent suppressed low numbers; raw numbers were rounded to nearest 7"))
+           
     
     display(SVG(filename=imgpath))
     
     
 
-def show_table(filename, latest_date_fmt, *, stp=False, show_carehomes=False, export_csv=True):
+def show_table(filename, latest_date_fmt, *, stp=False, show_carehomes=False, 
+               rows_to_exclude = [],
+               export_csv=True):
     '''
     Show table with specified filename. Rename row and column headers.
     
@@ -174,6 +179,7 @@ def show_table(filename, latest_date_fmt, *, stp=False, show_carehomes=False, ex
     latest_date_fmt (str): latest date of vaccination in dataset
     stp (bool): whether data is being shown by STP
     show_carehomes (bool): whether or not to show care homes table
+    rows_to_exclude (list): list of variables to exlude from all tables
     export_csv (bool): whether or not to save table as csv
     
     Outputs:
@@ -196,7 +202,11 @@ def show_table(filename, latest_date_fmt, *, stp=False, show_carehomes=False, ex
                               "proportion of 80+ population included (%)": "Proportion of 80+ population included (%)",
                               "[White - Black] abs difference": "White-Black ethncity: disparity in vaccination % (abs difference +/- range of uncertainty)", 
                               "[5 Least deprived - 1 Most deprived] abs difference": "Least deprived - Most deprived IMD quintile: disparity in vaccination % (abs difference +/- range of uncertainty)"})
+        
     if "Category" in tab.columns:
+        if rows_to_exclude:
+            for i in rows_to_exclude:
+                tab = tab.loc[tab["Category"]!=i]
         tab["Category"] = tab["Category"].str.replace("_"," ")
         tab = tab.set_index(["Category", "Group"])
     if stp==True:
