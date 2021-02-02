@@ -5,3 +5,12 @@ __pycache__
 .python-version
 output/*
 metadata/*
+interim-outputs/*
+machine_readable_outputs/*
+
+# jupyter
+.ipynb_checkpoints
+.ipython/
+.jupyter/
+.local/
+.env

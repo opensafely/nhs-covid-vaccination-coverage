@@ -1,0 +1,51 @@
+Category,Group,Vaccinated at 27 Jan (n),vaccinated 7d previous ,Vaccinated over last 7d (n),Increase in coverage over last 7d (%)
+overall,overall,968120.0,714029.0,254091.0,35.6
+Sex,F,713489.0,534996.0,178493.0,33.4
+Sex,M,254625.0,179025.0,75600.0,42.2
+Age band,0-19,10759.0,7266.0,3493.0,48.1
+Age band,20-29,129766.0,95354.0,34412.0,36.1
+Age band,30-39,180635.0,136745.0,43890.0,32.1
+Age band,40-49,214725.0,163373.0,51352.0,31.4
+Age band,50-59,271607.0,204106.0,67501.0,33.1
+Age band,60-69,160622.0,107170.0,53452.0,49.9
+Ethnicity broad categories,Black,20643.0,14280.0,6363.0,44.6
+Ethnicity broad categories,Mixed,10766.0,7924.0,2842.0,35.9
+Ethnicity broad categories,Other,15778.0,12488.0,3290.0,26.3
+Ethnicity broad categories,South Asian,68488.0,53221.0,15267.0,28.7
+Ethnicity broad categories,Unknown,211183.0,156954.0,54229.0,34.6
+Ethnicity broad categories,White,641256.0,469154.0,172102.0,36.7
+Ethnicity sixteen categories, African,13811.0,9583.0,4228.0,44.1
+Ethnicity sixteen categories, Bangladeshi or British Bangladeshi,2478.0,1792.0,686.0,38.3
+Ethnicity sixteen categories, Caribbean,3213.0,2170.0,1043.0,48.1
+Ethnicity sixteen categories, Chinese,3297.0,2681.0,616.0,23.0
+Ethnicity sixteen categories, Other,12474.0,9807.0,2667.0,27.2
+Ethnicity sixteen categories, Other Asian,19348.0,15841.0,3507.0,22.1
+Ethnicity sixteen categories,British or Mixed British,588182.0,430661.0,157521.0,36.6
+Ethnicity sixteen categories,Indian or British Indian,35049.0,27083.0,7966.0,29.4
+Ethnicity sixteen categories,Irish,4914.0,3633.0,1281.0,35.3
+Ethnicity sixteen categories,Other Black,3619.0,2527.0,1092.0,43.2
+Ethnicity sixteen categories,Other White,48153.0,34860.0,13293.0,38.1
+Ethnicity sixteen categories,Other mixed,3549.0,2667.0,882.0,33.1
+Ethnicity sixteen categories,Pakistani or British Pakistani,11613.0,8505.0,3108.0,36.5
+Ethnicity sixteen categories,Unknown,211183.0,156954.0,54229.0,34.6
+Ethnicity sixteen categories,White + Asian,2772.0,2205.0,567.0,25.7
+Ethnicity sixteen categories,White + Black African,2492.0,1715.0,777.0,45.3
+Ethnicity sixteen categories,White + Black Caribbean,1953.0,1344.0,609.0,45.3
+Index of Multiple Deprivation,1 Most deprived,157136.0,112742.0,44394.0,39.4
+Index of Multiple Deprivation,2,183288.0,134211.0,49077.0,36.6
+Index of Multiple Deprivation,3,207277.0,152068.0,55209.0,36.3
+Index of Multiple Deprivation,4,203329.0,150920.0,52409.0,34.7
+Index of Multiple Deprivation,5 Least deprived,191996.0,145376.0,46620.0,32.1
+Index of Multiple Deprivation,Unknown,25088.0,18704.0,6384.0,34.1
+BMI,30+,222901.0,159075.0,63826.0,40.1
+BMI,under 30,745206.0,554946.0,190260.0,34.3
+Chronic cardiac disease,no,936138.0,693469.0,242669.0,35.0
+Chronic cardiac disease,yes,31969.0,20552.0,11417.0,55.6
+Current COPD,no,947933.0,703675.0,244258.0,34.7
+Current COPD,yes,20174.0,10346.0,9828.0,95.0
+Dialysis,no,966070.0,713202.0,252868.0,35.5
+Dialysis,yes,2044.0,819.0,1225.0,149.6
+DMARDs,no,942480.0,698831.0,243649.0,34.9
+DMARDs,yes,25627.0,15190.0,10437.0,68.7
+SSRI (last 12 months),no,816536.0,602763.0,213773.0,35.5
+SSRI (last 12 months),yes,151571.0,111258.0,40313.0,36.2
