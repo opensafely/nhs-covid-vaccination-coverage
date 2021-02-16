@@ -8,8 +8,11 @@ from operator import itemgetter
 
 # we create a dict for renaming population variables into suitable longer/correctly capitalised forms for presentation as titles
 variable_renaming = {'ageband': "Age band",
+                      'ageband_5yr': "Age band",
                       'sex': "Sex",
-                      'bmi':"BMI",                            
+                      'bmi':"BMI",   
+                      'ethnicity 6 groups':"Ethnicity (broad categories)",
+                      'imd categories':"Index of Multiple Deprivation (quintiles)",
                       'chronic cardiac disease': 'Chronic cardiac disease',
                       'current copd': 'Current COPD',
                       'dialysis': 'Dialysis',
@@ -24,13 +27,12 @@ variable_renaming = {'ageband': "Age band",
                       'haematological cancer': 'Cancer (haematological)'}
 
 
-def get_savepath(*, stp=False, subfolder=False):
+def get_savepath(subfolder=None):
     '''
     Create /assign directories for importing figures and tables
     
     Inputs:
-    stp (boolean): stp breakdown used or not
-    subfolder (str): subfolder of in which to find files (required if stp==True)
+    subfolder (str): subfolder of in which to find files
     
     output:
     savepath (dict): a dictionary of filepaths for each file type
@@ -38,15 +40,16 @@ def get_savepath(*, stp=False, subfolder=False):
     
     savepath = {}
     for filetype in ["tables", "figures", "text"]:
-        if stp==False:
+        if subfolder:
+            savepath[filetype] = os.path.abspath(os.path.join("..", "interim-outputs", subfolder, filetype))   
+        else:
             savepath[filetype] = os.path.abspath(os.path.join("..", "interim-outputs", filetype))
-        elif stp==True:
-            savepath[filetype] = os.path.abspath(os.path.join("..", "interim-outputs", "stp", filetype))
+            
     return(savepath)
     
     
 def find_and_sort_filenames(foldername, *, 
-                            stp=False,
+                            org_breakdown=None,
                             subfolder="",
                             by_demographics_or_population="demographics", 
                             population_subset="80+",
@@ -58,12 +61,12 @@ def find_and_sort_filenames(foldername, *,
     
     Inputs:
     foldername (str):   Name of target folder in which "figures" or "tables" are found
-    stp (boolean): stp breakdown used or not
-    subfolder (str): subfolder of in which to find files (required if stp==True)
+    org_breakdown (str): Type of org breakdown (e.g "stp")
+    subfolder (str): subfolder of in which to find files (e.g an individual org)
     by_demographics_or_population (str): type of sort
     population_subset (str): population group to include
     demographics_subset (list): list of strings to filter filenames to a subset of demographic features
-                                (e.g. ["Ethnicity broad categories", "Index of Multiple Deprivation"])
+                                (e.g. ["ethnicity_6_groups", "imd_categories"])
     pre_string: string found in filename AHEAD OF desired factor for sorting (e.g. for filename containing "by ageband" use "by ").
                 filename will be split at this point.
     tail_string: string found in filename AFTER desired factor for sorting (e.g. for filename containing "by ageband.csv" use ".csv").
@@ -71,9 +74,9 @@ def find_and_sort_filenames(foldername, *,
     files_to_exclude (list): any files in target folder not to be included
     
     '''
+    savepath = get_savepath(subfolder=org_breakdown)
     
-    savepath = get_savepath(stp=stp)
-    if subfolder!="":        
+    if subfolder:  
         file_list = os.listdir(os.path.join(savepath[foldername], subfolder))
     else:
         file_list = os.listdir(savepath[foldername])
@@ -90,8 +93,8 @@ def find_and_sort_filenames(foldername, *,
         file_list = [f for f in file_list if any(d in f for d in demographics_subset)]
     
     if by_demographics_or_population=="demographics":
-        sort_order = {'Ethnicity broad categories': 3,
-             'Index of Multiple Deprivation': 4,
+        sort_order = {'ethnicity 6 groups': 3,
+             'imd categories': 4,
              'bmi': 5,
              'cancer excl lung and haem': 10,
              'chemo or radio': 11,
@@ -112,7 +115,8 @@ def find_and_sort_filenames(foldername, *,
         sort_order = {'80+': 0,
          '70-79': 1,
          'care home': 2,
-         'under 70s, not resident in care homes': 3}
+         'shielding': 3,
+         'under 70s, not in other eligible groups shown': 4}
     else:
         display("sort_by_population_or_demographics received an invalid value")
         
@@ -135,21 +139,22 @@ def find_and_sort_filenames(foldername, *,
 
 
 
-def show_chart(filepath, *, stp=False, subfolder="", title="on"):
+def show_chart(filepath, *, org_breakdown="", subfolder="", title="on"):
     '''
     Show chart from specified filepath. Rename filepaths for use as chart titles.
     
     Inputs:
     filepath (str):  file path
-    stp (boolean): stp breakdown used or not
-    subfolder (str): subfolder of in which to find files (required if stp==True)
+    org_breakdown (str): Type of org breakdown (e.g "stp")
+    subfolder (str): subfolder of in which to find files (e.g. an individual STP)
     title (str): "on" or "off"
     
     Outputs:
     plot     
     '''
-    savepath = get_savepath(stp=stp)
-    if subfolder!="":        
+    savepath = get_savepath(org_breakdown)
+    
+    if subfolder:     
         imgpath = os.path.join(savepath["figures"], subfolder, filepath)
     else:
         imgpath = os.path.join(savepath["figures"], filepath)
@@ -160,7 +165,7 @@ def show_chart(filepath, *, stp=False, subfolder="", title="on"):
             title_string = title_string.replace(v, f"{variable_renaming[v]}")
         title_string = title_string.replace(" by","\n ### by").replace(".svg","")
         display(Markdown(f"### {title_string}"))
-        if (stp==True) & ~any(s in filepath for s in ["overall","sex","Index of Multiple Deprivation"]):
+        if (len(subfolder)>0) & (~any(s in filepath for s in ["overall","sex","imd_categories"])):
             display(Markdown(f"Zero percentages may represent suppressed low numbers; raw numbers were rounded to nearest 7"))
            
     
@@ -168,16 +173,16 @@ def show_chart(filepath, *, stp=False, subfolder="", title="on"):
     
     
 
-def show_table(filename, latest_date_fmt, *, stp=False, show_carehomes=False, 
+def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=False, 
                rows_to_exclude = [],
-               export_csv=True):
+               export_csv=True, suffix=""):
     '''
     Show table with specified filename. Rename row and column headers.
     
     Inputs:
     filename (str): name of file
     latest_date_fmt (str): latest date of vaccination in dataset
-    stp (bool): whether data is being shown by STP
+    org_breakdown (str)
     show_carehomes (bool): whether or not to show care homes table
     rows_to_exclude (list): list of variables to exlude from all tables
     export_csv (bool): whether or not to save table as csv
@@ -185,8 +190,12 @@ def show_table(filename, latest_date_fmt, *, stp=False, show_carehomes=False,
     Outputs:
     tab (dataframe): formatted table (preceded by title derived from filename & intro text)   
     '''
-    savepath = get_savepath(stp=stp)
+    savepath = get_savepath(org_breakdown)
+    
+    # get table
     tab = pd.read_csv(os.path.join(savepath["tables"], filename))
+    
+    # rename columns
     tab = tab.rename(columns={"category":"Category",
                               "group":"Group",
                               "stp_name":"STP Name",
@@ -202,39 +211,51 @@ def show_table(filename, latest_date_fmt, *, stp=False, show_carehomes=False,
                               "proportion of 80+ population included (%)": "Proportion of 80+ population included (%)",
                               "[White - Black] abs difference": "White-Black ethncity: disparity in vaccination % (abs difference +/- range of uncertainty)", 
                               "[5 Least deprived - 1 Most deprived] abs difference": "Least deprived - Most deprived IMD quintile: disparity in vaccination % (abs difference +/- range of uncertainty)"})
-        
+    
+    # for "national" reports, exclude any specified rows and set index
     if "Category" in tab.columns:
         if rows_to_exclude:
             for i in rows_to_exclude:
                 tab = tab.loc[tab["Category"]!=i]
         tab["Category"] = tab["Category"].str.replace("_"," ")
         tab = tab.set_index(["Category", "Group"])
-    if stp==True:
+    
+    # for stp reports, set STP as index
+    if org_breakdown=="stp":
         tab = tab.set_index(["STP Name"]).sort_index()
-    if "Care Home Vaccinations, all ages, n (%)" in tab.columns:
-        tab = tab.drop("Care Home Vaccinations, all ages, n (%)", 1)
+        
+    # rename variables as per reference table above
     tab = tab.rename(variable_renaming,
                       axis='index')
-    title = filename.replace(".csv","")\
-                    .replace("under 70s, not resident in care homes","people aged under 70, not resident in care homes")
+    
+    # get title from filename
+    title = filename.replace(".csv","")
+    
+    # do not return care home table if specified
     if (show_carehomes==False) & (title == "Cumulative vaccination figures among care home population"):
         return
-    display(Markdown(f"## {title} \n Please refer to footnotes below table for information."))
     
+    # display title
+    display(Markdown(f"## \n ## {title} \n Please refer to footnotes below table for information."))
+    
+    # export csvs
     if export_csv==True:
         export_path = os.path.join("..", "machine_readable_outputs", "table_csvs")
         if not os.path.exists(export_path):
             os.makedirs(export_path)
-        tab.to_csv(os.path.join(export_path, filename), index=True)
+        tab.to_csv(os.path.join(export_path, f"{title}{suffix}.csv"), index=True)
 
-    
+    # display table
     display(tab)
     
+    # display footnotes
     display(Markdown("**Footnotes:**\n"\
-                       f"- Patient counts rounded to the nearest 7\n"\
-                       f"- Population excludes those known to live in an elderly care home, based upon their address."
-                     ))
-    if stp == True:
+                       f"- Patient counts rounded to the nearest 7"))
+    if (show_carehomes == True) & (title == "Cumulative vaccination figures among care home population"):
+        display(Markdown(f"- Population includes those known to live in an elderly care home, based upon clinical coding."))
+    else:
+        display(Markdown(f"- Population excludes those known to live in an elderly care home, based upon clinical coding."))
+    if org_breakdown=="stp":
         display(Markdown("- The percentage coverage of each STP population by TPP practices for over 80s is displayed, and STPs with less than 10% coverage are not shown.\n"\
                          "- The subset of the population covered by TPP in each STP may not be representative of the whole STP. \n"\
                          "- Practice-STP mappings and total 80+ population used to calculate the coverage are as of March 2020 and some borders and population sizes may have changed. \n"\
