@@ -1,0 +1,136 @@
+code,term
+1461.,H/O: dementia
+A410.,Kuru
+A411.,Creutzfeldt-Jakob disease
+E00..,Senile and presenile organic psychot conditions (& dementia)
+E000.,Uncomplicated senile dementia
+E001.,Presenile dementia
+E0010,Uncomplicated presenile dementia
+E0011,Presenile dementia with delirium
+E0012,Presenile dementia with paranoia
+E0013,Presenile dementia with depression
+E001z,Presenile dementia NOS
+E002.,Senile dementia with depressive or paranoid features
+E0020,Senile dementia with paranoia
+E0021,Senile dementia with depression
+E002z,Senile dementia with depressive or paranoid features NOS
+E003.,Senile dementia with delirium
+E004.,Arteriosclerotic dementia (including [multi infarct dement])
+E0040,Uncomplicated arteriosclerotic dementia
+E0041,Arteriosclerotic dementia with delirium
+E0042,Arteriosclerotic dementia with paranoia
+E0043,Arteriosclerotic dementia with depression
+E004z,Arteriosclerotic dementia NOS
+E00y.,(Oth senile/presen org psychoses) or (presbyophren psychos)
+E00z.,Senile or presenile psychoses NOS
+E011.,Korsakov psychosis
+E0110,Korsakov psychosis
+E0111,Korsakov's alcoholic psychosis with peripheral neuritis
+E0112,Wernicke-Korsakov syndrome
+E011z,Alcohol amnestic syndrome NOS
+E012.,Alcoholic dementia: [other] or [NOS]
+E040.,Korsakoff's syndrome - non-alcoholic
+E041.,Dementia in conditions EC
+Eu00.,[X]Dementia in Alzheimer's disease
+Eu001,Dementia in Alzheimer's disease with late onset
+Eu002,"[X]Dementia in Alzheimer's dis, atypical or mixed type"
+Eu00z,"[X]Dementia in Alzheimer's disease, unspecified"
+Eu01.,Vascular dementia
+Eu011,[X]Dementia: [multi-infarct] or [predominantly cortical]
+Eu01y,[X]Other vascular dementia
+Eu01z,"[X]Vascular dementia, unspecified"
+Eu02.,[X]Dementia in other diseases classified elsewhere
+Eu020,[X]Dementia in Pick's disease
+Eu021,[X]Dementia in Creutzfeldt-Jakob disease
+Eu022,[X]Dementia in Huntington's disease
+Eu023,[X]Dementia in Parkinson's disease
+Eu02y,[X]Dementia in other specified diseases classif elsewhere
+Eu02z,[X] Dementia: [unspecified] or [named variants (& NOS)]
+Eu041,[X]Delirium superimposed on dementia
+F110.,Alzheimer's disease
+F1100,Dementia in Alzheimer's disease with early onset
+F1101,Dementia in Alzheimer's disease with late onset
+F111.,Pick's disease
+F11x7,Cerebral degeneration due to Creutzfeldt-Jakob disease
+F11x8,Cerebral degeneration due to multifocal leucoencephalopathy
+F21y2,Binswanger's disease
+Fyu30,[X]Other Alzheimer's disease
+Ub1T6,Language disorder of dementia
+X002m,Amyotrophic lateral sclerosis with dementia
+X002w,Dementia
+X002x,Dementia in Alzheimer's disease with early onset
+X002y,Familial Alzheimer's disease of early onset
+X002z,Non-familial Alzheimer's disease of early onset
+X0030,Dementia in Alzheimer's disease with late onset
+X0031,Familial Alzheimer's disease of late onset
+X0032,Non-familial Alzheimer's disease of late onset
+X0033,Focal Alzheimer's disease
+X0034,Frontotemporal dementia
+X0035,Pick's disease with Pick bodies
+X0036,Pick's disease with Pick cells and no Pick bodies
+X0037,Frontotemporal degeneration
+X0039,Frontal lobe degeneration with motor neurone disease
+X003A,Lewy body disease
+X003G,Progressive aphasia in Alzheimer's disease
+X003H,Argyrophilic brain disease
+X003I,Post-traumatic dementia
+X003J,Punch drunk syndrome
+X003K,Spongiform encephalopathy
+X003L,Prion protein disease
+X003M,Gerstmann-Straussler-Scheinker syndrome
+X003P,Acquired immune deficiency syndrome dementia complex
+X003R,Vascular dementia of acute onset
+X003T,Subcortical vascular dementia
+X003V,Mixed cortical and subcortical vascular dementia
+X003W,Semantic dementia
+X003X,Patchy dementia
+X003Y,Epileptic dementia
+X003l,Parkinson's disease - dementia complex on Guam
+X00R0,Presbyophrenic psychosis
+X00R2,Senile dementia
+X00Rk,Alcoholic dementia NOS
+X73mf,Creutzfeldt-Jakob disease agent
+X73mj,Bovine spongiform encephalopathy agent
+XE1Xr,Senile and presenile organic psychotic conditions
+XE1Xs,Vascular dementia
+XE1Xt,Other senile and presenile organic psychoses
+XE1Xu,Other alcoholic dementia
+XE1Z6,[X]Unspecified dementia
+XE1aG,Dementia (& [presenile] or [senile])
+Xa0lH,Multi-infarct dementia
+Xa0sC,Frontal lobe degeneration
+Xa0sE,Dementia of frontal lobe type
+Xa1GB,Cerebral degeneration presenting primarily with dementia
+Xa25J,Alcoholic dementia
+Xa3ez,Other senile/presenile dementia
+XaA1S,New variant of Creutzfeldt-Jakob disease
+XaE74,Senile dementia of the Lewy body type
+XaIKB,Alzheimer's disease with early onset
+XaIKC,Alzheimer's disease with late onset
+XaKyY,[X]Lewy body dementia
+XaLFf,Exception reporting: dementia quality indicators
+XaLFo,Excepted from dementia quality indicators: Patient unsuitabl
+XaLFp,Excepted from dementia quality indicators: Informed dissent
+XaMAo,Prion protein markers for Creutzfeldt-Jakob disease
+XaMFy,Dementia monitoring administration
+XaMG0,Dementia monitoring first letter
+XaMGF,Dementia annual review
+XaMGG,Dementia monitoring second letter
+XaMGI,Dementia monitoring third letter
+XaMGJ,Dementia monitoring verbal invite
+XaMGK,Dementia monitoring telephone invite
+XaMJC,Dementia monitoring
+XaZWz,Participates in Butterfly Scheme for dementia
+XaZX0,Butterfly Scheme for dementia declined
+XabVp,Sporadic Creutzfeldt-Jakob disease
+XabtQ,Dementia medication review
+Xaghb,Predominantly cortical dementia
+Y000c,Dementia review done
+Y1f1d,Dementia monitoring invitation
+Y1f22,Dementia monitoring invitation
+Y1f98,Quality and Outcomes Framework dementia quality indicator-related care invitation (procedure)
+Y23fb,Mixed dementia
+Y6230,Creutzfeldt - Jakob disease
+Y8180,Other senile/presenile dement.
+Y9086,Senile dementia - simple type
+Y9087,Senile dementia-acute confused

@@ -78,15 +78,18 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     # drop unnecssary columns or columns created for processing 
     df = df.drop(["imd","ethnicity_16", "ethnicity", "adrenaline_pen", "has_died", "has_follow_up"], 1)
 
-    # care homes: regroup age bands (to later keep only 65+ labelled as care home residents)
-    df.loc[(df["care_home_type"].isin(["PS","PN","PC"])) & (df["age"]>=65) & (df["age"]<70), "ageband"] = "65-69"
+    
+    ###### care homes #####
 
     # amend community age band to remove any care home flags for under 65s 
-    #(only elderly care homes are included so these are likely live-in staff+their families or other non-care recipients)
     df.loc[(df["ageband_community"]=="care home") & (df["age"]<65), "ageband_community"] = df["ageband"]
 
+    # shielding: keep flag only for under 70s
+    df["shielded"] = np.where((df["shielded"]==1) & (df["age"]<70), "shielding", "")
+
+    
     # for each specific situation or condition, replace 1 with YES and 0 with no. This makes the graphs easier to read
-    for c in ["care_home","dementia", 
+    for c in ["dementia", 
           "chronic_cardiac_disease", "current_copd", "dialysis", "dmards","psychosis_schiz_bipolar",
          "solid_organ_transplantation", "chemo_or_radio", "intel_dis_incl_downs_syndrome","ssri",
           "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "bone_marrow_transplant",
@@ -94,12 +97,15 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
           "temporary_immunosuppression", "asplenia"]:
           df[c] = np.where(df[c]==1, "yes", "no")
 
-    # rename columns for IMD and ageband for readability
-    df = df.rename(columns={"imd":"Index_of_Multiple_Deprivation", "ageband_community":"community_ageband"})
+    # rename columns for agebands for consistency
+    df = df.rename(columns={"ageband_community":"community_ageband"})
 
     # get total population sizes and names for each STP
     stps = pd.read_csv(os.path.join("..","lib","stp_dict.csv"), usecols=["stp_id","name","list_size_o80"])
-    df = df.merge(stps, left_on="stp", right_on="stp_id", how="left").drop(["care_home_type","age","stp_id"], 1).rename(columns={"name":"stp_name"})  
+    df = df.merge(stps, left_on="stp", right_on="stp_id", how="left").rename(columns={"name":"stp_name"})
+    
+    # drop additional columns
+    df = df.drop(["age","stp_id"], 1)  
 
     return df
 

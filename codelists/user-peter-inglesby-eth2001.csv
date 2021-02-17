@@ -1,0 +1,83 @@
+code,term,grouping_16_label,category_16_id,grouping_6_label,category_6_id
+110761000000106,English - ethnic category 2001 census,eth2001_whibrit,1,White,1
+494131000000105,White British - ethnic category 2001 census,eth2001_whibrit,1,White,1
+92391000000108,British or mixed British - ethnic category 2001 census,eth2001_whibrit,1,White,1
+92541000000108,Scottish - ethnic category 2001 census,eth2001_whibrit,1,White,1
+92551000000106,Welsh - ethnic category 2001 census,eth2001_whibrit,1,White,1
+92561000000109,Northern Irish - ethnic category 2001 census,eth2001_whibrit,1,White,1
+92571000000102,Cornish - ethnic category 2001 census,eth2001_whibrit,1,White,1
+93921000000101,Ulster Scots - ethnic category 2001 census,eth2001_whibrit,1,White,1
+494161000000100,White Irish - ethnic category 2001 census,eth2001_whiirish,2,White,1
+92401000000106,Irish - ethnic category 2001 census,eth2001_whiirish,2,White,1
+110401000000103,Turkish - ethnic category 2001 census,eth2001_whiother,3,White,1
+88911000000101,Irish Traveller - ethnic category 2001 census,eth2001_whiother,3,White,1
+88921000000107,Traveller - ethnic category 2001 census,eth2001_whiother,3,White,1
+88931000000109,Gypsy/Romany - ethnic category 2001 census,eth2001_whiother,3,White,1
+88941000000100,Polish - ethnic category 2001 census,eth2001_whiother,3,White,1
+88951000000102,Baltic States (Estonian or Latvian or Lithuanian) - ethnic category 2001 census,eth2001_whiother,3,White,1
+88961000000104,Commonwealth of (Russian) Independent States - ethnic category 2001 census,eth2001_whiother,3,White,1
+88971000000106,Albanian - ethnic category 2001 census,eth2001_whiother,3,White,1
+88981000000108,Serbian - ethnic category 2001 census,eth2001_whiother,3,White,1
+92411000000108,Other White background - ethnic category 2001 census,eth2001_whiother,3,White,1
+92791000000109,Cypriot (part not stated) - ethnic category 2001 census,eth2001_whiother,3,White,1
+93931000000104,Greek - ethnic category 2001 census,eth2001_whiother,3,White,1
+93941000000108,Greek Cypriot - ethnic category 2001 census,eth2001_whiother,3,White,1
+93951000000106,Turkish Cypriot - ethnic category 2001 census,eth2001_whiother,3,White,1
+93961000000109,Italian - ethnic category 2001 census,eth2001_whiother,3,White,1
+93981000000100,Kosovan - ethnic category 2001 census,eth2001_whiother,3,White,1
+93991000000103,Bosnian - ethnic category 2001 census,eth2001_whiother,3,White,1
+94001000000108,Croatian - ethnic category 2001 census,eth2001_whiother,3,White,1
+94011000000105,Other republics which made up the former Yugoslavia - ethnic category 2001 census,eth2001_whiother,3,White,1
+94021000000104,Mixed Irish and other White - ethnic category 2001 census,eth2001_whiother,3,White,1
+94031000000102,Other mixed White - ethnic category 2001 census,eth2001_whiother,3,White,1
+94041000000106,Other White European or European unspecified or Mixed European - ethnic category 2001 census,eth2001_whiother,3,White,1
+94051000000109,Other White or White unspecified - ethnic category 2001 census,eth2001_whiother,3,White,1
+92421000000102,White and Black Caribbean - ethnic category 2001 census,eth2001_mxdwhiblkcar,4,Mixed,2
+92431000000100,White and Black African - ethnic category 2001 census,eth2001_mxdwhiblkafr,5,Mixed,2
+92441000000109,White and Asian - ethnic category 2001 census,eth2001_mxdwhiasn,6,Mixed,2
+110771000000104,Black and White - ethnic category 2001 census,eth2001_mxdother,7,Mixed,2
+92451000000107,Other Mixed background - ethnic category 2001 census,eth2001_mxdother,7,Mixed,2
+92581000000100,Black and Asian - ethnic category 2001 census,eth2001_mxdother,7,Mixed,2
+92591000000103,Black and Chinese - ethnic category 2001 census,eth2001_mxdother,7,Mixed,2
+92601000000109,Chinese and White - ethnic category 2001 census,eth2001_mxdother,7,Mixed,2
+92611000000106,Asian and Chinese - ethnic category 2001 census,eth2001_mxdother,7,Mixed,2
+92621000000100,Other Mixed or Mixed unspecified - ethnic category 2001 census,eth2001_mxdother,7,Mixed,2
+92631000000103,Mixed Asian - ethnic category 2001 census,eth2001_mxdother,7,Mixed,2
+92721000000106,Mixed Black - ethnic category 2001 census,eth2001_mxdother,7,Mixed,2
+110751000000108,Indian or British Indian - ethnic category 2001 census,eth2001_asnindian,8,South Asian,3
+92461000000105,Pakistani or British Pakistani - ethnic category 2001 census,eth2001_asnpak,9,South Asian,3
+92471000000103,Bangladeshi or British Bangladeshi - ethnic category 2001 census,eth2001_asnbang,10,South Asian,3
+110781000000102,Sinhalese - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+86461000000107,Sri Lankan - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92481000000101,Other Asian background - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92641000000107,Punjabi - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92651000000105,Kashmiri - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92661000000108,East African Asian - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92671000000101,Tamil - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92681000000104,British Asian - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92691000000102,Caribbean Asian - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92701000000102,Other Asian or Asian unspecified - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92751000000101,Vietnamese - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92761000000103,Japanese - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92771000000105,Filipino - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+92781000000107,Malaysian - ethnic category 2001 census,eth2001_asnother,11,South Asian,3
+107691000000105,Caribbean - ethnic category 2001 census,eth2001_blkcarib,12,Black,4
+92491000000104,African - ethnic category 2001 census,eth2001_blkafric,13,Black,4
+92711000000100,Somali - ethnic category 2001 census,eth2001_blkafric,13,Black,4
+92731000000108,Nigerian - ethnic category 2001 census,eth2001_blkafric,13,Black,4
+110791000000100,Black British - ethnic category 2001 census,eth2001_blkoth,14,Black,4
+92501000000105,Other Black background - ethnic category 2001 census,eth2001_blkoth,14,Black,4
+92741000000104,Other Black or Black unspecified - ethnic category 2001 census,eth2001_blkoth,14,Black,4
+92511000000107,Chinese - ethnic category 2001 census,eth2001_chinese,15,Other,5
+89001000000105,Arab - ethnic category 2001 census,eth2001_other,16,Other,5
+89011000000107,Iranian - ethnic category 2001 census,eth2001_other,16,Other,5
+89021000000101,South and Central American - ethnic category 2001 census,eth2001_other,16,Other,5
+92521000000101,Other - ethnic category 2001 census,eth2001_other,16,Other,5
+94061000000107,North African - ethnic category 2001 census,eth2001_other,16,Other,5
+94071000000100,"Middle Eastern (excluding Israeli, Iranian and Arab) - ethnic category 2001 census",eth2001_other,16,Other,5
+94081000000103,Israeli - ethnic category 2001 census,eth2001_other,16,Other,5
+94091000000101,Kurdish - ethnic category 2001 census,eth2001_other,16,Other,5
+94101000000109,Moroccan - ethnic category 2001 census,eth2001_other,16,Other,5
+94111000000106,Latin American - ethnic category 2001 census,eth2001_other,16,Other,5
+94121000000100,Multi-ethnic islands: Mauritian or Seychellois or Maldivian or St Helena - ethnic category 2001 census,eth2001_other,16,Other,5
+94151000000105,Any other group - ethnic category 2001 census,eth2001_other,16,Other,5
