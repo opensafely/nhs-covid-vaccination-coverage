@@ -115,7 +115,7 @@ def filter_other_group(df, groups_of_interest):
 
 def cumulative_sums(df, groups_of_interest, features_dict, latest_date):
     '''
-    Calculate cumulative sums
+    Calculate cumulative sums across groups
     
     Args:
         df (dataframe): input data
@@ -155,67 +155,97 @@ def cumulative_sums(df, groups_of_interest, features_dict, latest_date):
         else: # for age bands use all available features
             cols =  features_dict["DEFAULT"]
 
-        # This creates an empty dictionary that is used as a temporary collection place for the processed figures    
-        df_dict_temp = {}
         
-        # overall figures
-        total = out[["patient_id"]].nunique()[0]
+        df_dict_temp = filtered_cumulative_sum(df=out, columns=cols, latest_date=latest_date)
 
-        # Copies the dataframe but filters only to those who have had a vaccine recorded 
-        out2 = out.copy().loc[(out["covid_vacc_flag"]=="vaccinated")]
-
-        # group by date of covid vaccines to calculate cumulative sum of vaccines at each date of the campaign
-        out2 = pd.DataFrame(out2.groupby(["covid_vacc_date"])[["patient_id"]].nunique().unstack().fillna(0).cumsum()).reset_index()
-        out2 = out2.rename(columns={0:"overall"}).drop(["level_0"],1)
-
-        # in case no vaccinations on latest date for some orgs/groups, insert the latest data as a new row with the required date:
-        if out2["covid_vacc_date"].max()<latest_date:
-            out2.loc[max(out2.index)+1] = [latest_date, out2["overall"].max()]
-
-        # suppress low numbers
-        out2["overall"] = out2["overall"].replace([1,2,3,4,5,6], 0).fillna(0).astype(int)
-        
-        # Makes the overall_total values into integers so can be used in equation
-        out2["overall_total"] = total.astype(int)
-        
-        # create a percentage by dividing results by total
-        out2["overall_percent"] = 100*(out2["overall"]/out2["overall_total"])
-        df_dict_temp["overall"] = out2.set_index("covid_vacc_date")
-        
-        # figures by demographic/clinical features
-        for feature in cols:
-            
-            if feature=="sex":
-                out = out.loc[out[feature].isin(["M","F"])]
-
-            # find total number of patients in each subgroup (e.g. no of males and no of females)
-            totals = out.groupby([feature])[["patient_id"]].nunique().rename(columns={"patient_id":"total"}).transpose()
-            
-            # find total number of patients vaccinated in each subgroup (e.g. no of males and no of females),
-                # cumulative at each date of the campaign
-            out2 = out.copy().loc[(out["covid_vacc_flag"]=="vaccinated")]
-            out2 = out2.groupby([feature, "covid_vacc_date"])["patient_id"].nunique().unstack(0)
-            out2 = out2.fillna(0).cumsum()
-            
-            # suppress low numbers
-            out2 = out2.replace([1,2,3,4,5,6], 0).fillna(0)
-            # round other values to nearest 7
-            out2 = round7(out2)
-
-            for c2 in out2.columns:
-                out2[f"{c2}_total"] = totals[c2][0].astype(int)
-                #calculate percentage
-                out2[f"{c2}_percent"] = 100*(out2[c2]/out2[f"{c2}_total"])           
-            
-            # in case no vaccinations on latest date for some orgs/groups, insert the latest data as a new row with the required date
-            if out2.index.max()<latest_date:
-                out2.loc[latest_date] = out2.max()
-                
-            df_dict_temp[feature] = out2
         
         df_dict_out[group_title] = df_dict_temp
 
     return df_dict_out
+
+
+def filtered_cumulative_sum(df, columns, latest_date):
+    """
+    This calculates cumulative sums for a dataframe, and when given a set of
+    characteristics as columns, produces a dictionary of dataframes.
+
+    Args:
+        df (Dataframe): pandas dataframe. At the very least this needs a column with a date in
+            YYYY-MM-DD format, a column called 'covid_vacc_date' and a 'covid_vacc_flag'.
+        columns (list): list of subgroups e.g. ageband, sex
+        latest_date (datetime object): the date of the latest date of counting vaccines
+
+    Returns:
+        Dict (of dataframes): Each dataframe produced has a date as a row, with the value of the number
+            of vaccinations, the total that could be vaccinated (i.e. the denominator) and
+            the cumulative percentage vaccinated.
+
+            For overall population, i.e no subgroups, if the initial value is less that 7, it is
+            rounded to 0. For subgroups, the numerator (i.e the number of people who had a vaccine)
+            is rounded to the nearest 7.
+    """
+    # This creates an empty dictionary that is used as a temporary collection place for the processed figures    
+    df_dict_temp = {}
+    
+    # overall figures
+    total = df[["patient_id"]].nunique()[0]
+
+    # Copies the dataframe but filters only to those who have had a vaccine recorded 
+    out2 = df.copy().loc[(df["covid_vacc_flag"]=="vaccinated")]
+
+    # group by date of covid vaccines to calculate cumulative sum of vaccines at each date of the campaign
+    out2 = pd.DataFrame(out2.groupby(["covid_vacc_date"])[["patient_id"]].nunique().unstack().fillna(0).cumsum()).reset_index()
+    out2 = out2.rename(columns={0:"overall"}).drop(["level_0"],1)
+
+    # in case no vaccinations on latest date for some orgs/groups, insert the latest data as a new row with the required date:
+    if out2["covid_vacc_date"].max()<latest_date:
+        out2.loc[max(out2.index)+1] = [latest_date, out2["overall"].max()]
+
+    # suppress low numbers
+    out2["overall"] = out2["overall"].replace([1,2,3,4,5,6], 0).fillna(0).astype(int)
+    
+    # Rounds the overall_total values (and makes into integers)
+    out2["overall_total"] = round7(total)
+    
+    # create a percentage by dividing results by total
+    out2["overall_percent"] = 100*(out2["overall"]/out2["overall_total"])
+    df_dict_temp["overall"] = out2.set_index("covid_vacc_date")
+    
+    # figures by demographic/clinical features
+    for feature in columns:
+        
+        if feature=="sex":
+            df = df.loc[df[feature].isin(["M","F"])]
+
+        # find total number of patients in each subgroup (e.g. no of males and no of females)
+        totals = df.groupby([feature])[["patient_id"]].nunique().rename(columns={"patient_id":"total"}).transpose()
+        # suppress low numbers
+        totals = totals.replace([1,2,3,4,5,6], 0).fillna(0)
+        totals = round7(totals)
+        
+        # find total number of patients vaccinated in each subgroup (e.g. no of males and no of females),
+            # cumulative at each date of the campaign
+        out2 = df.copy().loc[(df["covid_vacc_flag"]=="vaccinated")]
+        out2 = out2.groupby([feature, "covid_vacc_date"])["patient_id"].nunique().unstack(0)
+        out2 = out2.fillna(0).cumsum()
+        
+        # suppress low numbers
+        out2 = out2.replace([1,2,3,4,5,6], 0).fillna(0)
+        # round other values to nearest 7
+        out2 = round7(out2)
+
+        for c2 in out2.columns:
+            out2[f"{c2}_total"] = totals[c2][0].astype(int)
+            #calculate percentage
+            out2[f"{c2}_percent"] = 100*(out2[c2]/out2[f"{c2}_total"])           
+        
+        # in case no vaccinations on latest date for some orgs/groups, insert the latest data as a new row with the required date
+        if out2.index.max()<latest_date:
+            out2.loc[latest_date] = out2.max()
+            
+        df_dict_temp[feature] = out2
+
+    return df_dict_temp
 
 
 def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, name_of_other_group="other", suffix=""):
@@ -232,8 +262,9 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, name_of
     
     dfp = df.copy().loc[(df["covid_vacc_date"]!=0)]
     
-    dfp["group"] = np.where( dfp["community_ageband"].isin(["80+","70-79","care home"]), dfp["community_ageband"], "other" )
-    dfp["group"] = np.where( (dfp["shielded"]=="shielding") & (dfp["group"]=="other"), "shielding", dfp["group"] )
+    dfp["group"] = np.where( dfp["community_ageband"].isin(["80+","70-79","care home", "65-69"]), 
+                            dfp["community_ageband"], "other" )
+    dfp["group"] = np.where( (dfp["shielded"]=="shielding (aged 16-69)") & (dfp["group"]=="other"), "shielding (aged 16-69)", dfp["group"] )
     
     dfp = dfp.groupby(["covid_vacc_date","group"])[["patient_id"]].count()  
     dfp = dfp.unstack().fillna(0).cumsum().reset_index().replace([0,1,2,3,4,5,6],0) 
@@ -301,7 +332,7 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
 
         # filter to required values:
         # for groups with a population denominator, keep the percentage value only
-        if group != "under 70s, not in other eligible groups shown":
+        if "not in other eligible groups" not in group:
             out = out.filter(regex='percent').round(1)
             col_str = " (percent)"
         # for groups with no denominator, keep the actual values only
@@ -332,7 +363,7 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
             else:
                 date_reached[i] = "unknown"
         out = out.transpose().append(date_reached).transpose().drop("weeks_to_target",1)
-        out = out[[lastweek,"weeklyrate","date_reached","Increase in uptake (%)"]].rename(columns={lastweek: f"vaccinated at {lastweek}{col_str}", "weeklyrate":f"Uptake over last 7d{col_str}", "date_reached":"Date projected to reach 90%"})    
+        out = out[[lastweek,"weeklyrate","date_reached","Increase in uptake (%)"]].rename(columns={lastweek: f"vaccinated 7d previous{col_str}", "weeklyrate":f"Uptake over last 7d{col_str}", "date_reached":"Date projected to reach 90%"})    
         out.index = out.index.str.replace("_percent","")    
         out = out.reset_index().rename(columns={category:"group", "index":"group"})
         out["category"] = category
@@ -356,7 +387,7 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
 
         out3 = out3.append(out2)   
 
-    if group == "under 70s, not in other eligible groups shown":
+    if "not in other eligible groups" in group:
         out3 = out3.drop(["percent","total","Date projected to reach 90%"],1)
     else:
         out3 = out3.drop(["Increase in uptake (%)"],1)
@@ -365,7 +396,7 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
 
 
 def summarise_data_by_group(result_dict, latest_date, 
-                            groups=["80+", "70-79", "care home", "shielding", "under 70s, not in other eligible groups shown"]):
+                            groups=["80+", "70-79", "care home", "shielding (aged 16-69)"]):
     """
     This takes in the large result_dict that is created by cumulative_sums()
     and loops through the specified groups and applies the function 
@@ -415,7 +446,7 @@ def round7(input_):
 
 
 def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savepath, 
-                         groups=["80+", "70-79", "care home", "shielding", "under 70s, not in other eligible groups shown"],
+                         groups=["80+", "70-79", "care home", "shielding (aged 16-69)"],
                          suffix=""):
     """
     This takes in the large summarised_data_dict that is created by summarise_data_by_group()
@@ -456,7 +487,7 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
     for group in groups:
         out = summarised_data_dict[group]
         vaccinated = round7(out.loc[("overall","overall")]["vaccinated"])
-        if group != "under 70s, not in other eligible groups shown":
+        if "not in other eligible groups" not in group:
             percent = out.loc[("overall","overall")]["percent"].round(1)
             total = out.loc[("overall","overall")]["total"].astype(int)
             summary_stats[f"**{group}** population vaccinated"] = f"{vaccinated:,} ({percent}% of {total:,})"
@@ -481,7 +512,7 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
     return summary_stats
 
 
-def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date, savepath, groups=["80+", "70-79", "care home", "shielding", "under 70s, not in other eligible groups shown"]):
+def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date, savepath, groups=["80+", "70-79", "care home", "shielding (aged 16-69)"]):
     """
     This takes in the large summarised_data_dict that is created by summarise_data_by_group()
     and loops through the specified groups and displays this information to the user. 
@@ -504,7 +535,9 @@ def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date,
                 Markdown(f"- 'Date projected to reach 90%' being 'unknown' indicates projection of >6mo (likely insufficient information)\n"\
                            f"- Patient counts rounded to the nearest 7"))
         out = summarised_data_dict[group]
-
+        for c in ["vaccinated","total"]:
+            if c in out.columns:
+                out[c] = out[c].astype(int)
         display(out)
 
         # saves to file

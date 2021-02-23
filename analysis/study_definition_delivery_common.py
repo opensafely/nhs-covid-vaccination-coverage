@@ -1,4 +1,4 @@
-from cohortextractor import patients
+from cohortextractor import patients, combine_codelists
 from codelists import *
 from datetime import date
 
@@ -26,7 +26,7 @@ common_variables = dict(
         AND (
             covid_vacc_date
             OR
-            (age >=70) 
+            (age >=65) 
             OR
             shielded
             OR
@@ -93,6 +93,7 @@ common_variables = dict(
         },
     ),
     # age bands for patients not in care homes (ie living in the community)
+    # this is used to define eligible groups not defined by clinical criteria
     ageband_community=patients.categorised_as(
         {
             "care home" : "DEFAULT",
@@ -100,7 +101,8 @@ common_variables = dict(
             "30-39": """ age >= 30 AND age < 40 AND NOT care_home""",
             "40-49": """ age >= 40 AND age < 50 AND NOT care_home""",
             "50-59": """ age >= 50 AND age < 60 AND NOT care_home""",
-            "60-69": """ age >= 60 AND age < 70 AND NOT care_home""",
+            "60-64": """ age >= 60 AND age < 65 AND NOT care_home""",
+            "65-69": """ age >= 65 AND age < 70 AND NOT care_home""",
             "70-79": """ age >= 70 AND age < 80 AND NOT care_home""",
             "80+": """ age >=  80 AND age < 120 AND NOT care_home""",
         },
@@ -113,7 +115,8 @@ common_variables = dict(
                     "30-39": 0.125,
                     "40-49": 0.125,
                     "50-59": 0.125,
-                    "60-69": 0.125,
+                    "60-64": 0.0625,
+                    "65-69": 0.0625,
                     "70-79": 0.125,
                     "80+": 0.125,
                 }
@@ -320,7 +323,7 @@ common_variables = dict(
         severely_clinically_vulnerable=patients.with_these_clinical_events(
             high_risk_codes, # note no date limits set
             find_last_match_in_period = True,
-            return_expectations={"incidence": 0.01,},
+            return_expectations={"incidence": 0.02,},
         ),
 
         # find date at which the high risk code was added
@@ -331,8 +334,49 @@ common_variables = dict(
 
         ### NOT SHIELDED GROUP (medium and low risk) - only flag if later than 'shielded'
         less_vulnerable=patients.with_these_clinical_events(
-            not_high_risk_codes, # note no date limits set
+            not_high_risk_codes, 
             on_or_after="date_severely_clinically_vulnerable",
+            return_expectations={"incidence": 0.01,},
+        ),
+    ),
+    
+    
+    # flag the newly expanded shielding group as of 15 feb (should be a subset of the previous flag)
+    shielded_since_feb_15 = patients.satisfying(
+            """severely_clinically_vulnerable_since_feb_15
+                AND NOT new_shielding_status_reduced
+                AND NOT previous_flag
+            """,
+        return_expectations={
+            "incidence": 0.01,
+                },
+        
+        ### SHIELDED GROUP - first flag all patients with "high risk" codes
+        severely_clinically_vulnerable_since_feb_15=patients.with_these_clinical_events(
+            high_risk_codes, 
+            on_or_after= "2021-02-15",
+            find_last_match_in_period = False,
+            return_expectations={"incidence": 0.02,},
+        ),
+
+        # find date at which the high risk code was added
+        date_vulnerable_since_feb_15=patients.date_of(
+            "severely_clinically_vulnerable_since_feb_15", 
+            date_format="YYYY-MM-DD",   
+        ),
+
+        ### check that patient's shielding status has not since been reduced to a lower risk level 
+         # e.g. due to improved clinical condition of patient
+        new_shielding_status_reduced=patients.with_these_clinical_events(
+            not_high_risk_codes,
+            on_or_after="date_vulnerable_since_feb_15",
+            return_expectations={"incidence": 0.01,},
+        ),
+        
+        # anyone with a previous flag of any risk level will not be added to the new shielding group
+        previous_flag=patients.with_these_clinical_events(
+            combine_codelists(high_risk_codes, not_high_risk_codes),
+            on_or_before="2021-02-14",
             return_expectations={"incidence": 0.01,},
         ),
     ),

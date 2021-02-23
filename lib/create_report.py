@@ -8,7 +8,7 @@ from operator import itemgetter
 
 # we create a dict for renaming population variables into suitable longer/correctly capitalised forms for presentation as titles
 variable_renaming = {'ageband': "Age band",
-                      'ageband_5yr': "Age band",
+                      'ageband 5yr': "Age band",
                       'sex': "Sex",
                       'bmi':"BMI",   
                       'ethnicity 6 groups':"Ethnicity (broad categories)",
@@ -115,7 +115,7 @@ def find_and_sort_filenames(foldername, *,
         sort_order = {'80+': 0,
          '70-79': 1,
          'care home': 2,
-         'shielding': 3,
+         'shielding (aged 16-69)': 3,
          'under 70s, not in other eligible groups shown': 4}
     else:
         display("sort_by_population_or_demographics received an invalid value")
@@ -251,10 +251,21 @@ def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=
     # display footnotes
     display(Markdown("**Footnotes:**\n"\
                        f"- Patient counts rounded to the nearest 7"))
-    if (show_carehomes == True) & (title == "Cumulative vaccination figures among care home population"):
+    
+    # display caveats about care home inclusion/exclusion where relevant
+    if (show_carehomes == True) & ("care home" in title):
         display(Markdown(f"- Population includes those known to live in an elderly care home, based upon clinical coding."))
-    else:
+    elif "shielding" in title:
+        display(Markdown(f"- Population excludes those over 65 known to live in an elderly care home, based upon clinical coding."))
+    elif ("80+" in title) | ("70-79" in title) | ("65-69" in title):
         display(Markdown(f"- Population excludes those known to live in an elderly care home, based upon clinical coding."))
+    
+    # display note that 65-69 group excludes shielding subgroup
+    if ("65-69" in title):
+        display(Markdown(f"- Population excludes those who are currently shielding."))
+    
+    
+    # display footnotes related to STPs   
     if org_breakdown=="stp":
         display(Markdown("- The percentage coverage of each STP population by TPP practices for over 80s is displayed, and STPs with less than 10% coverage are not shown.\n"\
                          "- The subset of the population covered by TPP in each STP may not be representative of the whole STP. \n"\
