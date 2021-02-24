@@ -1,0 +1,23 @@
+Category,Group,Vaccinated at 17 Feb (n),Vaccinated at 17 Feb (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,466356,57.6,809634,44.8,12.8
+newly shielded since feb 15,no,406476,80.5,505127,65.0,15.5
+newly shielded since feb 15,yes,59878,19.7,304507,11.3,8.4
+Sex,F,256697,56.0,458416,44.2,11.8
+Sex,M,209657,59.7,351211,45.6,14.1
+Age band,16-29,28903,42.9,67438,32.7,10.2
+Age band,30-39,46277,36.7,125951,28.6,8.1
+Age band,40-49,74543,45.9,162302,35.8,10.1
+Age band,50-59,135982,61.4,221557,47.6,13.8
+Age band,60-69,180642,77.7,232379,60.7,17.0
+Ethnicity (broad categories),Black,12460,31.1,40096,23.3,7.8
+Ethnicity (broad categories),Mixed,4676,37.7,12404,28.5,9.2
+Ethnicity (broad categories),Other,5264,34.5,15239,26.1,8.4
+Ethnicity (broad categories),South Asian,32312,32.9,98182,24.6,8.3
+Ethnicity (broad categories),Unknown,91959,59.5,154455,46.4,13.1
+Ethnicity (broad categories),White,319676,65.3,489244,51.1,14.2
+Index of Multiple Deprivation (quintiles),1 Most deprived,110600,45.9,241122,33.4,12.5
+Index of Multiple Deprivation (quintiles),2,99778,54.3,183715,41.6,12.7
+Index of Multiple Deprivation (quintiles),3,95424,62.2,153391,49.1,13.1
+Index of Multiple Deprivation (quintiles),4,81830,68.5,119539,55.4,13.1
+Index of Multiple Deprivation (quintiles),5 Least deprived,68033,73.4,92708,60.5,12.9
+Index of Multiple Deprivation (quintiles),Unknown,10689,55.8,19152,42.3,13.5

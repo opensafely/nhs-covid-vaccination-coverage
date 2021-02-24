@@ -1,18 +1,18 @@
-Category,Group,Vaccinated at 11 Feb (n),Vaccinated at 11 Feb (%),Total eligible,vaccinated at 2021-02-04 (percent),Vaccinated over last 7d (%)
-overall,overall,71600.0,87.0,82300.0,84.8,2.2
-Sex,F,51527.0,88.1,58501.0,86.0,2.1
-Sex,M,20076.0,84.4,23799.0,81.7,2.7
-ageband 5yr,65-69,3080.0,67.9,4534.0,63.6,4.3
-ageband 5yr,70-74,5523.0,79.7,6929.0,73.6,6.1
-ageband 5yr,75-79,8036.0,85.8,9365.0,83.3,2.5
-ageband 5yr,80-84,12495.0,88.6,14107.0,86.9,1.7
-ageband 5yr,85-89,16996.0,89.1,19077.0,87.4,1.7
-ageband 5yr,90+,25466.0,90.0,28287.0,88.5,1.5
-Ethnicity (broad categories),Black,294.0,70.0,420.0,68.3,1.7
-Ethnicity (broad categories),Mixed,133.0,78.7,169.0,74.6,4.1
-Ethnicity (broad categories),Other,238.0,84.4,282.0,79.4,5.0
-Ethnicity (broad categories),South Asian,476.0,78.5,606.0,75.1,3.4
-Ethnicity (broad categories),Unknown,15302.0,87.5,17490.0,85.5,2.0
-Ethnicity (broad categories),White,55160.0,87.1,63333.0,84.8,2.3
-Dementia,no,31668.0,84.0,37708.0,80.9,3.1
-Dementia,yes,39935.0,89.6,44592.0,88.0,1.6
+Category,Group,Vaccinated at 17 Feb (n),Vaccinated at 17 Feb (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,75162,90.2,83293,87.3,2.9
+Sex,F,53900,91.0,59199,88.4,2.6
+Sex,M,21266,88.3,24094,84.6,3.7
+Age band,65-69,3486,75.8,4599,68.8,7.0
+Age band,70-74,6034,85.9,7028,80.3,5.6
+Age band,75-79,8512,89.3,9534,86.0,3.3
+Age band,80-84,13027,91.1,14301,88.8,2.3
+Age band,85-89,17731,91.8,19320,89.4,2.4
+Age band,90+,26369,92.5,28511,90.2,2.3
+Ethnicity (broad categories),Black,322,75.4,427,70.5,4.9
+Ethnicity (broad categories),Mixed,147,87.5,168,79.2,8.3
+Ethnicity (broad categories),Other,252,87.8,287,82.9,4.9
+Ethnicity (broad categories),South Asian,497,81.6,609,78.2,3.4
+Ethnicity (broad categories),Unknown,16128,90.6,17801,87.8,2.8
+Ethnicity (broad categories),White,57827,90.3,64008,87.4,2.9
+Dementia,no,33628,88.0,38227,84.2,3.8
+Dementia,yes,41531,92.2,45066,89.9,2.3

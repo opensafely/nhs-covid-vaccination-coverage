@@ -78,18 +78,24 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     # drop unnecssary columns or columns created for processing 
     df = df.drop(["imd","ethnicity_16", "ethnicity", "adrenaline_pen", "has_died", "has_follow_up"], 1)
 
+
+    
+    # shielding: keep flag only for under 70s
+    df["shielded"] = np.where((df["shielded"]==1) & (df["age"]<70), "shielding (aged 16-69)", "")
     
     ###### care homes #####
-
     # amend community age band to remove any care home flags for under 65s 
-    df.loc[(df["ageband_community"]=="care home") & (df["age"]<65), "ageband_community"] = df["ageband"]
+    df.loc[(df["ageband_community"]=="care home") & (df["age"]<60), "ageband_community"] = df["ageband"] # 10 yr age band
+    df.loc[(df["ageband_community"]=="care home") & (df["age"]>=60) & (df["age"]<65), "ageband_community"] = "60-64" # 5 yr age band
 
-    # shielding: keep flag only for under 70s
-    df["shielded"] = np.where((df["shielded"]==1) & (df["age"]<70), "shielding", "")
+    # amend community age band to remove any people shielding from the under 70s groups (they will be reported in shielded group) 
+    df.loc[(df["ageband_community"]!="care home") & (df["age"]<70) & (df["shielded"]=="shielding (aged 16-69)"), "ageband_community"] = "shielding (aged 16-69)"
 
+    # rename column for clarity
+    df = df.rename(columns={"shielded_since_feb_15":"newly_shielded_since_feb_15"})
     
     # for each specific situation or condition, replace 1 with YES and 0 with no. This makes the graphs easier to read
-    for c in ["dementia", 
+    for c in ["newly_shielded_since_feb_15", "dementia", 
           "chronic_cardiac_disease", "current_copd", "dialysis", "dmards","psychosis_schiz_bipolar",
          "solid_organ_transplantation", "chemo_or_radio", "intel_dis_incl_downs_syndrome","ssri",
           "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "bone_marrow_transplant",
