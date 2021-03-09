@@ -179,6 +179,12 @@
       "url": "https://codelists.opensafely.org/codelist/user/peter-inglesby/eth2001/0f56fa3b/",
       "downloaded_at": "2021-02-10 14:28:12.230527Z",
       "sha": "708774541b925cf190016e2e160eec31b02d2512"
+    },
+    "primis-covid19-vacc-uptake-learndis.csv": {
+      "id": "primis-covid19-vacc-uptake/learndis/v1",
+      "url": "https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/learndis/v1/",
+      "downloaded_at": "2021-03-09 11:58:49.613669Z",
+      "sha": "41f81fcb9fadb082a77cadd6cf60614d7c8d860f"
     }
   }
 }

@@ -19,39 +19,6 @@ from study_definition_delivery_common import common_variables, campaign_start, i
 study = StudyDefinition(
     index_date = index_date,
     
-    # CAREHOME STATUS # TPP address-based flag
-#     care_home_type=patients.care_home_status_as_of(
-#         index_date,
-#         categorised_as={
-#             "PC": """
-#               IsPotentialCareHome
-#               AND LocationDoesNotRequireNursing='Y'
-#               AND LocationRequiresNursing='N'
-#             """,
-#             "PN": """
-#               IsPotentialCareHome
-#               AND LocationDoesNotRequireNursing='N'
-#               AND LocationRequiresNursing='Y'
-#             """,
-#             "PS": "IsPotentialCareHome",
-#             "": "DEFAULT", # use empty string 
-#         },
-#         return_expectations={
-#             "rate": "universal",
-#             "category": {"ratios": {"PC": 0.05, "PN": 0.05, "PS": 0.05, "": 0.85,},},
-#         },
-#     ),
-         
-#     # simple care home flag
-#     care_home_tpp=patients.categorised_as(
-#             {
-#             1: """care_home_type""",
-#             0: "DEFAULT", 
-#         },
-#         return_expectations={
-#             "category": {"ratios": {1: 0.15, 0: 0.85,},},
-#         },
-#     ),
 
     # ETHNICITY IN 16 CATEGORIES
     ethnicity_16=patients.with_these_clinical_events(
@@ -93,6 +60,41 @@ study = StudyDefinition(
             "category": {"ratios": {"1": 0.2, "2": 0.2, "3": 0.2, "4": 0.2, "5": 0.2}},
             "incidence": 0.75,
         },
+    ),
+            
+            
+    # fill missing ethnicity from SUS
+    ethnicity_6_sus = patients.with_ethnicity_from_sus(
+        returning="group_6",  
+        use_most_frequent_code=True,
+        return_expectations={
+            "category": {"ratios": {"1": 0.2, "2": 0.2, "3": 0.2, "4": 0.2, "5": 0.2}},
+            "incidence": 0.4,
+            },
+    ),
+    
+    ethnicity_16_sus = patients.with_ethnicity_from_sus(
+        returning="group_16",  
+        use_most_frequent_code=True,
+        return_expectations={
+            "category": {"ratios": {"1": 0.0625,
+                    "2": 0.0625,
+                    "3": 0.0625,
+                    "4": 0.0625,
+                    "5": 0.0625,
+                    "6": 0.0625,
+                    "7": 0.0625,
+                    "8": 0.0625,
+                    "9": 0.0625,
+                    "10": 0.0625,
+                    "11": 0.0625,
+                    "12": 0.0625,
+                    "13": 0.0625,
+                    "14": 0.0625,
+                    "15": 0.0625,
+                    "16": 0.0625,}},
+            "incidence": 0.4,
+            },
     ),
 
     # CLINICAL CO-MORBIDITIES WORK IN PROGRESS IN COLLABORATION WITH NHSX
