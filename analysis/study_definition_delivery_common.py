@@ -31,6 +31,8 @@ common_variables = dict(
             shielded
             OR
             (care_home)
+            OR
+            (LD)
         )
         """
     ),
@@ -380,4 +382,10 @@ common_variables = dict(
             return_expectations={"incidence": 0.01,},
         ),
     ),
+                
+    LD = patients.with_these_clinical_events(
+            wider_ld_codes, 
+            return_expectations={"incidence": 0.02,},
+    ),
+            
 )

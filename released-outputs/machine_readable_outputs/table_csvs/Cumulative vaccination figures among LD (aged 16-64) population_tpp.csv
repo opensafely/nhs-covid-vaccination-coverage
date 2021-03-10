@@ -1,0 +1,18 @@
+Category,Group,Vaccinated at 03 Mar (n),Vaccinated at 03 Mar (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,38673,48.3,80017,33.3,15.0
+Sex,F,15596,51.5,30275,35.9,15.6
+Sex,M,23079,46.4,49735,31.7,14.7
+Age band,16-29,13027,40.1,32473,25.8,14.3
+Age band,30-34,4816,46.0,10465,30.6,15.4
+Age band,35-39,3766,49.8,7567,34.0,15.8
+Age band,40-44,3122,52.5,5950,37.2,15.3
+Age band,45-49,3276,54.3,6034,38.6,15.7
+Age band,50-54,3738,58.2,6426,42.5,15.7
+Age band,55-59,3899,61.1,6384,45.4,15.7
+Age band,60-64,3024,64.2,4711,48.7,15.5
+Ethnicity (broad categories),Black,420,31.7,1323,20.6,11.1
+Ethnicity (broad categories),Mixed,364,34.2,1064,23.0,11.2
+Ethnicity (broad categories),Other,259,39.4,658,27.7,11.7
+Ethnicity (broad categories),South Asian,1540,33.7,4571,23.3,10.4
+Ethnicity (broad categories),Unknown,2765,42.3,6531,26.6,15.7
+Ethnicity (broad categories),White,33327,50.6,65863,35.1,15.5

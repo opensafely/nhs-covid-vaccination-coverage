@@ -35,6 +35,10 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     # import data and fill nulls with 0
     df = pd.read_csv(os.path.join("..",input_path, input_file)).fillna(0)
 
+    # fill unknown ethnicity from GP records with ethnicity from SUS (secondary care)
+    df.loc[df["ethnicity"]==0, "ethnicity"] = df["ethnicity_6_sus"]
+    df.loc[df["ethnicity_16"]==0, "ethnicity_16"] = df["ethnicity_16_sus"]
+    
     # convert ethnic categories to words. There are 2 ways of categorising - into 
     # 6 groups or into 16 groups. 
     # this creates a new column called `ethnicity_6_groups`
@@ -61,7 +65,7 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     # Assign column SSRI to be where has SSRI and no psychosis/bipolar/schizophrenia/dementia or LD
     df = df.assign(
         ssri = np.where((df["ssri"]==1) & (df["psychosis_schiz_bipolar"]==0) &\
-                    (df["intel_dis_incl_downs_syndrome"]==0) & (df["dementia"]==0), 1, 0))
+                    (df["LD"]==0) & (df["dementia"]==0), 1, 0))
 
     # Replace a region and STP with a value `0` with Unknown
     df = df.assign(
@@ -94,8 +98,11 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     # rename column for clarity
     df = df.rename(columns={"shielded_since_feb_15":"newly_shielded_since_feb_15"})
     
+    # LD: keep flag only for under 65s and those not shielding
+    df["LD_group"] = np.where((df["LD"]==1) & (df["age"]<65) &(df["shielded"]==""), "LD (aged 16-64)", "")
+    
     # for each specific situation or condition, replace 1 with YES and 0 with no. This makes the graphs easier to read
-    for c in ["newly_shielded_since_feb_15", "dementia", 
+    for c in ["LD", "newly_shielded_since_feb_15", "dementia", 
           "chronic_cardiac_disease", "current_copd", "dialysis", "dmards","psychosis_schiz_bipolar",
          "solid_organ_transplantation", "chemo_or_radio", "intel_dis_incl_downs_syndrome","ssri",
           "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "bone_marrow_transplant",

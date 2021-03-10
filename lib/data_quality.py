@@ -1,12 +1,15 @@
 "Module for data quality checks"
 
+import os
 from IPython.display import display, Markdown
 import pandas as pd
 
+# import custom functions from 'lib' folder
+import sys
+sys.path.append('../lib/')
+from report_results import create_output_dirs, filter_other_group, round7
 
-def ethnicity_completeness(df, group, 
-                           name_of_other_group="all other vaccinated people, not in eligible groups shown",
-                           groups_not_in_other_group=["care home","80+", "70-79"]):
+def ethnicity_completeness(df, groups_of_interest):
 
     '''
     Describe completeness of ethnicity coding for group of interest
@@ -22,26 +25,39 @@ def ethnicity_completeness(df, group,
     displays string describing n and % of given group with ethnicity known
     
     '''
-    # group without denominator
-    if group == "other":
-        out = df[["community_ageband","ethnicity_6_groups","patient_id"]].copy()
-        out = out.loc[~out["community_ageband"].isin(groups_not_in_other_group)]        
-        group = name_of_other_group
+    # create copy of df only with cols of interest
+    cols = [v for v in set(groups_of_interest.values()) if v != "other"]
+    cols.extend(["ethnicity_6_groups","patient_id"])   
         
-    # in subgroups with denominators
-    else:
-        out = df[["community_ageband","ethnicity_6_groups","patient_id"]].copy()
-        out = out.loc[out["community_ageband"]==group]
-
-    total = out["patient_id"].nunique()
-
-    known_eth = out.groupby("ethnicity_6_groups")[["patient_id"]].nunique().reset_index()
-    known_eth = known_eth.loc[known_eth["ethnicity_6_groups"]!="Unknown"]["patient_id"].sum()
-        
-    percent = round(100*(known_eth/total), 1)
-        
+    ethnicity_coverage = pd.DataFrame(columns=["group", "n with ethnicity", "total population (n)", "ethnicity coverage (%)"])
     
-    display(Markdown(f"Total **{group}** population with ethnicity recorded {known_eth:,d} ({percent}%)"))
+    for i, (group_title, group_label) in enumerate(groups_of_interest.items()):
+        out = df[cols].copy()
+        # filter dataframe to eligible group
+        if group_label == "other": # for "all others" filter out the each of the defined groups
+            # we want to exclude all the other eligible groups from the "other" group
+            out = filter_other_group(out, groups_of_interest=groups_of_interest)
+        elif group_label != "community_ageband": # for groups not defined as age bands or care home, filter out care home population
+            out = out.loc[(out["community_ageband"]!="care home") & (out[group_label]==group_title)]
+        # will need a further filter for the "clinically vulnerable" group here
+        else:    # age groups / care home
+            out = out.loc[(out[group_label]==group_title)]
+
+        total = round7(out["patient_id"].nunique())
+
+        known_eth = out.groupby("ethnicity_6_groups")[["patient_id"]].nunique().reset_index()
+        known_eth = known_eth.loc[known_eth["ethnicity_6_groups"]!="Unknown"]["patient_id"].sum()
+        known_eth = round7(known_eth)
+        percent = round(100*(known_eth/total), 1)
+        
+        # export ethnicity coverage stats to text file
+        savepath, _, _ = create_output_dirs()
+        ethnicity_coverage.loc[i] = [group_title, known_eth, total, percent]
+        ethnicity_coverage.to_csv(os.path.join(savepath["text"], "ethnicity_coverage.csv"), index=False)
+        
+
+        display(Markdown(f"Total **{group_title}** population with ethnicity recorded {known_eth:,d} ({percent}%)"))
+        
 
     
     

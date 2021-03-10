@@ -19,6 +19,7 @@ variable_renaming = {'ageband': "Age band",
                       'dmards': 'DMARDs',
                       'dementia': 'Dementia',
                       'psychosis schiz bipolar': 'Psychosis, schizophrenia, or bipolar',
+                      'LD': 'Learning disability',
                       'intel dis incl downs syndrome': 'Intellectual disability inc Down syndrome',
                       'ssri': 'SSRI (last 12 months)',
                       'chemo or radio': 'Chemo or radiotherapy',
@@ -93,30 +94,32 @@ def find_and_sort_filenames(foldername, *,
         file_list = [f for f in file_list if any(d in f for d in demographics_subset)]
     
     if by_demographics_or_population=="demographics":
-        sort_order = {'ethnicity 6 groups': 3,
-             'imd categories': 4,
-             'bmi': 5,
-             'cancer excl lung and haem': 10,
-             'chemo or radio': 11,
-             'chronic cardiac disease': 6,
-             'current copd': 7,
-             'dementia': 14,
-             'dialysis': 12,
-             'dmards': 13,
-             'haematological cancer': 9,
-             'intel dis incl downs syndrome': 15,
-             'lung cancer': 8,
-             'psychosis schiz bipolar': 16,
-             'sex': 2,
-             'ssri': 17,
-             'overall':0,
-             'ageband':1}
+        ordered_dems = ['overall',
+                        'newly shielded since feb 15',
+                        'ageband',
+                        'ageband_5yr',
+                        'sex',
+                        'ethnicity 6 groups',
+                        'imd categories',
+                        'bmi',
+                        'chronic cardiac disease',
+                        'current copd',
+                        'lung cancer',
+                        'haematological cancer',
+                        'cancer excl lung and haem',
+                        'chemo or radio',
+                        'dialysis',
+                        'dmards',
+                        'dementia',
+                        'LD',
+                        'psychosis schiz bipolar',
+                        'ssri'
+                        ]
+        sort_order = {key: ix for ix, key in enumerate(ordered_dems)}
     elif by_demographics_or_population=="population":
-        sort_order = {'80+': 0,
-         '70-79': 1,
-         'care home': 2,
-         'shielding (aged 16-69)': 3,
-         'under 70s, not in other eligible groups shown': 4}
+        ordered_pops = ['80+', '70-79', 'care home', 'shielding (aged 16-69)', '65-69',
+                         'under 65s, not in other eligible groups shown']
+        sort_order = {key: ix for ix, key in enumerate(ordered_pops)}
     else:
         display("sort_by_population_or_demographics received an invalid value")
         
@@ -260,8 +263,8 @@ def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=
     elif ("80+" in title) | ("70-79" in title) | ("65-69" in title):
         display(Markdown(f"- Population excludes those known to live in an elderly care home, based upon clinical coding."))
     
-    # display note that 65-69 group excludes shielding subgroup
-    if ("65-69" in title):
+    # display note that 65-69 and LD group excludes shielding subgroup
+    if ("65-69" in title) | ("LD (aged 16-64)" in title):
         display(Markdown(f"- Population excludes those who are currently shielding."))
     
     
@@ -274,4 +277,4 @@ def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=
                           "- 'Date projected to reach 90%' is an estimate based on the previous 7 days' uptake; being 'unknown' indicates projection of >6mo (likely insufficient information)"))
     
     if variable_renaming["ssri"] in tab.index:
-        display(Markdown("- SSRIs group excludes individuals with Psychosis/ schizophrenia/bipolar, Intellectual disability incl Down syndrome, or Dementia."))
+        display(Markdown("- SSRIs group excludes individuals with Psychosis/ schizophrenia/bipolar, LD, or Dementia."))

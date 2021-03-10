@@ -264,7 +264,9 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, name_of
     
     dfp["group"] = np.where( dfp["community_ageband"].isin(["80+","70-79","care home", "65-69"]), 
                             dfp["community_ageband"], "other" )
+    # separate shielding and LD groups out from "other" group
     dfp["group"] = np.where( (dfp["shielded"]=="shielding (aged 16-69)") & (dfp["group"]=="other"), "shielding (aged 16-69)", dfp["group"] )
+    dfp["group"] = np.where( (dfp["LD_group"]=="LD (aged 16-64)") & (dfp["group"]=="other"), "LD (aged 16-64)", dfp["group"] )
     
     dfp = dfp.groupby(["covid_vacc_date","group"])[["patient_id"]].count()  
     dfp = dfp.unstack().fillna(0).cumsum().reset_index().replace([0,1,2,3,4,5,6],0) 
@@ -276,6 +278,10 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, name_of
     
     dfp.columns = dfp.columns.droplevel()
     dfp["total"] = dfp.sum(axis=1)
+    
+    # sort columns (eligible groups) such that they appear in descending order of total no of vaccines at the latest date, 
+    # legend entries will appear in corresponding order hence be easier to read
+    dfp = dfp.sort_values(by=dfp.last_valid_index(), axis=1, ascending=False)
     
     # export data to csv
     out = dfp.copy()
@@ -290,6 +296,7 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, name_of
     plt.xticks(rotation=90)
     plt.ylabel("number of patients vaccinated", fontweight='bold')
     plt.title(f"Cumulative vaccination figures to {latest_date}", fontsize=16)
+    plt.legend(bbox_to_anchor=(1.04,1), loc="upper left")
     
     # export figure to file and display it
     plt.savefig(os.path.join(savepath["figures"], f"Cumulative vaccination figures.svg"), dpi=300, bbox_inches='tight')
@@ -375,7 +382,6 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
         out2 = out2.loc[out2["covid_vacc_date"]==latest_date].reset_index().set_index("covid_vacc_date").drop(["index"], 1).transpose()
         # split field names e.g. "M_percent" ->"M""percent"
         out2.index = pd.MultiIndex.from_tuples(out2.index.str.split('_').tolist())
-
         out2 = out2.unstack().reset_index(col_level=1)
         out2.columns = out2.columns.droplevel()
         out2 = out2.rename(columns={"index":"group", np.nan:"vaccinated"})
@@ -547,7 +553,7 @@ def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date,
         out_csv.to_csv(os.path.join(savepath["tables"], f"Cumulative vaccination figures among {group} population.csv"), index=True)
 
 
-def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_latest_date, savepath, pop_subgroups=["80+", "70-79"], groups_dict=None, savepath_figure_csvs=None, include_overall=False, org_name="", suffix=""):
+def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_latest_date, savepath, pop_subgroups=["80+", "70-79"], groups_dict=None, groups_to_exclude=None, savepath_figure_csvs=None, include_overall=False, org_name="", suffix=""):
     
     '''
     Plot vaccine coverage charts by demographic features
@@ -565,16 +571,10 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
         org_name (str): name of organisation for which data is to be presented (e.g. an STP or region)
         suffix (str): suffix to append to filenames on export
     '''
-
     
-    if include_overall==False:
-        groups = ["sex","ethnicity_6_groups","imd_categories", "bmi", "chronic_cardiac_disease", "current_copd", "dialysis", "dmards",
-                    "psychosis_schiz_bipolar","intel_dis_incl_downs_syndrome","dementia", "ssri",
-                     "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer"]        
-    else:
-        groups = ["overall","sex","ethnicity_6_groups","imd_categories", "bmi", "chronic_cardiac_disease", "current_copd", "dialysis", "dmards",
-                    "psychosis_schiz_bipolar","intel_dis_incl_downs_syndrome","dementia", "ssri",
-                     "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer"]
+    # set up a default list of characteristics
+    groups = ["sex","ethnicity_6_groups","imd_categories"]        
+
    
     if len(org_name)>1:
         org_string = f" for {org_name}"
@@ -584,7 +584,16 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
     for k in pop_subgroups:
         
         if groups_dict: # if specific demographic/clinical groups have been provided for each population subgroup, overwrite them here
-            groups = groups_dict[k]
+            if k in groups_dict:
+                groups = groups_dict[k]
+            else:
+                groups = groups_dict["DEFAULT"]
+        
+        if groups_to_exclude:
+            groups = [e for e in groups if e not in groups_to_exclude]
+            
+        if include_overall==True:
+            groups.insert(0, "overall")
         
         # display title for section of charts
         display(Markdown(f"## \n ## COVID vaccination rollout among **{k}** population up to {formatted_latest_date}{org_string}"))
