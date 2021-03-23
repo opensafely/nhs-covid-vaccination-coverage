@@ -80,26 +80,29 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     df = df.assign(bmi = np.where((df["bmi"]=="Not obese"), "under 30", "30+"))
 
     # drop unnecssary columns or columns created for processing 
-    df = df.drop(["imd","ethnicity_16", "ethnicity", "adrenaline_pen", "has_died", "has_follow_up"], 1)
+    df = df.drop(["imd","ethnicity_16", "ethnicity", 'ethnicity_6_sus',
+       'ethnicity_16_sus', "adrenaline_pen", "has_died", "has_follow_up"], 1)
 
-
+    # categorise into priority groups (similar to the national groups but not exactly the same)
+    conditions = [
+        (df["care_home"]==1) & (df["age"]>=65),
+        (df["age"]>=80),
+        (df["age"]>=70),
+        (df["shielded"]==1),
+        (df["age"]>=65),
+        (df["LD"]==1),
+        (df["age"]>=60),
+        (df["age"]>=55),
+        (df["age"]>=50)]
+    choices = [3,1,2,4,5,6,7,8,9]
+    # note the numbers here denote the desired sort order in which we want to look at these groups, not the priority order
     
-    # shielding: keep flag only for under 70s
-    df["shielded"] = np.where((df["shielded"]==1) & (df["age"]<70), "shielding (aged 16-69)", "")
-    
-    ###### care homes #####
-    # amend community age band to remove any care home flags for under 65s 
-    df.loc[(df["ageband_community"]=="care home") & (df["age"]<60), "ageband_community"] = df["ageband"] # 10 yr age band
-    df.loc[(df["ageband_community"]=="care home") & (df["age"]>=60) & (df["age"]<65), "ageband_community"] = "60-64" # 5 yr age band
-
-    # amend community age band to remove any people shielding from the under 70s groups (they will be reported in shielded group) 
-    df.loc[(df["ageband_community"]!="care home") & (df["age"]<70) & (df["shielded"]=="shielding (aged 16-69)"), "ageband_community"] = "shielding (aged 16-69)"
+    # create field "priority_group" which uses the appropriate value from `choices` according to the `conditions` met by each line of data. If none are met, assigns 0.
+    # Eg. for patient aged 71 but not in a care home, patient does not meet the first or second criteria, but meets the third so is assigned to the third of the `choices` i.e. `2`.
+    df['priority_group'] = np.select(conditions, choices, default=0)
 
     # rename column for clarity
     df = df.rename(columns={"shielded_since_feb_15":"newly_shielded_since_feb_15"})
-    
-    # LD: keep flag only for under 65s and those not shielding
-    df["LD_group"] = np.where((df["LD"]==1) & (df["age"]<65) &(df["shielded"]==""), "LD (aged 16-64)", "")
     
     # for each specific situation or condition, replace 1 with YES and 0 with no. This makes the graphs easier to read
     for c in ["LD", "newly_shielded_since_feb_15", "dementia", 
@@ -110,15 +113,13 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
           "temporary_immunosuppression", "asplenia"]:
           df[c] = np.where(df[c]==1, "yes", "no")
 
-    # rename columns for agebands for consistency
-    df = df.rename(columns={"ageband_community":"community_ageband"})
 
     # get total population sizes and names for each STP
     stps = pd.read_csv(os.path.join("..","lib","stp_dict.csv"), usecols=["stp_id","name","list_size_o80"])
     df = df.merge(stps, left_on="stp", right_on="stp_id", how="left").rename(columns={"name":"stp_name"})
     
     # drop additional columns
-    df = df.drop(["age","stp_id"], 1)  
+    df = df.drop(['registered', 'care_home', 'age',"stp_id", "ageband_community"], 1)  
 
     return df
 
