@@ -9,6 +9,7 @@ from operator import itemgetter
 # we create a dict for renaming population variables into suitable longer/correctly capitalised forms for presentation as titles
 variable_renaming = {'ageband': "Age band",
                       'ageband 5yr': "Age band",
+                      'ageband_5yr': "Age band",
                       'sex': "Sex",
                       'bmi':"BMI",   
                       'ethnicity 6 groups':"Ethnicity (broad categories)",
@@ -117,8 +118,8 @@ def find_and_sort_filenames(foldername, *,
                         ]
         sort_order = {key: ix for ix, key in enumerate(ordered_dems)}
     elif by_demographics_or_population=="population":
-        ordered_pops = ['80+', '70-79', 'care home', 'shielding (aged 16-69)', '65-69',
-                         'under 65s, not in other eligible groups shown']
+        ordered_pops = ['80+', '70-79', 'care home', 'shielding (aged 16-69)', '65-69', 'LD (aged 16-64)', '60-64', '55-59', '50-54',
+                         'under 60s, not in other eligible groups shown']
         sort_order = {key: ix for ix, key in enumerate(ordered_pops)}
     else:
         display("sort_by_population_or_demographics received an invalid value")
@@ -260,11 +261,11 @@ def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=
         display(Markdown(f"- Population includes those known to live in an elderly care home, based upon clinical coding."))
     elif "shielding" in title:
         display(Markdown(f"- Population excludes those over 65 known to live in an elderly care home, based upon clinical coding."))
-    elif ("80+" in title) | ("70-79" in title) | ("65-69" in title):
+    elif ("80+" in title) | ("70-79" in title) | ("65-69" in title): # don't include under 65s here
         display(Markdown(f"- Population excludes those known to live in an elderly care home, based upon clinical coding."))
     
     # display note that 65-69 and LD group excludes shielding subgroup
-    if ("65-69" in title) | ("LD (aged 16-64)" in title):
+    if ("65-69" in title) | ("60-64" in title)  | ("55-59" in title) | ("50-54" in title) | ("LD (aged 16-64)" in title):
         display(Markdown(f"- Population excludes those who are currently shielding."))
     
     

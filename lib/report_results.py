@@ -80,37 +80,23 @@ def find_and_save_latest_date(df, savepath, reference_column_name="covid_vacc_da
     return latest_date, latest_date_fmt
 
 
-def remove_other_key(d):
+def filtering(d):
     '''
-    Mutate a dictionary to remove key which has value "other"
-    '''
+    Find items from the full set of single digit numbers (0-9) which are not present as values in a given dict
     
-    keys = list(d.keys())
-    d2 = d.copy()
-    for key, val in d.items():
-        if val == "other":
-            del d2[key]
-    return d2
+    Inputs:
+    d (dict): a dict mapping strings to numeric `values`
+    
+    Outputs:
+    l (list): a list containing zero and all the single digit numbers (0-9) which do not appear in d
+    
+    '''
+    all_keys = [0,1,2,3,4,5,6,7,8,9]
+    keys = list(d.values())
 
-
-def filter_other_group(df, groups_of_interest):
-    '''
-    Exclude all the other eligible groups from the "other" group in dataframe provided. "other" should be contained in the groups_of_interest.
-    
-    Args:
-        df (dataframe): input data
-        groups_of_interest (dict): subgroups to breakdown by (and column on which to filter for these groups)
-    
-    Returns:
-        df (dataframe)
-    '''
-    groups_to_exclude = groups_of_interest.copy()
-    
-    groups_to_exclude = remove_other_key(groups_to_exclude)
-    for group_to_exclude, filter_col in groups_to_exclude.items():
-        df = df.loc[(~df[filter_col].isin([group_to_exclude]))]
-    
-    return df
+    # check which of `all_keys` are absent in `keys` and return them as a list (but always include 0)
+    l = [k for k in all_keys if ((k not in keys)|(k==0))]
+    return l
 
 
 def cumulative_sums(df, groups_of_interest, features_dict, latest_date):
@@ -119,7 +105,7 @@ def cumulative_sums(df, groups_of_interest, features_dict, latest_date):
     
     Args:
         df (dataframe): input data
-        groups_of_interest (dict): subgroups to breakdown by (and column on which to filter for these groups)
+        groups_of_interest (dict): dict mapping names of population/eligible subgroups to integers (1-9, and 0 for "other")
         features_dict (dict): dictionary mapping population subgroups to a list of demographic/clinical factors to include for that group
         latest_date (str): "YYYY-MM-DD"
     
@@ -134,18 +120,16 @@ def cumulative_sums(df, groups_of_interest, features_dict, latest_date):
     # also selects columns of interest. For example, in care home, we are interested in 
     # sex, ageband and broad ethnicity groups. In the analysis of age bands we are interested
     # in much more detail such as comorbidies and ethnicity in 16 groups. 
-    for group_title, group_label in groups_of_interest.items():
     
-        # filter dataframe to eligible group
-        if group_label == "other": # for "all others" filter out the each of the defined groups
-            out = df.copy()
-            # we want to exclude all the other eligible groups from the "other" group
-            out = filter_other_group(out, groups_of_interest=groups_of_interest)
-        elif group_label != "community_ageband": # for groups not defined as age bands or care home, filter out care home population
-            out = df.copy().loc[(df["community_ageband"]!="care home") & (df[group_label]==group_title)]
-        # will need a further filter for the "clinically vulnerable" group here
-        else:    # age groups / care home
-            out = df.copy().loc[(df[group_label]==group_title)]
+    # make a new field for the priority groups we are looking at (where any we have not specifically listed are regrouped as 0/"other")
+    items_to_group = filtering(groups_of_interest)
+    df["group"] = np.where(df["priority_group"].isin(items_to_group), 0, df["priority_group"])
+    # translate number into name
+    for name, number in groups_of_interest.items():
+        df.loc[df["group"]==number, "group_name"] = name
+    
+    for group_title, group_label in groups_of_interest.items():
+        out = df.copy().loc[(df["group"]==group_label)]
             
         # define columns to include, ie. a list of features of interest (e.g. ageband, ethnicity) per population group 
         if group_title in features_dict:
@@ -213,7 +197,6 @@ def filtered_cumulative_sum(df, columns, latest_date):
     
     # figures by demographic/clinical features
     for feature in columns:
-        
         if feature=="sex":
             df = df.loc[df[feature].isin(["M","F"])]
 
@@ -248,7 +231,7 @@ def filtered_cumulative_sum(df, columns, latest_date):
     return df_dict_temp
 
 
-def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, name_of_other_group="other", suffix=""):
+def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, suffix=""):
     '''
     Cumulative chart by day of total vaccines given across key eligible groups
     
@@ -257,21 +240,14 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, name_of
         latest_date (str): latest date across dataset in YYYY-MM-DD format
         savepath (dict): path to save figure as svg (savepath["figures"])
         savepath_figure_csvs (str): path to save machine readable csv for recreating the chart
-        name_of_other_group (str): option to rename "other" group as something more descriptive 
+        groups_of_interest (dict): population subgroups 
     '''
     
     dfp = df.copy().loc[(df["covid_vacc_date"]!=0)]
-    
-    dfp["group"] = np.where( dfp["community_ageband"].isin(["80+","70-79","care home", "65-69"]), 
-                            dfp["community_ageband"], "other" )
-    # separate shielding and LD groups out from "other" group
-    dfp["group"] = np.where( (dfp["shielded"]=="shielding (aged 16-69)") & (dfp["group"]=="other"), "shielding (aged 16-69)", dfp["group"] )
-    dfp["group"] = np.where( (dfp["LD_group"]=="LD (aged 16-64)") & (dfp["group"]=="other"), "LD (aged 16-64)", dfp["group"] )
-    
-    dfp = dfp.groupby(["covid_vacc_date","group"])[["patient_id"]].count()  
+
+    dfp = dfp.groupby(["covid_vacc_date","group_name"])[["patient_id"]].count()  
     dfp = dfp.unstack().fillna(0).cumsum().reset_index().replace([0,1,2,3,4,5,6],0) 
     
-    dfp = dfp.rename(columns={"other":name_of_other_group})
     dfp["covid_vacc_date"] = pd.to_datetime(dfp["covid_vacc_date"]).dt.strftime("%d %b")
     dfp = dfp.set_index("covid_vacc_date")
     dfp = round7(dfp)
