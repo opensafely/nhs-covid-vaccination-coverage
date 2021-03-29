@@ -1,55 +1,55 @@
-Category,Group,Vaccinated at 18 Mar (n),Vaccinated at 18 Mar (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,1022536,80.0,1277766,68.0,12.0
-Sex,F,522116,82.2,635075,70.8,11.4
-Sex,M,500416,77.9,642684,65.3,12.6
-Ethnicity (broad categories),Black,10416,53.4,19495,45.2,8.2
-Ethnicity (broad categories),Mixed,5166,65.2,7924,55.6,9.6
-Ethnicity (broad categories),Other,9786,60.9,16058,51.6,9.3
-Ethnicity (broad categories),South Asian,38514,73.7,52283,66.4,7.3
-Ethnicity (broad categories),Unknown,100205,69.4,144410,55.9,13.5
-Ethnicity (broad categories),White,858445,82.7,1037589,70.5,12.2
-ethnicity 16 groups, African,4116,53.6,7672,45.9,7.7
-ethnicity 16 groups, Bangladeshi or British Bangladeshi,1666,74.4,2240,65.9,8.5
-ethnicity 16 groups, Caribbean,4095,52.2,7847,43.6,8.6
-ethnicity 16 groups, Chinese,2933,61.7,4753,49.9,11.8
-ethnicity 16 groups, Other,6860,60.6,11312,52.3,8.3
-ethnicity 16 groups, Other Asian,8008,72.2,11095,64.5,7.7
-ethnicity 16 groups,British or Mixed British,809697,84.3,960722,71.8,12.5
-ethnicity 16 groups,Indian or British Indian,20720,79.1,26194,72.4,6.7
-ethnicity 16 groups,Irish,5152,78.9,6531,70.3,8.6
-ethnicity 16 groups,Other Black,2212,55.5,3983,47.1,8.4
-ethnicity 16 groups,Other White,43603,62.0,70343,53.1,8.9
-ethnicity 16 groups,Other mixed,1981,65.7,3017,57.1,8.6
-ethnicity 16 groups,Pakistani or British Pakistani,8120,63.7,12754,55.7,8.0
-ethnicity 16 groups,Unknown,100198,69.4,144389,55.9,13.5
-ethnicity 16 groups,White + Asian,1106,75.6,1463,64.6,11.0
-ethnicity 16 groups,White + Black African,889,60.2,1477,50.2,10.0
-ethnicity 16 groups,White + Black Caribbean,1190,60.5,1967,50.5,10.0
-Index of Multiple Deprivation (quintiles),1 Most deprived,141820,71.4,198569,59.7,11.7
-Index of Multiple Deprivation (quintiles),2,177989,76.9,231511,64.9,12.0
-Index of Multiple Deprivation (quintiles),3,224868,81.0,277452,68.8,12.2
-Index of Multiple Deprivation (quintiles),4,231658,83.1,278936,70.7,12.4
-Index of Multiple Deprivation (quintiles),5 Least deprived,225708,85.0,265608,73.1,11.9
-Index of Multiple Deprivation (quintiles),Unknown,20496,79.8,25669,69.5,10.3
-BMI,30+,264299,85.3,309953,75.2,10.1
-BMI,under 30,758233,78.3,967799,65.7,12.6
-Chronic cardiac disease,no,941059,79.4,1184659,66.9,12.5
-Chronic cardiac disease,yes,81473,87.5,93093,82.3,5.2
-Current COPD,no,992621,79.8,1243165,67.6,12.2
-Current COPD,yes,29911,86.5,34594,81.2,5.3
-DMARDs,no,1004255,79.9,1257011,67.8,12.1
-DMARDs,yes,18277,88.1,20741,80.9,7.2
-Dementia,no,1019459,80.0,1274098,68.0,12.0
-Dementia,yes,3073,84.1,3654,75.9,8.2
-"Psychosis, schizophrenia, or bipolar",no,1011528,80.1,1263038,68.0,12.1
-"Psychosis, schizophrenia, or bipolar",yes,11004,74.8,14721,67.9,6.9
-SSRI (last 12 months),no,914704,79.6,1149582,67.4,12.2
-SSRI (last 12 months),yes,107828,84.1,128170,73.0,11.1
-Chemo or radiotherapy,no,1006852,79.9,1259720,67.9,12.0
-Chemo or radiotherapy,yes,15680,87.0,18032,76.5,10.5
-Cancer (lung),no,1021566,80.0,1276583,68.0,12.0
-Cancer (lung),yes,966,82.1,1176,75.6,6.5
-Cancer (excluding lung/haem),no,960708,79.7,1205953,67.5,12.2
-Cancer (excluding lung/haem),yes,61824,86.1,71799,75.6,10.5
-Cancer (haematological),no,1019536,80.0,1274371,67.9,12.1
-Cancer (haematological),yes,2996,88.6,3381,83.4,5.2
+Category,Group,Vaccinated at 25 Mar (n),Vaccinated at 25 Mar (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,1105619,86.5,1277514,81.5,5.0
+Sex,F,559860,88.2,635047,83.6,4.6
+Sex,M,545755,84.9,642453,79.4,5.5
+Ethnicity (broad categories),Black,11522,59.1,19502,54.6,4.5
+Ethnicity (broad categories),Mixed,5607,70.8,7924,66.4,4.4
+Ethnicity (broad categories),Other,10745,66.9,16065,62.2,4.7
+Ethnicity (broad categories),South Asian,40817,78.0,52318,74.6,3.4
+Ethnicity (broad categories),Unknown,111237,77.3,143948,71.1,6.2
+Ethnicity (broad categories),White,925694,89.2,1037750,84.2,5.0
+ethnicity 16 groups, African,4557,59.4,7672,54.9,4.5
+ethnicity 16 groups, Bangladeshi or British Bangladeshi,1799,80.3,2240,75.6,4.7
+ethnicity 16 groups, Caribbean,4529,57.7,7847,53.2,4.5
+ethnicity 16 groups, Chinese,3311,69.7,4753,63.5,6.2
+ethnicity 16 groups, Other,7434,65.6,11326,61.6,4.0
+ethnicity 16 groups, Other Asian,8484,76.5,11088,73.2,3.3
+ethnicity 16 groups,British or Mixed British,872886,90.8,960883,85.7,5.1
+ethnicity 16 groups,Indian or British Indian,21756,82.9,26229,79.9,3.0
+ethnicity 16 groups,Irish,5453,83.5,6531,80.0,3.5
+ethnicity 16 groups,Other Black,2429,61.0,3983,56.8,4.2
+ethnicity 16 groups,Other White,47362,67.3,70343,63.0,4.3
+ethnicity 16 groups,Other mixed,2142,70.8,3024,67.4,3.4
+ethnicity 16 groups,Pakistani or British Pakistani,8778,68.8,12761,64.9,3.9
+ethnicity 16 groups,Unknown,111230,77.3,143934,71.1,6.2
+ethnicity 16 groups,White + Asian,1176,80.8,1456,76.4,4.4
+ethnicity 16 groups,White + Black African,980,66.4,1477,61.1,5.3
+ethnicity 16 groups,White + Black Caribbean,1309,66.5,1967,61.9,4.6
+Index of Multiple Deprivation (quintiles),1 Most deprived,156310,78.8,198471,73.1,5.7
+Index of Multiple Deprivation (quintiles),2,194110,83.8,231560,78.3,5.5
+Index of Multiple Deprivation (quintiles),3,242410,87.4,277403,82.4,5.0
+Index of Multiple Deprivation (quintiles),4,248675,89.2,278887,84.4,4.8
+Index of Multiple Deprivation (quintiles),5 Least deprived,242025,91.2,265447,86.4,4.8
+Index of Multiple Deprivation (quintiles),Unknown,22078,85.8,25739,81.0,4.8
+BMI,30+,280987,90.6,310163,86.5,4.1
+BMI,under 30,824628,85.2,967344,79.9,5.3
+Chronic cardiac disease,no,1021377,86.2,1184351,80.9,5.3
+Chronic cardiac disease,yes,84238,90.4,93156,88.2,2.2
+Current COPD,no,1074591,86.5,1242899,81.3,5.2
+Current COPD,yes,31024,89.7,34601,87.2,2.5
+DMARDs,no,1086505,86.5,1256766,81.3,5.2
+DMARDs,yes,19110,92.1,20741,89.1,3.0
+Dementia,no,1102381,86.5,1273846,81.5,5.0
+Dementia,yes,3234,88.3,3661,85.3,3.0
+"Psychosis, schizophrenia, or bipolar",no,1093932,86.6,1262786,81.5,5.1
+"Psychosis, schizophrenia, or bipolar",yes,11683,79.4,14721,75.9,3.5
+SSRI (last 12 months),no,989779,86.1,1149253,81.0,5.1
+SSRI (last 12 months),yes,115836,90.3,128254,85.6,4.7
+Chemo or radiotherapy,no,1088990,86.5,1259440,81.4,5.1
+Chemo or radiotherapy,yes,16625,92.0,18067,88.1,3.9
+Cancer (lung),no,1104593,86.5,1276324,81.5,5.0
+Cancer (lung),yes,1022,86.4,1183,83.4,3.0
+Cancer (excluding lung/haem),no,1039885,86.3,1205589,81.1,5.2
+Cancer (excluding lung/haem),yes,65730,91.4,71918,87.4,4.0
+Cancer (haematological),no,1102521,86.5,1274112,81.4,5.1
+Cancer (haematological),yes,3094,91.3,3388,89.5,1.8
