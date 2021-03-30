@@ -259,10 +259,15 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, suffix=
     # legend entries will appear in corresponding order hence be easier to read
     dfp = dfp.sort_values(by=dfp.last_valid_index(), axis=1, ascending=False)
     
+    
+    
     # export data to csv
     out = dfp.copy()
     if savepath_figure_csvs:
         out.to_csv(os.path.join(savepath_figure_csvs, f"Cumulative vaccination figures among each eligible group{suffix}.csv"), index=True)
+    
+    # divide numbers into millions
+    dfp = dfp/1e6
     
     # plot chart
     dfp.plot(legend=True, ds='steps-post')
@@ -270,7 +275,7 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, suffix=
     # set chart labels and other options
     plt.xlabel("date", fontweight='bold')
     plt.xticks(rotation=90)
-    plt.ylabel("number of patients vaccinated", fontweight='bold')
+    plt.ylabel("number of patients vaccinated (millions)", fontweight='bold')
     plt.title(f"Cumulative vaccination figures to {latest_date}", fontsize=16)
     plt.legend(bbox_to_anchor=(1.04,1), loc="upper left")
     
