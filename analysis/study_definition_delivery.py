@@ -268,5 +268,22 @@ study = StudyDefinition(
             "incidence": 0.1
         },
     ),
+
+    # COVID VACCINATION - Moderna
+    covid_vacc_moderna_date=patients.with_tpp_vaccination_record(
+        product_name_matches="COVID-19 mRNA (nucleoside modified) Vaccine Moderna 0.1mg/0.5mL dose dispersion for inj MDV",
+        on_or_after="2020-12-01",  # check all december to date
+        find_first_match_in_period=True,
+        returning="date",
+        date_format="YYYY-MM-DD",
+        return_expectations={
+            "date": {
+                "earliest": "2020-04-01",  # expected from early april
+                "latest": index_date,
+            },
+            "incidence": 0.1
+        },
+    ),
+
     **common_variables
 )

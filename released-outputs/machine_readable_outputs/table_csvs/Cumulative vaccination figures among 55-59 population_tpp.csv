@@ -1,0 +1,45 @@
+Category,Group,Vaccinated at 01 Apr (n),Vaccinated at 01 Apr (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,1280135,84.9,1508087,79.2,5.7
+Sex,F,646142,87.2,740901,82.2,5.0
+Sex,M,633990,82.6,767172,76.3,6.3
+Ethnicity (broad categories),Black,18207,59.0,30877,53.6,5.4
+Ethnicity (broad categories),Mixed,8456,69.3,12208,63.8,5.5
+Ethnicity (broad categories),Other,14448,65.8,21959,60.2,5.6
+Ethnicity (broad categories),South Asian,45752,76.6,59710,72.0,4.6
+Ethnicity (broad categories),Unknown,130613,75.4,173194,68.4,7.0
+Ethnicity (broad categories),White,1062656,87.8,1210132,82.2,5.6
+ethnicity 16 groups, African,7651,60.2,12719,55.0,5.2
+ethnicity 16 groups, Bangladeshi or British Bangladeshi,2394,80.5,2975,76.2,4.3
+ethnicity 16 groups, Caribbean,6216,56.8,10948,51.5,5.3
+ethnicity 16 groups, Chinese,4298,70.3,6118,62.5,7.8
+ethnicity 16 groups, Other,10150,64.1,15834,59.3,4.8
+ethnicity 16 groups, Other Asian,11172,75.6,14784,70.5,5.1
+ethnicity 16 groups,British or Mixed British,996814,89.7,1111635,84.0,5.7
+ethnicity 16 groups,Indian or British Indian,23100,81.6,28294,77.5,4.1
+ethnicity 16 groups,Irish,6258,81.8,7651,77.5,4.3
+ethnicity 16 groups,Other Black,4326,60.1,7203,54.4,5.7
+ethnicity 16 groups,Other White,59591,65.6,90853,60.4,5.2
+ethnicity 16 groups,Other mixed,2996,69.3,4326,63.9,5.4
+ethnicity 16 groups,Pakistani or British Pakistani,9100,66.6,13664,61.5,5.1
+ethnicity 16 groups,Unknown,130599,75.4,173180,68.4,7.0
+ethnicity 16 groups,White + Asian,1743,77.3,2254,72.0,5.3
+ethnicity 16 groups,White + Black African,1519,65.4,2324,59.3,6.1
+ethnicity 16 groups,White + Black Caribbean,2198,66.4,3311,61.1,5.3
+Index of Multiple Deprivation (quintiles),1 Most deprived,188433,76.8,245350,70.8,6.0
+Index of Multiple Deprivation (quintiles),2,225589,81.8,275667,76.0,5.8
+Index of Multiple Deprivation (quintiles),3,277193,85.8,322945,80.2,5.6
+Index of Multiple Deprivation (quintiles),4,284410,87.7,324128,82.1,5.6
+Index of Multiple Deprivation (quintiles),5 Least deprived,279027,90.0,310079,84.4,5.6
+Index of Multiple Deprivation (quintiles),Unknown,25480,85.2,29897,79.7,5.5
+BMI,30+,312613,89.7,348656,85.1,4.6
+BMI,under 30,967519,83.4,1159424,77.4,6.0
+Chronic cardiac disease,no,1216138,84.7,1436246,78.8,5.9
+Chronic cardiac disease,yes,63987,89.1,71834,86.6,2.5
+Current COPD,no,1255919,84.8,1480472,79.0,5.8
+Current COPD,yes,24213,87.7,27601,85.2,2.5
+DMARDs,no,1260980,84.8,1487052,79.0,5.8
+DMARDs,yes,19152,91.1,21028,87.8,3.3
+"Psychosis, schizophrenia, or bipolar",no,1265747,85.0,1489327,79.2,5.8
+"Psychosis, schizophrenia, or bipolar",yes,14385,76.7,18746,73.5,3.2
+SSRI (last 12 months),no,1130759,84.3,1341830,78.4,5.9
+SSRI (last 12 months),yes,149373,89.9,166243,84.9,5.0

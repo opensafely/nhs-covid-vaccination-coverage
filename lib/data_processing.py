@@ -58,10 +58,13 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
         covid_vacc_flag = np.where(df["covid_vacc_date"]!=0,"vaccinated","unvaccinated"),
         covid_vacc_flag_ox = np.where(df["covid_vacc_oxford_date"]!=0, 1, 0),
         covid_vacc_flag_pfz = np.where(df["covid_vacc_pfizer_date"]!=0, 1, 0),
+        covid_vacc_flag_mod = np.where(df["covid_vacc_moderna_date"]!=0, 1, 0),
         covid_vacc_2nd = np.where(df["covid_vacc_second_dose_date"]!=0, 1, 0),
         covid_vacc_bin = np.where(df["covid_vacc_date"]!=0, 1, 0))
 
-
+    # create an additional field for 2nd dose to use as a flag for each eligible group
+    df["2nd_dose"] = df["covid_vacc_2nd"]
+    
     # Assign column SSRI to be where has SSRI and no psychosis/bipolar/schizophrenia/dementia or LD
     df = df.assign(
         ssri = np.where((df["ssri"]==1) & (df["psychosis_schiz_bipolar"]==0) &\
@@ -105,7 +108,7 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     df = df.rename(columns={"shielded_since_feb_15":"newly_shielded_since_feb_15"})
     
     # for each specific situation or condition, replace 1 with YES and 0 with no. This makes the graphs easier to read
-    for c in ["LD", "newly_shielded_since_feb_15", "dementia", 
+    for c in ["2nd_dose", "LD", "newly_shielded_since_feb_15", "dementia", 
           "chronic_cardiac_disease", "current_copd", "dialysis", "dmards","psychosis_schiz_bipolar",
          "solid_organ_transplantation", "chemo_or_radio", "intel_dis_incl_downs_syndrome","ssri",
           "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "bone_marrow_transplant",

@@ -26,7 +26,7 @@ common_variables = dict(
         AND (
             covid_vacc_date
             OR
-            (age >=65) 
+            (age >=50) 
             OR
             shielded
             OR

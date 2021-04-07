@@ -7,9 +7,8 @@ from operator import itemgetter
 
 
 # we create a dict for renaming population variables into suitable longer/correctly capitalised forms for presentation as titles
-variable_renaming = {'ageband': "Age band",
-                      'ageband 5yr': "Age band",
-                      'ageband_5yr': "Age band",
+variable_renaming = { 'ageband 5yr': "Age band",
+                      'ageband': "Age band",
                       'sex': "Sex",
                       'bmi':"BMI",   
                       'ethnicity 6 groups':"Ethnicity (broad categories)",
