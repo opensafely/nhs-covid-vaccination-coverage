@@ -118,7 +118,7 @@ def find_and_sort_filenames(foldername, *,
         sort_order = {key: ix for ix, key in enumerate(ordered_dems)}
     elif by_demographics_or_population=="population":
         ordered_pops = ['80+', '70-79', 'care home', 'shielding (aged 16-69)', '65-69', 'LD (aged 16-64)', '60-64', '55-59', '50-54',
-                         'under 60s, not in other eligible groups shown']
+                         '16-49, not in other eligible groups shown']
         sort_order = {key: ix for ix, key in enumerate(ordered_pops)}
     else:
         display("sort_by_population_or_demographics received an invalid value")
