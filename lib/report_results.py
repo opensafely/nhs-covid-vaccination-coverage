@@ -404,11 +404,11 @@ def summarise_data_by_group(result_dict, latest_date,
             report_results()
     """
 
-    # creates an empty dictionary to fill in 
+    # creates an empty dict to fill in 
     df_dict_latest = {}
 
 
-    # loops through the specified groups and applis report results.
+    # loops through the specified groups and applies report_results.
     for group in groups:
         out = report_results(result_dict, group, latest_date=latest_date)
 
@@ -462,12 +462,10 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
         dict (summary_stats): dictionary of the results
     """
 
-    # create a dict to store results for display and for exporting to a txt file
-    summary_stats= {}
-
-    # add in a key that is the formatted str of the latest date
-    summary_stats[f"### As at {formatted_latest_date}"] = ""
-
+    # create a series to store results for display and exporting
+    summary_stats= pd.Series(dtype="str", name=f"{vaccine_type.replace('_',' ')} as at {formatted_latest_date}")
+    additional_stats =  pd.Series(dtype="str", name=f"Vaccine types and second doses")
+    
     # get the total vaccinated and round to the nearest 7
     if vaccine_type=="first_dose":
         reference_column_name="covid_vacc_date"
@@ -477,7 +475,7 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
 
     # add the results fo the summary_stats dict 
     suffix_str = suffix.replace("_","").upper()
-    summary_stats[f"**Total** population receiving {vaccine_type.replace('_',' ')} in {suffix_str}"] = f"{vaccinated_total:,d}"
+    summary_stats[f"Total vaccinated in {suffix_str}"] = f"{vaccinated_total:,d}"
 
     # loop through the specified groups and calculate number vaccinated in the groups
     # add the results to the dict
@@ -487,11 +485,11 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
         if "not in other eligible groups" not in group:
             percent = out.loc[("overall","overall")]["percent"].round(1)
             total = out.loc[("overall","overall")]["total"].astype(int)
-            summary_stats[f"**{group}** population receiving {vaccine_type.replace('_',' ')}"] = f"{vaccinated:,} (**{percent}%** of {total:,})"
+            summary_stats[f"{group}"] = f"{percent}% ({vaccinated:,} of {total:,})"
             #out_str = f"**{k}** population vaccinated {vaccinated:,} ({percent}% of {total:,})"
         else:
             #out_str = f"**{k}** population vaccinated {vaccinated:,}"
-            summary_stats[f"**{group}** population receiving {vaccine_type.replace('_',' ')}"] = f"{vaccinated:,}"
+            summary_stats[f"{group}"] = f"{vaccinated:,}"
 
     # if summarising first doses, perform some additional calculations        
     if vaccine_type=="first_dose":        
@@ -503,15 +501,15 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
         second_doses = round7(df["covid_vacc_2nd"].sum())
         sd_percent = round(100*second_doses/vaccinated_total, 1)
 
-        summary_stats[f"#### Vaccine types and second doses"] = ""
-        summary_stats["Second doses (% of all vaccinated)"] = f"{second_doses:,} ({sd_percent}%)"
-        summary_stats["Oxford-AZ vaccines (% of all first doses)"] = f"{oxford_vaccines:,} ({ox_percent}%)"
-        summary_stats["Moderna vaccines (% of all first doses)"] = f"{moderna_vaccines:,} ({mod_percent}%)"
+        additional_stats["Second doses (% of all vaccinated)"] = f"**{sd_percent}%** ({second_doses:,})"
+        additional_stats["Oxford-AZ vaccines (% of all first doses)"] = f"**{ox_percent}%** ({oxford_vaccines:,})"
+        additional_stats["Moderna vaccines (% of all first doses)"] = f"**{mod_percent}%** ({moderna_vaccines:,})"
 
     # export summary stats to text file
-    json.dump(summary_stats, open(os.path.join(savepath["text"], f"summary_stats_{vaccine_type}.txt"),'w'))
+    summary_stats.to_csv(os.path.join(savepath["text"], f"summary_stats_{vaccine_type}.txt"))
+    additional_stats.to_csv(os.path.join(savepath["text"], f"additional_stats_{vaccine_type}.txt"))
 
-    return summary_stats
+    return summary_stats, additional_stats
 
 
 def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date, savepath, groups=["80+", "70-79", "care home", "shielding (aged 16-69)"]):
@@ -595,7 +593,7 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
         display(Markdown(f"## \n ## COVID vaccination rollout among **{k}** population up to {formatted_latest_date}{org_string}"))
 
         # get the overall vaccination rate among relevant group and strip out the text to get the number (should be within 0 - 100)
-        overall_rate = float(summary_stats_results[f"**{k}** population receiving first dose"].split(" ")[1][3:7])
+        overall_rate = float(summary_stats_results[f"{k}"][0:4])
     
         out=cumulative_data_dict[k]
         
