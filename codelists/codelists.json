@@ -174,17 +174,17 @@
       "downloaded_at": "2021-02-10 14:28:12.124536Z",
       "sha": "99f6c0787e17e16430549a4cfb5084612faba2ac"
     },
-    "user-peter-inglesby-eth2001.csv": {
-      "id": "user/peter-inglesby/eth2001/0f56fa3b",
-      "url": "https://codelists.opensafely.org/codelist/user/peter-inglesby/eth2001/0f56fa3b/",
-      "downloaded_at": "2021-02-10 14:28:12.230527Z",
-      "sha": "708774541b925cf190016e2e160eec31b02d2512"
-    },
     "primis-covid19-vacc-uptake-learndis.csv": {
       "id": "primis-covid19-vacc-uptake/learndis/v1",
       "url": "https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/learndis/v1/",
       "downloaded_at": "2021-03-09 11:58:49.613669Z",
       "sha": "41f81fcb9fadb082a77cadd6cf60614d7c8d860f"
+    },
+    "primis-covid19-vacc-uptake-cov1decl.csv": {
+      "id": "primis-covid19-vacc-uptake/cov1decl/v1.1",
+      "url": "https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/cov1decl/v1.1/",
+      "downloaded_at": "2021-04-19 13:00:27.222055Z",
+      "sha": "c8f6ef075bb2f267ee8524453967ba927703fe9d"
     }
   }
 }

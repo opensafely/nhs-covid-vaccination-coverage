@@ -166,30 +166,30 @@ study = StudyDefinition(
         returning="binary_flag",
         return_expectations={"incidence": 0.01,},
     ),
-    cystic_fibrosis=patients.with_these_clinical_events(
-        cystic_fibrosis_codes,
-        on_or_before=index_date,
-        returning="binary_flag",
-        return_expectations={"incidence": 0.01,},
-    ),
-    sickle_cell_disease=patients.with_these_clinical_events(
-        sickle_cell_disease_codes,
-        on_or_before=index_date,
-        returning="binary_flag",
-        return_expectations={"incidence": 0.01,},
-    ),
-    permanant_immunosuppression=patients.with_these_clinical_events(
-        permanent_immunosuppression_codes,
-        on_or_before=index_date,
-        returning="binary_flag",
-        return_expectations={"incidence": 0.01,},
-    ),
-    temporary_immunosuppression=patients.with_these_clinical_events(
-        temporary_immunosuppression_codes,
-        on_or_before=index_date,
-        returning="binary_flag",
-        return_expectations={"incidence": 0.01,},
-    ),
+    # cystic_fibrosis=patients.with_these_clinical_events(
+    #     cystic_fibrosis_codes,
+    #     on_or_before=index_date,
+    #     returning="binary_flag",
+    #     return_expectations={"incidence": 0.01,},
+    # ),
+    # sickle_cell_disease=patients.with_these_clinical_events(
+    #     sickle_cell_disease_codes,
+    #     on_or_before=index_date,
+    #     returning="binary_flag",
+    #     return_expectations={"incidence": 0.01,},
+    # ),
+    # permanant_immunosuppression=patients.with_these_clinical_events(
+    #     permanent_immunosuppression_codes,
+    #     on_or_before=index_date,
+    #     returning="binary_flag",
+    #     return_expectations={"incidence": 0.01,},
+    # ),
+    # temporary_immunosuppression=patients.with_these_clinical_events(
+    #     temporary_immunosuppression_codes,
+    #     on_or_before=index_date,
+    #     returning="binary_flag",
+    #     return_expectations={"incidence": 0.01,},
+    # ),
     #
     psychosis_schiz_bipolar=patients.with_these_clinical_events(
         psychosis_schizophrenia_bipolar_affective_disease_codes,
@@ -199,12 +199,12 @@ study = StudyDefinition(
     ),
 
     # https://github.com/opensafely/codelist-development/issues/4
-    asplenia=patients.with_these_clinical_events(
-        asplenia_codes,
-        on_or_before=index_date,
-        returning="binary_flag",
-        return_expectations={"incidence": 0.01,},
-    ),
+    # asplenia=patients.with_these_clinical_events(
+    #     asplenia_codes,
+    #     on_or_before=index_date,
+    #     returning="binary_flag",
+    #     return_expectations={"incidence": 0.01,},
+    # ),
 
     ###############################################################################
     # COVID VACCINATION

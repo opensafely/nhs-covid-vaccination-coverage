@@ -10,7 +10,7 @@ from errors import DataCleaningError
 
 
 
-def load_data(input_file='input_delivery.csv', input_path="output"):
+def load_data(input_file='input_delivery.csv.gz', input_path="output"):
     """
     This reads in a csv that must be in output/ directory and cleans the
     data ready for use in the graphs and tables
@@ -33,7 +33,7 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     """
 
     # import data and fill nulls with 0
-    df = pd.read_csv(os.path.join("..",input_path, input_file)).fillna(0)
+    df = pd.read_csv(os.path.join("..",input_path, input_file), compression='gzip').fillna(0)
 
     # fill unknown ethnicity from GP records with ethnicity from SUS (secondary care)
     df.loc[df["ethnicity"]==0, "ethnicity"] = df["ethnicity_6_sus"]
@@ -62,6 +62,9 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
         covid_vacc_2nd = np.where(df["covid_vacc_second_dose_date"]!=0, 1, 0),
         covid_vacc_bin = np.where(df["covid_vacc_date"]!=0, 1, 0))
 
+    # declined - suppress if vaccine has been received
+    df["covid_vacc_declined_date"] = np.where(df["covid_vacc_date"]==0, df["covid_vacc_declined_date"], 0)
+    
     # create an additional field for 2nd dose to use as a flag for each eligible group
     df["2nd_dose"] = df["covid_vacc_2nd"]
     
@@ -84,7 +87,7 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
 
     # drop unnecssary columns or columns created for processing 
     df = df.drop(["imd","ethnicity_16", "ethnicity", 'ethnicity_6_sus',
-       'ethnicity_16_sus', "adrenaline_pen", "has_died", "has_follow_up"], 1)
+       'ethnicity_16_sus', "has_follow_up"], 1)
 
     # categorise into priority groups (similar to the national groups but not exactly the same)
     conditions = [
@@ -111,9 +114,7 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     for c in ["2nd_dose", "LD", "newly_shielded_since_feb_15", "dementia", 
           "chronic_cardiac_disease", "current_copd", "dialysis", "dmards","psychosis_schiz_bipolar",
          "solid_organ_transplantation", "chemo_or_radio", "intel_dis_incl_downs_syndrome","ssri",
-          "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "bone_marrow_transplant",
-          "cystic_fibrosis", "sickle_cell_disease", "permanant_immunosuppression",
-          "temporary_immunosuppression", "asplenia"]:
+          "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer"]:
           df[c] = np.where(df[c]==1, "yes", "no")
 
 
@@ -122,7 +123,7 @@ def load_data(input_file='input_delivery.csv', input_path="output"):
     df = df.merge(stps, left_on="stp", right_on="stp_id", how="left").rename(columns={"name":"stp_name"})
     
     # drop additional columns
-    df = df.drop(['registered', 'care_home', 'age',"stp_id", "ageband_community"], 1)  
+    df = df.drop(['care_home', 'age',"stp_id"], 1)  
 
     return df
 
