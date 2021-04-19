@@ -234,7 +234,7 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
     return df_dict_temp
 
 
-def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, suffix=""):
+def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine_type="first_dose", suffix=""):
     '''
     Cumulative chart by day of total vaccines given across key eligible groups
     
@@ -243,16 +243,25 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, suffix=
         latest_date (str): latest date across dataset in YYYY-MM-DD format
         savepath (dict): path to save figure as svg (savepath["figures"])
         savepath_figure_csvs (str): path to save machine readable csv for recreating the chart
-        groups_of_interest (dict): population subgroups 
+        vaccine_type (str): used in output strings to describe type of vaccine received e.g. "first_dose", "moderna". 
+                            Also appended to filename of output. 
+        suffix (str)
     '''
     
-    dfp = df.copy().loc[(df["covid_vacc_date"]!=0)]
+    if vaccine_type=="first_dose":
+        reference_column_name="covid_vacc_date"
+        title=f"Cumulative vaccination figures"
+    else:
+        reference_column_name=f"covid_vacc_{vaccine_type}_date"
+        title=f"Cumulative {vaccine_type.replace('_',' ')} vaccination figures"   
+    
+    dfp = df.copy().loc[(df[reference_column_name]!=0)]
 
-    dfp = dfp.groupby(["covid_vacc_date","group_name"])[["patient_id"]].count()  
+    dfp = dfp.groupby([reference_column_name,"group_name"])[["patient_id"]].count()  
     dfp = dfp.unstack().fillna(0).cumsum().reset_index().replace([0,1,2,3,4,5,6],0) 
     
-    dfp["covid_vacc_date"] = pd.to_datetime(dfp["covid_vacc_date"]).dt.strftime("%d %b")
-    dfp = dfp.set_index("covid_vacc_date")
+    dfp[reference_column_name] = pd.to_datetime(dfp[reference_column_name]).dt.strftime("%d %b")
+    dfp = dfp.set_index(reference_column_name)
     dfp = round7(dfp)
     
     dfp.columns = dfp.columns.droplevel()
@@ -263,14 +272,18 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, suffix=
     dfp = dfp.sort_values(by=dfp.last_valid_index(), axis=1, ascending=False)
     
     
-    
     # export data to csv
     out = dfp.copy()
     if savepath_figure_csvs:
-        out.to_csv(os.path.join(savepath_figure_csvs, f"Cumulative vaccination figures among each eligible group{suffix}.csv"), index=True)
+        out.to_csv(os.path.join(savepath_figure_csvs, f"{title} among each eligible group{suffix}.csv"), index=True)
     
-    # divide numbers into millions
-    dfp = dfp/1e6
+    # divide numbers into millions if exceeding 10m, otherwise thousands
+    if dfp["total"].max() >= 1e7:
+        dfp = dfp/1e6
+        ylabel = "number of patients (millions)"
+    else:
+        dfp = dfp/1000
+        ylabel = "number of patients (thousands)"
     
     # plot chart
     dfp.plot(legend=True, ds='steps-post')
@@ -278,12 +291,12 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, suffix=
     # set chart labels and other options
     plt.xlabel("date", fontweight='bold')
     plt.xticks(rotation=90)
-    plt.ylabel("number of patients vaccinated (millions)", fontweight='bold')
-    plt.title(f"Cumulative vaccination figures to {latest_date}", fontsize=16)
+    plt.ylabel(ylabel, fontweight='bold')
+    plt.title(f"{title} to {latest_date}", fontsize=16)
     plt.legend(bbox_to_anchor=(1.04,1), loc="upper left")
     
     # export figure to file and display it
-    plt.savefig(os.path.join(savepath["figures"], f"Cumulative vaccination figures.svg"), dpi=300, bbox_inches='tight')
+    plt.savefig(os.path.join(savepath["figures"], f"{title}.svg"), dpi=300, bbox_inches='tight')
     plt.show()
     
     
@@ -469,8 +482,8 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
     # get the total vaccinated and round to the nearest 7
     if vaccine_type=="first_dose":
         reference_column_name="covid_vacc_date"
-    elif vaccine_type=="second_dose":
-        reference_column_name="covid_vacc_second_dose_date"
+    else:
+        reference_column_name=f"covid_vacc_{vaccine_type}_date"
     vaccinated_total = round7( df.loc[df[reference_column_name]!=0]["patient_id"].nunique() )
 
     # add the results fo the summary_stats dict 
@@ -560,6 +573,7 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
                          If org_name is supplied this dict should map filetypes to orgs to filepaths.
         pop_subgroups (list): population subgroups for which to create charts, default ["80+", "70-79"]
         groups_dict (dict): dictionary mapping population subgroups to a list of demographic/clinical factors to include for that group
+        groups_to_exclude (list):
         savepath_figure_csvs (dict): Optionally supply if exporting numbers presented in charts to csv
         include_overall (bool): Option to include "overall" chart ie. chart with a single line, not broken down into any groups
         org_name (str): name of organisation for which data is to be presented (e.g. an STP or region)
@@ -593,19 +607,22 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
         display(Markdown(f"## \n ## COVID vaccination rollout among **{k}** population up to {formatted_latest_date}{org_string}"))
 
         # get the overall vaccination rate among relevant group and strip out the text to get the number (should be within 0 - 100)
-        overall_rate = float(summary_stats_results[f"{k}"][0:4])
+        overall_rate = float(summary_stats_results[f"{k}"][0:4].replace("%",""))
     
         out=cumulative_data_dict[k]
         
         for c in groups:
             out=cumulative_data_dict[k][c]
-            # suppress low numbers         
+                     
+            # get index name (== "covid_vacc_date" for first doses)
+            reference_column_name = out.index.name
+            vaccine_type = reference_column_name.replace("covid_vacc_","").replace("date"," ").replace("_"," ").title()
             
             # export csv to file - numerator and denominator rather than percentages
             if savepath_figure_csvs:
                 cols = [c for c in out.columns if '_percent' not in c]
                 out_csv = out.copy()[cols]
-                out_csv.to_csv(os.path.join(savepath_figure_csvs, f"Cumulative vaccination percent among {k} population by {c.replace('_',' ')}{suffix}.csv"), index=True)
+                out_csv.to_csv(os.path.join(savepath_figure_csvs, f"Cumulative {vaccine_type}vaccination percent among {k} population by {c.replace('_',' ')}{suffix}.csv"), index=True)
             
             #  for plotting, drop vaccinated and total column but keep percentage
             cols = [c for c in out.columns if ('_percent' not in c) & ('_total' not in c)]
@@ -614,15 +631,16 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
                 out = out.rename(columns={f"{c2}_percent":c2})
 
             # display title and caveats for individual chart
-            display(Markdown(f"### COVID vaccinations among **{k}** population by **{c.replace('_',' ')}**"))
+            display(Markdown(f"### {vaccine_type}COVID vaccinations among **{k}** population by **{c.replace('_',' ')}**"))
             if len(org_name)>0:
                 display(Markdown(f"#### {org_string}"))
                 if ~(c in ["overall","sex","imd_categories"]):
                     display(Markdown(f"Zero percentages may represent suppressed low numbers; raw numbers were rounded to nearest 7"))
             
+            
             out = out.reset_index()
-            out["covid_vacc_date"] = pd.to_datetime(out["covid_vacc_date"]).dt.strftime("%d %b")
-            out = out.set_index("covid_vacc_date")
+            out[reference_column_name] = pd.to_datetime(out[reference_column_name]).dt.strftime("%d %b")
+            out = out.set_index(reference_column_name)
             
             
             # plot trend chart and set chart options
@@ -630,8 +648,8 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
             plt.axhline(overall_rate, color="k", linestyle="--", alpha=0.5)
             plt.text(0, overall_rate*1.02, "latest overall cohort rate")
             plt.ylim(top=1.1*max(overall_rate, out.max().max()))
-            plt.ylabel("Percent vaccinated (cumulative)")
-            plt.xlabel("Date vaccinated")
+            plt.ylabel("Percent (cumulative)")
+            plt.xlabel("Date")
             plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
             
             # export figures to file
@@ -639,6 +657,6 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
                 figure_savepath = savepath["figures"][org_name]          
             else: 
                 figure_savepath = savepath["figures"]
-            plt.savefig(os.path.join(figure_savepath, f"COVID vaccinations among {k} population by {c.replace('_',' ')}.svg"), dpi=300, bbox_inches='tight')
+            plt.savefig(os.path.join(figure_savepath, f"{vaccine_type}COVID vaccinations among {k} population by {c.replace('_',' ')}.svg"), dpi=300, bbox_inches='tight')
 
             plt.show() 

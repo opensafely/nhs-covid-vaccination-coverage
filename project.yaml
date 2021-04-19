@@ -6,10 +6,10 @@ expectations:
 actions:
 
   generate_delivery_cohort:
-    run: cohortextractor:latest generate_cohort --study-definition study_definition_delivery
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_delivery --output-format=csv.gz
     outputs:
       highly_sensitive:
-        cohort: output/input_delivery.csv
+        cohort: output/input_delivery.csv.gz
 
   generate_notebook:
     run: jupyter:latest jupyter nbconvert /workspace/notebooks/population_characteristics.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400

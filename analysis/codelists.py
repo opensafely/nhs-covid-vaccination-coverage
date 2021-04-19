@@ -166,3 +166,7 @@ asplenia_codes = codelist_from_csv(
 wider_ld_codes = codelist_from_csv(
     "codelists/primis-covid19-vacc-uptake-learndis.csv", system="snomed", column="code"
 )
+
+covid_vacc_declined = codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-cov1decl.csv", system="snomed", column="code"
+)

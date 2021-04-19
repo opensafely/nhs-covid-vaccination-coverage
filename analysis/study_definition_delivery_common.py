@@ -30,11 +30,16 @@ common_variables = dict(
             OR
             shielded
             OR
-            (care_home)
-            OR
             (LD)
         )
-        """
+        """,
+        registered=patients.registered_as_of(
+            index_date, 
+        ),
+        has_died=patients.died_from_any_cause(
+            on_or_before=index_date,
+            returning="binary_flag",
+        ),
     ),
 
     has_follow_up=patients.registered_with_one_practice_between(
@@ -42,15 +47,7 @@ common_variables = dict(
         end_date=index_date,
         return_expectations={"incidence": 0.90},
     ),
-    registered=patients.registered_as_of(
-        index_date, 
-        return_expectations={"incidence": 0.98},
-    ),
-    has_died=patients.died_from_any_cause(
-        on_or_before=index_date,
-        returning="binary_flag",
-        return_expectations={"incidence": 0.05},
-    ),
+    
 
     
     ### PRIMIS care home flag 
@@ -89,37 +86,6 @@ common_variables = dict(
                     "50-59": 0.125,
                     "60-69": 0.125,
                     "70-79": 0.25,
-                    "80+": 0.125,
-                }
-            },
-        },
-    ),
-    # age bands for patients not in care homes (ie living in the community)
-    # this is used to define eligible groups not defined by clinical criteria
-    ageband_community=patients.categorised_as(
-        {
-            "care home" : "DEFAULT",
-            "16-29": """ age >= 16 AND age < 30 AND NOT care_home""",
-            "30-39": """ age >= 30 AND age < 40 AND NOT care_home""",
-            "40-49": """ age >= 40 AND age < 50 AND NOT care_home""",
-            "50-59": """ age >= 50 AND age < 60 AND NOT care_home""",
-            "60-64": """ age >= 60 AND age < 65 AND NOT care_home""",
-            "65-69": """ age >= 65 AND age < 70 AND NOT care_home""",
-            "70-79": """ age >= 70 AND age < 80 AND NOT care_home""",
-            "80+": """ age >=  80 AND age < 120 AND NOT care_home""",
-        },
-        return_expectations={
-            "rate": "universal",
-            "category": {
-                "ratios": {
-                    "care home":0.125,
-                    "16-29": 0.125,
-                    "30-39": 0.125,
-                    "40-49": 0.125,
-                    "50-59": 0.125,
-                    "60-64": 0.0625,
-                    "65-69": 0.0625,
-                    "70-79": 0.125,
                     "80+": 0.125,
                 }
             },
@@ -300,17 +266,7 @@ common_variables = dict(
         returning="binary_flag", 
         return_expectations={"incidence": 0.01,},
     ),
-    adrenaline_pen=patients.with_these_medications(
-        adrenaline_pen,
-        on_or_after="index_date - 24 months",  # look for last two years
-        returning="binary_flag",
-        return_last_date_in_period=False,
-        include_month=False,
-        return_expectations={
-            "date": {"earliest": "2018-12-01", "latest": index_date},
-            "incidence": 0.001,
-        },
-    ),
+
 
 
     ### PRIMIS overall flag for shielded group
@@ -386,6 +342,21 @@ common_variables = dict(
     LD = patients.with_these_clinical_events(
             wider_ld_codes, 
             return_expectations={"incidence": 0.02,},
+    ),
+
+    # declined vaccination / vaccination course / first dose (not including declined second dose)
+    covid_vacc_declined_date = patients.with_these_clinical_events(
+        covid_vacc_declined,
+        returning="date",
+        find_first_match_in_period=True,
+        date_format = "YYYY-MM-DD",
+        return_expectations={
+            "date": {
+                "earliest": "2020-12-08",  # first vaccine administered on the 8/12
+                "latest": index_date,
+            },
+                "incidence":0.04
+        },
     ),
             
 )
