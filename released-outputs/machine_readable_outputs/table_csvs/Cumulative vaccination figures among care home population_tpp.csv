@@ -1,18 +1,18 @@
-Category,Group,Vaccinated at 21 Apr (n),Vaccinated at 21 Apr (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,80920,96.2,84119,96.0,0.2
-Sex,F,57575,96.5,59675,96.3,0.2
-Sex,M,23345,95.5,24444,95.2,0.3
-Age band,65-69,4403,92.6,4753,92.5,0.1
-Age band,70-74,6818,94.2,7238,94.0,0.2
-Age band,75-79,9464,95.6,9898,95.4,0.2
-Age band,80-84,14154,96.5,14665,96.2,0.3
-Age band,85-89,18963,96.7,19607,96.5,0.2
-Age band,90+,27111,97.0,27951,96.8,0.2
-Ethnicity (broad categories),Black,399,86.4,462,86.4,0.0
-Ethnicity (broad categories),Mixed,203,90.6,224,90.6,0.0
-Ethnicity (broad categories),Other,350,94.3,371,94.3,0.0
-Ethnicity (broad categories),South Asian,623,92.7,672,92.7,0.0
-Ethnicity (broad categories),Unknown,2058,93.3,2205,93.0,0.3
-Ethnicity (broad categories),White,77280,96.4,80192,96.1,0.3
-Dementia,no,36582,95.1,38472,94.8,0.3
-Dementia,yes,44338,97.1,45647,96.9,0.2
+Category,Group,Vaccinated at 05 May (n),Vaccinated at 05 May (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,81543,96.4,84623,96.3,0.1
+Sex,F,58002,96.6,60032,96.5,0.1
+Sex,M,23541,95.7,24591,95.6,0.1
+Age band,65-69,4466,93.3,4788,93.1,0.2
+Age band,70-74,6923,94.6,7322,94.4,0.2
+Age band,75-79,9576,95.9,9989,95.7,0.2
+Age band,80-84,14301,96.6,14798,96.5,0.1
+Age band,85-89,19103,96.7,19754,96.6,0.1
+Age band,90+,27174,97.2,27965,97.1,0.1
+Ethnicity (broad categories),Black,406,87.9,462,86.4,1.5
+Ethnicity (broad categories),Mixed,210,93.8,224,93.8,0.0
+Ethnicity (broad categories),Other,343,94.2,364,94.2,0.0
+Ethnicity (broad categories),South Asian,630,93.8,672,92.7,1.1
+Ethnicity (broad categories),Unknown,2065,93.1,2219,93.1,0.0
+Ethnicity (broad categories),White,77896,96.6,80675,96.5,0.1
+Dementia,no,36876,95.3,38682,95.2,0.1
+Dementia,yes,44667,97.2,45941,97.2,0.0
