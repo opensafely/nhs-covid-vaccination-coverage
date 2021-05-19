@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import os
 
 from datetime import datetime
-import json
 from IPython.display import display, Markdown
 
 
@@ -236,12 +235,12 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
 
 def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine_type="first_dose", suffix=""):
     '''
-    Cumulative chart by day of total vaccines given across key eligible groups
+    Cumulative chart by day of total vaccines given across key eligible groups. Produces both SVG and PNG versions.
     
     Args:
         df (dataframe): cumulative daily data on vaccines given per group
         latest_date (str): latest date across dataset in YYYY-MM-DD format
-        savepath (dict): path to save figure as svg (savepath["figures"])
+        savepath (dict): path to save figure (savepath["figures"])
         savepath_figure_csvs (str): path to save machine readable csv for recreating the chart
         vaccine_type (str): used in output strings to describe type of vaccine received e.g. "first_dose", "moderna". 
                             Also appended to filename of output. 
@@ -296,10 +295,12 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine
     plt.legend(bbox_to_anchor=(1.04,1), loc="upper left")
     
     # export figure to file and display it
-    plt.savefig(os.path.join(savepath["figures"], f"{title}.svg"), dpi=300, bbox_inches='tight')
+    filename = os.path.join(savepath["figures"], title)
+    plt.savefig(f"{filename}.svg", dpi=300, bbox_inches='tight')
+    plt.savefig(f"{filename}.png", dpi=300, bbox_inches='tight')
     plt.show()
     
-    
+
     
 def report_results(df_dict_cum, group, latest_date, breakdown=None):
     '''
@@ -563,7 +564,7 @@ def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date,
 def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_latest_date, savepath, pop_subgroups=["80+", "70-79"], groups_dict=None, groups_to_exclude=None, savepath_figure_csvs=None, include_overall=False, org_name="", suffix=""):
     
     '''
-    Plot vaccine coverage charts by demographic features
+    Plot vaccine coverage charts by demographic features. Produces both SVG and PNG versions.
     
     Args:
         summary_stats_results (dict): summary statistics for full cohort to use for plotting comparator lines
@@ -657,6 +658,8 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
                 figure_savepath = savepath["figures"][org_name]          
             else: 
                 figure_savepath = savepath["figures"]
-            plt.savefig(os.path.join(figure_savepath, f"{vaccine_type}COVID vaccinations among {k} population by {c.replace('_',' ')}.svg"), dpi=300, bbox_inches='tight')
+            filename = os.path.join(figure_savepath, f"{vaccine_type}COVID vaccinations among {k} population by {c.replace('_', ' ')}")
+            plt.savefig(f"{filename}.svg", dpi=300, bbox_inches='tight')
+            plt.savefig(f"{filename}.png", dpi=300, bbox_inches='tight')
 
             plt.show() 
