@@ -24,7 +24,7 @@ actions:
         text: interim-outputs/text/*
 
   generate_report:
-    run: jupyter:latest jupyter nbconvert /workspace/notebooks/opensafely_vaccine_report_overall.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
+    run: jupyter:latest env IMAGE_FORMAT=svg jupyter nbconvert /workspace/notebooks/opensafely_vaccine_report_overall.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
 
     needs: [generate_delivery_cohort, generate_notebook]
     outputs:
@@ -33,7 +33,7 @@ actions:
         csvs: machine_readable_outputs/table_csvs/*
 
   generate_simple_report:
-    run: jupyter:latest jupyter nbconvert /workspace/notebooks/opensafely_vaccine_report_overall.ipynb --execute --to html --template basic --output=/workspace/output/opensafely_vaccine_report_overall_simple.html --ExecutePreprocessor.timeout=86400 --no-input
+    run: jupyter:latest env IMAGE_FORMAT=png jupyter nbconvert /workspace/notebooks/opensafely_vaccine_report_overall.ipynb --execute --to html --template basic --output=/workspace/output/opensafely_vaccine_report_overall_simple.html --ExecutePreprocessor.timeout=86400 --no-input
 
     needs: [generate_delivery_cohort, generate_notebook]
     outputs:
