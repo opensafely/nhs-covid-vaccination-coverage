@@ -1,6 +1,6 @@
 # OpenSAFELY COVID-19 Vaccine Coverage Report
 
-This is the code and configuration of our pre-print paper available the [OpenSAFELY website here](https://opensafely.org/research/2021/covid-vaccine-coverage/) and on [MedRxiv here](https://www.medrxiv.org/content/10.1101/2021.01.25.21250356v2). You can sign up for the [OpenSAFELY email newsletter here](https://opensafely.org/contact/) for updates about the COVID-19 vaccine reports and other OpenSAFELY projects.
+This is the code and configuration of our pre-print paper available on the [OpenSAFELY website here](https://opensafely.org/research/2021/covid-vaccine-coverage/) and on [MedRxiv here](https://www.medrxiv.org/content/10.1101/2021.01.25.21250356v2). You can sign up for the [OpenSAFELY email newsletter here](https://opensafely.org/contact/) for updates about the COVID-19 vaccine reports and other OpenSAFELY projects.
 
 
 - If you are interested in how we defined our variables, take a look at the [study definition](analysis/study_definition_delivery.py); this is written in `python`, but non-programmers should be able to understand what is going on there.
