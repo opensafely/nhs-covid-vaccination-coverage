@@ -61,7 +61,21 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
         covid_vacc_flag_mod = np.where(df["covid_vacc_moderna_date"]!=0, 1, 0),
         covid_vacc_2nd = np.where(df["covid_vacc_second_dose_date"]!=0, 1, 0),
         covid_vacc_bin = np.where(df["covid_vacc_date"]!=0, 1, 0))
-
+        
+    # Mixed doses:
+    # flag patients with a second dose, where more than one type has been recorded
+    df = df.assign(    
+        covid_vacc_ox_pfz = np.where((df["covid_vacc_2nd"]==1) & \
+                                          (df["covid_vacc_flag_pfz"]==1) & \
+                                          (df["covid_vacc_flag_ox"]==1), 1, 0),
+        covid_vacc_ox_mod = np.where((df["covid_vacc_2nd"]==1) & \
+                                          (df["covid_vacc_flag_ox"]==1) & \
+                                          (df["covid_vacc_flag_mod"]==1), 1, 0),
+        covid_vacc_mod_pfz = np.where((df["covid_vacc_2nd"]==1) & \
+                                          (df["covid_vacc_flag_mod"]==1) & \
+                                          (df["covid_vacc_flag_pfz"]==1), 1, 0),
+        )
+        
     # declined - suppress if vaccine has been received
     df["covid_vacc_declined_date"] = np.where(df["covid_vacc_date"]==0, df["covid_vacc_declined_date"], 0)
     
