@@ -1,7 +1,6 @@
 import os
 import pandas as pd
 from IPython.display import display, Markdown
-from IPython.core.display import SVG
 from collections import OrderedDict
 from operator import itemgetter
 
@@ -55,8 +54,9 @@ def find_and_sort_filenames(foldername, *,
                             by_demographics_or_population="demographics", 
                             population_subset="80+",
                             demographics_subset=[],
-                            pre_string="by ", tail_string=".svg",
-                            files_to_exclude=["Cumulative vaccination figures.svg"]):
+                            file_extension="csv",
+                            pre_string="by ", tail_string=None,
+                            files_to_exclude=None):
     '''
     List files from specified folder ("figures" or "tables") and sort in predetermined order
     
@@ -68,6 +68,7 @@ def find_and_sort_filenames(foldername, *,
     population_subset (str): population group to include
     demographics_subset (list): list of strings to filter filenames to a subset of demographic features
                                 (e.g. ["ethnicity_6_groups", "imd_categories"])
+    file_extension (str): extension of the files to list (use to pick out either SVGs or PNGs)
     pre_string: string found in filename AHEAD OF desired factor for sorting (e.g. for filename containing "by ageband" use "by ").
                 filename will be split at this point.
     tail_string: string found in filename AFTER desired factor for sorting (e.g. for filename containing "by ageband.csv" use ".csv").
@@ -75,6 +76,9 @@ def find_and_sort_filenames(foldername, *,
     files_to_exclude (list): any files in target folder not to be included
     
     '''
+    tail_string = tail_string or f".{file_extension}"
+    files_to_exclude = files_to_exclude or [f"Cumulative vaccination figures.{file_extension}"]
+
     savepath = get_savepath(subfolder=org_breakdown)
     
     if subfolder:  
@@ -85,7 +89,10 @@ def find_and_sort_filenames(foldername, *,
     for f in files_to_exclude:
         if f in file_list:
             file_list.remove(f)
-    
+
+    # restrict to files with the specified extension
+    file_list = [f for f in file_list if f.endswith(f".{file_extension}")]
+
     # restrict to population subset of interest based on string supplied
     file_list = [f for f in file_list if population_subset in f]
 
@@ -141,13 +148,13 @@ def find_and_sort_filenames(foldername, *,
     return(out_list.keys())
 
 
-
-def show_chart(filepath, *, org_breakdown="", subfolder="", title="on"):
+def show_chart(filepath, image_format, org_breakdown="", subfolder="", title="on"):
     '''
     Show chart from specified filepath. Rename filepaths for use as chart titles.
     
     Inputs:
     filepath (str):  file path
+    image_format (ImageFormat): the type of image to show
     org_breakdown (str): Type of org breakdown (e.g "stp")
     subfolder (str): subfolder of in which to find files (e.g. an individual STP)
     title (str): "on" or "off"
@@ -166,17 +173,15 @@ def show_chart(filepath, *, org_breakdown="", subfolder="", title="on"):
         title_string = filepath
         for v in variable_renaming: # replace short strings with full variable names
             title_string = title_string.replace(v, f"{variable_renaming[v]}")
-        title_string = title_string.replace(" by","\n ### by").replace(".svg","")
+        title_string = title_string.replace(" by","\n ### by").replace(f".{image_format.extension}", "")
         display(Markdown(f"### {title_string}"))
         if (len(subfolder)>0) & (~any(s in filepath for s in ["overall","sex","imd_categories"])):
             display(Markdown(f"Zero percentages may represent suppressed low numbers; raw numbers were rounded to nearest 7"))
            
-    
-    display(SVG(filename=imgpath))
-    
-    
+    display(image_format.formatter(filename=imgpath))
 
-def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=False, 
+
+def import_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=False, 
                rows_to_exclude = [],
                export_csv=True, suffix=""):
     '''
@@ -191,7 +196,8 @@ def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=
     export_csv (bool): whether or not to save table as csv
     
     Outputs:
-    tab (dataframe): formatted table (preceded by title derived from filename & intro text)   
+    tab (dataframe): formatted table 
+    title (str): title to display with table
     '''
     savepath = get_savepath(org_breakdown)
     
@@ -238,9 +244,6 @@ def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=
     if (show_carehomes==False) & (title == "Cumulative vaccination figures among care home population"):
         return
     
-    # display title
-    display(Markdown(f"## \n ## {title} \n Please refer to footnotes below table for information."))
-    
     # export csvs
     if export_csv==True:
         export_path = os.path.join("..", "machine_readable_outputs", "table_csvs")
@@ -248,6 +251,31 @@ def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=
             os.makedirs(export_path)
         tab.to_csv(os.path.join(export_path, f"{title}{suffix}.csv"), index=True)
 
+    # return table and title
+    return tab, title
+    
+
+        
+def show_table(df, title, latest_date_fmt, *, org_breakdown=None, show_carehomes=False):
+    '''
+    Show table with specified filename. Rename row and column headers.
+    
+    Inputs:
+    df: dataframe
+    latest_date_fmt (str): latest date of vaccination in dataset
+    org_breakdown (str): e.g. "stp"
+    show_carehomes (bool): whether or not we are showing care homes table
+    
+    Outputs:
+    tab (dataframe): formatted table (preceded by title derived from filename & intro text)   
+    '''
+    
+    # get table
+    tab = df
+       
+    # display title
+    display(Markdown(f"## \n ## {title} \n Please refer to footnotes below table for information."))
+    
     # display table
     display(tab)
     
@@ -255,6 +283,9 @@ def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=
     display(Markdown("**Footnotes:**\n"\
                        f"- Patient counts rounded to the nearest 7"))
     
+    if ("second" in title.lower()):
+        display(Markdown(f"- Only persons who had their fist dose at least 14 weeks ago are included in the 'due' group."))
+        
     # display caveats about care home inclusion/exclusion where relevant
     if (show_carehomes == True) & ("care home" in title):
         display(Markdown(f"- Population includes those known to live in an elderly care home, based upon clinical coding."))
@@ -278,3 +309,12 @@ def show_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=
     
     if variable_renaming["ssri"] in tab.index:
         display(Markdown("- SSRIs group excludes individuals with Psychosis/ schizophrenia/bipolar, LD, or Dementia."))
+        
+        
+        
+def df_column_switch(df, column1, column2):
+    i = list(df.columns)
+    a, b = i.index(column1), i.index(column2)
+    i[b], i[a] = i[a], i[b]
+    df = df[i]
+    return df

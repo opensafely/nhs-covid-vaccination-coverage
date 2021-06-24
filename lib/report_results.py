@@ -4,7 +4,6 @@ import matplotlib.pyplot as plt
 import os
 
 from datetime import datetime
-import json
 from IPython.display import display, Markdown
 
 
@@ -66,7 +65,16 @@ def create_output_dirs_per_org(org_list=None, subfolder=None, filetypes=["figure
 
 def find_and_save_latest_date(df, savepath, reference_column_name="covid_vacc_date"):
     """
-    Finds the latest date of a vaccine given and formats as a string.
+    Finds the latest date of a date column and formats as a string.
+    
+    Inputs:
+    df (dataframe): must contain `reference_column_name`
+    savepath (str): location to save latest date as a txt file
+    reference_column_name (str): column of dates in which to find latest date
+    
+    Returns:
+    latest_date (str): "%Y-%m-%d"
+    latest_date_fmt (str): "%d %b %Y"
     """
     # query the data frame and pull out the latest date
     latest_date = df[df[reference_column_name] != 0][reference_column_name].max()
@@ -183,10 +191,13 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
     out2 = pd.DataFrame(filtered.groupby([reference_column_name])[["patient_id"]].nunique().unstack().fillna(0).cumsum()).reset_index()
     out2 = out2.rename(columns={0:"overall"}).drop(["level_0"],1)
 
-    # in case no vaccinations on latest date for some orgs/groups, insert the latest data as a new row with the required date:
-    if out2[reference_column_name].max()<latest_date:
-        out2.loc[max(out2.index)+1] = [latest_date, out2["overall"].max()]
+    # filter to latest date and earlier (usually no effect unless a date earlier than the latest available data is passed)
+    out2 = out2.loc[out2[reference_column_name] <= latest_date]
     
+    # in case no vaccinations on latest date for some orgs/groups, insert the latest data as a new row with the required date:    
+    if latest_date not in list(out2[reference_column_name]):
+        out2.loc[max(out2.index)+1] = [latest_date, out2.loc[out2[reference_column_name]<latest_date]["overall"].max()]
+
     # suppress low numbers
     out2["overall"] = out2["overall"].replace([1,2,3,4,5,6], 0).fillna(0).astype(int)
     
@@ -209,11 +220,14 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
         # suppress low numbers
         totals = totals.replace([1,2,3,4,5,6], 0).fillna(0)
         totals = round7(totals)
-        
+    
         # find total number of patients vaccinated in each subgroup (e.g. no of males and no of females),
             # cumulative at each date of the campaign
         out2 = filtered.copy().groupby([feature, reference_column_name])["patient_id"].nunique().unstack(0)
         out2 = out2.fillna(0).cumsum()
+
+        # filter to latest date and earlier (usually no effect unless a date earlier than the latest available data is passed)
+        out2 = out2.loc[out2.index <= latest_date]
         
         # suppress low numbers
         out2 = out2.replace([1,2,3,4,5,6], 0).fillna(0)
@@ -223,8 +237,8 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
         for c2 in out2.columns:
             out2[f"{c2}_total"] = totals[c2][0].astype(int)
             #calculate percentage
-            out2[f"{c2}_percent"] = 100*(out2[c2]/out2[f"{c2}_total"])           
-        
+            out2[f"{c2}_percent"] = 100*(out2[c2]/out2[f"{c2}_total"])   
+            
         # in case no vaccinations on latest date for some orgs/groups, insert the latest data as a new row with the required date
         if out2.index.max()<latest_date:
             out2.loc[latest_date] = out2.max()
@@ -236,12 +250,12 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
 
 def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine_type="first_dose", suffix=""):
     '''
-    Cumulative chart by day of total vaccines given across key eligible groups
+    Cumulative chart by day of total vaccines given across key eligible groups. Produces both SVG and PNG versions.
     
     Args:
         df (dataframe): cumulative daily data on vaccines given per group
         latest_date (str): latest date across dataset in YYYY-MM-DD format
-        savepath (dict): path to save figure as svg (savepath["figures"])
+        savepath (dict): path to save figure (savepath["figures"])
         savepath_figure_csvs (str): path to save machine readable csv for recreating the chart
         vaccine_type (str): used in output strings to describe type of vaccine received e.g. "first_dose", "moderna". 
                             Also appended to filename of output. 
@@ -296,10 +310,12 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine
     plt.legend(bbox_to_anchor=(1.04,1), loc="upper left")
     
     # export figure to file and display it
-    plt.savefig(os.path.join(savepath["figures"], f"{title}.svg"), dpi=300, bbox_inches='tight')
+    filename = os.path.join(savepath["figures"], title)
+    plt.savefig(f"{filename}.svg", dpi=300, bbox_inches='tight')
+    plt.savefig(f"{filename}.png", dpi=300, bbox_inches='tight')
     plt.show()
     
-    
+
     
 def report_results(df_dict_cum, group, latest_date, breakdown=None):
     '''
@@ -330,6 +346,11 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
         out = df_dict_cum[group][category]
         reference_column_name = out.index.name
 
+#         # filter to latest_date and earlier (allows a date other than the current date to be passed)
+#         out = out.loc[out.index <= latest_date]
+#         if latest_date not in list(out.index):
+#             out.loc[latest_date] = out.loc[out.index <latest_date].max()
+
         # calculate changes: select only latest date and 7 days ago:
         latest = pd.to_datetime(out.index).max()
         lastweek = (latest + pd.DateOffset(days=-7)).strftime("%Y-%m-%d")
@@ -347,10 +368,11 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
             out = out.filter(regex='^(?!.*percent).*$')
             col_str = ""
         
+        
+
         # if last week's exact date not present, fill in using latest values prior to required date
-        if sum(out.index == lastweek)==0:
+        if lastweek not in list(out.index):
             out.loc[lastweek] = out.loc[out.index < lastweek].max()
-            
         out = out.loc[[latest_date,lastweek],:].transpose()
         
         out["weeklyrate"] = ((out[latest_date] - out[lastweek]).fillna(0)).round(1)
@@ -379,10 +401,11 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
         out2 = df_dict_cum[group][category].reset_index()
         out2 = out2.loc[out2[reference_column_name]==latest_date].reset_index().set_index(reference_column_name).drop(["index"], 1).transpose()
         # split field names e.g. "M_percent" ->"M""percent"
+        
         out2.index = pd.MultiIndex.from_tuples(out2.index.str.split('_').tolist())
         out2 = out2.unstack().reset_index(col_level=1)
         out2.columns = out2.columns.droplevel()
-        out2 = out2.rename(columns={"index":"group", np.nan:"vaccinated"})
+        out2 = out2.rename(columns={"index":"group", np.nan:"vaccinated"}).fillna(0)
         out2["percent"] = out2["percent"].round(1)
         out2["category"] = category
         out2 = out2.set_index(["category","group"])
@@ -506,17 +529,33 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
 
     # if summarising first doses, perform some additional calculations        
     if vaccine_type=="first_dose":        
-        # count oxford vax as a proportion of total; filter to date of first vax only in case of patients having mixed types    
+        # count each vax type as a proportion of total; filter to date of first vax only in case of patients having mixed types    
         oxford_vaccines = round7(df.copy().loc[df["covid_vacc_date"]==df["covid_vacc_oxford_date"]]["covid_vacc_flag_ox"].sum())
         ox_percent = round(100*oxford_vaccines/vaccinated_total, 1)
+        pfizer_vaccines = round7(df.copy().loc[df["covid_vacc_date"]==df["covid_vacc_pfizer_date"]]["covid_vacc_flag_pfz"].sum())
+        pfz_percent = round(100*pfizer_vaccines/vaccinated_total, 1)
         moderna_vaccines = round7(df.copy().loc[df["covid_vacc_date"]==df["covid_vacc_moderna_date"]]["covid_vacc_flag_mod"].sum())
         mod_percent = round(100*moderna_vaccines/vaccinated_total, 1)
+        
+        # second doses
         second_doses = round7(df["covid_vacc_2nd"].sum())
         sd_percent = round(100*second_doses/vaccinated_total, 1)
+        mixed_ox_pfz_doses = round7(df["covid_vacc_ox_pfz"].sum())
+        mixed_ox_pfz_percent = round(100*mixed_ox_pfz_doses/second_doses, 1)
+        mixed_ox_mod_doses = round7(df["covid_vacc_ox_mod"].sum())
+        mixed_ox_mod_percent = round(100*mixed_ox_mod_doses/second_doses, 1)
+        mixed_mod_pfz_doses = round7(df["covid_vacc_mod_pfz"].sum())
+        mixed_mod_pfz_percent = round(100*mixed_mod_pfz_doses/second_doses, 1)
 
-        additional_stats["Second doses (% of all vaccinated)"] = f"**{sd_percent}%** ({second_doses:,})"
         additional_stats["Oxford-AZ vaccines (% of all first doses)"] = f"**{ox_percent}%** ({oxford_vaccines:,})"
+        additional_stats["Pfizer vaccines (% of all first doses)"] = f"**{pfz_percent}%** ({pfizer_vaccines:,})"
         additional_stats["Moderna vaccines (% of all first doses)"] = f"**{mod_percent}%** ({moderna_vaccines:,})"
+        
+        additional_stats["Second doses (% of all vaccinated)"] = f"**{sd_percent}%** ({second_doses:,})"
+        
+        additional_stats["Mixed doses Ox-AZ + Pfizer (% of fully vaccinated)"] = f"**{mixed_ox_pfz_percent}%** ({mixed_ox_pfz_doses})"
+        additional_stats["Mixed doses Ox-AZ + Moderna (% of fully vaccinated)"] = f"**{mixed_ox_mod_percent}%** ({mixed_ox_mod_doses})"
+        additional_stats["Mixed doses Moderna + Pfizer (% of fully vaccinated)"] = f"**{mixed_mod_pfz_percent}%** ({mixed_mod_pfz_doses})"
 
     # export summary stats to text file
     summary_stats.to_csv(os.path.join(savepath["text"], f"summary_stats_{vaccine_type}.txt"))
@@ -525,7 +564,7 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
     return summary_stats, additional_stats
 
 
-def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date, savepath, groups=["80+", "70-79", "care home", "shielding (aged 16-69)"]):
+def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date, savepath, vaccine_type="first_dose", groups=["80+", "70-79", "care home", "shielding (aged 16-69)"]):
     """
     This takes in the large summarised_data_dict that is created by summarise_data_by_group()
     and loops through the specified groups and displays this information to the user. 
@@ -536,15 +575,16 @@ def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date,
         summarised_data_dict (dict): dictionary that is created by running summarise_data_by_group()
         formatted_latest_date (str): str that is created by running 
             find_and_save_latest_date()
+        savepath (str): save path.
+        vaccine_type (str): string to insert into filename on export.
         groups (list): eligible groups of interest. 
 
     """
     pd.set_option('display.max_rows',200)
-
     # loops through the groups and displays markdown
     for group in groups:
         display(Markdown(f"## "),
-                Markdown(f"## COVID vaccination rollout among **{group}** population up to {formatted_latest_date}"),
+                Markdown(f"## COVID vaccination rollout ({vaccine_type.replace('_', ' ')}) among **{group}** population up to {formatted_latest_date}"),
                 Markdown(f"- 'Date projected to reach 90%' being 'unknown' indicates projection of >6mo (likely insufficient information)\n"\
                            f"- Patient counts rounded to the nearest 7"))
         out = summarised_data_dict[group]
@@ -557,13 +597,19 @@ def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date,
         out_csv = out.copy()
         if "Date projected to reach 90%" in out.columns:
             out_csv = out_csv.drop("Date projected to reach 90%",1)
-        out_csv.to_csv(os.path.join(savepath["tables"], f"Cumulative vaccination figures among {group} population.csv"), index=True)
+        
+        if vaccine_type == "first_dose":
+            out_str = ""
+        else:
+            out_str = vaccine_type.replace("_", " ") + " "
+        out_csv.to_csv(os.path.join(savepath["tables"], f"Cumulative {out_str}vaccination figures among {group} population.csv"), index=True)
 
+        
 
 def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_latest_date, savepath, pop_subgroups=["80+", "70-79"], groups_dict=None, groups_to_exclude=None, savepath_figure_csvs=None, include_overall=False, org_name="", suffix=""):
     
     '''
-    Plot vaccine coverage charts by demographic features
+    Plot vaccine coverage charts by demographic features. Produces both SVG and PNG versions.
     
     Args:
         summary_stats_results (dict): summary statistics for full cohort to use for plotting comparator lines
@@ -616,12 +662,13 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
                      
             # get index name (== "covid_vacc_date" for first doses)
             reference_column_name = out.index.name
-            vaccine_type = reference_column_name.replace("covid_vacc_","").replace("date"," ").replace("_"," ").title()
+            vaccine_type = reference_column_name.replace("covid_vacc_","").replace("date","").replace("_"," ").title()
             
             # export csv to file - numerator and denominator rather than percentages
             if savepath_figure_csvs:
                 cols = [c for c in out.columns if '_percent' not in c]
                 out_csv = out.copy()[cols]
+                
                 out_csv.to_csv(os.path.join(savepath_figure_csvs, f"Cumulative {vaccine_type}vaccination percent among {k} population by {c.replace('_',' ')}{suffix}.csv"), index=True)
             
             #  for plotting, drop vaccinated and total column but keep percentage
@@ -657,6 +704,8 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
                 figure_savepath = savepath["figures"][org_name]          
             else: 
                 figure_savepath = savepath["figures"]
-            plt.savefig(os.path.join(figure_savepath, f"{vaccine_type}COVID vaccinations among {k} population by {c.replace('_',' ')}.svg"), dpi=300, bbox_inches='tight')
+            filename = os.path.join(figure_savepath, f"{vaccine_type}COVID vaccinations among {k} population by {c.replace('_', ' ')}")
+            plt.savefig(f"{filename}.svg", dpi=300, bbox_inches='tight')
+            plt.savefig(f"{filename}.png", dpi=300, bbox_inches='tight')
 
             plt.show() 
