@@ -31,3 +31,13 @@ actions:
       moderately_sensitive:
         notebook: output/opensafely_vaccine_report_overall_simple.html
         csvs: machine_readable_outputs/table_csvs/*
+
+  generate_report_second_doses:
+    run: jupyter:latest jupyter nbconvert /workspace/notebooks/second_doses.ipynb --execute --to html --template basic --output-dir=/workspace/output/second_doses --ExecutePreprocessor.timeout=86400 --no-input
+
+    needs: [generate_notebook]
+    outputs:
+      moderately_sensitive:
+        notebook: output/second_doses/second_doses.html
+        tables: output/second_doses/*.csv
+       
