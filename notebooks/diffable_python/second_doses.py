@@ -63,9 +63,9 @@ display(Markdown(
 # - [**80+** population](#Cumulative-second-dose-vaccination-figures-among-80+-population)
 # - [**70-79** population](#Cumulative-second-dose-vaccination-figures-among-70-79-population)
 # - [**Care home** population](#Cumulative-second-dose-vaccination-figures-among-care-home-population)
-# - [**Shielding (aged 16-69)** population](#Cumulative-second-dose-vaccination-figures-among-shielding-(aged-16-69\)-population)
+# - <a href="#Cumulative-second-dose-vaccination-figures-among-shielding-(aged-16-69)-population"><strong>Shielding (aged 16-69)</strong> population</a>
 # - [**65-69** population](#Cumulative-second-dose-vaccination-figures-among-65-69-population)
-# - [**LD (aged 16-64)** population](#Cumulative-second-dose-vaccination-figures-among-LD-(aged-16-64\)-population)
+# - <a href="#Cumulative-second-dose-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population"><strong>LD (aged 16-64)</strong> population</a>
 # - [**60-64** population](#Cumulative-second-dose-vaccination-figures-among-60-64-population)
 # - [**55-59** population](#Cumulative-second-dose-vaccination-figures-among-54-59-population)
 # - [**50-54** population](#Cumulative-second-dose-vaccination-figures-among-50-54-population)
@@ -188,8 +188,8 @@ for f, f2 in zip(tablelist, tablelist_2nd):
            Markdown("Error bars indicate possible error caused by rounding"))
         
     plt.show()
-    
 
-# -
+
+# +
 
 
