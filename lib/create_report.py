@@ -274,6 +274,8 @@ def show_table(df, title, latest_date_fmt, *, org_breakdown=None, show_carehomes
     tab = df
        
     # display title
+    if " LD " in title:
+        title = title.replace("LD", "Learning Disabilities")
     display(Markdown(f"## \n ## {title} \n Please refer to footnotes below table for information."))
     
     # display table
@@ -295,8 +297,8 @@ def show_table(df, title, latest_date_fmt, *, org_breakdown=None, show_carehomes
         display(Markdown(f"- Population excludes those known to live in an elderly care home, based upon clinical coding."))
     
     # display note that 65-69 and LD group excludes shielding subgroup
-    if ("65-69" in title) | ("60-64" in title)  | ("55-59" in title) | ("50-54" in title) | ("LD (aged 16-64)" in title):
-        display(Markdown(f"- Population excludes those who are currently shielding."))
+    if ("65-69" in title) | ("60-64" in title)  | ("55-59" in title) | ("50-54" in title) | ("Learning Disabilities" in title):
+        display(Markdown(f"- Population excludes those who are shielding."))
     
     
     # display footnotes related to STPs   

@@ -1,18 +1,18 @@
-Category,Group,Vaccinated at 16 Jun (n),Vaccinated at 16 Jun (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,69241,84.1,82376,83.6,0.5
-Sex,F,26845,86.3,31094,86.0,0.3
-Sex,M,42392,82.7,51282,82.2,0.5
-Age band,16-29,26411,77.2,34230,76.5,0.7
-Age band,30-34,8862,83.2,10654,82.7,0.5
-Age band,35-39,6692,86.8,7707,86.5,0.3
-Age band,40-44,5404,89.6,6034,89.2,0.4
-Age band,45-49,5558,90.7,6125,90.5,0.2
-Age band,50-54,5971,92.4,6461,92.2,0.2
-Age band,55-59,5894,92.1,6398,91.9,0.2
-Age band,60-64,4452,93.5,4760,93.4,0.1
-Ethnicity (broad categories),Black,791,59.2,1337,58.6,0.6
+Category,Group,Vaccinated at 24 Jun (n),Vaccinated at 24 Jun (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,69655,84.5,82446,84.1,0.4
+Sex,F,26992,86.7,31122,86.3,0.4
+Sex,M,42658,83.1,51324,82.7,0.4
+Age band,16-29,26677,77.8,34286,77.2,0.6
+Age band,30-34,8925,83.7,10661,83.3,0.4
+Age band,35-39,6706,87.0,7707,86.8,0.2
+Age band,40-44,5425,89.9,6034,89.7,0.2
+Age band,45-49,5572,91.0,6125,90.7,0.3
+Age band,50-54,5978,92.4,6468,92.4,0.0
+Age band,55-59,5908,92.2,6405,92.0,0.2
+Age band,60-64,4452,93.5,4760,93.5,0.0
+Ethnicity (broad categories),Black,805,60.2,1337,59.7,0.5
 Ethnicity (broad categories),Mixed,728,67.5,1078,66.9,0.6
-Ethnicity (broad categories),Other,490,70.7,693,69.7,1.0
-Ethnicity (broad categories),South Asian,3381,71.8,4711,70.9,0.9
-Ethnicity (broad categories),Unknown,5208,81.2,6412,80.7,0.5
-Ethnicity (broad categories),White,58639,86.1,68145,85.7,0.4
+Ethnicity (broad categories),Other,497,71.0,700,70.0,1.0
+Ethnicity (broad categories),South Asian,3430,72.8,4711,72.1,0.7
+Ethnicity (broad categories),Unknown,5271,82.1,6419,81.4,0.7
+Ethnicity (broad categories),White,58926,86.4,68194,86.1,0.3
