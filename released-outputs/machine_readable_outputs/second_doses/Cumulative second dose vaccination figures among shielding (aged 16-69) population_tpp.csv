@@ -1,0 +1,25 @@
+Category,Group,Second Doses due at 08 Jul (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,718100,696797,97.0,833532
+newly shielded since feb 15,no,451178,440482,97.6,499884
+newly shielded since feb 15,yes,266924,256319,96.0,333655
+Sex,F,399357,386855,96.89999999999999,468181
+Sex,M,318731,309932,97.2,365337
+Age band,16-29,51394,48538,94.39999999999999,69993
+Age band,30-39,97342,92736,95.3,127673
+Age band,40-49,140259,135373,96.5,166733
+Age band,50-59,205961,200760,97.5,229873
+Age band,60-69,223132,219387,98.3,239239
+Ethnicity (broad categories),Black,29470,27867,94.6,44618
+Ethnicity (broad categories),Mixed,10423,9898,95.0,14406
+Ethnicity (broad categories),Other,13237,12775,96.5,18242
+Ethnicity (broad categories),South Asian,85302,81319,95.3,108430
+Ethnicity (broad categories),Unknown,26201,25599,97.7,31101
+Ethnicity (broad categories),White,553448,539329,97.39999999999999,616721
+Index of Multiple Deprivation (quintiles),1 Most deprived,198142,189959,95.89999999999999,244342
+Index of Multiple Deprivation (quintiles),2,159796,154707,96.8,187985
+Index of Multiple Deprivation (quintiles),3,139846,136311,97.5,158676
+Index of Multiple Deprivation (quintiles),4,112847,110425,97.89999999999999,124754
+Index of Multiple Deprivation (quintiles),5 Least deprived,89831,88277,98.3,97097
+Index of Multiple Deprivation (quintiles),Unknown,17626,17108,97.1,20664
+Learning disability,no,693910,673351,97.0,806561
+Learning disability,yes,24178,23436,96.89999999999999,26957
