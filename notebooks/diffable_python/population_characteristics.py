@@ -32,6 +32,7 @@ import numpy as np
 from datetime import datetime, timedelta
 import subprocess
 from IPython.display import display, Markdown, HTML
+import os
 
 suffix = "_tpp"
 
@@ -79,8 +80,10 @@ population_subgroups = {"80+":1,
         "60-64": 7,
         "55-59": 8,
         "50-54": 9,
-        "16-49, not in other eligible groups shown":0 
-        # NB the key for the final group (0) must contain phrase "not in other eligible groups"
+        "40-49": 10,
+        "30-39": 11,
+        "18-29": 0 
+        # NB if the population denominator is not included for the final group (0), the key must contain phrase "not in other eligible groups" so that data is presented appropriately
         }
 
 groups = population_subgroups.keys()
@@ -97,11 +100,11 @@ o60 = [d for d in DEFAULT if d not in ("ageband_5yr", "dialysis", "LD")]
 o50 = [d for d in DEFAULT if d not in ("ageband_5yr", "dialysis", "LD", "dementia",
                                        "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer"
                                       )]
-other = ["sex","ageband", "ethnicity_6_groups", "ethnicity_16_groups","imd_categories",
-                              "bmi","chronic_cardiac_disease", "current_copd", "dmards","ssri"]
+# under50s
+u50 = ["sex", "ethnicity_6_groups", "ethnicity_16_groups","imd_categories"]
 
 # dictionary mapping population subgroups to a list of demographic/clinical factors to include for that group
-features_dict = {0:    other, ## patients not assigned to a priority group
+features_dict = {0:    u50, ## patients not assigned to a priority group
                  "care home": ["sex", "ageband_5yr", "ethnicity_6_groups", "dementia"],
                  "shielding (aged 16-69)": ["newly_shielded_since_feb_15", "sex", "ageband", "ethnicity_6_groups", "imd_categories",
                                            "LD"],
@@ -109,6 +112,9 @@ features_dict = {0:    other, ## patients not assigned to a priority group
                  "60-64":    o60,
                  "55-59":    o50,
                  "50-54":    o50,
+                 "40-49":    u50,
+                 "30-39":    u50,
+                 "18-29":    u50,
                  "LD (aged 16-64)":  ["sex", "ageband_5yr", "ethnicity_6_groups"],
                  "DEFAULT":   DEFAULT # other age groups
                 }
@@ -176,8 +182,8 @@ create_detailed_summary_uptake(summarised_data_dict, formatted_latest_date,
 
 from report_results import plot_dem_charts
 
-plot_dem_charts(summ_stat_results, df_dict_cum,  formatted_latest_date, pop_subgroups=["80+", "70-79", "65-69","shielding (aged 16-69)", "60-64", "55-59", "50-54"], groups_dict=features_dict,
-                groups_to_exclude=["ethnicity_16_groups", "dmards", "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer"],
+plot_dem_charts(summ_stat_results, df_dict_cum,  formatted_latest_date, pop_subgroups=["80+", "70-79", "65-69","shielding (aged 16-69)", "60-64", "55-59", "50-54", "40-49", "30-39", "18-29"], groups_dict=features_dict,
+                groups_to_exclude=["ethnicity_16_groups", "current_copd", "chronic_cardiac_disease", "dmards", "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer"],
                 savepath=savepath, savepath_figure_csvs=savepath_figure_csvs, suffix=suffix)
 
 # ## Completeness of ethnicity recording
@@ -200,7 +206,13 @@ date_14w = pd.to_datetime(df["covid_vacc_date"]).max() - timedelta(weeks=14)
 date_14w = str(date_14w)[:10]
 
 df_s = df.copy()
+# replace any second doses not yet "due" with "0"
 df_s.loc[(pd.to_datetime(df_s["covid_vacc_date"]) >= date_14w), "covid_vacc_second_dose_date"] = 0
+
+# also ensure that first dose was dated after the start of the campaign, otherwise date is likely incorrect 
+# and due date for second dose cannot be calculated accurately
+# this also excludes any second doses where first dose date = 0 (this should affect dummy data only!)
+df_s.loc[(pd.to_datetime(df_s["covid_vacc_date"]) <= "2020-12-07"), "covid_vacc_second_dose_date"] = 0
 
 formatted_date_14w = datetime.strptime(date_14w, "%Y-%m-%d").strftime("%d %b %Y")
 with open(os.path.join(savepath["text"], f"latest_date_of_first_dose_for_due_second_doses.txt"), "w") as text_file:
@@ -209,43 +221,50 @@ with open(os.path.join(savepath["text"], f"latest_date_of_first_dose_for_due_sec
 display(Markdown(formatted_date_14w))
 
 # +
-population_subgroups_2 = {"80+":1,
-        "70-79":2, 
-        "care home":3, 
-        "shielding (aged 16-69)":4, 
-        "65-69": 5,  
-        "LD (aged 16-64)": 6,  
-        "16-64, not in other eligible groups shown":0 
-        # NB the key for the final group (0) must contain phrase "not in other eligible groups"
-        }
+# add "brand of first dose" to list of features to break down by
+import copy
+features_dict_2 = copy.deepcopy(features_dict)
 
-groups2 = population_subgroups_2.keys()
+for k in features_dict_2:
+    ls = list(features_dict_2[k])
+    ls.append("brand_of_first_dose") 
+    features_dict_2[k] = ls
 
-df_dict_cum_second_dose = cumulative_sums(df_s, groups_of_interest=population_subgroups_2, features_dict=features_dict, 
+# +
+
+df_dict_cum_second_dose = cumulative_sums(df_s, groups_of_interest=population_subgroups, features_dict=features_dict_2, 
                                           latest_date=latest_date, reference_column_name="covid_vacc_second_dose_date")
 # -
 
-second_dose_summarised_data_dict = summarise_data_by_group(df_dict_cum_second_dose, latest_date=latest_date, groups=groups2)
+second_dose_summarised_data_dict = summarise_data_by_group(df_dict_cum_second_dose, latest_date=latest_date, groups=groups)
 
 create_detailed_summary_uptake(second_dose_summarised_data_dict, formatted_latest_date, 
-                               groups=groups2,
+                               groups=groups,
                                savepath=savepath, vaccine_type="second_dose")
 
 # ## For comparison look at first doses UP TO 14 WEEKS AGO
 #
 
 # +
+# latest date of 14 weeks ago is entered as the latest_date when calculating cumulative sums below.
+
+# Seperately, we also ensure that first dose was dated after the start of the campaign, 
+# to be consistent with the second doses due calculated above
+df_14w = df.copy()
+df_14w.loc[(pd.to_datetime(df_14w["covid_vacc_date"]) <= "2020-12-07"), "covid_vacc_date"] = 0
+
+
 df_dict_cum_14w = cumulative_sums(
-                                  df, groups_of_interest=population_subgroups_2, features_dict=features_dict, 
+                                  df_14w, groups_of_interest=population_subgroups, features_dict=features_dict_2, 
                                   latest_date=date_14w
                                   )
 
 summarised_data_dict_14w = summarise_data_by_group(
                                                    df_dict_cum_14w, 
                                                    latest_date=date_14w, 
-                                                   groups=groups2
+                                                   groups=groups
                                                    )
 
 create_detailed_summary_uptake(summarised_data_dict_14w, formatted_latest_date=date_14w, 
-                               groups=groups2,
+                               groups=groups,
                                savepath=savepath, vaccine_type="first_dose_14w_ago")

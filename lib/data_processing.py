@@ -61,19 +61,50 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
         covid_vacc_flag_mod = np.where(df["covid_vacc_moderna_date"]!=0, 1, 0),
         covid_vacc_2nd = np.where(df["covid_vacc_second_dose_date"]!=0, 1, 0),
         covid_vacc_bin = np.where(df["covid_vacc_date"]!=0, 1, 0))
+    
+    # Create a single field for brand of first dose
+    conditions = [( # pt has had an oxford vaccine, on or after the date this brand was first administered 
+                    # in UK (minus 1 day; if date is unfeasible, vaccine type may be incorrect):
+                    df["covid_vacc_oxford_date"].astype(str)>="2020-01-03") & ( 
+                   # oxford vaccine was on date of first dose:
+                   df["covid_vacc_oxford_date"]==df["covid_vacc_date"]) & ( 
+                    # oxford vaccine was not on same date as another brand:
+                   df["covid_vacc_oxford_date"]!=df["covid_vacc_pfizer_date"]) & ( 
+                   df["covid_vacc_oxford_date"]!=df["covid_vacc_moderna_date"]),
+                    ## repeat for pfizer and moderna:
+                  (df["covid_vacc_pfizer_date"].astype(str)>="2020-12-07") & (
+                   df["covid_vacc_pfizer_date"]==df["covid_vacc_date"]) & (   
+                   df["covid_vacc_pfizer_date"]!=df["covid_vacc_oxford_date"]) & (
+                   df["covid_vacc_pfizer_date"]!=df["covid_vacc_moderna_date"]),
+                  # moderna - only include if first dose date is after the date first administered in UK
+                  (df["covid_vacc_moderna_date"].astype(str)>="2021-04-06") & (
+                   df["covid_vacc_moderna_date"]==df["covid_vacc_date"]) & (   
+                   df["covid_vacc_moderna_date"]!=df["covid_vacc_oxford_date"]) & (
+                   df["covid_vacc_moderna_date"]!=df["covid_vacc_pfizer_date"]),
+                   ## unknown type - pt has had first dose but the above conditions do not apply
+                    # these may be unspecified brands or where two diff brands were recorded same day
+                   df["covid_vacc_date"]!=0
+    ]
+    choices = ["oxford", "pfizer", "moderna", "unknown"]
+            
+    df['brand_of_first_dose'] = np.select(conditions, choices, default="none")
         
     # Mixed doses:
-    # flag patients with a second dose, where more than one type has been recorded
+    # flag patients with a second dose, where more than one type has been recorded on different dates 
+    # (sometimes more than one brand is recorded on the same date)
     df = df.assign(    
         covid_vacc_ox_pfz = np.where((df["covid_vacc_2nd"]==1) & \
                                           (df["covid_vacc_flag_pfz"]==1) & \
-                                          (df["covid_vacc_flag_ox"]==1), 1, 0),
+                                          (df["covid_vacc_flag_ox"]==1) & \
+                                          (df["covid_vacc_pfizer_date"] != df["covid_vacc_oxford_date"]), 1, 0),
         covid_vacc_ox_mod = np.where((df["covid_vacc_2nd"]==1) & \
                                           (df["covid_vacc_flag_ox"]==1) & \
-                                          (df["covid_vacc_flag_mod"]==1), 1, 0),
+                                          (df["covid_vacc_flag_mod"]==1) & \
+                                          (df["covid_vacc_oxford_date"] != df["covid_vacc_moderna_date"]), 1, 0),
         covid_vacc_mod_pfz = np.where((df["covid_vacc_2nd"]==1) & \
                                           (df["covid_vacc_flag_mod"]==1) & \
-                                          (df["covid_vacc_flag_pfz"]==1), 1, 0),
+                                          (df["covid_vacc_flag_pfz"]==1) & \
+                                          (df["covid_vacc_moderna_date"] != df["covid_vacc_pfizer_date"]), 1, 0),
         )
         
     # declined - suppress if vaccine has been received
@@ -113,8 +144,10 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
         (df["LD"]==1),
         (df["age"]>=60),
         (df["age"]>=55),
-        (df["age"]>=50)]
-    choices = [3,1,2,4,5,6,7,8,9]
+        (df["age"]>=50),
+        (df["age"]>=40),
+        (df["age"]>=30)]
+    choices = [3,1,2,4,5,6,7,8,9,10,11]
     # note the numbers here denote the desired sort order in which we want to look at these groups, not the priority order
     
     # create field "priority_group" which uses the appropriate value from `choices` according to the `conditions` met by each line of data. If none are met, assigns 0.
