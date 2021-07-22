@@ -251,6 +251,7 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
 def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine_type="first_dose", suffix=""):
     '''
     Cumulative chart by day of total vaccines given across key eligible groups. Produces both SVG and PNG versions.
+    Exports csvs.
     
     Args:
         df (dataframe): cumulative daily data on vaccines given per group
@@ -274,8 +275,9 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine
     dfp = dfp.groupby([reference_column_name,"group_name"])[["patient_id"]].count()  
     dfp = dfp.unstack().fillna(0).cumsum().reset_index().replace([0,1,2,3,4,5,6],0) 
     
-    dfp[reference_column_name] = pd.to_datetime(dfp[reference_column_name]).dt.strftime("%d %b")
+    dfp[reference_column_name] = pd.to_datetime(dfp[reference_column_name]).dt.strftime("%Y %d %b")
     dfp = dfp.set_index(reference_column_name)
+    
     dfp = round7(dfp)
     
     dfp.columns = dfp.columns.droplevel()
@@ -285,11 +287,13 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine
     # legend entries will appear in corresponding order hence be easier to read
     dfp = dfp.sort_values(by=dfp.last_valid_index(), axis=1, ascending=False)
     
-    
-    # export data to csv
-    out = dfp.copy()
+    ### export data to csv
     if savepath_figure_csvs:
+        out = dfp.copy()
         out.to_csv(os.path.join(savepath_figure_csvs, f"{title} among each eligible group{suffix}.csv"), index=True)
+    
+    # exclude year from dates in charts
+    dfp.index = dfp.index.str[5:]
     
     # divide numbers into millions if exceeding 10m, otherwise thousands
     if dfp["total"].max() >= 1e7:
@@ -527,35 +531,48 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
             #out_str = f"**{k}** population vaccinated {vaccinated:,}"
             summary_stats[f"{group}"] = f"{vaccinated:,}"
 
-    # if summarising first doses, perform some additional calculations        
-    if vaccine_type=="first_dose":        
-        # count each vax type as a proportion of total; filter to date of first vax only in case of patients having mixed types    
-        oxford_vaccines = round7(df.copy().loc[df["covid_vacc_date"]==df["covid_vacc_oxford_date"]]["covid_vacc_flag_ox"].sum())
-        ox_percent = round(100*oxford_vaccines/vaccinated_total, 1)
-        pfizer_vaccines = round7(df.copy().loc[df["covid_vacc_date"]==df["covid_vacc_pfizer_date"]]["covid_vacc_flag_pfz"].sum())
-        pfz_percent = round(100*pfizer_vaccines/vaccinated_total, 1)
-        moderna_vaccines = round7(df.copy().loc[df["covid_vacc_date"]==df["covid_vacc_moderna_date"]]["covid_vacc_flag_mod"].sum())
-        mod_percent = round(100*moderna_vaccines/vaccinated_total, 1)
+    # if summarising first doses, perform some additional calculations     
+    if vaccine_type=="first_dose":    
+        # calculate the proportion of first doses which were of each brand available 
+        vaccine_brands = {}
+        vaccine_brands["oxford"], vaccine_brands["pfizer"], vaccine_brands["moderna"] = {}, {}, {}
+        # count each vax type as a proportion of total; filter to date of first vax only in case of patients having mixed types
+        # note that the first vaccine date being equal to the specific brand date could include unvaccinated people (0=0) so need to sum the specific flag
+        for x, y in [("oxford", "ox"), ("pfizer", "pfz"), ("moderna", "mod")]:
+            vaccine_brands[x]["first_doses"] = round7(df.copy().loc[df["covid_vacc_date"]==df[f"covid_vacc_{x}_date"]][f"covid_vacc_flag_{y}"].sum())
+            vaccine_brands[x]["percent"] = round(100*vaccine_brands[x]["first_doses"]/vaccinated_total, 1)
         
         # second doses
         second_doses = round7(df["covid_vacc_2nd"].sum())
         sd_percent = round(100*second_doses/vaccinated_total, 1)
-        mixed_ox_pfz_doses = round7(df["covid_vacc_ox_pfz"].sum())
-        mixed_ox_pfz_percent = round(100*mixed_ox_pfz_doses/second_doses, 1)
-        mixed_ox_mod_doses = round7(df["covid_vacc_ox_mod"].sum())
-        mixed_ox_mod_percent = round(100*mixed_ox_mod_doses/second_doses, 1)
-        mixed_mod_pfz_doses = round7(df["covid_vacc_mod_pfz"].sum())
-        mixed_mod_pfz_percent = round(100*mixed_mod_pfz_doses/second_doses, 1)
+        
+        # second doses according to brand of first dose
+        for x in ["oxford", "pfizer", "moderna"]:
+            vaccine_brands[x]["second_doses"] = round7(df.loc[df["covid_vacc_date"]==df[f"covid_vacc_{x}_date"]]["covid_vacc_2nd"].sum())
+            denom = vaccine_brands[x]["first_doses"]
+            if denom>0: # in case of zeros in dummy data
+                out = round(100*vaccine_brands[x]["second_doses"]/denom, 1)
+            else:
+                out = 0
+            vaccine_brands[x]["second_doses_percent"] = out
+        
+        # mixed doses
+        for x, y, z in [("oxford", "ox", "pfz"), ("oxford","ox", "mod"),  ("moderna","mod", "pfz")]:
+            vaccine_brands[x][z] = round7(df[f"covid_vacc_{y}_{z}"].sum())
+            vaccine_brands[x][f"{z}_percent"] = round(100*vaccine_brands[x][z]/second_doses, 1)
 
-        additional_stats["Oxford-AZ vaccines (% of all first doses)"] = f"**{ox_percent}%** ({oxford_vaccines:,})"
-        additional_stats["Pfizer vaccines (% of all first doses)"] = f"**{pfz_percent}%** ({pfizer_vaccines:,})"
-        additional_stats["Moderna vaccines (% of all first doses)"] = f"**{mod_percent}%** ({moderna_vaccines:,})"
+        additional_stats["Oxford-AZ vaccines (% of all first doses)"] = f'**{vaccine_brands["oxford"]["percent"]}%** ({vaccine_brands["oxford"]["first_doses"]:,})'
+        additional_stats["Pfizer vaccines (% of all first doses)"] = f'**{vaccine_brands["pfizer"]["percent"]}%** ({vaccine_brands["pfizer"]["first_doses"]:,})'
+        additional_stats["Moderna vaccines (% of all first doses)"] = f'**{vaccine_brands["moderna"]["percent"]}%** ({vaccine_brands["moderna"]["first_doses"]:,})'
         
         additional_stats["Second doses (% of all vaccinated)"] = f"**{sd_percent}%** ({second_doses:,})"
+        additional_stats["Second doses (% of Ox-AZ first doses)"] = f'**{vaccine_brands["oxford"]["second_doses_percent"]}%** ({vaccine_brands["oxford"]["second_doses"]:,})'
+        additional_stats["Second doses (% of Pfizer first doses)"] = f'**{vaccine_brands["pfizer"]["second_doses_percent"]}%** ({vaccine_brands["pfizer"]["second_doses"]:,})'
+        additional_stats["Second doses (% of Moderna first doses)"] = f'**{vaccine_brands["moderna"]["second_doses_percent"]}%** ({vaccine_brands["moderna"]["second_doses"]:,})'
         
-        additional_stats["Mixed doses Ox-AZ + Pfizer (% of fully vaccinated)"] = f"**{mixed_ox_pfz_percent}%** ({mixed_ox_pfz_doses})"
-        additional_stats["Mixed doses Ox-AZ + Moderna (% of fully vaccinated)"] = f"**{mixed_ox_mod_percent}%** ({mixed_ox_mod_doses})"
-        additional_stats["Mixed doses Moderna + Pfizer (% of fully vaccinated)"] = f"**{mixed_mod_pfz_percent}%** ({mixed_mod_pfz_doses})"
+        additional_stats["Mixed doses Ox-AZ + Pfizer (% of fully vaccinated)"] = f'**{vaccine_brands["oxford"]["pfz_percent"]}%** ({vaccine_brands["oxford"]["pfz"]})'
+        additional_stats["Mixed doses Ox-AZ + Moderna (% of fully vaccinated)"] = f'**{vaccine_brands["oxford"]["mod_percent"]}%** ({vaccine_brands["oxford"]["mod"]})'
+        additional_stats["Mixed doses Moderna + Pfizer (% of fully vaccinated)"] = f'**{vaccine_brands["moderna"]["pfz_percent"]}%** ({vaccine_brands["moderna"]["pfz"]})'
 
     # export summary stats to text file
     summary_stats.to_csv(os.path.join(savepath["text"], f"summary_stats_{vaccine_type}.txt"))

@@ -63,6 +63,7 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
         covid_vacc_bin = np.where(df["covid_vacc_date"]!=0, 1, 0))
     
     # Create a single field for brand of first dose
+    # This excludes any uncertain cases where date of brand was too early or multiple brands were recorded
     conditions = [( # pt has had an oxford vaccine, on or after the date this brand was first administered 
                     # in UK (minus 1 day; if date is unfeasible, vaccine type may be incorrect):
                     df["covid_vacc_oxford_date"].astype(str)>="2020-01-03") & ( 
@@ -85,26 +86,30 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
                     # these may be unspecified brands or where two diff brands were recorded same day
                    df["covid_vacc_date"]!=0
     ]
-    choices = ["oxford", "pfizer", "moderna", "unknown"]
+    choices = ["Oxford-AZ", "Pfizer", "Moderna", "Unknown"]
             
     df['brand_of_first_dose'] = np.select(conditions, choices, default="none")
         
     # Mixed doses:
-    # flag patients with a second dose, where more than one type has been recorded on different dates 
+    # flag patients with a second dose, where the two specified brands have been recorded on different dates 
     # (sometimes more than one brand is recorded on the same date)
+    # Also use the brand-of-first-dose field above to ensure the first dose was clear
     df = df.assign(    
-        covid_vacc_ox_pfz = np.where((df["covid_vacc_2nd"]==1) & \
-                                          (df["covid_vacc_flag_pfz"]==1) & \
-                                          (df["covid_vacc_flag_ox"]==1) & \
-                                          (df["covid_vacc_pfizer_date"] != df["covid_vacc_oxford_date"]), 1, 0),
-        covid_vacc_ox_mod = np.where((df["covid_vacc_2nd"]==1) & \
-                                          (df["covid_vacc_flag_ox"]==1) & \
-                                          (df["covid_vacc_flag_mod"]==1) & \
-                                          (df["covid_vacc_oxford_date"] != df["covid_vacc_moderna_date"]), 1, 0),
-        covid_vacc_mod_pfz = np.where((df["covid_vacc_2nd"]==1) & \
-                                          (df["covid_vacc_flag_mod"]==1) & \
-                                          (df["covid_vacc_flag_pfz"]==1) & \
-                                          (df["covid_vacc_moderna_date"] != df["covid_vacc_pfizer_date"]), 1, 0),
+        covid_vacc_ox_pfz = np.where((df["covid_vacc_2nd"]==1) & (
+                                      df['brand_of_first_dose'].isin(["Oxford-AZ", "Pfizer"])) & (
+                                      df["covid_vacc_flag_pfz"]==1) & (
+                                      df["covid_vacc_flag_ox"]==1) & (
+                                      df["covid_vacc_pfizer_date"] != df["covid_vacc_oxford_date"]), 1, 0),
+        covid_vacc_ox_mod = np.where((df["covid_vacc_2nd"]==1) & (
+                                      df['brand_of_first_dose'].isin(["Oxford-AZ", "Moderna"])) & (
+                                      df["covid_vacc_flag_ox"]==1) & (
+                                      df["covid_vacc_flag_mod"]==1) & (
+                                      df["covid_vacc_oxford_date"] != df["covid_vacc_moderna_date"]), 1, 0),
+        covid_vacc_mod_pfz = np.where((df["covid_vacc_2nd"]==1) & (
+                                      df['brand_of_first_dose'].isin(["Moderna", "Pfizer"])) & (
+                                      df["covid_vacc_flag_mod"]==1) & (
+                                      df["covid_vacc_flag_pfz"]==1) & (
+                                      df["covid_vacc_moderna_date"] != df["covid_vacc_pfizer_date"]), 1, 0),
         )
         
     # declined - suppress if vaccine has been received
