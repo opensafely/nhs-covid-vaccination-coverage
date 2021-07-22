@@ -43,8 +43,7 @@ def ethnicity_completeness(df, groups_of_interest):
         
         # export ethnicity coverage stats to text file
         savepath, _, _ = create_output_dirs()
-        if groupno == 0: # for the other group the denominator is unknown and only vaccinated people are included
-            groupname ="vaccinated "+groupname
+        
         ethnicity_coverage.loc[i] = [groupname, known_eth, total, percent]
         ethnicity_coverage.to_csv(os.path.join(savepath["text"], "ethnicity_coverage.csv"), index=False)
         

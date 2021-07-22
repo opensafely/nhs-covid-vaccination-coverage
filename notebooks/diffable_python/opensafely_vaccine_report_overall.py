@@ -92,15 +92,15 @@ for x in additional_stats.index[0:3]:
     display(Markdown(f"{x}: {additional_stats.loc[x][0]}\n"))
     
 display(Markdown(f"### Second doses and dose combinations" ))
-display(Markdown("**Note:** second dose figures are raw proportions and do not take into account how many are due, and the proportion due is likely to vary substantially by brand.</br>\
+display(Markdown("**Note:** second dose figures are raw proportions and do not take into account how many are due, which is likely to vary substantially by brand.</br>\
                 For more detailed analysis please refer to our [second dose report](https://reports.opensafely.org/reports/vaccine-coverage-second-doses/)"))
 
 for x in additional_stats.index[3:7]:  
     display(Markdown(f"{x}: {additional_stats.loc[x][0]}\n"))
     
 display(Markdown("</br>**Note:** mixed doses counts patients with two doses at least 19 days apart, \
-                  excluding patients with two different brands recorded on different days \
-                  or where the first dose was recorded before the given brand was available"))
+                  excluding patients with two different brands recorded on the same day \
+                  or where the first dose was recorded on a date prior to when the given brand was available in the UK"))
        
 for x in additional_stats.index[7:]:  
     display(Markdown(f"{x}: {additional_stats.loc[x][0]}\n"))
@@ -258,6 +258,7 @@ for filename in tablelist:
 from create_report import get_savepath
 savepath = get_savepath()
 tab = pd.read_csv(os.path.join(savepath["text"], "ethnicity_coverage.csv")).set_index("group")
+tab.index = tab.index.str.replace("vaccinated 18-29", "18-29")
 display(Markdown("- Ethnicity information is primarily retrieved from GP records. \
                  \n- Where missing in GP records, as of March 8 2021, it is then retrieved from hospital records if present. \
                  \n - For patients with multiple different ethnicities recorded, we use the most common non-missing ethnicity \
