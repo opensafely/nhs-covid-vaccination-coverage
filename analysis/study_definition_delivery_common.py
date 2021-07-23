@@ -22,16 +22,15 @@ common_variables = dict(
         AND
         NOT has_died
         AND 
-        age>=16 AND age <= 120
-        AND (
-            covid_vacc_date
-            OR
-            (age >=50) 
-            OR
-            shielded
-            OR
-            (LD)
-        )
+        age <= 120
+        AND 
+        age>=16
+        AND
+        (age >=18  
+        OR
+        shielded
+        OR
+        LD)
         """,
         registered=patients.registered_as_of(
             index_date, 

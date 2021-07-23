@@ -221,7 +221,7 @@ study = StudyDefinition(
                 "earliest": "2020-12-08",  # first vaccine administered on the 8/12
                 "latest": index_date,
             },
-                "incidence":0.4
+                "incidence":0.5
         },
     ),
     # SECOND DOSE COVID VACCINATION
@@ -236,7 +236,7 @@ study = StudyDefinition(
                 "earliest": "2020-12-29",  # first reported second dose administered on the 29/12
                 "latest": index_date,
             },
-                "incidence": 0.1
+                "incidence": 0.3
         },
     ),
     # COVID VACCINATION - Pfizer BioNTech
@@ -265,7 +265,7 @@ study = StudyDefinition(
                 "earliest": "2020-01-04",  # first vaccine administered on the 4/1
                 "latest": index_date,
             },
-            "incidence": 0.1
+            "incidence": 0.2
         },
     ),
 

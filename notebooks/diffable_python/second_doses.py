@@ -26,6 +26,8 @@
 
 # **Please note** This report is intended to highlight any differences between subgroups of priority cohorts in receiving second doses, only including those which are due (i.e. where at least 14 weeks has passed since the first dose). **It is therefore NOT a comprehensive view of all second doses given to date** - to see these figures please refer to the main report. 
 
+# #### **New:** now includes everyone over 18 and a breakdown by brand of first dose
+
 # +
 from datetime import datetime
 import matplotlib.pyplot as plt
@@ -48,12 +50,15 @@ display(Markdown(f"### Report last updated **{datetime.today().strftime('%d %b %
 with open(os.path.join("..", "interim-outputs","text", "latest_date.txt"), 'r') as file:
     latest_date_fmt = file.read()
     display(Markdown(f"### Second dose vaccinations included up to **{latest_date_fmt}** inclusive"))
-
+    
 with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dose_for_due_second_doses.txt"), 'r') as file:
     latest_date_14w_fmt = file.read()
     
 display(Markdown(
-    f"### Only persons who had their first dose at least 14 weeks ago ({latest_date_14w_fmt}) are included in the 'due' group."))
+    f"### Only persons who had their first dose between the start of the campaign (**7 Dec 2020**) \
+    and 14 weeks ago (**{latest_date_14w_fmt}**) are included in the 'due' group."))
+
+
 # -
 
 # ##  
@@ -69,8 +74,10 @@ display(Markdown(
 # - [**60-64** population](#Cumulative-second-dose-vaccination-figures-among-60-64-population)
 # - [**55-59** population](#Cumulative-second-dose-vaccination-figures-among-54-59-population)
 # - [**50-54** population](#Cumulative-second-dose-vaccination-figures-among-50-54-population)
+# - [**40-49** population](#Cumulative-second-dose-vaccination-figures-among-40-49-population)
+# - [**30-39** population](#Cumulative-second-dose-vaccination-figures-among-30-39-population)
+# - [**18-29** population](#Cumulative-second-dose-vaccination-figures-among-18-29-population)
 #
-# The above groups are only included in the report once at least 70% of their total population are due second doses.
 
 # +
 
@@ -114,7 +121,7 @@ for f, f2 in zip(tablelist, tablelist_2nd):
     df["Second Doses due (% of total)"] = 100*df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]\
                                           /df["Total population"]
     if backend != "expectations" and (
-        df["Second Doses due (% of total)"][("overall","overall")] < 0.70):
+        df["Second Doses due (% of total)"][("overall","overall")] < 0.50):
         continue    
     df = df.drop("Second Doses due (% of total)", 1)
     
@@ -133,9 +140,15 @@ for f, f2 in zip(tablelist, tablelist_2nd):
         os.makedirs(export_path)
     df.to_csv(os.path.join(export_path, f"{title}{suffix}.csv"), index=True)
     
-    show_table(df, title, latest_date_fmt, show_carehomes=True)    
+    # add comma separators to numbers before displaying table
+    df_to_show = df.copy()
+    for c in [f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)", 
+             "Second doses given (n)", "Total population"]:
+        df_to_show[c] = df_to_show[c].apply('{:,}'.format)
+    show_table(df_to_show, title, latest_date_fmt, show_carehomes=True)    
     
     df["Second doses overdue (% of due)"] = 100 - df["Second doses given (% of due)"]
+    
     
     ######### plot charts
     
@@ -145,9 +158,10 @@ for f, f2 in zip(tablelist, tablelist_2nd):
     
     cats_to_include = ["Age band", "Ethnicity (broad categories)", 
                    "Index of Multiple Deprivation (quintiles)", "Dementia", 
-                   "Learning disability", "Psychosis, schizophrenia, or bipolar"]
+                   "Learning disability", "Psychosis, schizophrenia, or bipolar", 
+                    "brand of first dose"]
     cats = [c for c in df.index.levels[0] if c in cats_to_include]
-    
+
     # find ymax
     ymax = df[["Second doses overdue (% of due)"]].loc[cats].max()[0]
     
@@ -168,7 +182,13 @@ for f, f2 in zip(tablelist, tablelist_2nd):
     # plot charts and display titles
     for n, cat in enumerate(cats):
         chart_title = "Second doses overdue (% of those due)\n by "+ cat
-        dfp=df.loc[cat]
+        dfp=df.copy().loc[cat]
+        
+        # do not include "unknown" brand of first dose (unless it's the only item in the index)
+        if (cat == "brand of first dose") & (len(dfp.index)>1):
+            dfp = dfp.loc[dfp.index!="Unknown"]
+        
+        # plot chart
         dfp[["Second doses overdue (% of due)"]].plot.bar(title=chart_title, ax=axes[n], legend=False)
         # add errorbars
         axes[n].errorbar(dfp.index, dfp["Second doses overdue (% of due)"], # same location as each bar
@@ -176,6 +196,7 @@ for f, f2 in zip(tablelist, tablelist_2nd):
                          fmt="none", # no markers or connecting lines
                          ecolor='k')
         axes[n].set_axis_on()
+        
         axes[n].set_ylim([0, min(125, ymax*1.05)])
         axes[n].set_ylabel("Second doses overdue (%)")
         axes[n].set_xlabel(cat.title())
@@ -184,12 +205,13 @@ for f, f2 in zip(tablelist, tablelist_2nd):
         if (cat == "Ethnicity (broad categories)") | (cat == "Index of Multiple Deprivation (quintiles)"):
             plt.setp(axes[n].get_xticklabels(), fontsize=8)
     plt.subplots_adjust(hspace=1)
-    display(Markdown("Second doses which have not been given 14 weeks since the first dose"),
+    
+    display(Markdown("Second doses which have not been given at least 14 weeks since the first dose"),
            Markdown("Error bars indicate possible error caused by rounding"))
-        
+    
     plt.show()
+# -
 
 
-# +
 
 

@@ -1,18 +1,21 @@
-Category,Group,Second Doses due at 08 Jul (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,81448,78986,97.0,86212
-Sex,F,57995,56385,97.2,61131
-Sex,M,23450,22603,96.39999999999999,25081
-Age band,65-69,4459,4277,95.89999999999999,4893
-Age band,70-74,6965,6720,96.5,7546
-Age band,75-79,9681,9331,96.39999999999999,10332
-Age band,80-84,14483,14035,96.89999999999999,15274
-Age band,85-89,19243,18697,97.2,20272
-Age band,90+,26621,25928,97.39999999999999,27895
-Ethnicity (broad categories),Black,413,399,96.6,490
-Ethnicity (broad categories),Mixed,210,196,93.30000000000001,238
+Category,Group,Second Doses due at 14 Jul (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,81583,79104,97.0,86233
+Sex,F,58114,56476,97.2,61166
+Sex,M,23464,22624,96.39999999999999,25067
+Age band,65-69,4473,4305,96.2,4907
+Age band,70-74,6986,6748,96.6,7553
+Age band,75-79,9716,9359,96.3,10353
+Age band,80-84,14511,14056,96.89999999999999,15302
+Age band,85-89,19278,18725,97.1,20286
+Age band,90+,26614,25914,97.39999999999999,27832
+Ethnicity (broad categories),Black,413,392,94.89999999999999,483
+Ethnicity (broad categories),Mixed,210,203,96.7,238
 Ethnicity (broad categories),Other,343,329,95.89999999999999,371
 Ethnicity (broad categories),South Asian,623,588,94.39999999999999,679
-Ethnicity (broad categories),Unknown,1918,1862,97.1,2100
-Ethnicity (broad categories),White,77945,75621,97.0,82341
-Dementia,no,36449,35294,96.8,39095
-Dementia,yes,44996,43687,97.1,47124
+Ethnicity (broad categories),Unknown,1904,1848,97.1,2044
+Ethnicity (broad categories),White,78092,75747,97.0,82418
+Dementia,no,36477,35329,96.89999999999999,39060
+Dementia,yes,45101,43771,97.1,47173
+brand of first dose,Oxford-AZ,60137,58254,96.89999999999999,61418
+brand of first dose,Pfizer,21336,20748,97.2,21420
+brand of first dose,Unknown,105,105,100.0,112

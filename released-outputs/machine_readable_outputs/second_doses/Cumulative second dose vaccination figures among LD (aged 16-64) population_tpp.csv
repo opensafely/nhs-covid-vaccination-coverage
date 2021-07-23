@@ -1,18 +1,21 @@
-Category,Group,Second Doses due at 08 Jul (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,64673,61793,95.5,82628
-Sex,F,25263,24213,95.8,31206
-Sex,M,39410,37576,95.3,51422
-Age band,16-29,24241,22897,94.5,34426
-Age band,30-34,8253,7861,95.3,10668
-Age band,35-39,6272,6013,95.89999999999999,7721
-Age band,40-44,5089,4907,96.39999999999999,6041
-Age band,45-49,5229,5033,96.3,6132
-Age band,50-54,5670,5481,96.7,6475
-Age band,55-59,5649,5460,96.7,6398
-Age band,60-64,4277,4137,96.7,4760
-Ethnicity (broad categories),Black,693,630,90.9,1344
-Ethnicity (broad categories),Mixed,651,609,93.5,1078
-Ethnicity (broad categories),Other,441,413,93.7,707
-Ethnicity (broad categories),South Asian,2926,2702,92.30000000000001,4725
-Ethnicity (broad categories),Unknown,4788,4606,96.2,6419
-Ethnicity (broad categories),White,55167,52829,95.8,68348
+Category,Group,Second Doses due at 14 Jul (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,65244,62682,96.1,82663
+Sex,F,25466,24528,96.3,31220
+Sex,M,39774,38157,95.89999999999999,51436
+Age band,16-29,24542,23331,95.1,34461
+Age band,30-34,8323,7980,95.89999999999999,10668
+Age band,35-39,6314,6076,96.2,7714
+Age band,40-44,5124,4956,96.7,6041
+Age band,45-49,5250,5082,96.8,6132
+Age band,50-54,5712,5558,97.3,6482
+Age band,55-59,5677,5516,97.2,6398
+Age band,60-64,4298,4186,97.39999999999999,4760
+Ethnicity (broad categories),Black,707,644,91.10000000000001,1351
+Ethnicity (broad categories),Mixed,665,630,94.69999999999999,1092
+Ethnicity (broad categories),Other,448,427,95.3,714
+Ethnicity (broad categories),South Asian,2975,2772,93.2,4739
+Ethnicity (broad categories),Unknown,4802,4648,96.8,6356
+Ethnicity (broad categories),White,55643,53564,96.3,68411
+brand of first dose,Oxford-AZ,47131,44933,95.3,49133
+brand of first dose,Pfizer,18074,17710,98.0,21266
+brand of first dose,Unknown,35,35,100.0,35
