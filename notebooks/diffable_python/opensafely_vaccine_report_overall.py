@@ -47,7 +47,7 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 # #### 
 # ## Contents:
 # - **<a href=#summary>Overview</a>**
-# - **<a href=#summarychart>Summary Chart</a>**
+# - **<a href=#summarychart>Summary Charts</a>**
 # - **Trends in vaccination coverage** according to demographic/clinical features, for:
 #  - <a href=#charts80>80+ population</a>
 #  - <a href=#charts70>70-79 population</a>
@@ -57,13 +57,13 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 #  - <a href=#charts55>55-59 population</a>
 #  - <a href=#charts50>50-54 population</a>
 #  - <a href=#charts40>40-49 population</a>
-# </br>
-# </br>
+# <br>
+# <br>
 # - **<a href=#tables>Current vaccination coverage of each eligible population group, according to demographic/clinical features</a>**
 #   - Includes each of the groups above, plus <a href=#Cumulative-vaccination-figures-among-care-home-population>care home (65+)</a> and <a href=#Cumulative-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population>LD (aged 16-64)</a> populations.
 #   - **NEW** - tables now include <a href=#Cumulative-vaccination-figures-among-30-39-population>30-39</a> and <a href=#Cumulative-vaccination-figures-among-18-29-population>18-29</a> populations
-# </br>
-# </br>
+# <br>
+# <br>
 # - Appendix: <a href=#ethnicity>Proportion of each population group for whom ethnicity is known</a>
 #
 
@@ -81,24 +81,35 @@ out = summary_stats_1.join(summary_stats_2)
 out.index = out.index.rename("Group")
 display(out)
 
+
 display(Markdown(f"##### \n" 
                  "**NB** Patient counts are rounded to nearest 7\n"
                 "##### \n" ))
 
-display(Markdown(f"### Vaccine types" ),
-       Markdown("**Note:** numbers may not sum to 100% as it is not always possible to determine vaccine type given, and patients occasionally have more than one brand recorded on the same day."))
+display(Markdown("### Group definitions \n - The **care home** group is defined based on patients (aged 65+) having one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/longres/v1/).\n"
+                 "\n- The **shielding** group is defined based on patients having one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/shield/v1/) \
+                 provided it was not superceded by one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/nonshield/v1/).\n"                
+                "\n- The **LD** (learning disability) group is defined based on [this](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/learndis/v1/)\
+                codelist and excludes people who are shielding.\n"
+                 "\n- Patients are counted in their highest risk category only; e.g. a 65-year-old who is shielding \
+                is only counted in the shielding group, not in the 65-69 population\n"))
+
+
+display(Markdown(f"##### \n"
+                 f"### Vaccine types\n"
+                 f"**Note:** numbers may not sum to 100% as it is not always possible to determine vaccine type given, and patients occasionally have more than one brand recorded on the same day."))
 
 for x in additional_stats.index[0:3]:  
     display(Markdown(f"{x}: {additional_stats.loc[x][0]}\n"))
     
 display(Markdown(f"### Second doses and dose combinations" ))
-display(Markdown("**Note:** second dose figures are raw proportions and do not take into account how many are due, which is likely to vary substantially by brand.</br>\
+display(Markdown("**Note:** second dose figures are raw proportions and do not take into account how many are due, which is likely to vary substantially by brand.<br>\
                 For more detailed analysis please refer to our [second dose report](https://reports.opensafely.org/reports/vaccine-coverage-second-doses/)"))
 
 for x in additional_stats.index[3:7]:  
     display(Markdown(f"{x}: {additional_stats.loc[x][0]}\n"))
     
-display(Markdown("</br>**Note:** mixed doses counts patients with two doses at least 19 days apart, \
+display(Markdown("<br>**Note:** mixed doses counts patients with two doses at least 19 days apart, \
                   excluding patients with two different brands recorded on the same day \
                   or where the first dose was recorded on a date prior to when the given brand was available in the UK"))
        
@@ -107,21 +118,11 @@ for x in additional_stats.index[7:]:
 
     
 
-
-display(Markdown(f"##### \n"
-                 "### Group definitions \n - The **care home** group is defined based on patients (aged 65+) having one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/longres/v1/).\n"
-                 "\n- The **shielding** group is defined based on patients having one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/shield/v1/) \
-                 provided it was not superceded by one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/nonshield/v1/).\n"                
-                "\n- The **LD** (learning disability) group is defined based on [this](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/learndis/v1/)\
-                codelist and excludes people who are shielding.\n"
-                 "\n- Patients are counted in their highest risk category only; e.g. a 65-year-old who is shielding \
-                is only counted in the shielding group, not in the 65-69 population\n"))
-
 # -
 
 # # 
 #
-# ## Summary Chart <a name='summarychart' />
+# ## Summary Charts <a name='summarychart' />
 
 # +
 import sys
@@ -131,7 +132,10 @@ from image_formats import pick_image_format
 
 IMAGE_FORMAT = pick_image_format()
 
-show_chart(f"Cumulative vaccination figures.{IMAGE_FORMAT.extension}", IMAGE_FORMAT, title="off")
+show_chart(f"Cumulative vaccination figures by priority status.{IMAGE_FORMAT.extension}", IMAGE_FORMAT, title="off")
+display(Markdown("**Note:** 'Priority groups' only includes those identified as being in a priority group by our methodology. \
+                'Others' includes everyone aged 18-49 except those who are shielding or have a learning disability.<br><br>"))
+show_chart(f"Cumulative vaccination figures by priority group.{IMAGE_FORMAT.extension}", IMAGE_FORMAT, title="off")
 
 # -
 
