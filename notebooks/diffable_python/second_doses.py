@@ -129,10 +129,11 @@ for f, f2 in zip(tablelist, tablelist_2nd):
     df["Second doses given (% of due)"] = 100*(df[f"Second doses given (n)"]/\
                                                  df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]).round(3)
                                              
-
-        
+    df["Second doses overdue (n)"] = df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"] -\
+                                      df[f"Second doses given (n)"]
+                                                 
     # column order
-    df = df[[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)", 
+    df = df[[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)", "Second doses overdue (n)",
              "Second doses given (n)", "Second doses given (% of due)", "Total population"]]
 
     export_path = os.path.join("..", "output", "second_doses")
@@ -143,7 +144,7 @@ for f, f2 in zip(tablelist, tablelist_2nd):
     # add comma separators to numbers before displaying table
     df_to_show = df.copy()
     for c in [f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)", 
-             "Second doses given (n)", "Total population"]:
+              "Second doses overdue (n)", "Second doses given (n)", "Total population"]:
         df_to_show[c] = df_to_show[c].apply('{:,}'.format)
     show_table(df_to_show, title, latest_date_fmt, show_carehomes=True)    
     
@@ -161,14 +162,19 @@ for f, f2 in zip(tablelist, tablelist_2nd):
                    "Learning disability", "Psychosis, schizophrenia, or bipolar", 
                     "brand of first dose"]
     cats = [c for c in df.index.levels[0] if c in cats_to_include]
-
-    # find ymax
-    ymax = df[["Second doses overdue (% of due)"]].loc[cats].max()[0]
+    df = df.loc[cats]
     
     # find errors based on rounding
     # both num and denom are rounded to nearest 7 so both may be out by <=3 
     df["pos_error"] = 100*3/(df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]-3)
     df["neg_error"] = 100*3/(df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]+3)
+    
+    # do not show in charts values representing less than 100 people
+    df.loc[df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]<100, 
+             ["Second doses overdue (% of due)","neg_error","pos_error"]] = 0
+    
+    # find ymax
+    ymax = df[["Second doses overdue (% of due)"]].max()[0]
     
     rows_of_charts = int(len(cats)/2 + (len(cats)%2)/2)
     fig, axs = plt.subplots(rows_of_charts, 2, figsize=(12, 4*rows_of_charts))
@@ -188,6 +194,8 @@ for f, f2 in zip(tablelist, tablelist_2nd):
         if (cat == "brand of first dose") & (len(dfp.index)>1):
             dfp = dfp.loc[dfp.index!="Unknown"]
         
+        
+        
         # plot chart
         dfp[["Second doses overdue (% of due)"]].plot.bar(title=chart_title, ax=axes[n], legend=False)
         # add errorbars
@@ -197,7 +205,7 @@ for f, f2 in zip(tablelist, tablelist_2nd):
                          ecolor='k')
         axes[n].set_axis_on()
         
-        axes[n].set_ylim([0, min(125, ymax*1.05)])
+        axes[n].set_ylim([0, min(15, ymax*1.05)])
         axes[n].set_ylabel("Second doses overdue (%)")
         axes[n].set_xlabel(cat.title())
         
@@ -210,8 +218,3 @@ for f, f2 in zip(tablelist, tablelist_2nd):
            Markdown("Error bars indicate possible error caused by rounding"))
     
     plt.show()
-# -
-
-
-
-

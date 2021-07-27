@@ -1,21 +1,22 @@
-Category,Group,Second Doses due at 14 Jul (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,65244,62682,96.1,82663
-Sex,F,25466,24528,96.3,31220
-Sex,M,39774,38157,95.89999999999999,51436
-Age band,16-29,24542,23331,95.1,34461
-Age band,30-34,8323,7980,95.89999999999999,10668
-Age band,35-39,6314,6076,96.2,7714
-Age band,40-44,5124,4956,96.7,6041
-Age band,45-49,5250,5082,96.8,6132
-Age band,50-54,5712,5558,97.3,6482
-Age band,55-59,5677,5516,97.2,6398
-Age band,60-64,4298,4186,97.39999999999999,4760
-Ethnicity (broad categories),Black,707,644,91.10000000000001,1351
-Ethnicity (broad categories),Mixed,665,630,94.69999999999999,1092
-Ethnicity (broad categories),Other,448,427,95.3,714
-Ethnicity (broad categories),South Asian,2975,2772,93.2,4739
-Ethnicity (broad categories),Unknown,4802,4648,96.8,6356
-Ethnicity (broad categories),White,55643,53564,96.3,68411
-brand of first dose,Oxford-AZ,47131,44933,95.3,49133
-brand of first dose,Pfizer,18074,17710,98.0,21266
-brand of first dose,Unknown,35,35,100.0,35
+Category,Group,Second Doses due at 21 Jul (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,65916,2413,63503,96.3,82733
+Sex,F,25697,868,24829,96.6,31255
+Sex,M,40222,1547,38675,96.2,51471
+Age band,16-29,24794,1113,23681,95.5,34510
+Age band,30-34,8449,343,8106,95.89999999999999,10675
+Age band,35-39,6370,224,6146,96.5,7714
+Age band,40-44,5159,154,5005,97.0,6048
+Age band,45-49,5313,175,5138,96.7,6139
+Age band,50-54,5768,154,5614,97.3,6482
+Age band,55-59,5733,154,5579,97.3,6405
+Age band,60-64,4326,98,4228,97.7,4760
+Ethnicity (broad categories),Black,721,56,665,92.2,1351
+Ethnicity (broad categories),Mixed,672,35,637,94.8,1085
+Ethnicity (broad categories),Other,455,21,434,95.39999999999999,714
+Ethnicity (broad categories),South Asian,3045,189,2856,93.8,4746
+Ethnicity (broad categories),Unknown,4816,140,4676,97.1,6321
+Ethnicity (broad categories),White,56203,1967,54236,96.5,68502
+brand of first dose,Moderna,0,0,0,,301
+brand of first dose,Oxford-AZ,47635,2058,45577,95.7,49161
+brand of first dose,Pfizer,18242,357,17885,98.0,21497
+brand of first dose,Unknown,35,0,35,100.0,42

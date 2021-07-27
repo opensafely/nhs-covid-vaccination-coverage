@@ -248,7 +248,8 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
     return df_dict_temp
 
 
-def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine_type="first_dose", suffix=""):
+def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, 
+                        vaccine_type="first_dose", grouping="group_name", include_total=True, suffix=""):
     '''
     Cumulative chart by day of total vaccines given across key eligible groups. Produces both SVG and PNG versions.
     Exports csvs.
@@ -260,24 +261,34 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine
         savepath_figure_csvs (str): path to save machine readable csv for recreating the chart
         vaccine_type (str): used in output strings to describe type of vaccine received e.g. "first_dose", "moderna". 
                             Also appended to filename of output. 
+        grouping (str): column to use for grouping of patients e.g. "group_name"
+        include_total (bin): whether or not to include the "total" line in the chart
         suffix (str)
     '''
     
+    # set titles and reference_column_name for later us
     if vaccine_type=="first_dose":
         reference_column_name="covid_vacc_date"
         title=f"Cumulative vaccination figures"
     else:
         reference_column_name=f"covid_vacc_{vaccine_type}_date"
-        title=f"Cumulative {vaccine_type.replace('_',' ')} vaccination figures"   
+        title=f"Cumulative {vaccine_type.replace('_',' ')} vaccination figures"
+    if  grouping=="group_name":
+        title=title+f" by priority group"
+    else:
+        title=title+f" by {grouping.replace('_',' ')}"
     
+    # filter to those with the relevant vaccine/dose/type
     dfp = df.copy().loc[(df[reference_column_name]!=0)]
 
-    dfp = dfp.groupby([reference_column_name,"group_name"])[["patient_id"]].count()  
+    dfp = dfp.groupby([reference_column_name, grouping])[["patient_id"]].count()  
     dfp = dfp.unstack().fillna(0).cumsum().reset_index().replace([0,1,2,3,4,5,6],0) 
     
+    # convert dates to easily readable format and set as index
     dfp[reference_column_name] = pd.to_datetime(dfp[reference_column_name]).dt.strftime("%Y %d %b")
     dfp = dfp.set_index(reference_column_name)
     
+    # round to nearest 7
     dfp = round7(dfp)
     
     dfp.columns = dfp.columns.droplevel()
@@ -295,13 +306,18 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs, vaccine
     # exclude year from dates in charts
     dfp.index = dfp.index.str[5:]
     
+    # drop total from chart if required
+    if include_total == False:
+        dfp = dfp.drop("total", 1)
+    
     # divide numbers into millions if exceeding 10m, otherwise thousands
-    if dfp["total"].max() >= 1e7:
+    if dfp.max().max() >= 1e7:
         dfp = dfp/1e6
         ylabel = "number of patients (millions)"
     else:
         dfp = dfp/1000
         ylabel = "number of patients (thousands)"
+    
     
     # plot chart
     dfp.plot(legend=True, ds='steps-post')

@@ -1,21 +1,21 @@
-Category,Group,Second Doses due at 14 Jul (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,81583,79104,97.0,86233
-Sex,F,58114,56476,97.2,61166
-Sex,M,23464,22624,96.39999999999999,25067
-Age band,65-69,4473,4305,96.2,4907
-Age band,70-74,6986,6748,96.6,7553
-Age band,75-79,9716,9359,96.3,10353
-Age band,80-84,14511,14056,96.89999999999999,15302
-Age band,85-89,19278,18725,97.1,20286
-Age band,90+,26614,25914,97.39999999999999,27832
-Ethnicity (broad categories),Black,413,392,94.89999999999999,483
-Ethnicity (broad categories),Mixed,210,203,96.7,238
-Ethnicity (broad categories),Other,343,329,95.89999999999999,371
-Ethnicity (broad categories),South Asian,623,588,94.39999999999999,679
-Ethnicity (broad categories),Unknown,1904,1848,97.1,2044
-Ethnicity (broad categories),White,78092,75747,97.0,82418
-Dementia,no,36477,35329,96.89999999999999,39060
-Dementia,yes,45101,43771,97.1,47173
-brand of first dose,Oxford-AZ,60137,58254,96.89999999999999,61418
-brand of first dose,Pfizer,21336,20748,97.2,21420
-brand of first dose,Unknown,105,105,100.0,112
+Category,Group,Second Doses due at 21 Jul (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,81943,2669,79274,96.7,86247
+Sex,F,58331,1750,56581,97.0,61159
+Sex,M,23604,917,22687,96.1,25088
+Age band,65-69,4501,182,4319,96.0,4907
+Age band,70-74,7042,259,6783,96.3,7560
+Age band,75-79,9779,399,9380,95.89999999999999,10367
+Age band,80-84,14602,490,14112,96.6,15344
+Age band,85-89,19390,602,18788,96.89999999999999,20335
+Age band,90+,26628,749,25879,97.2,27741
+Ethnicity (broad categories),Black,413,21,392,94.89999999999999,483
+Ethnicity (broad categories),Mixed,210,7,203,96.7,238
+Ethnicity (broad categories),Other,343,14,329,95.89999999999999,371
+Ethnicity (broad categories),South Asian,623,42,581,93.30000000000001,679
+Ethnicity (broad categories),Unknown,1904,63,1841,96.7,2044
+Ethnicity (broad categories),White,78456,2534,75922,96.8,82439
+Dementia,no,36638,1225,35413,96.7,39039
+Dementia,yes,45304,1442,43862,96.8,47208
+brand of first dose,Oxford-AZ,60424,2093,58331,96.5,61334
+brand of first dose,Pfizer,21413,581,20832,97.3,21490
+brand of first dose,Unknown,105,0,105,100.0,112

@@ -159,6 +159,9 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
     # Eg. for patient aged 71 but not in a care home, patient does not meet the first or second criteria, but meets the third so is assigned to the third of the `choices` i.e. `2`.
     df['priority_group'] = np.select(conditions, choices, default=0)
 
+    # group into broad priority groups vs others
+    df["priority_status"] = np.where((df["priority_group"]>0)&(df["priority_group"]<10), "Priority groups", "Others")
+    
     # rename column for clarity
     df = df.rename(columns={"shielded_since_feb_15":"newly_shielded_since_feb_15"})
     
