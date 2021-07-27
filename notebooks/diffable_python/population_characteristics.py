@@ -138,7 +138,9 @@ df_dict_cum_second_dose = cumulative_sums(df, groups_of_interest=population_subg
 
 from report_results import make_vaccine_graphs
 
-make_vaccine_graphs(df, latest_date=latest_date, savepath=savepath, savepath_figure_csvs=savepath_figure_csvs, suffix=suffix)
+make_vaccine_graphs(df, latest_date=latest_date, grouping="priority_status", savepath_figure_csvs=savepath_figure_csvs, savepath=savepath, suffix=suffix)
+
+make_vaccine_graphs(df, latest_date=latest_date, include_total=False, savepath=savepath, savepath_figure_csvs=savepath_figure_csvs, suffix=suffix)
 
 # ### Reports 
 
