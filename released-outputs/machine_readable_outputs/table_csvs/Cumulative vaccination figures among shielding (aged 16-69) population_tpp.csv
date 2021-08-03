@@ -1,25 +1,25 @@
-Category,Group,Vaccinated at 21 Jul (n),Vaccinated at 21 Jul (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,752211,90.1,835303,89.9,0.2
-newly shielded since feb 15,no,462315,92.6,499443,92.5,0.1
-newly shielded since feb 15,yes,289898,86.3,335853,86.1,0.2
-Sex,F,420448,89.6,469203,89.4,0.2
-Sex,M,331751,90.6,366086,90.5,0.1
-Age band,16-29,56238,80.2,70091,79.9,0.3
-Age band,30-39,106526,83.3,127813,83.0,0.3
-Age band,40-49,148533,89.0,166978,88.8,0.2
-Age band,50-59,212968,92.4,230433,92.3,0.1
-Age band,60-69,227927,95.0,239974,94.9,0.1
-Ethnicity (broad categories),Black,33047,74.0,44660,73.7,0.3
-Ethnicity (broad categories),Mixed,11361,78.7,14434,78.5,0.2
-Ethnicity (broad categories),Other,14693,80.4,18277,80.1,0.3
-Ethnicity (broad categories),South Asian,94038,86.7,108479,86.4,0.3
-Ethnicity (broad categories),Unknown,26775,88.0,30443,87.8,0.2
-Ethnicity (broad categories),White,572278,92.5,618989,92.4,0.1
-Index of Multiple Deprivation (quintiles),1 Most deprived,210546,86.1,244496,86.0,0.1
-Index of Multiple Deprivation (quintiles),2,167972,89.2,188258,89.1,0.1
-Index of Multiple Deprivation (quintiles),3,145579,91.5,159152,91.3,0.2
-Index of Multiple Deprivation (quintiles),4,116781,93.3,125125,93.2,0.1
-Index of Multiple Deprivation (quintiles),5 Least deprived,92526,95.0,97405,94.9,0.1
-Index of Multiple Deprivation (quintiles),Unknown,18795,90.2,20846,90.0,0.2
-Learning disability,no,727125,90.0,808339,89.8,0.2
-Learning disability,yes,25074,93.1,26943,92.9,0.2
+Category,Group,Vaccinated at 28 Jul (n),Vaccinated at 28 Jul (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,752860,90.2,835072,90.0,0.2
+newly shielded since feb 15,no,462112,92.6,498897,92.6,0.0
+newly shielded since feb 15,yes,290752,86.5,336175,86.3,0.2
+Sex,F,420924,89.7,469091,89.6,0.1
+Sex,M,331926,90.7,365967,90.6,0.1
+Age band,16-29,56427,80.5,70084,80.2,0.3
+Age band,30-39,106771,83.5,127799,83.3,0.2
+Age band,40-49,148722,89.1,166964,89.0,0.1
+Age band,50-59,213059,92.5,230384,92.4,0.1
+Age band,60-69,227864,95.0,239827,95.0,0.0
+Ethnicity (broad categories),Black,33152,74.2,44653,74.0,0.2
+Ethnicity (broad categories),Mixed,11375,78.8,14427,78.7,0.1
+Ethnicity (broad categories),Other,14728,80.6,18270,80.3,0.3
+Ethnicity (broad categories),South Asian,94241,86.9,108458,86.7,0.2
+Ethnicity (broad categories),Unknown,26789,88.1,30422,88.0,0.1
+Ethnicity (broad categories),White,572565,92.5,618828,92.4,0.1
+Index of Multiple Deprivation (quintiles),1 Most deprived,210889,86.3,244447,86.1,0.2
+Index of Multiple Deprivation (quintiles),2,168084,89.3,188160,89.2,0.1
+Index of Multiple Deprivation (quintiles),3,145621,91.6,159047,91.5,0.1
+Index of Multiple Deprivation (quintiles),4,116823,93.4,125097,93.3,0.1
+Index of Multiple Deprivation (quintiles),5 Least deprived,92575,95.0,97405,95.0,0.0
+Index of Multiple Deprivation (quintiles),Unknown,18858,90.2,20902,90.1,0.1
+Learning disability,no,727762,90.1,808129,89.9,0.2
+Learning disability,yes,25088,93.1,26936,93.0,0.1
