@@ -61,7 +61,7 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 # <br>
 # - **<a href=#tables>Current vaccination coverage of each eligible population group, according to demographic/clinical features</a>**
 #   - Includes each of the groups above, plus <a href=#Cumulative-vaccination-figures-among-care-home-population>care home (65+)</a> and <a href=#Cumulative-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population>LD (aged 16-64)</a> populations.
-#   - **NEW** - tables now include <a href=#Cumulative-vaccination-figures-among-30-39-population>30-39</a> and <a href=#Cumulative-vaccination-figures-among-18-29-population>18-29</a> populations
+#   - **NEW** - tables now include <a href=#Cumulative-vaccination-figures-among-16-17-population>16-17</a>  population
 # <br>
 # <br>
 # - Appendix: <a href=#ethnicity>Proportion of each population group for whom ethnicity is known</a>
