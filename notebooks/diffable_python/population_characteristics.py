@@ -82,7 +82,8 @@ population_subgroups = {"80+":1,
         "50-54": 9,
         "40-49": 10,
         "30-39": 11,
-        "18-29": 0 
+        "18-29": 12,                
+        "16-17": 0 
         # NB if the population denominator is not included for the final group (0), the key must contain phrase "not in other eligible groups" so that data is presented appropriately
         }
 
@@ -115,6 +116,7 @@ features_dict = {0:    u50, ## patients not assigned to a priority group
                  "40-49":    u50,
                  "30-39":    u50,
                  "18-29":    u50,
+                 "16-17":    ["sex", "ethnicity_6_groups", "imd_categories"],
                  "LD (aged 16-64)":  ["sex", "ageband_5yr", "ethnicity_6_groups"],
                  "DEFAULT":   DEFAULT # other age groups
                 }
@@ -240,9 +242,11 @@ df_dict_cum_second_dose = cumulative_sums(df_s, groups_of_interest=population_su
 
 second_dose_summarised_data_dict = summarise_data_by_group(df_dict_cum_second_dose, latest_date=latest_date, groups=groups)
 
+# + collapsed=true jupyter={"outputs_hidden": true}
 create_detailed_summary_uptake(second_dose_summarised_data_dict, formatted_latest_date, 
                                groups=groups,
                                savepath=savepath, vaccine_type="second_dose")
+# -
 
 # ## For comparison look at first doses UP TO 14 WEEKS AGO
 #
