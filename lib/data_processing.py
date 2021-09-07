@@ -151,8 +151,9 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
         (df["age"]>=55),
         (df["age"]>=50),
         (df["age"]>=40),
-        (df["age"]>=30)]
-    choices = [3,1,2,4,5,6,7,8,9,10,11]
+        (df["age"]>=30),
+        (df["age"]>=18)]
+    choices = [3,1,2,4,5,6,7,8,9,10,11,12]
     # note the numbers here denote the desired sort order in which we want to look at these groups, not the priority order
     
     # create field "priority_group" which uses the appropriate value from `choices` according to the `conditions` met by each line of data. If none are met, assigns 0.
