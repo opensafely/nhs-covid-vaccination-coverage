@@ -1,0 +1,16 @@
+Category,Group,Vaccinated at 01 Sep (n),Vaccinated at 01 Sep (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,245937,46.8,525707,39.5,7.3
+Sex,F,126196,49.1,256844,41.8,7.3
+Sex,M,119728,44.5,268835,37.4,7.1
+Ethnicity (broad categories),Black,3108,19.0,16401,15.0,4.0
+Ethnicity (broad categories),Mixed,4487,33.8,13286,28.3,5.5
+Ethnicity (broad categories),Other,4130,32.3,12768,26.8,5.5
+Ethnicity (broad categories),South Asian,14952,34.8,42917,28.0,6.8
+Ethnicity (broad categories),Unknown,55580,49.1,113190,41.2,7.9
+Ethnicity (broad categories),White,163667,50.0,327110,42.7,7.3
+Index of Multiple Deprivation (quintiles),1 Most deprived,38171,32.2,118671,27.0,5.2
+Index of Multiple Deprivation (quintiles),2,41020,41.3,99442,34.4,6.9
+Index of Multiple Deprivation (quintiles),3,49371,48.9,101003,41.3,7.6
+Index of Multiple Deprivation (quintiles),4,53123,54.2,97965,46.0,8.2
+Index of Multiple Deprivation (quintiles),5 Least deprived,59115,60.4,97825,51.5,8.9
+Index of Multiple Deprivation (quintiles),Unknown,5117,47.5,10773,39.9,7.6

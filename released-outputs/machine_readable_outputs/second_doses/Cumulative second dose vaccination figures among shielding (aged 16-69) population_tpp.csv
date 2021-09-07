@@ -1,29 +1,29 @@
-Category,Group,Second Doses due at 28 Jul (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,726657,18917,707740,97.39999999999999,835072
-newly shielded since feb 15,no,453047,9807,443240,97.8,498897
-newly shielded since feb 15,yes,273616,9114,264502,96.7,336175
-Sex,F,404250,11102,393148,97.3,469091
-Sex,M,322392,7812,314580,97.6,365967
-Age band,16-29,52038,2562,49476,95.1,70084
-Age band,30-39,98980,4137,94843,95.8,127799
-Age band,40-49,142387,4263,138124,97.0,166964
-Age band,50-59,208285,4599,203686,97.8,230384
-Age band,60-69,224959,3360,221599,98.5,239827
-Ethnicity (broad categories),Black,30282,1372,28910,95.5,44653
-Ethnicity (broad categories),Mixed,10626,476,10150,95.5,14427
-Ethnicity (broad categories),Other,13510,427,13083,96.8,18270
-Ethnicity (broad categories),South Asian,87094,3416,83678,96.1,108458
-Ethnicity (broad categories),Unknown,25886,504,25382,98.1,30422
-Ethnicity (broad categories),White,559244,12719,546525,97.7,618828
-Index of Multiple Deprivation (quintiles),1 Most deprived,201138,7224,193914,96.39999999999999,244447
-Index of Multiple Deprivation (quintiles),2,161630,4452,157178,97.2,188160
-Index of Multiple Deprivation (quintiles),3,141351,3178,138173,97.8,159047
-Index of Multiple Deprivation (quintiles),4,113911,2191,111720,98.1,125097
-Index of Multiple Deprivation (quintiles),5 Least deprived,90580,1386,89194,98.5,97405
-Index of Multiple Deprivation (quintiles),Unknown,18032,490,17542,97.3,20902
-Learning disability,no,702219,18221,683998,97.39999999999999,808129
-Learning disability,yes,24430,700,23730,97.1,26936
-brand of first dose,Moderna,98,14,84,85.7,1400
-brand of first dose,Oxford-AZ,472661,14938,457723,96.8,481243
-brand of first dose,Pfizer,253421,3948,249473,98.4,269731
-brand of first dose,Unknown,469,14,455,97.0,483
+Category,Group,Second Doses due at 01 Sep (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,741160,19101,722059,97.39999999999999,838964
+newly shielded since feb 15,no,456897,9856,447041,97.8,498743
+newly shielded since feb 15,yes,284263,9240,275023,96.7,340221
+Sex,F,413049,11095,401954,97.3,471401
+Sex,M,328097,8008,320089,97.6,367549
+Age band,16-29,53529,2604,50925,95.1,70406
+Age band,30-39,102144,4165,97979,95.89999999999999,128219
+Age band,40-49,145957,4284,141673,97.1,167636
+Age band,50-59,211750,4676,207074,97.8,231553
+Age band,60-69,227766,3367,224399,98.5,241143
+Ethnicity (broad categories),Black,31486,1400,30086,95.6,44765
+Ethnicity (broad categories),Mixed,10934,476,10458,95.6,14448
+Ethnicity (broad categories),Other,14028,490,13538,96.5,18305
+Ethnicity (broad categories),South Asian,90055,3318,86737,96.3,108591
+Ethnicity (broad categories),Unknown,25683,497,25186,98.1,29820
+Ethnicity (broad categories),White,568967,12922,556045,97.7,623021
+Index of Multiple Deprivation (quintiles),1 Most deprived,205723,7196,198527,96.5,245063
+Index of Multiple Deprivation (quintiles),2,165074,4508,160566,97.3,188916
+Index of Multiple Deprivation (quintiles),3,143787,3220,140567,97.8,159768
+Index of Multiple Deprivation (quintiles),4,115843,2226,113617,98.1,125853
+Index of Multiple Deprivation (quintiles),5 Least deprived,92064,1435,90629,98.4,98098
+Index of Multiple Deprivation (quintiles),Unknown,18662,518,18144,97.2,21245
+Learning disability,no,716387,18424,697963,97.39999999999999,811986
+Learning disability,yes,24759,672,24087,97.3,26957
+brand of first dose,Moderna,469,56,413,88.1,1624
+brand of first dose,Oxford-AZ,480431,14294,466137,97.0,483406
+brand of first dose,Pfizer,259763,4739,255024,98.2,274295
+brand of first dose,Unknown,490,14,476,97.1,504
