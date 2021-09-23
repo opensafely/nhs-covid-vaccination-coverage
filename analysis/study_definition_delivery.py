@@ -241,7 +241,7 @@ study = StudyDefinition(
     ),
     # COVID VACCINATION - Pfizer BioNTech
     covid_vacc_pfizer_date=patients.with_tpp_vaccination_record(
-        product_name_matches="COVID-19 mRNA Vaccine Pfizer-BioNTech BNT162b2 30micrograms/0.3ml dose conc for susp for inj MDV",
+        product_name_matches="COVID-19 mRNA Vaccine Comirnaty 30micrograms/0.3ml dose conc for susp for inj MDV (Pfizer)",
         on_or_after="2020-12-01",  # check all december to date
         find_first_match_in_period=True,
         returning="date",
