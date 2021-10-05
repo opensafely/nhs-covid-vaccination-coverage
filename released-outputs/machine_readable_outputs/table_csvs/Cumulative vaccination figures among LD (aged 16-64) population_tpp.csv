@@ -1,19 +1,19 @@
-Category,Group,Vaccinated at 15 Sep (n),Vaccinated at 15 Sep (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,72741,87.0,83566,86.9,0.1
-Sex,F,28112,89.1,31556,89.0,0.1
-Sex,M,44625,85.8,52010,85.7,0.1
-Age band,16-17,3514,73.5,4781,72.8,0.7
-Age band,18-29,25207,83.5,30205,83.3,0.2
-Age band,30-34,9268,86.1,10759,86.1,0.0
-Age band,35-39,6923,88.8,7798,88.7,0.1
-Age band,40-44,5565,91.0,6118,91.0,0.0
-Age band,45-49,5670,92.0,6160,92.0,0.0
+Category,Group,Vaccinated at 29 Sep (n),Vaccinated at 29 Sep (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,72979,87.2,83720,87.1,0.1
+Sex,F,28210,89.2,31626,89.1,0.1
+Sex,M,44765,85.9,52087,85.8,0.1
+Age band,16-17,3577,74.4,4809,74.1,0.3
+Age band,18-29,25326,83.6,30303,83.5,0.1
+Age band,30-34,9296,86.3,10766,86.3,0.0
+Age band,35-39,6930,88.9,7798,88.8,0.1
+Age band,40-44,5579,91.1,6125,91.0,0.1
+Age band,45-49,5677,92.2,6160,92.2,0.0
 Age band,50-54,6090,93.1,6538,93.1,0.0
-Age band,55-59,5992,93.2,6426,93.1,0.1
-Age band,60-64,4508,94.3,4781,94.3,0.0
-Ethnicity (broad categories),Black,875,63.8,1372,63.8,0.0
-Ethnicity (broad categories),Mixed,812,73.4,1106,72.8,0.6
-Ethnicity (broad categories),Other,546,75.0,728,75.0,0.0
-Ethnicity (broad categories),South Asian,3745,78.2,4788,77.6,0.6
-Ethnicity (broad categories),Unknown,5341,85.3,6258,85.2,0.1
-Ethnicity (broad categories),White,61418,88.6,69321,88.5,0.1
+Age band,55-59,5992,93.2,6426,93.2,0.0
+Age band,60-64,4515,94.4,4781,94.4,0.0
+Ethnicity (broad categories),Black,882,64.0,1379,64.0,0.0
+Ethnicity (broad categories),Mixed,819,73.6,1113,73.0,0.6
+Ethnicity (broad categories),Other,553,75.2,735,75.2,0.0
+Ethnicity (broad categories),South Asian,3773,78.6,4802,78.4,0.2
+Ethnicity (broad categories),Unknown,5306,85.6,6202,85.4,0.2
+Ethnicity (broad categories),White,61635,88.7,69489,88.6,0.1
