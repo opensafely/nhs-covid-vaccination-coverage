@@ -46,9 +46,13 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 
 # #### 
 # ## Contents:
-# - **<a href=#summary>Overview</a>**
+# - **<a href=#summary>Overview</a>**   (NEW: now includes third/booster dose counts)
+# <br>
+# <br>
 # - **<a href=#summarychart>Summary Charts</a>**
-# - **Trends in vaccination coverage** according to demographic/clinical features, for:
+# <br>
+# <br>
+# - **Charts:** Trends in first dose vaccination coverage according to demographic/clinical features, for:
 #  - <a href=#charts80>80+ population</a>
 #  - <a href=#charts70>70-79 population</a>
 #  - <a href=#charts_shield>shielding (aged 16-69) population</a>
@@ -59,9 +63,19 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 #  - <a href=#charts40>40-49 population</a>
 # <br>
 # <br>
-# - **<a href=#tables>Current vaccination coverage of each eligible population group, according to demographic/clinical features</a>**
-#   - Includes each of the groups above, plus <a href=#Cumulative-vaccination-figures-among-care-home-population>care home (65+)</a> and <a href=#Cumulative-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population>LD (aged 16-64)</a> populations.
-#   - **NEW** - tables now include <a href=#Cumulative-vaccination-figures-among-16-17-population>16-17</a>  population
+# - **Tables:** Current first dose vaccination coverage according to demographic/clinical features, for:
+#   - <a href=#Cumulative-vaccination-figures-among-80+-population>80+</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-70-79-population>70-79</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-care-home-population>care home (65+)</a> population
+#   - <a href=#Cumulative-vaccination-figures-among-shielding-(aged-16-69)-population>shielding (aged 16-69)</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-65-69-population>65-69</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population>LD (aged 16-64)</a> populations.
+#   - <a href=#Cumulative-vaccination-figures-among-60-64-population>60-64</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-55-59-population>55-59</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-50-54-population>50-54</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-40-49-population>40-49</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-18-39-population>18-39</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-16-17-population>16-17</a>  population
 # <br>
 # <br>
 # - Appendix: <a href=#ethnicity>Proportion of each population group for whom ethnicity is known</a>
@@ -75,15 +89,18 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 import json
 summary_stats_1 = pd.read_csv(os.path.join("..", "interim-outputs","text", "summary_stats_first_dose.txt")).set_index("Unnamed: 0")
 summary_stats_2 = pd.read_csv(os.path.join("..", "interim-outputs","text", "summary_stats_second_dose.txt")).set_index("Unnamed: 0")
+summary_stats_3 = pd.read_csv(os.path.join("..", "interim-outputs","text", "summary_stats_third_dose.txt")).set_index("Unnamed: 0")
 additional_stats = pd.read_csv(os.path.join("..", "interim-outputs","text", "additional_stats_first_dose.txt")).set_index("Unnamed: 0")
 
 out = summary_stats_1.join(summary_stats_2)
+out = out.join(summary_stats_3)
 out.index = out.index.rename("Group")
 display(out)
 
 
 display(Markdown(f"##### \n" 
                  "**NB** Patient counts are rounded to nearest 7\n"
+                 "\nSecond doses are at least 19 days after the first; third doses at least 8 weeks after the second\n"
                 "##### \n" ))
 
 display(Markdown("### Group definitions \n - The **care home** group is defined based on patients (aged 65+) having one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/longres/v1/).\n"
@@ -109,9 +126,9 @@ display(Markdown("**Note:** second dose figures are raw proportions and do not t
 for x in additional_stats.index[3:7]:  
     display(Markdown(f"{x}: {additional_stats.loc[x][0]}\n"))
     
-display(Markdown("<br>**Note:** mixed doses counts patients with two doses at least 19 days apart, \
+display(Markdown("<br>**Note:** mixed doses counts patients with first and second doses at least 19 days apart, \
                   excluding patients with two different brands recorded on the same day \
-                  or where the first dose was recorded on a date prior to when the given brand was available in the UK"))
+                  or recorded on a date prior to when the given brand was available in the UK"))
        
 for x in additional_stats.index[7:]:  
     display(Markdown(f"{x}: {additional_stats.loc[x][0]}\n"))
@@ -242,6 +259,19 @@ for item in chartlist2:
 
 # # 
 # ## Vaccination rates of each eligible population group, according to demographic/clinical features  <a name='tables' />
+#   - <a href=#Cumulative-vaccination-figures-among-80+-population>80+</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-70-79-population>70-79</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-care-home-population>care home (65+)</a> population
+#   - <a href=#Cumulative-vaccination-figures-among-shielding-(aged-16-69)-population>shielding (aged 16-69)</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-65-69-population>65-69</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population>LD (aged 16-64)</a> populations.
+#   - <a href=#Cumulative-vaccination-figures-among-60-64-population>60-64</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-55-59-population>55-59</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-50-54-population>50-54</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-40-49-population>40-49</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-18-39-population>18-39</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-16-17-population>16-17</a>  population
+# <br>
 
 # +
 tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population", 

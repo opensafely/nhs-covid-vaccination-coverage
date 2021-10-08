@@ -127,13 +127,16 @@ features_dict = {0:    u50, ## patients not assigned to a priority group
 df_dict_cum = cumulative_sums(df, groups_of_interest=population_subgroups, features_dict=features_dict, latest_date=latest_date)
 
 # +
-# for details on second doses, no need for breakdowns of any groups (only "overall" figures will be included)
+# for details on second/third doses, no need for breakdowns of any groups (only "overall" figures will be included)
 second_dose_features = {}
 for g in groups:
     second_dose_features[g] = []
 
 df_dict_cum_second_dose = cumulative_sums(df, groups_of_interest=population_subgroups, features_dict=second_dose_features, 
                                           latest_date=latest_date, reference_column_name="covid_vacc_second_dose_date")
+
+df_dict_cum_third_dose = cumulative_sums(df, groups_of_interest=population_subgroups, features_dict=second_dose_features, 
+                                          latest_date=latest_date, reference_column_name="covid_vacc_third_dose_date")
 # -
 
 # ### Cumulative vaccination figures - overall
@@ -150,7 +153,11 @@ from report_results import summarise_data_by_group
 
 summarised_data_dict = summarise_data_by_group(df_dict_cum, latest_date=latest_date, groups=groups)
 
+# +
 summarised_data_dict_2nd_dose = summarise_data_by_group(df_dict_cum_second_dose, latest_date=latest_date, groups=groups)
+
+summarised_data_dict_3rd_dose = summarise_data_by_group(df_dict_cum_third_dose, latest_date=latest_date, groups=groups)
+# -
 
 # ### Proportion of each eligible population vaccinated to date
 
@@ -159,12 +166,18 @@ from report_results import create_summary_stats, create_detailed_summary_uptake
 summ_stat_results, additional_stats = create_summary_stats(df, summarised_data_dict, formatted_latest_date, groups=groups, 
                                          savepath=savepath, suffix=suffix)
 
+# +
 summ_stat_results_2nd_dose, _ = create_summary_stats(df, summarised_data_dict_2nd_dose, formatted_latest_date, 
                                                   groups=groups, savepath=savepath, 
                                                   vaccine_type="second_dose", suffix=suffix)
 
+summ_stat_results_3rd_dose, _ = create_summary_stats(df, summarised_data_dict_3rd_dose, formatted_latest_date, 
+                                                  groups=groups, savepath=savepath, 
+                                                  vaccine_type="third_dose", suffix=suffix)
+# -
+
 # display the results of the summary stats on first and second doses
-display(pd.DataFrame(summ_stat_results).join(pd.DataFrame(summ_stat_results_2nd_dose)))    
+display(pd.DataFrame(summ_stat_results).join(pd.DataFrame(summ_stat_results_2nd_dose)).join(pd.DataFrame(summ_stat_results_3rd_dose)))   
 display(Markdown(f"*\n figures rounded to nearest 7"))
 
 # +
@@ -242,11 +255,9 @@ df_dict_cum_second_dose = cumulative_sums(df_s, groups_of_interest=population_su
 
 second_dose_summarised_data_dict = summarise_data_by_group(df_dict_cum_second_dose, latest_date=latest_date, groups=groups)
 
-# + collapsed=true jupyter={"outputs_hidden": true}
 create_detailed_summary_uptake(second_dose_summarised_data_dict, formatted_latest_date, 
                                groups=groups,
                                savepath=savepath, vaccine_type="second_dose")
-# -
 
 # ## For comparison look at first doses UP TO 14 WEEKS AGO
 #
