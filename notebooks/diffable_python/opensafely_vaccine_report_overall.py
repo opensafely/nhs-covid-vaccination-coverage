@@ -103,14 +103,9 @@ display(Markdown(f"##### \n"
                  "\nSecond doses are at least 19 days after the first; third doses at least 8 weeks after the second\n"
                 "##### \n" ))
 
-display(Markdown("### Group definitions \n - The **care home** group is defined based on patients (aged 65+) having one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/longres/v1/).\n"
-                 "\n- The **shielding** group is defined based on patients having one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/shield/v1/) \
-                 provided it was not superceded by one of [these codes](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/nonshield/v1/).\n"                
-                "\n- The **LD** (learning disability) group is defined based on [this](https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/learndis/v1/)\
-                codelist and excludes people who are shielding.\n"
-                 "\n- Patients are counted in their highest risk category only; e.g. a 65-year-old who is shielding \
-                is only counted in the shielding group, not in the 65-69 population\n"))
-
+with open('../lib/group_definitions.txt') as f:
+    group_defs = f.read()
+    display(Markdown(group_defs))
 
 display(Markdown(f"##### \n"
                  f"### Vaccine types\n"
