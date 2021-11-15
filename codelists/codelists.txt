@@ -29,3 +29,8 @@ opensafely/permanent-immunosuppression/2020-06-02
 opensafely/temporary-immunosuppression/2020-04-24
 primis-covid19-vacc-uptake/learndis/v1
 primis-covid19-vacc-uptake/cov1decl/v1.1
+opensafely/housebound/5bc77310
+opensafely/no-longer-housebound/29a88ca6 
+primis-covid19-vacc-uptake/longres/v1
+primis-covid19-vacc-uptake/shield/v1
+primis-covid19-vacc-uptake/nonshield/v1
