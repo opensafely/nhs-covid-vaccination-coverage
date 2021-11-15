@@ -292,7 +292,7 @@ study = StudyDefinition(
 
     # COVID VACCINATION - Moderna
     covid_vacc_moderna_date=patients.with_tpp_vaccination_record(
-        product_name_matches="COVID-19 mRNA (nucleoside modified) Vaccine Moderna 0.1mg/0.5mL dose dispersion for inj MDV",
+        product_name_matches="COVID-19 mRNA Vaccine Spikevax (nucleoside modified) 0.1mg/0.5mL dose disp for inj MDV (Moderna)",
         on_or_after="2020-12-01",  # check all december to date
         find_first_match_in_period=True,
         returning="date",
