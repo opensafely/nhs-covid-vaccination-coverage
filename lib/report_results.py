@@ -199,7 +199,7 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
         out2.loc[max(out2.index)+1] = [latest_date, out2.loc[out2[reference_column_name]<latest_date]["overall"].max()]
 
     # suppress low numbers
-    out2["overall"] = out2["overall"].replace([1,2,3,4,5,6], 0).fillna(0).astype(int)
+    out2["overall"] = round7(out2["overall"].replace([1,2,3,4,5,6], 0).fillna(0).astype(int))
     
     # Rounds the overall_total values (and makes into integers)
     out2["overall_total"] = round7(total)    
