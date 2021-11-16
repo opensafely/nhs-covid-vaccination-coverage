@@ -1,16 +1,16 @@
-Category,Group,Vaccinated at 21 Oct (n),Vaccinated at 21 Oct (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,309443,58.8,526204,58.0,0.8
-Sex,F,157402,61.3,256802,60.5,0.8
-Sex,M,152019,56.4,269374,55.6,0.8
-Ethnicity (broad categories),Black,4690,28.1,16667,27.3,0.8
-Ethnicity (broad categories),Mixed,5915,43.7,13545,42.9,0.8
-Ethnicity (broad categories),Other,5481,40.7,13482,39.9,0.8
-Ethnicity (broad categories),South Asian,20748,47.7,43484,46.7,1.0
-Ethnicity (broad categories),Unknown,66710,61.1,109165,60.2,0.9
-Ethnicity (broad categories),White,205877,62.4,329826,61.6,0.8
-Index of Multiple Deprivation (quintiles),1 Most deprived,51772,43.4,119252,42.6,0.8
-Index of Multiple Deprivation (quintiles),2,53382,53.3,100107,52.5,0.8
-Index of Multiple Deprivation (quintiles),3,62069,61.4,101164,60.5,0.9
-Index of Multiple Deprivation (quintiles),4,65142,66.7,97629,65.9,0.8
-Index of Multiple Deprivation (quintiles),5 Least deprived,70329,72.7,96712,71.9,0.8
-Index of Multiple Deprivation (quintiles),Unknown,6741,59.6,11305,58.6,1.0
+Category,Group,Vaccinated at 10 Nov (n),Vaccinated at 10 Nov (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,322056,61.2,526421,60.5,0.7
+Sex,F,163289,63.6,256872,62.9,0.7
+Sex,M,158746,58.9,269514,58.3,0.6
+Ethnicity (broad categories),Black,5194,31.0,16779,30.2,0.8
+Ethnicity (broad categories),Mixed,6265,46.0,13615,45.4,0.6
+Ethnicity (broad categories),Other,5845,42.3,13818,41.6,0.7
+Ethnicity (broad categories),South Asian,22407,51.2,43799,50.3,0.9
+Ethnicity (broad categories),Unknown,68271,63.5,107492,62.9,0.6
+Ethnicity (broad categories),White,214046,64.7,330890,64.1,0.6
+Index of Multiple Deprivation (quintiles),1 Most deprived,54628,45.8,119364,45.1,0.7
+Index of Multiple Deprivation (quintiles),2,56007,55.9,100184,55.2,0.7
+Index of Multiple Deprivation (quintiles),3,64491,63.7,101297,63.1,0.6
+Index of Multiple Deprivation (quintiles),4,67508,69.2,97587,68.5,0.7
+Index of Multiple Deprivation (quintiles),5 Least deprived,72282,75.0,96439,74.4,0.6
+Index of Multiple Deprivation (quintiles),Unknown,7119,61.8,11515,61.2,0.6
