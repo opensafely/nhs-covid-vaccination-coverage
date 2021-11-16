@@ -30,7 +30,6 @@
 
 # +
 from datetime import datetime
-import matplotlib.pyplot as plt
 # %matplotlib inline
 # %config InlineBackend.figure_format='png'
 
@@ -40,7 +39,8 @@ import pandas as pd
 pd.set_option("display.max_rows", 200)
 import sys
 sys.path.append('../lib/')
-from create_report import *
+from create_report import find_and_sort_filenames
+from second_third_doses import *
 
 backend = os.getenv("OPENSAFELY_BACKEND", "expectations")
 suffix = "_tpp"
@@ -78,9 +78,14 @@ display(Markdown(
 # - [**30-39** population](#Cumulative-second-dose-vaccination-figures-among-30-39-population)
 # - [**18-29** population](#Cumulative-second-dose-vaccination-figures-among-18-29-population)
 #
+# [**SUMMARY**](#Summary)
+#
+
+with open('../lib/group_definitions.txt') as f:
+    group_defs = f.read()
+    display(Markdown(group_defs))
 
 # +
-
 tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population", 
                                     pre_string="among ", tail_string=" population.csv",
                                     population_subset="Cumulative first dose 14w ago",
@@ -95,126 +100,8 @@ tablelist_2nd = find_and_sort_filenames("tables", by_demographics_or_population=
                                         )
 
 
-for f, f2 in zip(tablelist, tablelist_2nd):
-    display(Markdown("[Back to top](#Contents)"))
-    df, _ = import_table(f, latest_date_fmt=latest_date_14w_fmt, show_carehomes=True, suffix=suffix, export_csv=False)
-    df = df.drop(["Previous week's vaccination coverage (%)", "Total eligible", "Vaccinated over last 7d (%)"],1)
-    
-    df2, title = import_table(f2, latest_date_fmt, show_carehomes=True, suffix=suffix, export_csv=False)
-    df2 = df2.drop(["Previous week's vaccination coverage (%)", "Vaccinated over last 7d (%)"],1)
-    
-    # column renaming and number formatting
-    for c in df2.columns:
-        if "(n)" in c:
-            df2[c] = pd.to_numeric(df2[c], downcast='integer')
-            df2 = df2.rename(columns={c:"Second doses given (n)"})
-    for c in df.columns:
-        if "(n)" in c:
-            # the number of second doses due is the number of first doses given 14 w ago
-            df = df.rename(columns={c:f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"})
-            
-    df = df2.join(df)
-    
-    df = df.rename(columns={"Total eligible":"Total population"})
-
-    # only show tables where a significant proportion of the total population are due second dose
-    df["Second Doses due (% of total)"] = 100*df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]\
-                                          /df["Total population"]
-    if backend != "expectations" and (
-        df["Second Doses due (% of total)"][("overall","overall")] < 0.50):
-        continue    
-    df = df.drop("Second Doses due (% of total)", 1)
-    
-    # calculate difference from expected
-    df["Second doses given (% of due)"] = 100*(df[f"Second doses given (n)"]/\
-                                                 df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]).round(3)
-                                             
-    df["Second doses overdue (n)"] = df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"] -\
-                                      df[f"Second doses given (n)"]
-                                                 
-    # column order
-    df = df[[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)", "Second doses overdue (n)",
-             "Second doses given (n)", "Second doses given (% of due)", "Total population"]]
-
-    export_path = os.path.join("..", "output", "second_doses")
-    if not os.path.exists(export_path):
-        os.makedirs(export_path)
-    df.to_csv(os.path.join(export_path, f"{title}{suffix}.csv"), index=True)
-    
-    # add comma separators to numbers before displaying table
-    df_to_show = df.copy()
-    for c in [f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)", 
-              "Second doses overdue (n)", "Second doses given (n)", "Total population"]:
-        df_to_show[c] = df_to_show[c].apply('{:,}'.format)
-    show_table(df_to_show, title, latest_date_fmt, show_carehomes=True)    
-    
-    df["Second doses overdue (% of due)"] = 100 - df["Second doses given (% of due)"]
-    
-    
-    ######### plot charts
-    
-    if " LD " in title:
-        title = title.replace("LD (aged 16-64) population", "people with learning disabilities (aged 16-64)")
-    display(Markdown(f"## \n ## {title.replace('Cumulative ','').replace(' vaccination figures', 's overdue').title()}"))
-    
-    cats_to_include = ["Age band", "Ethnicity (broad categories)", 
-                   "Index of Multiple Deprivation (quintiles)", "Dementia", 
-                   "Learning disability", "Psychosis, schizophrenia, or bipolar", 
-                    "brand of first dose"]
-    cats = [c for c in df.index.levels[0] if c in cats_to_include]
-    df = df.loc[cats]
-    
-    # find errors based on rounding
-    # both num and denom are rounded to nearest 7 so both may be out by <=3 
-    df["pos_error"] = 100*3/(df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]-3)
-    df["neg_error"] = 100*3/(df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]+3)
-    
-    # do not show in charts values representing less than 100 people
-    df.loc[df[f"Second Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]<100, 
-             ["Second doses overdue (% of due)","neg_error","pos_error"]] = 0
-    
-    # find ymax
-    ymax = df[["Second doses overdue (% of due)"]].max()[0]
-    
-    rows_of_charts = int(len(cats)/2 + (len(cats)%2)/2)
-    fig, axs = plt.subplots(rows_of_charts, 2, figsize=(12, 4*rows_of_charts))
-    
-    # unpack all the axes subplots
-    axes = axs.ravel()
-    # turn off axes until they are used
-    for ax in axes:
-        ax.set_axis_off()
-        
-    # plot charts and display titles
-    for n, cat in enumerate(cats):
-        chart_title = "Second doses overdue (% of those due)\n by "+ cat
-        dfp=df.copy().loc[cat]
-        
-        # do not include "unknown" brand of first dose (unless it's the only item in the index)
-        if (cat == "brand of first dose") & (len(dfp.index)>1):
-            dfp = dfp.loc[dfp.index!="Unknown"]
-        
-        
-        
-        # plot chart
-        dfp[["Second doses overdue (% of due)"]].plot.bar(title=chart_title, ax=axes[n], legend=False)
-        # add errorbars
-        axes[n].errorbar(dfp.index, dfp["Second doses overdue (% of due)"], # same location as each bar
-                         yerr=[dfp["neg_error"], dfp["pos_error"]], #"First row contains the lower errors, the second row contains the upper errors."
-                         fmt="none", # no markers or connecting lines
-                         ecolor='k')
-        axes[n].set_axis_on()
-        
-        axes[n].set_ylim([0, min(15, ymax*1.05)])
-        axes[n].set_ylabel("Second doses overdue (%)")
-        axes[n].set_xlabel(cat.title())
-        
-        # reduce tick label sizes
-        if (cat == "Ethnicity (broad categories)") | (cat == "Index of Multiple Deprivation (quintiles)"):
-            plt.setp(axes[n].get_xticklabels(), fontsize=8)
-    plt.subplots_adjust(hspace=1)
-    
-    display(Markdown("Second doses which have not been given at least 14 weeks since the first dose"),
-           Markdown("Error bars indicate possible error caused by rounding"))
-    
-    plt.show()
+second_third_doses(tablelist, tablelist_2nd, dose_type="Second", time_period="14 weeks",
+                   latest_date_fmt=latest_date_fmt,
+                   latest_date_fmt_2=latest_date_14w_fmt, 
+                   backend=backend, suffix = "_tpp")
+   

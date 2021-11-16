@@ -333,6 +333,33 @@ common_variables = dict(
             return_expectations={"incidence": 0.01,},
         ),
     ),
+    
+    housebound = patients.satisfying(
+            """housebound_date
+                AND NOT no_longer_housebound
+                AND NOT moved_into_care_home""",
+        return_expectations={
+            "incidence": 0.01,
+                },
+        
+        housebound_date=patients.with_these_clinical_events( 
+            housebound_codes, 
+            on_or_before=index_date,
+            find_last_match_in_period = True,
+            returning="date",
+            date_format="YYYY-MM-DD",
+        ),   
+        no_longer_housebound=patients.with_these_clinical_events( 
+            no_longer_housebound_codes, 
+            on_or_after="housebound_date",
+        ),
+        moved_into_care_home=patients.with_these_clinical_events(
+            care_home_snomed_codes,
+            on_or_after="housebound_date",
+        ),
+        
+    ),
+        
                 
     LD = patients.with_these_clinical_events(
             wider_ld_codes, 

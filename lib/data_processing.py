@@ -131,7 +131,7 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
     # categorise BMI into obese (i.e. BMI >=30) or non-obese (<30)
     df = df.assign(bmi = np.where((df["bmi"]=="Not obese"), "under 30", "30+"))
 
-    # drop unnecssary columns or columns created for processing 
+    # drop unnecessary columns or columns created for processing 
     df = df.drop(["imd","ethnicity_16", "ethnicity", 'ethnicity_6_sus',
        'ethnicity_16_sus', "has_follow_up"], 1)
 
@@ -166,7 +166,7 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
     for c in ["2nd_dose", "LD", "newly_shielded_since_feb_15", "dementia", 
           "chronic_cardiac_disease", "current_copd", "dialysis", "dmards","psychosis_schiz_bipolar",
          "solid_organ_transplantation", "chemo_or_radio", "intel_dis_incl_downs_syndrome","ssri",
-          "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer"]:
+          "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "housebound"]:
           df[c] = np.where(df[c]==1, "yes", "no")
 
 
