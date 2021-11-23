@@ -92,20 +92,22 @@ summary_stats_2 = pd.read_csv(os.path.join("..", "interim-outputs","text", "summ
 summary_stats_3 = pd.read_csv(os.path.join("..", "interim-outputs","text", "summary_stats_third_dose.txt")).set_index("Unnamed: 0")
 additional_stats = pd.read_csv(os.path.join("..", "interim-outputs","text", "additional_stats_first_dose.txt")).set_index("Unnamed: 0")
 
+# first display group definitions/caveats
+with open('../lib/group_definitions.txt') as f:
+    group_defs = f.read()
+    display(Markdown(f"{group_defs} #### \n"))
+    
+# display summary table
 out = summary_stats_1.join(summary_stats_2)
 out = out.join(summary_stats_3)
 out.index = out.index.rename("Group")
 display(out)
 
-
 display(Markdown(f"##### \n" 
                  "**NB** Patient counts are rounded to nearest 7\n"
-                 "\nSecond doses are at least 19 days after the first; third doses at least 8 weeks after the second\n"
+                 "\nSecond doses are at least 19 days after the first; third doses at least 8 weeks after the second;\n"
+                 "\nAll second and third/booster doses given in these timescales are counted whether or not they were 'due' according to the relevant dosing schedule at the time.\n"
                 "##### \n" ))
-
-with open('../lib/group_definitions.txt') as f:
-    group_defs = f.read()
-    display(Markdown(group_defs))
 
 display(Markdown(f"##### \n"
                  f"### Vaccine types\n"

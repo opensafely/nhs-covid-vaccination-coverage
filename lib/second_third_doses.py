@@ -127,7 +127,7 @@ def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, dose_type="Sec
 
         cats_to_include = ["Age band", "Ethnicity (broad categories)", 
                        "Index of Multiple Deprivation (quintiles)", "Dementia", 
-                       "Learning disability", "Psychosis, schizophrenia, or bipolar", 
+                       "Learning disability", "Psychosis, schizophrenia, or bipolar", "Housebound", 
                         "brand of first dose"]
         cats = [c for c in df.index.levels[0] if c in cats_to_include]
         df = df.loc[cats]

@@ -1,22 +1,22 @@
-Category,Group,Second Doses due at 10 Nov (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,103250,1680,101570,98.4,109158
-Sex,F,72639,1050,71589,98.6,76524
-Sex,M,30611,630,29981,97.89999999999999,32634
-Age band,65-69,5782,154,5628,97.3,6244
-Age band,70-74,9310,217,9093,97.7,9989
-Age band,75-79,12999,259,12740,98.0,13783
-Age band,80-84,19229,301,18928,98.4,20342
-Age band,85-89,24591,371,24220,98.5,25949
-Age band,90+,31339,378,30961,98.8,32844
-Ethnicity (broad categories),Black,574,14,560,97.6,700
-Ethnicity (broad categories),Mixed,294,7,287,97.6,322
-Ethnicity (broad categories),Other,469,14,455,97.0,504
-Ethnicity (broad categories),South Asian,889,28,861,96.89999999999999,987
-Ethnicity (broad categories),Unknown,2184,35,2149,98.4,2436
-Ethnicity (broad categories),White,98833,1582,97251,98.4,104209
-Dementia,no,46606,833,45773,98.2,49931
-Dementia,yes,56644,854,55790,98.5,59220
+Category,Group,Second Doses due at 17 Nov (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,103243,1540,101703,98.5,109228
+Sex,F,72604,952,71652,98.7,76552
+Sex,M,30632,581,30051,98.1,32676
+Age band,65-69,5789,140,5649,97.6,6258
+Age band,70-74,9324,210,9114,97.7,10010
+Age band,75-79,13027,238,12789,98.2,13832
+Age band,80-84,19257,287,18970,98.5,20391
+Age band,85-89,24626,336,24290,98.6,26012
+Age band,90+,31220,336,30884,98.9,32725
+Ethnicity (broad categories),Black,581,21,560,96.39999999999999,700
+Ethnicity (broad categories),Mixed,301,7,294,97.7,322
+Ethnicity (broad categories),Other,469,7,462,98.5,504
+Ethnicity (broad categories),South Asian,896,21,875,97.7,1001
+Ethnicity (broad categories),Unknown,2128,35,2093,98.4,2394
+Ethnicity (broad categories),White,98861,1449,97412,98.5,104307
+Dementia,no,46634,742,45892,98.4,50008
+Dementia,yes,56602,791,55811,98.6,59220
 brand of first dose,Moderna,0,0,0,,28
-brand of first dose,Oxford-AZ,74158,1407,72751,98.1,74228
-brand of first dose,Pfizer,28938,273,28665,99.1,31052
+brand of first dose,Oxford-AZ,74011,1295,72716,98.3,74074
+brand of first dose,Pfizer,29071,238,28833,99.2,31339
 brand of first dose,Unknown,147,0,147,100.0,147
