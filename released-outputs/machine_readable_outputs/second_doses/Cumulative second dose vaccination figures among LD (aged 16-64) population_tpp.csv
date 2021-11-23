@@ -1,23 +1,23 @@
-Category,Group,Second Doses due at 10 Nov (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,72198,2688,69510,96.3,84231
-Sex,F,27965,945,27020,96.6,31871
-Sex,M,44233,1750,42483,96.0,52353
-Age band,16-17,3262,196,3066,94.0,4886
-Age band,18-29,25032,1134,23898,95.5,30569
-Age band,30-34,9205,371,8834,96.0,10801
-Age band,35-39,6895,252,6643,96.3,7847
-Age band,40-44,5558,168,5390,97.0,6153
-Age band,45-49,5670,182,5488,96.8,6188
-Age band,50-54,6097,161,5936,97.39999999999999,6559
-Age band,55-59,5985,133,5852,97.8,6447
-Age band,60-64,4494,91,4403,98.0,4774
-Ethnicity (broad categories),Black,868,49,819,94.39999999999999,1400
-Ethnicity (broad categories),Mixed,791,35,756,95.6,1120
-Ethnicity (broad categories),Other,546,21,525,96.2,749
-Ethnicity (broad categories),South Asian,3640,217,3423,94.0,4837
-Ethnicity (broad categories),Unknown,5068,147,4921,97.1,6034
-Ethnicity (broad categories),White,61278,2205,59073,96.39999999999999,70084
-brand of first dose,Moderna,357,56,301,84.3,406
-brand of first dose,Oxford-AZ,49644,1743,47901,96.5,49693
-brand of first dose,Pfizer,22148,889,21259,96.0,23583
+Category,Group,Second Doses due at 17 Nov (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,72394,2681,69713,96.3,84266
+Sex,F,28028,931,27097,96.7,31892
+Sex,M,44366,1750,42616,96.1,52367
+Age band,16-17,3304,203,3101,93.89999999999999,4900
+Age band,18-29,25130,1141,23989,95.5,30590
+Age band,30-34,9233,385,8848,95.8,10801
+Age band,35-39,6902,245,6657,96.5,7847
+Age band,40-44,5558,161,5397,97.1,6153
+Age band,45-49,5677,175,5502,96.89999999999999,6188
+Age band,50-54,6104,154,5950,97.5,6566
+Age band,55-59,5985,126,5859,97.89999999999999,6440
+Age band,60-64,4501,84,4417,98.1,4781
+Ethnicity (broad categories),Black,875,56,819,93.60000000000001,1407
+Ethnicity (broad categories),Mixed,805,42,763,94.8,1134
+Ethnicity (broad categories),Other,553,21,532,96.2,749
+Ethnicity (broad categories),South Asian,3668,224,3444,93.89999999999999,4837
+Ethnicity (broad categories),Unknown,4984,140,4844,97.2,5929
+Ethnicity (broad categories),White,61516,2205,59311,96.39999999999999,70217
+brand of first dose,Moderna,364,56,308,84.6,413
+brand of first dose,Oxford-AZ,49658,1694,47964,96.6,49693
+brand of first dose,Pfizer,22316,917,21399,95.89999999999999,23681
 brand of first dose,Unknown,42,0,42,100.0,42
