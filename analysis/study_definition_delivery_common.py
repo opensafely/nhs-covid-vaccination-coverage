@@ -52,7 +52,7 @@ common_variables = dict(
 
     # Demographic information
     age=patients.age_as_of(
-        "2021-03-31",  # PHE defined date for calulating eligibilty across all vaccination campaigns
+        "2021-08-31",  # PHE defined date for vaccine coverage
         return_expectations={
             "rate": "universal",
             "int": {"distribution": "population_ages"},
