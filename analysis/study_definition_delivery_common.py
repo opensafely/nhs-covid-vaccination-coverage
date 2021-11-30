@@ -52,7 +52,7 @@ common_variables = dict(
 
     # Demographic information
     age=patients.age_as_of(
-        "2021-03-31",  # PHE defined date for calulating eligibilty across all vaccination campaigns
+        "2021-08-31",  # PHE defined date for vaccine coverage
         return_expectations={
             "rate": "universal",
             "int": {"distribution": "population_ages"},
@@ -148,27 +148,27 @@ common_variables = dict(
         },
     ),
     # stp is an NHS administration region based on geography
-    stp=patients.registered_practice_as_of(
-        index_date,
-        returning="stp_code",
-        return_expectations={
-            "rate": "universal",
-            "category": {
-                "ratios": {
-                    "STP1": 0.1,
-                    "STP2": 0.1,
-                    "STP3": 0.1,
-                    "STP4": 0.1,
-                    "STP5": 0.1,
-                    "STP6": 0.1,
-                    "STP7": 0.1,
-                    "STP8": 0.1,
-                    "STP9": 0.1,
-                    "STP10": 0.1,
-                }
-            },
-        },
-    ),
+#     stp=patients.registered_practice_as_of(
+#         index_date,
+#         returning="stp_code",
+#         return_expectations={
+#             "rate": "universal",
+#             "category": {
+#                 "ratios": {
+#                     "STP1": 0.1,
+#                     "STP2": 0.1,
+#                     "STP3": 0.1,
+#                     "STP4": 0.1,
+#                     "STP5": 0.1,
+#                     "STP6": 0.1,
+#                     "STP7": 0.1,
+#                     "STP8": 0.1,
+#                     "STP9": 0.1,
+#                     "STP10": 0.1,
+#                 }
+#             },
+#         },
+#     ),
     # NHS administrative region
     region=patients.registered_practice_as_of(
         index_date,
