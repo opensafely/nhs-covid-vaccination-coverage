@@ -306,5 +306,55 @@ study = StudyDefinition(
         },
     ),
 
+    
+    ## BRAND OF THIRD/BOOSTER DOSES
+    # BOOSTER (3rd) DOSE COVID VACCINATION - Pfizer
+    covid_vacc_third_dose_pfizer_date=patients.with_tpp_vaccination_record(
+        product_name_matches="COVID-19 mRNA Vaccine Comirnaty 30micrograms/0.3ml dose conc for susp for inj MDV (Pfizer)",
+        on_or_after="covid_vacc_second_dose_date + 56 days", 
+        find_first_match_in_period=True,
+        returning="date",
+        date_format="YYYY-MM-DD",
+        return_expectations={
+            "date": {
+                "earliest": "2021-09-24",  # first booster dose recorded
+                "latest": index_date,
+            },
+                "incidence": 0.1
+        },
+    ),
+    
+    # BOOSTER (3rd) DOSE COVID VACCINATION - Oxford AZ
+    covid_vacc_third_dose_oxford_date=patients.with_tpp_vaccination_record(
+        product_name_matches="COVID-19 Vac AstraZeneca (ChAdOx1 S recomb) 5x10000000000 viral particles/0.5ml dose sol for inj MDV",
+        on_or_after="covid_vacc_second_dose_date + 56 days", 
+        find_first_match_in_period=True,
+        returning="date",
+        date_format="YYYY-MM-DD",
+        return_expectations={
+            "date": {
+                "earliest": "2021-09-24",  # first booster dose recorded
+                "latest": index_date,
+            },
+                "incidence": 0.1
+        },
+    ),
+    
+    # BOOSTER (3rd) DOSE COVID VACCINATION - Moderna
+    covid_vacc_third_dose_moderna_date=patients.with_tpp_vaccination_record(
+        product_name_matches="COVID-19 mRNA Vaccine Spikevax (nucleoside modified) 0.1mg/0.5mL dose disp for inj MDV (Moderna)",
+        on_or_after="covid_vacc_second_dose_date + 56 days", 
+        find_first_match_in_period=True,
+        returning="date",
+        date_format="YYYY-MM-DD",
+        return_expectations={
+            "date": {
+                "earliest": "2021-09-24",  # first booster dose recorded
+                "latest": index_date,
+            },
+                "incidence": 0.1
+        },
+    ),
+    
     **common_variables
 )

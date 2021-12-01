@@ -98,7 +98,7 @@ tablelist_2nd = find_and_sort_filenames("tables", by_demographics_or_population=
                                         )
 
 
-second_third_doses(tablelist, tablelist_2nd, cohorts=["80+","70-79"], dose_type="Third", time_period="27 weeks",
+second_third_doses(tablelist, tablelist_2nd, cohorts=["80+","70-79","care home", "shielding (aged 16-69)", "65-69"], dose_type="Third", time_period="27 weeks",
                    max_ylim=100,
                    latest_date_fmt=latest_date_fmt,
                    latest_date_fmt_2=latest_date_27w_fmt, 

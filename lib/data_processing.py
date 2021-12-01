@@ -120,9 +120,9 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
                     (df["LD"]==0) & (df["dementia"]==0), 1, 0))
 
     # Replace a region and STP with a value `0` with Unknown
-    df = df.assign(
-        region = df['region'].replace(0, "Unknown"),
-        stp = df['stp'].replace(0, "Unknown"))
+#     df = df.assign(
+#         region = df['region'].replace(0, "Unknown"),
+#         stp = df['stp'].replace(0, "Unknown"))
 
     # Replace `I` or `U` for sex with `Other/Unknown`
     df = df.assign(
@@ -171,11 +171,11 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
 
 
     # get total population sizes and names for each STP
-    stps = pd.read_csv(os.path.join("..","lib","stp_dict.csv"), usecols=["stp_id","name","list_size_o80"])
-    df = df.merge(stps, left_on="stp", right_on="stp_id", how="left").rename(columns={"name":"stp_name"})
+    # stps = pd.read_csv(os.path.join("..","lib","stp_dict.csv"), usecols=["stp_id","name","list_size_o80"])
+    # df = df.merge(stps, left_on="stp", right_on="stp_id", how="left").rename(columns={"name":"stp_name"})
     
     # drop additional columns
-    df = df.drop(['care_home', 'age',"stp_id"], 1)  
+    df = df.drop(['care_home', 'age'], 1)  
 
     return df
 
