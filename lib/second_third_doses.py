@@ -91,7 +91,7 @@ def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, dose_type="Sec
         df = df[[f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)", f"{dose_type} doses overdue (n)",
                  f"{dose_type} doses given (n)", f"{dose_type} doses given (% of due)", "Total population"]]
 
-        export_path = os.path.join("..", "output", dose_file_name)
+        export_path = os.path.join("..", "output", "machine_readable_outputs", dose_file_name)
         if not os.path.exists(export_path):
             os.makedirs(export_path)
         df.to_csv(os.path.join(export_path, f"{title}{suffix}.csv"), index=True)

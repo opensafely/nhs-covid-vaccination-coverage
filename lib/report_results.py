@@ -29,9 +29,9 @@ def create_output_dirs(subfolder=None):
         os.makedirs(savepath[filetype], exist_ok=True)
 
     # create /assign directories for exporting csvs behind the figures & for tables
-    savepath_figure_csvs = os.path.abspath(os.path.join("..", "machine_readable_outputs", "figure_csvs"))
+    savepath_figure_csvs = os.path.abspath(os.path.join("..", "output", "machine_readable_outputs", "figure_csvs"))
     os.makedirs(savepath_figure_csvs, exist_ok=True)
-    savepath_table_csvs = os.path.abspath(os.path.join("..", "machine_readable_outputs", "table_csvs"))
+    savepath_table_csvs = os.path.abspath(os.path.join("..", "output", "machine_readable_outputs", "table_csvs"))
     os.makedirs(savepath_table_csvs, exist_ok=True)
 
     return savepath, savepath_figure_csvs, savepath_table_csvs
@@ -269,7 +269,7 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs,
     # set titles and reference_column_name for later us
     if vaccine_type=="first_dose":
         reference_column_name="covid_vacc_date"
-        title=f"Cumulative vaccination figures"
+        title=f"Cumulative first dose vaccination figures"
     else:
         reference_column_name=f"covid_vacc_{vaccine_type}_date"
         title=f"Cumulative {vaccine_type.replace('_',' ')} vaccination figures"
@@ -589,6 +589,19 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
         additional_stats["Mixed doses Ox-AZ + Pfizer (% of fully vaccinated)"] = f'**{vaccine_brands["oxford"]["pfz_percent"]}%** ({vaccine_brands["oxford"]["pfz"]})'
         additional_stats["Mixed doses Ox-AZ + Moderna (% of fully vaccinated)"] = f'**{vaccine_brands["oxford"]["mod_percent"]}%** ({vaccine_brands["oxford"]["mod"]})'
         additional_stats["Mixed doses Moderna + Pfizer (% of fully vaccinated)"] = f'**{vaccine_brands["moderna"]["pfz_percent"]}%** ({vaccine_brands["moderna"]["pfz"]})'
+
+    if vaccine_type == "third_dose":
+        vaccine_brands_3rd_dose = {}
+        vaccine_brands_3rd_dose["oxford"], vaccine_brands_3rd_dose["pfizer"], vaccine_brands_3rd_dose["moderna"] = {}, {}, {}
+
+        for x in ["oxford", "pfizer", "moderna"]:
+            vaccine_brands_3rd_dose[x]["third_doses"] = round7(df.copy().loc[df["covid_vacc_third_dose_date"] == df[f"covid_vacc_{x}_date"]]["covid_vacc_3rd"].sum())
+            vaccine_brands_3rd_dose[x]["percent"] = round(100*vaccine_brands_3rd_dose[x]["third_doses"]/vaccinated_total, 1)
+        
+        additional_stats["Oxford-AZ vaccines (% of all third doses)"] = f'**{vaccine_brands_3rd_dose["oxford"]["percent"]}%** ({vaccine_brands_3rd_dose["oxford"]["third_doses"]:,})'
+        additional_stats["Pfizer vaccines (% of all third doses)"] = f'**{vaccine_brands_3rd_dose["pfizer"]["percent"]}%** ({vaccine_brands_3rd_dose["pfizer"]["third_doses"]:,})'
+        additional_stats["Moderna vaccines (% of all third doses)"] = f'**{vaccine_brands_3rd_dose["moderna"]["percent"]}%** ({vaccine_brands_3rd_dose["moderna"]["third_doses"]:,})'
+
 
     # export summary stats to text file
     summary_stats.to_csv(os.path.join(savepath["text"], f"summary_stats_{vaccine_type}.txt"))
