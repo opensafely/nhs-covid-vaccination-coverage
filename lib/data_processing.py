@@ -94,6 +94,23 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
     
         df[f'brand_of_{dose}_dose'] = np.select(conditions, choices, default="none")
  
+    # Third doses - brands 
+    # No dates required as date filtering occurs in study definition
+    conditions = [ ( (df["covid_vacc_third_dose_oxford_date"] != 0 ) &
+                     (df["covid_vacc_third_dose_oxford_date"] != df["covid_vacc_third_dose_pfizer_date" ] ) &
+                     (df["covid_vacc_third_dose_oxford_date"] != df["covid_vacc_third_dose_moderna_date"] ) ),
+                   ((df["covid_vacc_third_dose_pfizer_date"] != 0) &
+                    (df["covid_vacc_third_dose_pfizer_date"] != df["covid_vacc_third_dose_oxford_date"]) &
+                    (df["covid_vacc_third_dose_pfizer_date"] != df["covid_vacc_third_dose_moderna_date"])),
+                   ((df["covid_vacc_third_dose_moderna_date"] != 0) &
+                    (df["covid_vacc_third_dose_moderna_date"] != df["covid_vacc_third_dose_oxford_date"]) &
+                    (df["covid_vacc_third_dose_moderna_date"] != df["covid_vacc_third_dose_pfizer_date"])),
+                   ## unknown type - pt has had the dose but the above conditions do not apply
+                   # these may be unspecified brands or where two diff brands were recorded same day
+                   df["covid_vacc_third_dose_oxford_date"] != 0 ]
+    
+    df[f'brand_of_third_dose'] = np.select(conditions, choices, default="none")
+
     # Mixed doses:
     # flag patients with different brands for the first and second dose 
     df = df.assign(    
@@ -166,7 +183,7 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
     for c in ["2nd_dose", "LD", "newly_shielded_since_feb_15", "dementia", 
           "chronic_cardiac_disease", "current_copd", "dialysis", "dmards","psychosis_schiz_bipolar",
          "solid_organ_transplantation", "chemo_or_radio", "intel_dis_incl_downs_syndrome","ssri",
-          "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "housebound"]:
+          "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "housebound", "ckd"]:
           df[c] = np.where(df[c]==1, "yes", "no")
 
 
@@ -209,7 +226,7 @@ def map_ethnicity(df, columnname, number_of_groups):
 
     new_ethnicity_column_name = f"ethnicity_{number_of_groups}_groups"
     df[new_ethnicity_column_name] = [ethnicity_dict[x] for x in df[columnname].fillna(0).astype(int)]
-
+    
     return df
 
 

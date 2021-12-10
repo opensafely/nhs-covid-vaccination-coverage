@@ -74,7 +74,8 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 #   - <a href=#Cumulative-vaccination-figures-among-55-59-population>55-59</a>  population
 #   - <a href=#Cumulative-vaccination-figures-among-50-54-population>50-54</a>  population
 #   - <a href=#Cumulative-vaccination-figures-among-40-49-population>40-49</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-18-39-population>18-39</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-30-39-population>30-39</a>  population
+#   - <a href=#Cumulative-vaccination-figures-among-18-29-population>18-29</a>  population
 #   - <a href=#Cumulative-vaccination-figures-among-16-17-population>16-17</a>  population
 # <br>
 # <br>
@@ -146,10 +147,10 @@ from image_formats import pick_image_format
 
 IMAGE_FORMAT = pick_image_format()
 
-show_chart(f"Cumulative vaccination figures by priority status.{IMAGE_FORMAT.extension}", IMAGE_FORMAT, title="off")
+show_chart(f"Cumulative first dose vaccination figures by priority status.{IMAGE_FORMAT.extension}", IMAGE_FORMAT, title="off")
 display(Markdown("**Note:** 'Priority groups' only includes those identified as being in a priority group by our methodology. \
                 'Others' includes everyone aged 18-49 except those who are shielding or have a learning disability.<br><br>"))
-show_chart(f"Cumulative vaccination figures by priority group.{IMAGE_FORMAT.extension}", IMAGE_FORMAT, title="off")
+show_chart(f"Cumulative first dose vaccination figures by priority group.{IMAGE_FORMAT.extension}", IMAGE_FORMAT, title="off")
 
 # -
 

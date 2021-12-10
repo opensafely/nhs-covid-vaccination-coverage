@@ -34,3 +34,6 @@ opensafely/no-longer-housebound/29a88ca6
 primis-covid19-vacc-uptake/longres/v1
 primis-covid19-vacc-uptake/shield/v1
 primis-covid19-vacc-uptake/nonshield/v1
+primis-covid19-vacc-uptake/ckd_cov/v1.2.1
+primis-covid19-vacc-uptake/ckd15/v1
+primis-covid19-vacc-uptake/ckd35/v1

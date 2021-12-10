@@ -10,11 +10,12 @@ variable_renaming = { 'ageband 5yr': "Age band",
                       'ageband': "Age band",
                       'sex': "Sex",
                       'bmi':"BMI",   
+                      'housebound':'Housebound',
                       'ethnicity 6 groups':"Ethnicity (broad categories)",
                       'imd categories':"Index of Multiple Deprivation (quintiles)",
                       'chronic cardiac disease': 'Chronic cardiac disease',
                       'current copd': 'Current COPD',
-                      'dialysis': 'Dialysis',
+                      'ckd': 'Chronic kidney disease',
                       'dmards': 'DMARDs',
                       'dementia': 'Dementia',
                       'psychosis schiz bipolar': 'Psychosis, schizophrenia, or bipolar',
@@ -109,13 +110,14 @@ def find_and_sort_filenames(foldername, *,
                         'ethnicity 6 groups',
                         'imd categories',
                         'bmi',
+                        'housebound',
                         'chronic cardiac disease',
                         'current copd',
                         'lung cancer',
                         'haematological cancer',
                         'cancer excl lung and haem',
                         'chemo or radio',
-                        'dialysis',
+                        'ckd',
                         'dmards',
                         'dementia',
                         'LD',
@@ -245,7 +247,7 @@ def import_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehome
     
     # export csvs
     if export_csv==True:
-        export_path = os.path.join("..", "machine_readable_outputs", "table_csvs")
+        export_path = os.path.join("..", "output", "machine_readable_outputs", "table_csvs")
         if not os.path.exists(export_path):
             os.makedirs(export_path)
         tab.to_csv(os.path.join(export_path, f"{title}{suffix}.csv"), index=True)
@@ -285,7 +287,7 @@ def show_table(df, title, latest_date_fmt, *, org_breakdown=None, show_carehomes
                        f"- Patient counts rounded to the nearest 7"))
     
     if ("second" in title.lower()):
-        display(Markdown(f"- Only persons who are currently registered and had their fist dose at least 14 weeks ago are included in the 'due' group."))
+        display(Markdown(f"- Only persons who are currently registered and had their first dose at least 14 weeks ago are included in the 'due' group."))
         
     # display caveats about care home inclusion/exclusion where relevant
     if (show_carehomes == True) & ("care home" in title):
@@ -299,7 +301,6 @@ def show_table(df, title, latest_date_fmt, *, org_breakdown=None, show_carehomes
     if ("65-69" in title) | ("60-64" in title)  | ("55-59" in title) | ("50-54" in title) | ("Learning Disabilities" in title):
         display(Markdown(f"- Population excludes those who are shielding."))
     
-    
     # display footnotes related to STPs   
     if org_breakdown=="stp":
         display(Markdown("- The percentage coverage of each STP population by TPP practices for over 80s is displayed, and STPs with less than 10% coverage are not shown.\n"\
@@ -310,7 +311,11 @@ def show_table(df, title, latest_date_fmt, *, org_breakdown=None, show_carehomes
     
     if variable_renaming["ssri"] in tab.index:
         display(Markdown("- SSRIs group excludes individuals with Psychosis/ schizophrenia/bipolar, LD, or Dementia."))
-        
+    
+    if variable_renaming["ckd"] in tab.index:
+        display(Markdown(f"- Chronic kidney disease is defined as the presence of a relevant diagnostic code, or a most recent stage recorded >= 3."))
+    
+
         
         
 def df_column_switch(df, column1, column2):
