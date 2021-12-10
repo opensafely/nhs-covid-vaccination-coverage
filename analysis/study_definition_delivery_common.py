@@ -333,7 +333,45 @@ common_variables = dict(
             return_expectations={"incidence": 0.01,},
         ),
     ),
-    
+
+    # Chronic kidney disease flag
+    # as per official COVID-19 vaccine reporting specification
+    # IF CKD_COV_DAT <> NULL (diagnoses) | Select | Next
+    # IF CKD15_DAT = NULL  (No stages)   | Reject | Next
+    # IF CKD35_DAT>=CKD15_DAT            | Select | Reject
+    # (i.e. any diagnostic code, or most recent stage recorded >=3)
+    ckd = patients.satisfying(
+        """ckd_cov_dat 
+            OR
+            ckd35_dat
+        """,
+        # Chronic kidney disease diagnostic codes
+        ckd_cov_dat=patients.with_these_clinical_events(
+            ckd_cov,
+            returning="date",
+            find_first_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+        # Chronic kidney disease codes - all stages
+        ckd15_dat=patients.with_these_clinical_events(
+            ckd15,
+            returning="date",
+            find_last_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+        # Chronic kidney disease codes-stages 3 - 5
+        # only on or after latest CKD1-5 code
+        ckd35_dat=patients.with_these_clinical_events(
+            ckd35,
+            returning="date",
+            find_last_match_in_period=True,
+            between=["ckd15_dat", "index_date"],
+            date_format="YYYY-MM-DD",
+        ),
+    ),
+        
     housebound = patients.satisfying(
             """housebound_date
                 AND NOT no_longer_housebound

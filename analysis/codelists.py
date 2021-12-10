@@ -177,3 +177,18 @@ housebound_codes = codelist_from_csv(
 no_longer_housebound_codes = codelist_from_csv(
     "codelists/opensafely-no-longer-housebound.csv", system="snomed", column="code"
 )
+
+# Chronic kidney disease diagnostic codes
+ckd_cov = codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-ckd_cov.csv", system="snomed", column="code"
+)
+
+# Chronic kidney disease codes - all stages
+ckd15 = codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-ckd15.csv", system="snomed", column="code"
+)
+
+# Chronic kidney disease codes-stages 3 - 5
+ckd35 = codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-ckd35.csv", system="snomed", column="code"
+)
