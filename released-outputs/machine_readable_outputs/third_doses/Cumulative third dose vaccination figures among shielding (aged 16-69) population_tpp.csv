@@ -1,25 +1,27 @@
-Category,Group,Third Doses due at 24 Nov (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,593054,204148,388906,65.60000000000001,826777
-newly shielded since feb 15,no,403760,113253,290507,72.0,486829
-newly shielded since feb 15,yes,189294,90895,98399,52.0,339941
-Sex,F,327999,113211,214788,65.5,465885
-Sex,M,265048,90937,174111,65.7,360878
-Age band,16-29,36610,18823,17787,48.6,66878
-Age band,30-39,70574,33943,36631,51.9,125972
-Age band,40-49,108507,44247,64260,59.199999999999996,165564
-Age band,50-59,174153,56847,117306,67.4,229544
-Age band,60-69,203210,50295,152915,75.2,238812
-Ethnicity (broad categories),Black,20825,9653,11172,53.6,44695
-Ethnicity (broad categories),Mixed,7742,3304,4438,57.3,14357
-Ethnicity (broad categories),Other,9744,4004,5740,58.9,18158
-Ethnicity (broad categories),South Asian,58730,27699,31031,52.800000000000004,107947
-Ethnicity (broad categories),Unknown,17682,7329,10353,58.599999999999994,26509
-Ethnicity (broad categories),White,478324,152152,326172,68.2,615097
-Index of Multiple Deprivation (quintiles),1 Most deprived,152040,64638,87402,57.49999999999999,241556
-Index of Multiple Deprivation (quintiles),2,129388,47929,81459,63.0,186165
-Index of Multiple Deprivation (quintiles),3,118804,38619,80185,67.5,157332
-Index of Multiple Deprivation (quintiles),4,98084,27629,70455,71.8,123837
-Index of Multiple Deprivation (quintiles),5 Least deprived,79541,19859,59682,75.0,96229
-Index of Multiple Deprivation (quintiles),Unknown,15190,5474,9716,64.0,21644
-Learning disability,no,572684,196182,376502,65.7,799848
-Learning disability,yes,20363,7966,12397,60.9,26915
+Category,Group,Third Doses due at 01 Dec (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,633969,190960,443009,69.89999999999999,826805
+newly shielded since feb 15,no,413077,97426,315651,76.4,486899
+newly shielded since feb 15,yes,220892,93534,127358,57.699999999999996,339913
+Sex,F,351890,107583,244307,69.39999999999999,465983
+Sex,M,282072,83377,198695,70.39999999999999,360815
+Age band,16-29,40054,19096,20958,52.300000000000004,66920
+Age band,30-39,79135,35175,43960,55.60000000000001,126021
+Age band,40-49,119266,43456,75810,63.6,165578
+Age band,50-59,185255,51408,133847,72.3,229544
+Age band,60-69,210245,41825,168420,80.10000000000001,238735
+Ethnicity (broad categories),Black,23338,10248,13090,56.10000000000001,44695
+Ethnicity (broad categories),Mixed,8582,3381,5201,60.6,14371
+Ethnicity (broad categories),Other,10941,4193,6748,61.7,18137
+Ethnicity (broad categories),South Asian,67648,30450,37198,55.00000000000001,108031
+Ethnicity (broad categories),Unknown,19061,6678,12383,65.0,25956
+Ethnicity (broad categories),White,504385,136003,368382,73.0,615601
+Index of Multiple Deprivation (quintiles),1 Most deprived,166236,64505,101731,61.199999999999996,241549
+Index of Multiple Deprivation (quintiles),2,139601,45668,93933,67.30000000000001,186305
+Index of Multiple Deprivation (quintiles),3,125811,34762,91049,72.39999999999999,157311
+Index of Multiple Deprivation (quintiles),4,102984,24220,78764,76.5,123739
+Index of Multiple Deprivation (quintiles),5 Least deprived,82978,16660,66318,79.9,96194
+Index of Multiple Deprivation (quintiles),Unknown,16352,5145,11207,68.5,21693
+Learning disability,no,612360,183778,428582,70.0,799869
+Learning disability,yes,21602,7182,14420,66.8,26929
+Chronic kidney disease,no,585879,179711,406168,69.3,770035
+Chronic kidney disease,yes,48083,11249,36834,76.6,56756
