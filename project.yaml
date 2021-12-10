@@ -7,7 +7,7 @@ actions:
 
   generate_delivery_cohort:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_delivery --output-format=csv.gz
-    
+
     outputs:
       highly_sensitive:
         cohort: output/input_delivery.csv.gz
@@ -40,7 +40,7 @@ actions:
 
         
   generate_report_second_doses:
-    run: jupyter:latest jupyter nbconvert /workspace/notebooks/second_doses.ipynb --execute --to html --template basic --output-dir=/workspace/output/second_doses --ExecutePreprocessor.timeout=86400 --no-input
+    run: jupyter:latest jupyter nbconvert /workspace/notebooks/second_doses.ipynb --execute --to html --template basic --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
 
     needs: [generate_notebook]
     outputs:
@@ -49,7 +49,7 @@ actions:
         tables: output/machine_readable_outputs/second_doses/*.csv
        
   generate_report_third_doses:
-    run: jupyter:latest jupyter nbconvert /workspace/notebooks/booster-third-doses.ipynb --execute --to html --template basic --output-dir=/workspace/output/third_doses --ExecutePreprocessor.timeout=86400 --no-input
+    run: jupyter:latest jupyter nbconvert /workspace/notebooks/booster-third-doses.ipynb --execute --to html --template basic --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
 
     needs: [generate_notebook]
     outputs:
