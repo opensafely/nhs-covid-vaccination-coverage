@@ -1,31 +1,17 @@
-# ---
-# jupyter:
-#   jupytext:
-#     cell_metadata_filter: all
-#     notebook_metadata_filter: all,-language_info
-#     text_representation:
-#       extension: .py
-#       format_name: light
-#       format_version: '1.5'
-#       jupytext_version: 1.3.3
-#   kernelspec:
-#     display_name: Python 3
-#     language: python
-#     name: python3
-# ---
+#!/usr/bin/env python
+# coding: utf-8
 
-# + [markdown]
 # # Vaccines and patient characteristics
-# -
-
 
 # ### Import libraries and data
-#
+# 
 # The datasets used for this report are created using the study definition [`/analysis/study_definition.py`](../analysis/study_definition.py), using codelists referenced in [`/codelists/codelists.txt`](../codelists/codelists.txt). 
 
-# +
-# %load_ext autoreload
-# %autoreload 2
+# In[1]:
+
+
+get_ipython().run_line_magic('load_ext', 'autoreload')
+get_ipython().run_line_magic('autoreload', '2')
  
 import pandas as pd
 import numpy as np
@@ -38,36 +24,70 @@ suffix = "_tpp"
 
 # get current branch
 current_branch = subprocess.run(["git", "rev-parse", "--abbrev-ref", "HEAD"], capture_output=True).stdout.decode("utf8").strip()
-# -
+
 
 # ### Import our custom functions
+
+# In[2]:
+
 
 # import custom functions from 'lib' folder
 import sys
 sys.path.append('../lib/')
 
+
+# In[3]:
+
+
 from data_processing import load_data
 
+
+# In[4]:
+
+
 from report_results import find_and_save_latest_date, create_output_dirs
+
+
+# In[5]:
+
 
 # create output directories to save files into 
 savepath, savepath_figure_csvs, savepath_table_csvs = create_output_dirs()
 
+
 # ### Load and Process the raw data 
+
+# In[6]:
+
 
 df = load_data()
 
+
+# In[7]:
+
+
 latest_date, formatted_latest_date = find_and_save_latest_date(df, savepath=savepath)
 
+
+# In[8]:
+
+
 print(f"Latest Date: {formatted_latest_date}")
+
 
 # ### Summarise by group and demographics at latest date
 
 # #### Calculate cumulative sums at each date and select latest date + previous figures for comparison
 
+# In[9]:
+
+
 from report_results import cumulative_sums
 
-# +
+
+# In[10]:
+
+
 # population subgroups - in a dict to indicate which field to filter on
 
 
@@ -94,7 +114,7 @@ groups = population_subgroups.keys()
 DEFAULT = ["sex","ageband_5yr","ethnicity_6_groups","ethnicity_16_groups", "imd_categories", 
                               "bmi", "housebound", "chronic_cardiac_disease", "current_copd", "dialysis", "dmards", "dementia",
                               "psychosis_schiz_bipolar","LD","ssri",
-                              "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer"]
+                              "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "ckd"]
 #for specific age bands remove features which are included elsehwere or not prevalent
 o65 = [d for d in DEFAULT if d not in ("ageband_5yr", "dialysis")]
 o60 = [d for d in DEFAULT if d not in ("ageband_5yr", "dialysis", "LD", "housebound")]
@@ -121,12 +141,16 @@ features_dict = {0:    u50, ## patients not assigned to a priority group
                  "DEFAULT":   DEFAULT # other age groups
                 }
 
-# -
+
+# In[11]:
 
 
 df_dict_cum = cumulative_sums(df, groups_of_interest=population_subgroups, features_dict=features_dict, latest_date=latest_date)
 
-# +
+
+# In[12]:
+
+
 # for details on second/third doses, no need for breakdowns of any groups (only "overall" figures will be included)
 second_dose_features = {}
 for g in groups:
@@ -137,36 +161,68 @@ df_dict_cum_second_dose = cumulative_sums(df, groups_of_interest=population_subg
 
 df_dict_cum_third_dose = cumulative_sums(df, groups_of_interest=population_subgroups, features_dict=second_dose_features, 
                                           latest_date=latest_date, reference_column_name="covid_vacc_third_dose_date")
-# -
+
 
 # ### Cumulative vaccination figures - overall
 
+# In[13]:
+
+
 from report_results import make_vaccine_graphs
+
+
+# In[14]:
+
 
 make_vaccine_graphs(df, latest_date=latest_date, grouping="priority_status", savepath_figure_csvs=savepath_figure_csvs, savepath=savepath, suffix=suffix)
 
+
+# In[15]:
+
+
 make_vaccine_graphs(df, latest_date=latest_date, include_total=False, savepath=savepath, savepath_figure_csvs=savepath_figure_csvs, suffix=suffix)
+
 
 # ### Reports 
 
+# In[16]:
+
+
 from report_results import summarise_data_by_group
+
+
+# In[17]:
+
 
 summarised_data_dict = summarise_data_by_group(df_dict_cum, latest_date=latest_date, groups=groups)
 
-# +
+
+# In[18]:
+
+
 summarised_data_dict_2nd_dose = summarise_data_by_group(df_dict_cum_second_dose, latest_date=latest_date, groups=groups)
 
 summarised_data_dict_3rd_dose = summarise_data_by_group(df_dict_cum_third_dose, latest_date=latest_date, groups=groups)
-# -
+
 
 # ### Proportion of each eligible population vaccinated to date
 
+# In[19]:
+
+
 from report_results import create_summary_stats, create_detailed_summary_uptake
+
+
+# In[20]:
+
 
 summ_stat_results, additional_stats = create_summary_stats(df, summarised_data_dict, formatted_latest_date, groups=groups, 
                                          savepath=savepath, suffix=suffix)
 
-# +
+
+# In[21]:
+
+
 summ_stat_results_2nd_dose, _ = create_summary_stats(df, summarised_data_dict_2nd_dose, formatted_latest_date, 
                                                   groups=groups, savepath=savepath, 
                                                   vaccine_type="second_dose", suffix=suffix)
@@ -174,47 +230,68 @@ summ_stat_results_2nd_dose, _ = create_summary_stats(df, summarised_data_dict_2n
 summ_stat_results_3rd_dose, _ = create_summary_stats(df, summarised_data_dict_3rd_dose, formatted_latest_date, 
                                                   groups=groups, savepath=savepath, 
                                                   vaccine_type="third_dose", suffix=suffix)
-# -
+
+
+# In[22]:
+
 
 # display the results of the summary stats on first and second doses
 display(pd.DataFrame(summ_stat_results).join(pd.DataFrame(summ_stat_results_2nd_dose)).join(pd.DataFrame(summ_stat_results_3rd_dose)))   
 display(Markdown(f"*\n figures rounded to nearest 7"))
 
-# +
+
+# In[23]:
+
+
 # other information on vaccines
 
 for x in additional_stats.keys():
     display(Markdown(f"{x}: {additional_stats[x]}"))
     
 display(Markdown(f"*\n figures rounded to nearest 7"))
-# -
+
 
 # # Detailed summary of coverage among population groups as at latest date
+
+# In[24]:
+
 
 create_detailed_summary_uptake(summarised_data_dict, formatted_latest_date, 
                                groups=population_subgroups.keys(),
                                savepath=savepath)
 
+
 # # Demographics time trend charts
 
+# In[25]:
+
+
 from report_results import plot_dem_charts
+
+
+# In[26]:
+
 
 plot_dem_charts(summ_stat_results, df_dict_cum,  formatted_latest_date, pop_subgroups=["80+", "70-79", "65-69","shielding (aged 16-69)", "60-64", "55-59", "50-54", "40-49", "30-39", "18-29"], groups_dict=features_dict,
                 groups_to_exclude=["ethnicity_16_groups", "current_copd", "chronic_cardiac_disease", "dmards", "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer"],
                 savepath=savepath, savepath_figure_csvs=savepath_figure_csvs, suffix=suffix)
 
+
 # ## Completeness of ethnicity recording
 
-# +
+# In[27]:
+
+
 from data_quality import *
 
 ethnicity_completeness(df=df, groups_of_interest=population_subgroups)
 
-# -
 
 # # Second doses
 
-# +
+# In[28]:
+
+
 # only count second doses where the first dose was given at least 14 weeks ago 
 # to allow comparison of the first dose situation 14w ago with the second dose situation now
 # otherwise bias could be introduced from any second doses given early in certain subgroups
@@ -246,7 +323,10 @@ def subtract_from_date(s, unit, number, description):
 date_14w, formatted_date_14w = subtract_from_date(s=df["covid_vacc_date"], unit="weeks", number=14, 
                                              description="latest_date_of_first_dose_for_due_second_doses")
 
-# +
+
+# In[29]:
+
+
 # filter data
 df_s = df.copy()
 # replace any second doses not yet "due" with "0"
@@ -258,7 +338,9 @@ df_s.loc[(pd.to_datetime(df_s["covid_vacc_date"]) >= date_14w), "covid_vacc_seco
 df_s.loc[(pd.to_datetime(df_s["covid_vacc_date"]) <= "2020-12-07"), "covid_vacc_second_dose_date"] = 0
 
 
-# +
+# In[30]:
+
+
 # add "brand of first dose" to list of features to break down by
 import copy
 features_dict_2 = copy.deepcopy(features_dict)
@@ -268,7 +350,10 @@ for k in features_dict_2:
     ls.append("brand_of_first_dose") 
     features_dict_2[k] = ls
 
-# +
+
+# In[31]:
+
+
 # data processing / summarising
 df_dict_cum_second_dose = cumulative_sums(df_s, groups_of_interest=population_subgroups, features_dict=features_dict_2, 
                                           latest_date=latest_date, reference_column_name="covid_vacc_second_dose_date")
@@ -282,7 +367,10 @@ create_detailed_summary_uptake(second_dose_summarised_data_dict, formatted_lates
 # ## For comparison look at first doses UP TO 14 WEEKS AGO
 #
 
-# +
+
+# In[32]:
+
+
 # latest date of 14 weeks ago is entered as the latest_date when calculating cumulative sums below.
 
 # Seperately, we also ensure that first dose was dated after the start of the campaign, 
@@ -305,18 +393,23 @@ summarised_data_dict_14w = summarise_data_by_group(
 create_detailed_summary_uptake(summarised_data_dict_14w, formatted_latest_date=date_14w, 
                                groups=groups,
                                savepath=savepath, vaccine_type="first_dose_14w_ago")
-# -
+
 
 # # Booster/third doses
 
-# +
+# In[34]:
+
+
 # only want to count third doses where the second dose was given a little over 6 months ago (26 weeks+1)
 # here we use latest date of any first dose just to calculate the date 27w ago. 
 
 date_27w, formatted_date_27w = subtract_from_date(s=df["covid_vacc_date"], unit="weeks", number=27, 
                                              description="latest_date_of_second_dose_for_due_third_doses")
 
-# +
+
+# In[35]:
+
+
 # filtering for third doses that are "due"
 
 df_t = df.copy()
@@ -329,7 +422,9 @@ df_t.loc[(pd.to_datetime(df_t["covid_vacc_second_dose_date"]) >= date_27w), "cov
 df_t.loc[(pd.to_datetime(df_t["covid_vacc_second_dose_date"]) <= "2020-12-21"), "covid_vacc_third_dose_date"] = 0
 
 
-# +
+# In[36]:
+
+
 # summarise third doses to date (after filtering above)
 
 # keep priority groups (50+/CEV/Care home etc) only
@@ -343,12 +438,14 @@ third_dose_summarised_data_dict = summarise_data_by_group(df_dict_cum_third_dose
 create_detailed_summary_uptake(third_dose_summarised_data_dict, formatted_latest_date, 
                                groups=population_subgroups_third.keys(),
                                savepath=savepath, vaccine_type="third_dose")
-# -
+
 
 # ## For comparison look at second dose coverage UP TO 27 WEEKS AGO
-#
+# 
 
-# +
+# In[37]:
+
+
 # latest date of 200 days ago is entered as the latest_date when calculating cumulative sums below.
 
 # Seperately, we also ensure that second dose was dated 2 weeks after the start of the campaign, 
@@ -373,3 +470,4 @@ summarised_data_dict_27w = summarise_data_by_group(
 create_detailed_summary_uptake(summarised_data_dict_27w, formatted_latest_date=date_27w, 
                                groups=population_subgroups_third.keys(),
                                savepath=savepath, vaccine_type="second_dose_27w_ago")
+
