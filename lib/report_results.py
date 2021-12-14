@@ -594,14 +594,13 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
         vaccine_brands_3rd_dose = {}
         vaccine_brands_3rd_dose["oxford"], vaccine_brands_3rd_dose["pfizer"], vaccine_brands_3rd_dose["moderna"] = {}, {}, {}
 
-        for x in ["oxford", "pfizer", "moderna"]:
-            vaccine_brands_3rd_dose[x]["third_doses"] = round7(df.copy().loc[df["covid_vacc_third_dose_date"] == df[f"covid_vacc_{x}_date"]]["covid_vacc_3rd"].sum())
+        for x, y in [ ("oxford", "Oxford-AZ"), ("pfizer", "Pfizer"), ("moderna", "Moderna") ]:
+            vaccine_brands_3rd_dose[x]["third_doses"] = round7(df.copy().loc[df["brand_of_third_dose"] == y ]["covid_vacc_3rd"].sum())
             vaccine_brands_3rd_dose[x]["percent"] = round(100*vaccine_brands_3rd_dose[x]["third_doses"]/vaccinated_total, 1)
         
         additional_stats["Oxford-AZ vaccines (% of all third doses)"] = f'**{vaccine_brands_3rd_dose["oxford"]["percent"]}%** ({vaccine_brands_3rd_dose["oxford"]["third_doses"]:,})'
         additional_stats["Pfizer vaccines (% of all third doses)"] = f'**{vaccine_brands_3rd_dose["pfizer"]["percent"]}%** ({vaccine_brands_3rd_dose["pfizer"]["third_doses"]:,})'
         additional_stats["Moderna vaccines (% of all third doses)"] = f'**{vaccine_brands_3rd_dose["moderna"]["percent"]}%** ({vaccine_brands_3rd_dose["moderna"]["third_doses"]:,})'
-
 
     # export summary stats to text file
     summary_stats.to_csv(os.path.join(savepath["text"], f"summary_stats_{vaccine_type}.txt"))
