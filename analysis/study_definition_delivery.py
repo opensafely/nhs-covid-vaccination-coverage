@@ -320,7 +320,7 @@ study = StudyDefinition(
                 "earliest": "2021-09-24",  # first booster dose recorded
                 "latest": index_date,
             },
-                "incidence": 0.1
+                "incidence": 0.25
         },
     ),
     
@@ -336,7 +336,7 @@ study = StudyDefinition(
                 "earliest": "2021-09-24",  # first booster dose recorded
                 "latest": index_date,
             },
-                "incidence": 0.1
+                "incidence": 0.10
         },
     ),
     
@@ -352,7 +352,7 @@ study = StudyDefinition(
                 "earliest": "2021-09-24",  # first booster dose recorded
                 "latest": index_date,
             },
-                "incidence": 0.1
+                "incidence": 0.25
         },
     ),
     

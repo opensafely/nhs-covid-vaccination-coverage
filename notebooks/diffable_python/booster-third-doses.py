@@ -59,15 +59,15 @@ for x in additional_stats.index[0:3]:
 # ## Contents
 # 
 # **Cumulative third dose vaccination figures among:**
-# - [**80+** population](#Cumulative-second-dose-vaccination-figures-among-80+-population)
-# - [**70-79** population](#Cumulative-second-dose-vaccination-figures-among-70-79-population)
-# - [**Care home** population](#Cumulative-second-dose-vaccination-figures-among-care-home-population)
-# - <a href="#Cumulative-second-dose-vaccination-figures-among-shielding-(aged-16-69)-population"><strong>Shielding (aged 16-69)</strong> population</a>
-# - [**65-69** population](#Cumulative-second-dose-vaccination-figures-among-65-69-population)
-# - <a href="#Cumulative-second-dose-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population"><strong>LD (aged 16-64)</strong> population</a>
-# - [**60-64** population](#Cumulative-second-dose-vaccination-figures-among-60-64-population)
-# - [**55-59** population](#Cumulative-second-dose-vaccination-figures-among-54-59-population)
-# - [**50-54** population](#Cumulative-second-dose-vaccination-figures-among-50-54-population)
+# - [**80+** population](#Cumulative-third-dose-vaccination-figures-among-80+-population)
+# - [**70-79** population](#Cumulative-third-dose-vaccination-figures-among-70-79-population)
+# - [**Care home** population](#Cumulative-third-dose-vaccination-figures-among-care-home-population)
+# - <a href="#Cumulative-third-dose-vaccination-figures-among-shielding-(aged-16-69)-population"><strong>Shielding (aged 16-69)</strong> population</a>
+# - [**65-69** population](#Cumulative-third-dose-vaccination-figures-among-65-69-population)
+# - <a href="#Cumulative-third-dose-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population"><strong>LD (aged 16-64)</strong> population</a>
+# - [**60-64** population](#Cumulative-third-dose-vaccination-figures-among-60-64-population)
+# - [**55-59** population](#Cumulative-third-dose-vaccination-figures-among-54-59-population)
+# - [**50-54** population](#Cumulative-third-dose-vaccination-figures-among-50-54-population)
 # 
 # The above links will become functional as each of the stated populations are included in the report. 
 # - [**All groups (Summary**](#Summary))
