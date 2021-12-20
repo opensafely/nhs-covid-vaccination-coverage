@@ -1,19 +1,19 @@
-Category,Group,Third Doses due at 08 Dec (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,54831,23702,31129,56.8,85134
-Sex,F,21749,8960,12789,58.8,32158
-Sex,M,33082,14735,18347,55.50000000000001,52969
-Age band,16-17,1512,889,623,41.199999999999996,4816
-Age band,18-29,17878,8932,8946,50.0,30695
-Age band,30-34,7105,3206,3899,54.900000000000006,11137
-Age band,35-39,5467,2296,3171,57.99999999999999,8078
-Age band,40-44,4487,1757,2730,60.8,6293
-Age band,45-49,4431,1673,2758,62.2,6083
-Age band,50-54,4977,1785,3192,64.1,6545
-Age band,55-59,5012,1799,3213,64.1,6524
-Age band,60-64,3962,1372,2590,65.4,4956
-Ethnicity (broad categories),Black,560,294,266,47.5,1428
-Ethnicity (broad categories),Mixed,532,259,273,51.300000000000004,1162
-Ethnicity (broad categories),Other,364,175,189,51.9,763
-Ethnicity (broad categories),South Asian,2261,1267,994,44.0,4949
-Ethnicity (broad categories),Unknown,3472,1603,1869,53.800000000000004,5845
-Ethnicity (broad categories),White,47642,20097,27545,57.8,70973
+Category,Group,Third Doses due at 15 Dec (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,68411,29603,38808,56.699999999999996,85197
+Sex,F,26635,10899,15736,59.099999999999994,32193
+Sex,M,41769,18704,23065,55.2,52997
+Age band,16-17,2380,1498,882,37.1,4830
+Age band,18-29,23296,11844,11452,49.2,30723
+Age band,30-34,8918,4018,4900,54.900000000000006,11137
+Age band,35-39,6741,2807,3934,58.4,8085
+Age band,40-44,5460,2051,3409,62.4,6300
+Age band,45-49,5355,1932,3423,63.9,6083
+Age band,50-54,5873,2002,3871,65.9,6552
+Age band,55-59,5859,1981,3878,66.2,6531
+Age band,60-64,4536,1477,3059,67.4,4956
+Ethnicity (broad categories),Black,770,441,329,42.699999999999996,1435
+Ethnicity (broad categories),Mixed,742,378,364,49.1,1169
+Ethnicity (broad categories),Other,504,273,231,45.800000000000004,763
+Ethnicity (broad categories),South Asian,3325,2065,1260,37.9,4970
+Ethnicity (broad categories),Unknown,4606,2212,2394,52.0,5824
+Ethnicity (broad categories),White,58457,24227,34230,58.599999999999994,71036
