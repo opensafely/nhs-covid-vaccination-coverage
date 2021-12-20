@@ -13,7 +13,7 @@
 
 # This report is intended to highlight any differences between subgroups of priority cohorts in receiving "booster" doses (or third primary doses where eligible), at least 6 months (27 weeks) after their second dose.
 
-# In[2]:
+# In[1]:
 
 
 from datetime import datetime
@@ -39,13 +39,23 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date.txt"), 'r') 
     display(Markdown(f"### Third dose vaccinations included up to **{latest_date_fmt}** inclusive"))
     
 with open(os.path.join("..", "interim-outputs","text", "latest_date_of_second_dose_for_due_third_doses.txt"), 'r') as file:
-    latest_date_27w_fmt = file.read()
+    latest_date_3rdDUE_fmt = file.read()
+
+with open(os.path.join("..", "interim-outputs","text", "latest_date_of_second_dose_for_due_third_doses_specified_delay.txt"), 'r') as file:
+    latest_date_3rdDUE_delay = file.read()
+
+latest_date_3rdDUE_delay_abbreviated = abbreviate_time_period(latest_date_3rdDUE_delay)
 
 additional_stats = pd.read_csv(os.path.join("..", "interim-outputs", "text", "additional_stats_third_dose.txt")).set_index("Unnamed: 0")
 
-    
+
+# In[ ]:
+
+
+display(Markdown(f"This report is intended to highlight any differences between subgroups of priority cohorts in receiving 'booster' doses (or third primary doses where eligible), at least {latest_date_3rdDUE_delay} after their second dose."))
+
 display(Markdown(
-    f"### Only persons who had their second dose at least 27 weeks ago (**{latest_date_27w_fmt}**) are included in the 'due' group."))
+    f"### Only persons who had their second dose at least {latest_date_3rdDUE_delay} ago (**{latest_date_3rdDUE_fmt}**) are included in the 'due' group."))
 
 display(Markdown(f"##### \n"
                  f"### Vaccine types\n"
@@ -55,7 +65,6 @@ for x in additional_stats.index[0:3]:
     display(Markdown(f"{x}: {additional_stats.loc[x][0]}\n"))
 
 
-# ##  
 # ## Contents
 # 
 # **Cumulative third dose vaccination figures among:**
@@ -68,6 +77,8 @@ for x in additional_stats.index[0:3]:
 # - [**60-64** population](#Cumulative-third-dose-vaccination-figures-among-60-64-population)
 # - [**55-59** population](#Cumulative-third-dose-vaccination-figures-among-54-59-population)
 # - [**50-54** population](#Cumulative-third-dose-vaccination-figures-among-50-54-population)
+# - [**40-49** population](#Cumulative-third-dose-vaccination-figures-among-40-49-population)
+# 
 # 
 # The above links will become functional as each of the stated populations are included in the report. 
 # - [**All groups (Summary**](#Summary))
@@ -84,13 +95,14 @@ with open('../lib/group_definitions.txt') as f:
     display(Markdown(group_defs))
 
 
-# In[3]:
+# In[10]:
 
 
 tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population", 
                                     pre_string="among ", tail_string=" population.csv",
-                                    population_subset="Cumulative second dose 27w ago",
-                                    files_to_exclude=["Cumulative second dose 27w ago vaccination figures among 16-17 population.csv"],
+                                    population_subset=f"Cumulative second dose {latest_date_3rdDUE_delay_abbreviated} ago",
+                                    files_to_exclude=[
+                                        f"Cumulative second dose {latest_date_3rdDUE_delay_abbreviated} ago vaccination figures among 16-17 population.csv"],
                                     )
     
 # get 3rd dose figures for each group
@@ -101,9 +113,9 @@ tablelist_2nd = find_and_sort_filenames("tables", by_demographics_or_population=
                                         )
 
 
-second_third_doses(tablelist, tablelist_2nd, cohorts=["80+","70-79","care home", "shielding (aged 16-69)", "65-69", "60-64", "55-59", "50-54", "LD (aged 16-64)"], dose_type="Third", time_period="27 weeks",
+second_third_doses(tablelist, tablelist_2nd, cohorts=["80+", "70-79", "care home", "shielding (aged 16-69)", "65-69", "60-64", "55-59", "50-54", "LD (aged 16-64)", "40-49"], dose_type="Third", time_period=latest_date_3rdDUE_delay,
                    max_ylim=100,
                    latest_date_fmt=latest_date_fmt,
-                   latest_date_fmt_2=latest_date_27w_fmt, 
+                   latest_date_fmt_2=latest_date_3rdDUE_fmt, 
                    backend=backend, suffix = "_tpp")
 

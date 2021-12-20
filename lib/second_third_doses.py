@@ -10,6 +10,21 @@ import sys
 sys.path.append('../lib/')
 from create_report import import_table, show_table
 
+def abbreviate_time_period(time_period):
+    '''
+    This takes in a string that describes a length of time unit
+    (e.g., '4 weeks', '91 days') and converts it to a short form.
+
+    INPUTS
+    time_period (str): a period of time
+
+    OUTPUTS
+    time_period_abbr (str): the first letter of the unit
+    '''
+    time_period_abbr = time_period.replace(" ", "").replace('days', "d").replace(
+        'weeks', "w").replace('months', "m").replace('years', "y")
+    return( time_period_abbr )
+
 
 def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, dose_type="Second", time_period="14 weeks", latest_date_fmt, latest_date_fmt_2,
                        max_ylim=12, 
