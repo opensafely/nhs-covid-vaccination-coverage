@@ -1,19 +1,19 @@
-Category,Group,Vaccinated at 08 Dec (n),Vaccinated at 08 Dec (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,74592,87.6,85134,87.5,0.1
-Sex,F,28791,89.5,32158,89.4,0.1
-Sex,M,45794,86.5,52969,86.3,0.2
-Age band,16-17,3535,73.4,4816,73.0,0.4
-Age band,18-29,25837,84.2,30695,84.0,0.2
-Age band,30-34,9674,86.9,11137,86.7,0.2
-Age band,35-39,7217,89.3,8078,89.3,0.0
-Age band,40-44,5754,91.4,6293,91.3,0.1
-Age band,45-49,5635,92.6,6083,92.6,0.0
-Age band,50-54,6132,93.7,6545,93.7,0.0
-Age band,55-59,6111,93.7,6524,93.7,0.0
-Age band,60-64,4690,94.6,4956,94.6,0.0
-Ethnicity (broad categories),Black,938,65.7,1428,65.2,0.5
-Ethnicity (broad categories),Mixed,861,74.1,1162,73.5,0.6
-Ethnicity (broad categories),Other,581,76.1,763,76.1,0.0
-Ethnicity (broad categories),South Asian,3983,80.5,4949,80.2,0.3
-Ethnicity (broad categories),Unknown,5026,86.0,5845,85.9,0.1
-Ethnicity (broad categories),White,63203,89.1,70973,88.9,0.2
+Category,Group,Vaccinated at 15 Dec (n),Vaccinated at 15 Dec (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,74774,87.8,85197,87.6,0.2
+Sex,F,28861,89.6,32193,89.5,0.1
+Sex,M,45906,86.6,52997,86.5,0.1
+Age band,16-17,3570,73.9,4830,73.3,0.6
+Age band,18-29,25928,84.4,30723,84.2,0.2
+Age band,30-34,9688,87.0,11137,86.9,0.1
+Age band,35-39,7224,89.4,8085,89.3,0.1
+Age band,40-44,5761,91.4,6300,91.4,0.0
+Age band,45-49,5642,92.8,6083,92.6,0.2
+Age band,50-54,6139,93.7,6552,93.6,0.1
+Age band,55-59,6125,93.8,6531,93.7,0.1
+Age band,60-64,4697,94.8,4956,94.6,0.2
+Ethnicity (broad categories),Black,945,65.9,1435,65.4,0.5
+Ethnicity (broad categories),Mixed,868,74.3,1169,74.3,0.0
+Ethnicity (broad categories),Other,588,77.1,763,76.1,1.0
+Ethnicity (broad categories),South Asian,4004,80.6,4970,80.3,0.3
+Ethnicity (broad categories),Unknown,5012,86.1,5824,85.9,0.2
+Ethnicity (broad categories),White,63364,89.2,71036,89.1,0.1
