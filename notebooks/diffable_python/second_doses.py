@@ -1,25 +1,12 @@
-# ---
-# jupyter:
-#   jupytext:
-#     cell_metadata_filter: all
-#     notebook_metadata_filter: all,-language_info
-#     text_representation:
-#       extension: .py
-#       format_name: light
-#       format_version: '1.5'
-#       jupytext_version: 1.3.3
-#   kernelspec:
-#     display_name: Python 3
-#     language: python
-#     name: python3
-# ---
+#!/usr/bin/env python
+# coding: utf-8
 
 # # OpenSAFELY COVID Vaccine coverage report: Second doses 
 
 # OpenSAFELY is a new secure analytics platform for electronic patient records built on behalf of NHS England to deliver urgent academic and operational research during the pandemic. 
-#
-# This is an extension of our [regular weekly report](https://reports.opensafely.org/reports/vaccine-coverage/) on COVID-19 vaccination coverage in England using data from 40% of general practices that use TPP electronic health record software. **The data requires careful interpretation and there are a number of caveats. Please read the full detail about our methods and discussion of our earlier results (as of January 13th) in our preprint paper available [here](https://www.medrxiv.org/content/10.1101/2021.01.25.21250356v2).** 
-#
+# 
+# This is an extension of our [regular weekly report](https://reports.opensafely.org/reports/vaccine-coverage/) on COVID-19 vaccination coverage in England using data from 40% of general practices that use TPP electronic health record software. **The data requires careful interpretation and there are a number of caveats. Please read the full detail about our methods and discussion of our earlier results (as of 17 March 2021) in our paper available [here](https://doi.org/10.3399/BJGP.2021.0376).** 
+# 
 # The full analytical methods behind the latest results in this report are available [here](https://github.com/opensafely/nhs-covid-vaccination-uptake).
 
 # ## Second doses
@@ -28,10 +15,12 @@
 
 # #### **New:** now includes everyone over 18 and a breakdown by brand of first dose
 
-# +
+# In[1]:
+
+
 from datetime import datetime
-# %matplotlib inline
-# %config InlineBackend.figure_format='png'
+get_ipython().run_line_magic('matplotlib', 'inline')
+get_ipython().run_line_magic('config', "InlineBackend.figure_format='png'")
 
 from IPython.display import display, Markdown
 import os
@@ -59,11 +48,9 @@ display(Markdown(
     and 14 weeks ago (**{latest_date_14w_fmt}**) are included in the 'due' group."))
 
 
-# -
-
 # ##  
 # ## Contents
-#
+# 
 # **Cumulative second dose vaccination figures among:**
 # - [**80+** population](#Cumulative-second-dose-vaccination-figures-among-80+-population)
 # - [**70-79** population](#Cumulative-second-dose-vaccination-figures-among-70-79-population)
@@ -72,20 +59,26 @@ display(Markdown(
 # - [**65-69** population](#Cumulative-second-dose-vaccination-figures-among-65-69-population)
 # - <a href="#Cumulative-second-dose-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population"><strong>LD (aged 16-64)</strong> population</a>
 # - [**60-64** population](#Cumulative-second-dose-vaccination-figures-among-60-64-population)
-# - [**55-59** population](#Cumulative-second-dose-vaccination-figures-among-54-59-population)
+# - [**55-59** population](#Cumulative-second-dose-vaccination-figures-among-55-59-population)
 # - [**50-54** population](#Cumulative-second-dose-vaccination-figures-among-50-54-population)
 # - [**40-49** population](#Cumulative-second-dose-vaccination-figures-among-40-49-population)
 # - [**30-39** population](#Cumulative-second-dose-vaccination-figures-among-30-39-population)
 # - [**18-29** population](#Cumulative-second-dose-vaccination-figures-among-18-29-population)
-#
+# 
 # [**SUMMARY**](#Summary)
-#
+# 
+
+# In[2]:
+
 
 with open('../lib/group_definitions.txt') as f:
     group_defs = f.read()
     display(Markdown(group_defs))
 
-# +
+
+# In[3]:
+
+
 tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population", 
                                     pre_string="among ", tail_string=" population.csv",
                                     population_subset="Cumulative first dose 14w ago",
@@ -105,3 +98,4 @@ second_third_doses(tablelist, tablelist_2nd, dose_type="Second", time_period="14
                    latest_date_fmt_2=latest_date_14w_fmt, 
                    backend=backend, suffix = "_tpp")
    
+
