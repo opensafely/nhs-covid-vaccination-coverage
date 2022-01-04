@@ -5,15 +5,13 @@
 
 # OpenSAFELY is a new secure analytics platform for electronic patient records built on behalf of NHS England to deliver urgent academic and operational research during the pandemic. 
 # 
-# This is an extension of our [regular weekly report](https://reports.opensafely.org/reports/vaccine-coverage/) on COVID-19 vaccination coverage in England using data from 40% of general practices that use TPP electronic health record software. **The data requires careful interpretation and there are a number of caveats. Please read the full detail about our methods and discussion of our earlier results (as of January 13th) in our preprint paper available [here](https://www.medrxiv.org/content/10.1101/2021.01.25.21250356v2).** 
+# This is an extension of our [regular weekly report](https://reports.opensafely.org/reports/vaccine-coverage/) on COVID-19 vaccination coverage in England using data from 40% of general practices that use TPP electronic health record software. **The data requires careful interpretation and there are a number of caveats. Please read the full detail about our methods and discussion of our earlier results (as of 17 March 2021) in our paper available [here](https://doi.org/10.3399/BJGP.2021.0376).** 
 # 
 # The full analytical methods behind the latest results in this report are available [here](https://github.com/opensafely/nhs-covid-vaccination-uptake).
 
 # ## Booster/Third doses
 
-# This report is intended to highlight any differences between subgroups of priority cohorts in receiving "booster" doses (or third primary doses where eligible), at least 6 months (27 weeks) after their second dose.
-
-# In[1]:
+# In[6]:
 
 
 from datetime import datetime
@@ -49,7 +47,7 @@ latest_date_3rdDUE_delay_abbreviated = abbreviate_time_period(latest_date_3rdDUE
 additional_stats = pd.read_csv(os.path.join("..", "interim-outputs", "text", "additional_stats_third_dose.txt")).set_index("Unnamed: 0")
 
 
-# In[ ]:
+# In[7]:
 
 
 display(Markdown(f"This report is intended to highlight any differences between subgroups of priority cohorts in receiving 'booster' doses (or third primary doses where eligible), at least {latest_date_3rdDUE_delay} after their second dose."))
@@ -75,19 +73,18 @@ for x in additional_stats.index[0:3]:
 # - [**65-69** population](#Cumulative-third-dose-vaccination-figures-among-65-69-population)
 # - <a href="#Cumulative-third-dose-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population"><strong>LD (aged 16-64)</strong> population</a>
 # - [**60-64** population](#Cumulative-third-dose-vaccination-figures-among-60-64-population)
-# - [**55-59** population](#Cumulative-third-dose-vaccination-figures-among-54-59-population)
+# - [**55-59** population](#Cumulative-third-dose-vaccination-figures-among-55-59-population)
 # - [**50-54** population](#Cumulative-third-dose-vaccination-figures-among-50-54-population)
 # - [**40-49** population](#Cumulative-third-dose-vaccination-figures-among-40-49-population)
 # 
 # 
-# The above links will become functional as each of the stated populations are included in the report. 
 # - [**All groups (Summary**](#Summary))
 # 
 # 
 # 
 # 
 
-# In[2]:
+# In[8]:
 
 
 with open('../lib/group_definitions.txt') as f:
@@ -95,7 +92,7 @@ with open('../lib/group_definitions.txt') as f:
     display(Markdown(group_defs))
 
 
-# In[10]:
+# In[9]:
 
 
 tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population", 
