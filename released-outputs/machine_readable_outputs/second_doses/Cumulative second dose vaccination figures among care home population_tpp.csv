@@ -1,22 +1,22 @@
-Category,Group,Second Doses due at 29 Dec (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,104272,889,103383,99.1,110628
-Sex,F,73052,560,72492,99.2,77245
-Sex,M,31220,329,30891,98.9,33376
+Category,Group,Second Doses due at 05 Jan 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,104083,945,103138,99.1,110383
+Sex,F,72940,595,72345,99.2,77112
+Sex,M,31143,357,30786,98.9,33271
 Age band,65-69,5754,91,5663,98.4,6244
-Age band,70-74,9135,119,9016,98.7,9800
-Age band,75-79,12992,133,12859,99.0,13874
-Age band,80-84,18718,161,18557,99.1,19880
-Age band,85-89,24745,175,24570,99.3,26215
-Age band,90+,32928,210,32718,99.4,34608
-Ethnicity (broad categories),Black,588,14,574,97.6,721
-Ethnicity (broad categories),Mixed,315,7,308,97.8,336
-Ethnicity (broad categories),Other,483,7,476,98.6,525
+Age band,70-74,9163,133,9030,98.5,9814
+Age band,75-79,12985,140,12845,98.9,13867
+Age band,80-84,18697,168,18529,99.1,19852
+Age band,85-89,24710,189,24521,99.2,26173
+Age band,90+,32774,231,32543,99.3,34426
+Ethnicity (broad categories),Black,588,21,567,96.39999999999999,714
+Ethnicity (broad categories),Mixed,315,7,308,97.8,343
+Ethnicity (broad categories),Other,483,7,476,98.6,518
 Ethnicity (broad categories),South Asian,931,21,910,97.7,1029
-Ethnicity (broad categories),Unknown,2051,21,2030,99.0,2268
-Ethnicity (broad categories),White,99904,826,99078,99.2,105742
-Dementia,no,47299,441,46858,99.1,50841
-Dementia,yes,56973,455,56518,99.2,59780
+Ethnicity (broad categories),Unknown,2037,21,2016,99.0,2254
+Ethnicity (broad categories),White,99736,882,98854,99.1,105518
+Dementia,no,47313,469,46844,99.0,50834
+Dementia,yes,56770,483,56287,99.1,59549
 brand of first dose,Moderna,7,0,7,100.0,119
-brand of first dose,Oxford-AZ,73934,721,73213,99.0,73955
-brand of first dose,Pfizer,30184,168,30016,99.4,33131
+brand of first dose,Oxford-AZ,73640,693,72947,99.1,73654
+brand of first dose,Pfizer,30282,252,30030,99.2,33152
 brand of first dose,Unknown,147,0,147,100.0,147

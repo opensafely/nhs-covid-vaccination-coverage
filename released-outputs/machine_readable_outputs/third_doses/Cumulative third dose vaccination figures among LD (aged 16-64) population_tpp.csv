@@ -1,19 +1,19 @@
-Category,Group,Third Doses due at 29 Dec (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,68971,17626,51345,74.4,85260
-Sex,F,26845,6461,20384,75.9,32207
-Sex,M,42126,11172,30954,73.5,53046
-Age band,16-17,2436,1015,1421,58.3,4844
-Age band,18-29,23618,7462,16156,68.4,30758
-Age band,30-34,8988,2401,6587,73.3,11151
-Age band,35-39,6776,1603,5173,76.3,8085
-Age band,40-44,5481,1106,4375,79.80000000000001,6300
-Age band,45-49,5369,1050,4319,80.4,6083
-Age band,50-54,5880,1085,4795,81.5,6552
-Age band,55-59,5880,1071,4809,81.8,6531
-Age band,60-64,4536,826,3710,81.8,4956
-Ethnicity (broad categories),Black,791,343,448,56.599999999999994,1435
-Ethnicity (broad categories),Mixed,763,252,511,67.0,1176
-Ethnicity (broad categories),Other,518,189,329,63.5,770
-Ethnicity (broad categories),South Asian,3381,1540,1841,54.50000000000001,4977
-Ethnicity (broad categories),Unknown,4634,1274,3360,72.5,5796
-Ethnicity (broad categories),White,58884,14042,44842,76.2,71099
+Category,Group,Third Doses due at 05 Jan 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,69167,15617,53550,77.4,85253
+Sex,F,26915,5684,21231,78.9,32200
+Sex,M,42252,9940,32312,76.5,53053
+Age band,16-17,2457,938,1519,61.8,4851
+Age band,18-29,23723,6692,17031,71.8,30751
+Age band,30-34,9016,2135,6881,76.3,11144
+Age band,35-39,6797,1400,5397,79.4,8092
+Age band,40-44,5488,966,4522,82.39999999999999,6300
+Age band,45-49,5369,924,4445,82.8,6083
+Age band,50-54,5894,945,4949,84.0,6552
+Age band,55-59,5887,924,4963,84.3,6531
+Age band,60-64,4536,714,3822,84.3,4949
+Ethnicity (broad categories),Black,798,322,476,59.599999999999994,1442
+Ethnicity (broad categories),Mixed,763,231,532,69.69999999999999,1176
+Ethnicity (broad categories),Other,525,168,357,68.0,777
+Ethnicity (broad categories),South Asian,3409,1449,1960,57.49999999999999,4977
+Ethnicity (broad categories),Unknown,4613,1099,3514,76.2,5740
+Ethnicity (broad categories),White,59059,12348,46711,79.10000000000001,71134
