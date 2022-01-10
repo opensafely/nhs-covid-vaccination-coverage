@@ -1,47 +1,47 @@
-Category,Group,Third Doses due at 29 Dec (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,2247798,683046,1564752,69.6,2991268
-Sex,F,1146495,321692,824803,71.89999999999999,1429946
-Sex,M,1101268,361347,739921,67.2,1561273
-Ethnicity (broad categories),Black,51471,25585,25886,50.3,93065
-Ethnicity (broad categories),Mixed,27062,10556,16506,61.0,43547
-Ethnicity (broad categories),Other,55706,22267,33439,60.0,93541
-Ethnicity (broad categories),South Asian,192619,82383,110236,57.199999999999996,275289
-Ethnicity (broad categories),Unknown,188986,61544,127442,67.4,297199
-Ethnicity (broad categories),White,1731912,480697,1251215,72.2,2188578
-ethnicity 16 groups, African,34496,17549,16947,49.1,59087
-ethnicity 16 groups, Bangladeshi or British Bangladeshi,14532,6790,7742,53.300000000000004,19215
-ethnicity 16 groups, Caribbean,6300,2856,3444,54.7,14714
-ethnicity 16 groups, Chinese,14525,4347,10178,70.1,23023
-ethnicity 16 groups, Other,41167,17913,23254,56.49999999999999,70497
-ethnicity 16 groups, Other Asian,45465,17563,27902,61.4,65408
-ethnicity 16 groups,British or Mixed British,1521093,390509,1130584,74.3,1809108
-ethnicity 16 groups,Indian or British Indian,83615,28980,54635,65.3,114128
-ethnicity 16 groups,Irish,10647,2821,7826,73.5,14994
-ethnicity 16 groups,Other Black,10675,5180,5495,51.5,19257
-ethnicity 16 groups,Other White,200158,87367,112791,56.39999999999999,364462
-ethnicity 16 groups,Other mixed,10528,4039,6489,61.6,17374
-ethnicity 16 groups,Pakistani or British Pakistani,49014,29057,19957,40.699999999999996,76531
-ethnicity 16 groups,Unknown,189014,61544,127470,67.4,297248
-ethnicity 16 groups,White + Asian,6125,2037,4088,66.7,8624
-ethnicity 16 groups,White + Black African,6209,2786,3423,55.1,10087
-ethnicity 16 groups,White + Black Caribbean,4193,1680,2513,59.9,7455
-Index of Multiple Deprivation (quintiles),1 Most deprived,372519,159278,213241,57.199999999999996,580461
-Index of Multiple Deprivation (quintiles),2,413791,145502,268289,64.8,585760
-Index of Multiple Deprivation (quintiles),3,465969,136668,329301,70.7,613641
-Index of Multiple Deprivation (quintiles),4,468608,120757,347851,74.2,584633
-Index of Multiple Deprivation (quintiles),5 Least deprived,464261,102578,361683,77.9,546609
-Index of Multiple Deprivation (quintiles),Unknown,62615,18249,44366,70.89999999999999,80115
-BMI,30+,433125,117824,315301,72.8,515634
-BMI,under 30,1814638,565215,1249423,68.89999999999999,2475585
-Chronic cardiac disease,no,2213939,674646,1539293,69.5,2949695
-Chronic cardiac disease,yes,33824,8393,25431,75.2,41524
-Current COPD,no,2235520,679336,1556184,69.6,2975469
-Current COPD,yes,12243,3696,8547,69.8,15743
-DMARDs,no,2224754,678300,1546454,69.5,2964549
-DMARDs,yes,23009,4739,18270,79.4,26670
-"Psychosis, schizophrenia, or bipolar",no,2221065,674982,1546083,69.6,2953412
-"Psychosis, schizophrenia, or bipolar",yes,26698,8057,18641,69.8,37807
-SSRI (last 12 months),no,2087106,639499,1447607,69.39999999999999,2802408
-SSRI (last 12 months),yes,160657,43540,117117,72.89999999999999,188811
-Chronic kidney disease,no,2238313,681002,1557311,69.6,2980040
-Chronic kidney disease,yes,9450,2037,7413,78.4,11179
+Category,Group,Third Doses due at 05 Jan 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,2255414,593089,1662325,73.7,2991716
+Sex,F,1149904,278712,871192,75.8,1430100
+Sex,M,1105475,314370,791105,71.6,1561560
+Ethnicity (broad categories),Black,52024,24143,27881,53.6,93149
+Ethnicity (broad categories),Mixed,27230,9590,17640,64.8,43596
+Ethnicity (broad categories),Other,56126,19866,36260,64.60000000000001,93737
+Ethnicity (broad categories),South Asian,194026,75054,118972,61.3,275492
+Ethnicity (broad categories),Unknown,187985,52318,135667,72.2,295113
+Ethnicity (broad categories),White,1737995,412118,1325877,76.3,2190580
+ethnicity 16 groups, African,34853,16548,18305,52.5,59129
+ethnicity 16 groups, Bangladeshi or British Bangladeshi,14623,6118,8505,58.199999999999996,19243
+ethnicity 16 groups, Caribbean,6370,2695,3675,57.699999999999996,14735
+ethnicity 16 groups, Chinese,14651,3514,11137,76.0,23086
+ethnicity 16 groups, Other,41482,16352,25130,60.6,70665
+ethnicity 16 groups, Other Asian,45773,15757,30016,65.60000000000001,65478
+ethnicity 16 groups,British or Mixed British,1525958,329889,1196069,78.4,1810809
+ethnicity 16 groups,Indian or British Indian,84000,25550,58450,69.6,114191
+ethnicity 16 groups,Irish,10675,2485,8190,76.7,14987
+ethnicity 16 groups,Other Black,10801,4900,5901,54.6,19285
+ethnicity 16 groups,Other White,201404,79772,121632,60.4,364819
+ethnicity 16 groups,Other mixed,10591,3654,6937,65.5,17395
+ethnicity 16 groups,Pakistani or British Pakistani,49616,27608,22008,44.4,76566
+ethnicity 16 groups,Unknown,187964,52297,135667,72.2,295092
+ethnicity 16 groups,White + Asian,6153,1799,4354,70.8,8638
+ethnicity 16 groups,White + Black African,6251,2576,3675,58.8,10087
+ethnicity 16 groups,White + Black Caribbean,4214,1554,2660,63.1,7455
+Index of Multiple Deprivation (quintiles),1 Most deprived,374416,144508,229908,61.4,580524
+Index of Multiple Deprivation (quintiles),2,415471,128457,287014,69.1,585774
+Index of Multiple Deprivation (quintiles),3,467460,117614,349846,74.8,613711
+Index of Multiple Deprivation (quintiles),4,469882,102039,367843,78.3,584675
+Index of Multiple Deprivation (quintiles),5 Least deprived,465164,84763,380401,81.8,546651
+Index of Multiple Deprivation (quintiles),Unknown,62993,15708,47285,75.1,80332
+BMI,30+,434273,102347,331926,76.4,515550
+BMI,under 30,1821106,490735,1330371,73.1,2476110
+Chronic cardiac disease,no,2221429,585445,1635984,73.6,2950059
+Chronic cardiac disease,yes,33950,7637,26313,77.5,41601
+Current COPD,no,2243080,589757,1653323,73.7,2975889
+Current COPD,yes,12292,3318,8974,73.0,15771
+DMARDs,no,2232300,588889,1643411,73.6,2964962
+DMARDs,yes,23079,4193,18886,81.8,26698
+"Psychosis, schizophrenia, or bipolar",no,2228562,585795,1642767,73.7,2953839
+"Psychosis, schizophrenia, or bipolar",yes,26817,7287,19530,72.8,37821
+SSRI (last 12 months),no,2094463,555856,1538607,73.5,2803052
+SSRI (last 12 months),yes,160916,37226,123690,76.9,188608
+Chronic kidney disease,no,2245901,591241,1654660,73.7,2980474
+Chronic kidney disease,yes,9478,1841,7637,80.60000000000001,11186
