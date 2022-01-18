@@ -1,19 +1,19 @@
-Category,Group,Third Doses due at 05 Jan 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,69167,15617,53550,77.4,85253
-Sex,F,26915,5684,21231,78.9,32200
-Sex,M,42252,9940,32312,76.5,53053
-Age band,16-17,2457,938,1519,61.8,4851
-Age band,18-29,23723,6692,17031,71.8,30751
-Age band,30-34,9016,2135,6881,76.3,11144
-Age band,35-39,6797,1400,5397,79.4,8092
-Age band,40-44,5488,966,4522,82.39999999999999,6300
-Age band,45-49,5369,924,4445,82.8,6083
-Age band,50-54,5894,945,4949,84.0,6552
-Age band,55-59,5887,924,4963,84.3,6531
-Age band,60-64,4536,714,3822,84.3,4949
-Ethnicity (broad categories),Black,798,322,476,59.599999999999994,1442
-Ethnicity (broad categories),Mixed,763,231,532,69.69999999999999,1176
-Ethnicity (broad categories),Other,525,168,357,68.0,777
-Ethnicity (broad categories),South Asian,3409,1449,1960,57.49999999999999,4977
-Ethnicity (broad categories),Unknown,4613,1099,3514,76.2,5740
-Ethnicity (broad categories),White,59059,12348,46711,79.10000000000001,71134
+Category,Group,Third Doses due at 12 Jan 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,69363,13734,55629,80.2,85330
+Sex,F,26985,4956,22029,81.6,32242
+Sex,M,42378,8785,33593,79.3,53081
+Age band,16-17,2471,861,1610,65.2,4858
+Age band,18-29,23828,5999,17829,74.8,30793
+Age band,30-34,9044,1876,7168,79.3,11151
+Age band,35-39,6804,1211,5593,82.19999999999999,8085
+Age band,40-44,5495,833,4662,84.8,6307
+Age band,45-49,5376,791,4585,85.3,6090
+Age band,50-54,5901,798,5103,86.5,6559
+Age band,55-59,5901,763,5138,87.1,6538
+Age band,60-64,4543,602,3941,86.7,4949
+Ethnicity (broad categories),Black,812,301,511,62.9,1449
+Ethnicity (broad categories),Mixed,770,217,553,71.8,1183
+Ethnicity (broad categories),Other,525,154,371,70.7,777
+Ethnicity (broad categories),South Asian,3423,1358,2065,60.3,4977
+Ethnicity (broad categories),Unknown,4613,938,3675,79.7,5733
+Ethnicity (broad categories),White,59220,10780,48440,81.8,71211

@@ -8,10 +8,12 @@
 # This is an extension of our [regular weekly report](https://reports.opensafely.org/reports/vaccine-coverage/) on COVID-19 vaccination coverage in England using data from 40% of general practices that use TPP electronic health record software. **The data requires careful interpretation and there are a number of caveats. Please read the full detail about our methods and discussion of our earlier results (as of 17 March 2021) in our paper available [here](https://doi.org/10.3399/BJGP.2021.0376).** 
 # 
 # The full analytical methods behind the latest results in this report are available [here](https://github.com/opensafely/nhs-covid-vaccination-uptake).
+# 
+# **Update: As of 17th January 2022, our vaccine reports will be published fortnightly.  If you rely on weekly data updates for your own reporting or analysis please contact team@opensafely.org to let us know.**
 
 # ## Booster/Third doses
 
-# In[6]:
+# In[1]:
 
 
 from datetime import datetime
@@ -47,7 +49,7 @@ latest_date_3rdDUE_delay_abbreviated = abbreviate_time_period(latest_date_3rdDUE
 additional_stats = pd.read_csv(os.path.join("..", "interim-outputs", "text", "additional_stats_third_dose.txt")).set_index("Unnamed: 0")
 
 
-# In[7]:
+# In[2]:
 
 
 display(Markdown(f"This report is intended to highlight any differences between subgroups of priority cohorts in receiving 'booster' doses (or third primary doses where eligible), at least {latest_date_3rdDUE_delay} after their second dose."))
@@ -78,13 +80,13 @@ for x in additional_stats.index[0:3]:
 # - [**40-49** population](#Cumulative-third-dose-vaccination-figures-among-40-49-population)
 # 
 # 
-# - [**All groups (Summary**](#Summary))
+# - [**All groups (Summary)**](#Summary))
 # 
 # 
 # 
 # 
 
-# In[8]:
+# In[3]:
 
 
 with open('../lib/group_definitions.txt') as f:
@@ -92,7 +94,7 @@ with open('../lib/group_definitions.txt') as f:
     display(Markdown(group_defs))
 
 
-# In[9]:
+# In[4]:
 
 
 tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population", 
