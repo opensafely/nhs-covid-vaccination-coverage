@@ -8,6 +8,9 @@ metadata/*
 interim-outputs/*
 machine_readable_outputs/*
 
+# Mac
+.DS_Store
+
 # jupyter
 .ipynb_checkpoints
 .ipython/
