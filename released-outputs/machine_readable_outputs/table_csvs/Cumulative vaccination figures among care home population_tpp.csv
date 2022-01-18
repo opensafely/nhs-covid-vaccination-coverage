@@ -1,18 +1,18 @@
-Category,Group,Vaccinated at 05 Jan 2022 (n),Vaccinated at 05 Jan 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,107079,97.0,110383,97.0,0.0
-Sex,F,74970,97.2,77112,97.2,0.0
-Sex,M,32109,96.5,33271,96.5,0.0
-Age band,65-69,5915,94.7,6244,94.6,0.1
-Age band,70-74,9415,95.9,9814,95.9,0.0
-Age band,75-79,13370,96.4,13867,96.4,0.0
-Age band,80-84,19285,97.1,19852,97.1,0.0
-Age band,85-89,25494,97.4,26173,97.4,0.0
-Age band,90+,33600,97.6,34426,97.6,0.0
-Ethnicity (broad categories),Black,623,87.3,714,86.3,1.0
-Ethnicity (broad categories),Mixed,322,93.9,343,93.9,0.0
+Category,Group,Vaccinated at 12 Jan 2022 (n),Vaccinated at 12 Jan 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,106841,97.0,110145,97.0,0.0
+Sex,F,74858,97.2,77007,97.2,0.0
+Sex,M,31983,96.5,33131,96.5,0.0
+Age band,65-69,5922,94.7,6251,94.7,0.0
+Age band,70-74,9429,95.9,9835,95.8,0.1
+Age band,75-79,13356,96.5,13846,96.4,0.1
+Age band,80-84,19264,97.1,19831,97.1,0.0
+Age band,85-89,25445,97.4,26131,97.3,0.1
+Age band,90+,33425,97.6,34251,97.6,0.0
+Ethnicity (broad categories),Black,623,87.3,714,87.3,0.0
+Ethnicity (broad categories),Mixed,322,95.8,336,95.8,0.0
 Ethnicity (broad categories),Other,497,95.9,518,95.9,0.0
-Ethnicity (broad categories),South Asian,973,94.6,1029,94.6,0.0
-Ethnicity (broad categories),Unknown,2093,92.9,2254,92.9,0.0
-Ethnicity (broad categories),White,102571,97.2,105518,97.2,0.0
-Dementia,no,48846,96.1,50834,96.0,0.1
-Dementia,yes,58233,97.8,59549,97.8,0.0
+Ethnicity (broad categories),South Asian,966,93.9,1029,93.9,0.0
+Ethnicity (broad categories),Unknown,2107,92.9,2268,92.9,0.0
+Ethnicity (broad categories),White,102326,97.2,105273,97.2,0.0
+Dementia,no,48790,96.1,50771,96.0,0.1
+Dementia,yes,58058,97.8,59367,97.8,0.0
