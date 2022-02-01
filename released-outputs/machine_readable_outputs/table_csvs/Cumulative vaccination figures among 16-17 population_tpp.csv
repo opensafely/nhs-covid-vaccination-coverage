@@ -1,16 +1,16 @@
-Category,Group,Vaccinated at 12 Jan 2022 (n),Vaccinated at 12 Jan 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,359737,67.2,535514,66.4,0.8
-Sex,F,182007,69.5,261996,68.7,0.8
-Sex,M,177702,65.0,273476,64.2,0.8
-Ethnicity (broad categories),Black,6356,36.8,17276,35.9,0.9
-Ethnicity (broad categories),Mixed,7364,51.9,14196,51.1,0.8
-Ethnicity (broad categories),Other,6825,47.7,14315,47.0,0.7
-Ethnicity (broad categories),South Asian,26131,58.1,44940,57.3,0.8
-Ethnicity (broad categories),Unknown,72233,68.8,104993,68.1,0.7
-Ethnicity (broad categories),White,240807,70.9,339759,70.1,0.8
-Index of Multiple Deprivation (quintiles),1 Most deprived,62104,51.2,121317,50.3,0.9
-Index of Multiple Deprivation (quintiles),2,62699,61.9,101255,61.1,0.8
-Index of Multiple Deprivation (quintiles),3,71925,69.9,102844,69.1,0.8
-Index of Multiple Deprivation (quintiles),4,74921,75.4,99365,74.7,0.7
-Index of Multiple Deprivation (quintiles),5 Least deprived,80171,80.9,99092,80.4,0.5
-Index of Multiple Deprivation (quintiles),Unknown,7896,68.1,11592,67.3,0.8
+Category,Group,Vaccinated at 26 Jan 2022 (n),Vaccinated at 26 Jan 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,365925,68.2,536305,67.8,0.4
+Sex,F,185185,70.6,262353,70.1,0.5
+Sex,M,180712,66.0,273910,65.6,0.4
+Ethnicity (broad categories),Black,6594,38.0,17339,37.5,0.5
+Ethnicity (broad categories),Mixed,7567,53.1,14259,52.5,0.6
+Ethnicity (broad categories),Other,7070,49.0,14427,48.3,0.7
+Ethnicity (broad categories),South Asian,26768,59.4,45073,58.8,0.6
+Ethnicity (broad categories),Unknown,72646,69.8,104132,69.3,0.5
+Ethnicity (broad categories),White,245259,71.9,341033,71.5,0.4
+Index of Multiple Deprivation (quintiles),1 Most deprived,63770,52.5,121471,52.0,0.5
+Index of Multiple Deprivation (quintiles),2,63959,63.1,101416,62.6,0.5
+Index of Multiple Deprivation (quintiles),3,73010,70.9,102942,70.5,0.4
+Index of Multiple Deprivation (quintiles),4,76034,76.4,99568,75.9,0.5
+Index of Multiple Deprivation (quintiles),5 Least deprived,81032,81.7,99162,81.3,0.4
+Index of Multiple Deprivation (quintiles),Unknown,8085,69.1,11704,68.6,0.5
