@@ -1,61 +1,61 @@
-Category,Group,Second Doses due at 26 Jan 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,1198428,9184,1189244,99.2,1308713
-Sex,F,604303,4655,599648,99.2,652820
-Sex,M,594118,4529,589589,99.2,655886
-Ethnicity (broad categories),Black,14868,385,14483,97.39999999999999,20727
-Ethnicity (broad categories),Mixed,6783,133,6650,98.0,8477
-Ethnicity (broad categories),Other,13363,203,13160,98.5,17612
-Ethnicity (broad categories),South Asian,47628,686,46942,98.6,54803
-Ethnicity (broad categories),Unknown,94843,840,94003,99.1,115738
-Ethnicity (broad categories),White,1020929,6930,1013999,99.3,1091349
-ethnicity 16 groups, African,5936,154,5782,97.39999999999999,8036
-ethnicity 16 groups, Bangladeshi or British Bangladeshi,2121,28,2093,98.7,2401
-ethnicity 16 groups, Caribbean,5537,154,5383,97.2,8120
-ethnicity 16 groups, Chinese,4123,49,4074,98.8,5292
-ethnicity 16 groups, Other,9240,154,9086,98.3,12320
-ethnicity 16 groups, Other Asian,10129,126,10003,98.8,11900
-ethnicity 16 groups,British or Mixed British,959385,6013,953372,99.4,1011045
-ethnicity 16 groups,Indian or British Indian,24472,273,24199,98.9,27538
-ethnicity 16 groups,Irish,6160,63,6097,99.0,6902
-ethnicity 16 groups,Other Black,3388,77,3311,97.7,4564
-ethnicity 16 groups,Other White,55356,854,54502,98.5,73381
-ethnicity 16 groups,Other mixed,2569,42,2527,98.4,3241
-ethnicity 16 groups,Pakistani or British Pakistani,10892,252,10640,97.7,12950
-ethnicity 16 groups,Unknown,94885,840,94045,99.1,115780
-ethnicity 16 groups,White + Asian,1379,14,1365,99.0,1568
-ethnicity 16 groups,White + Black African,1246,21,1225,98.3,1582
-ethnicity 16 groups,White + Black Caribbean,1596,56,1540,96.5,2093
-Index of Multiple Deprivation (quintiles),1 Most deprived,175161,2429,172732,98.6,201922
-Index of Multiple Deprivation (quintiles),2,212870,1974,210896,99.1,236950
-Index of Multiple Deprivation (quintiles),3,262318,1757,260561,99.3,284998
-Index of Multiple Deprivation (quintiles),4,266553,1582,264971,99.4,285950
-Index of Multiple Deprivation (quintiles),5 Least deprived,255220,1155,254065,99.5,269647
-Index of Multiple Deprivation (quintiles),Unknown,26299,287,26012,98.9,29239
-BMI,30+,303247,1897,301350,99.4,319886
-BMI,under 30,895174,7287,887887,99.2,988813
-Chronic cardiac disease,no,1105251,8449,1096802,99.2,1209607
-Chronic cardiac disease,yes,93170,735,92435,99.2,99092
-Current COPD,no,1164597,8750,1155847,99.2,1272495
-Current COPD,yes,33824,434,33390,98.7,36204
-DMARDs,no,1177428,9051,1168377,99.2,1286691
-DMARDs,yes,20993,133,20860,99.4,22008
-Dementia,no,1194753,9135,1185618,99.2,1304793
-Dementia,yes,3668,42,3626,98.9,3913
-"Psychosis, schizophrenia, or bipolar",no,1185093,8869,1176224,99.3,1293404
-"Psychosis, schizophrenia, or bipolar",yes,13328,315,13013,97.6,15295
-SSRI (last 12 months),no,1116178,8484,1107694,99.2,1222501
-SSRI (last 12 months),yes,82243,693,81550,99.2,86198
-Chemo or radiotherapy,no,1180298,9072,1171226,99.2,1289785
-Chemo or radiotherapy,yes,18123,112,18011,99.4,18914
-Cancer (lung),no,1197063,9170,1187893,99.2,1307236
-Cancer (lung),yes,1358,14,1344,99.0,1470
-Cancer (excluding lung/haem),no,1125061,8750,1116311,99.2,1231629
-Cancer (excluding lung/haem),yes,73360,434,72926,99.4,77070
-Cancer (haematological),no,1195068,9163,1185905,99.2,1305129
-Cancer (haematological),yes,3353,14,3339,99.6,3570
-Chronic kidney disease,no,1167047,8953,1158094,99.2,1275561
-Chronic kidney disease,yes,31374,224,31150,99.3,33138
-brand of first dose,Moderna,1127,112,1015,90.10000000000001,4004
-brand of first dose,Oxford-AZ,885696,6531,879165,99.3,885787
-brand of first dose,Pfizer,310499,2485,308014,99.2,319515
-brand of first dose,Unknown,1106,63,1043,94.3,1134
+Category,Group,Second Doses due at 09 Feb 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,1200731,9569,1191162,99.2,1310239
+Sex,F,605486,4872,600614,99.2,653674
+Sex,M,595238,4697,590541,99.2,656551
+Ethnicity (broad categories),Black,14931,399,14532,97.3,20741
+Ethnicity (broad categories),Mixed,6804,126,6678,98.1,8491
+Ethnicity (broad categories),Other,13426,217,13209,98.4,17654
+Ethnicity (broad categories),South Asian,47761,714,47047,98.5,54873
+Ethnicity (broad categories),Unknown,93310,861,92449,99.1,114016
+Ethnicity (broad categories),White,1024492,7252,1017240,99.3,1094450
+ethnicity 16 groups, African,5950,154,5796,97.39999999999999,8029
+ethnicity 16 groups, Bangladeshi or British Bangladeshi,2128,35,2093,98.4,2408
+ethnicity 16 groups, Caribbean,5551,154,5397,97.2,8120
+ethnicity 16 groups, Chinese,4151,56,4095,98.7,5341
+ethnicity 16 groups, Other,9282,161,9121,98.3,12320
+ethnicity 16 groups, Other Asian,10157,126,10031,98.8,11907
+ethnicity 16 groups,British or Mixed British,962794,6307,956487,99.3,1014153
+ethnicity 16 groups,Indian or British Indian,24542,308,24234,98.7,27587
+ethnicity 16 groups,Irish,6181,70,6111,98.9,6902
+ethnicity 16 groups,Other Black,3423,77,3346,97.8,4592
+ethnicity 16 groups,Other White,55510,875,54635,98.4,73395
+ethnicity 16 groups,Other mixed,2576,35,2541,98.6,3241
+ethnicity 16 groups,Pakistani or British Pakistani,10941,259,10682,97.6,12971
+ethnicity 16 groups,Unknown,93310,861,92449,99.1,114009
+ethnicity 16 groups,White + Asian,1379,7,1372,99.5,1575
+ethnicity 16 groups,White + Black African,1253,28,1225,97.8,1589
+ethnicity 16 groups,White + Black Caribbean,1596,56,1540,96.5,2086
+Index of Multiple Deprivation (quintiles),1 Most deprived,175273,2443,172830,98.6,201852
+Index of Multiple Deprivation (quintiles),2,213164,2037,211127,99.0,237090
+Index of Multiple Deprivation (quintiles),3,262885,1862,261023,99.3,285404
+Index of Multiple Deprivation (quintiles),4,267050,1652,265398,99.4,286321
+Index of Multiple Deprivation (quintiles),5 Least deprived,255913,1253,254660,99.5,270200
+Index of Multiple Deprivation (quintiles),Unknown,26439,322,26117,98.8,29365
+BMI,30+,304192,2016,302176,99.3,320712
+BMI,under 30,896532,7553,888979,99.2,989520
+Chronic cardiac disease,no,1107057,8813,1098244,99.2,1210650
+Chronic cardiac disease,yes,93667,756,92911,99.2,99575
+Current COPD,no,1166620,9128,1157492,99.2,1273762
+Current COPD,yes,34104,441,33663,98.7,36470
+DMARDs,no,1179626,9429,1170197,99.2,1288126
+DMARDs,yes,21098,140,20958,99.3,22106
+Dementia,no,1197021,9520,1187501,99.2,1306291
+Dementia,yes,3703,49,3654,98.7,3941
+"Psychosis, schizophrenia, or bipolar",no,1187375,9261,1178114,99.2,1294930
+"Psychosis, schizophrenia, or bipolar",yes,13349,308,13041,97.7,15302
+SSRI (last 12 months),no,1118299,8855,1109444,99.2,1223866
+SSRI (last 12 months),yes,82425,714,81711,99.1,86359
+Chemo or radiotherapy,no,1182475,9450,1173025,99.2,1291199
+Chemo or radiotherapy,yes,18249,119,18130,99.3,19026
+Cancer (lung),no,1199331,9555,1189776,99.2,1308727
+Cancer (lung),yes,1393,14,1379,99.0,1505
+Cancer (excluding lung/haem),no,1126860,9093,1117767,99.2,1232693
+Cancer (excluding lung/haem),yes,73864,476,73388,99.4,77539
+Cancer (haematological),no,1197329,9555,1187774,99.2,1306613
+Cancer (haematological),yes,3395,14,3381,99.6,3619
+Chronic kidney disease,no,1169119,9331,1159788,99.2,1276863
+Chronic kidney disease,yes,31605,238,31367,99.2,33369
+brand of first dose,Moderna,1169,126,1043,89.2,4004
+brand of first dose,Oxford-AZ,886550,6384,880166,99.3,886627
+brand of first dose,Pfizer,311899,3003,308896,99.0,320271
+brand of first dose,Unknown,1113,63,1050,94.3,1141

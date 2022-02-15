@@ -1,37 +1,37 @@
-Category,Group,Second Doses due at 26 Jan 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,2350061,89705,2260356,96.2,3393124
-Sex,F,1209936,39074,1170862,96.8,1641661
-Sex,M,1140055,50631,1089424,95.6,1751365
-Ethnicity (broad categories),Black,50260,3269,46991,93.5,99981
-Ethnicity (broad categories),Mixed,36316,1827,34489,95.0,63602
-Ethnicity (broad categories),Other,67368,3101,64267,95.39999999999999,125146
-Ethnicity (broad categories),South Asian,228893,9891,219002,95.7,347466
-Ethnicity (broad categories),Unknown,193011,7819,185192,95.89999999999999,318465
-Ethnicity (broad categories),White,1774143,63798,1710345,96.39999999999999,2438359
-ethnicity 16 groups, African,34174,2114,32060,93.8,62762
-ethnicity 16 groups, Bangladeshi or British Bangladeshi,16149,686,15463,95.8,22890
-ethnicity 16 groups, Caribbean,5943,441,5502,92.60000000000001,16219
-ethnicity 16 groups, Chinese,16415,371,16044,97.7,32186
-ethnicity 16 groups, Other,50967,2730,48237,94.6,92988
-ethnicity 16 groups, Other Asian,50666,2191,48475,95.7,79114
-ethnicity 16 groups,British or Mixed British,1522549,53228,1469321,96.5,1907332
-ethnicity 16 groups,Indian or British Indian,99015,3038,95977,96.89999999999999,148400
-ethnicity 16 groups,Irish,10500,385,10115,96.3,16933
-ethnicity 16 groups,Other Black,10136,714,9422,93.0,21000
-ethnicity 16 groups,Other White,241059,10178,230881,95.8,514024
-ethnicity 16 groups,Other mixed,14728,679,14049,95.39999999999999,25977
-ethnicity 16 groups,Pakistani or British Pakistani,63056,3983,59073,93.7,97055
-ethnicity 16 groups,Unknown,193039,7826,185213,95.89999999999999,318493
-ethnicity 16 groups,White + Asian,8288,350,7938,95.8,12299
-ethnicity 16 groups,White + Black African,6426,329,6097,94.89999999999999,11200
-ethnicity 16 groups,White + Black Caribbean,6888,476,6412,93.10000000000001,14147
-Index of Multiple Deprivation (quintiles),1 Most deprived,454608,28322,426286,93.8,759962
-Index of Multiple Deprivation (quintiles),2,475566,20874,454692,95.6,728833
-Index of Multiple Deprivation (quintiles),3,486073,16506,469567,96.6,691397
-Index of Multiple Deprivation (quintiles),4,446502,12474,434028,97.2,597016
-Index of Multiple Deprivation (quintiles),5 Least deprived,383810,8365,375445,97.8,483007
-Index of Multiple Deprivation (quintiles),Unknown,103432,3164,100268,96.89999999999999,132811
-brand of first dose,Moderna,140280,6881,133399,95.1,157339
-brand of first dose,Oxford-AZ,547435,14819,532616,97.3,547743
-brand of first dose,Pfizer,1659623,67543,1592080,95.89999999999999,1749552
-brand of first dose,Unknown,2653,469,2184,82.3,2751
+Category,Group,Second Doses due at 09 Feb 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,2363788,89586,2274202,96.2,3397933
+Sex,F,1217391,39144,1178247,96.8,1643579
+Sex,M,1146320,50435,1095885,95.6,1754256
+Ethnicity (broad categories),Black,51268,3346,47922,93.5,100457
+Ethnicity (broad categories),Mixed,36701,1848,34853,95.0,63784
+Ethnicity (broad categories),Other,68033,3150,64883,95.39999999999999,125496
+Ethnicity (broad categories),South Asian,231189,9912,221277,95.7,348544
+Ethnicity (broad categories),Unknown,191982,7721,184261,96.0,316141
+Ethnicity (broad categories),White,1784545,63609,1720936,96.39999999999999,2443413
+ethnicity 16 groups, African,34853,2149,32704,93.8,63091
+ethnicity 16 groups, Bangladeshi or British Bangladeshi,16275,672,15603,95.89999999999999,22932
+ethnicity 16 groups, Caribbean,6055,462,5593,92.4,16233
+ethnicity 16 groups, Chinese,16548,392,16156,97.6,32249
+ethnicity 16 groups, Other,51485,2772,48713,94.6,93247
+ethnicity 16 groups, Other Asian,51156,2212,48944,95.7,79394
+ethnicity 16 groups,British or Mixed British,1530795,52962,1477833,96.5,1912120
+ethnicity 16 groups,Indian or British Indian,99694,3038,96656,97.0,148932
+ethnicity 16 groups,Irish,10542,392,10150,96.3,16926
+ethnicity 16 groups,Other Black,10367,742,9625,92.80000000000001,21140
+ethnicity 16 groups,Other White,243201,10241,232960,95.8,514346
+ethnicity 16 groups,Other mixed,14861,686,14175,95.39999999999999,26026
+ethnicity 16 groups,Pakistani or British Pakistani,64064,3983,60081,93.8,97286
+ethnicity 16 groups,Unknown,191982,7721,184261,96.0,316141
+ethnicity 16 groups,White + Asian,8323,350,7973,95.8,12327
+ethnicity 16 groups,White + Black African,6531,329,6202,95.0,11249
+ethnicity 16 groups,White + Black Caribbean,6986,490,6496,93.0,14196
+Index of Multiple Deprivation (quintiles),1 Most deprived,457618,28168,429450,93.8,760270
+Index of Multiple Deprivation (quintiles),2,478443,20776,457667,95.7,729736
+Index of Multiple Deprivation (quintiles),3,488439,16506,471933,96.6,692132
+Index of Multiple Deprivation (quintiles),4,448749,12509,436240,97.2,597660
+Index of Multiple Deprivation (quintiles),5 Least deprived,385833,8435,377398,97.8,484071
+Index of Multiple Deprivation (quintiles),Unknown,104629,3185,101444,97.0,133966
+brand of first dose,Moderna,140819,6762,134057,95.19999999999999,157836
+brand of first dose,Oxford-AZ,547946,14343,533603,97.39999999999999,548205
+brand of first dose,Pfizer,1672195,67991,1604204,95.89999999999999,1757343
+brand of first dose,Unknown,2751,490,2261,82.19999999999999,2856
