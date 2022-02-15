@@ -5,7 +5,7 @@
 
 # OpenSAFELY is a new secure analytics platform for electronic patient records built on behalf of NHS England to deliver urgent academic and operational research during the pandemic. 
 # 
-# This is an extension of our [regular weekly report](https://reports.opensafely.org/reports/vaccine-coverage/) on COVID-19 vaccination coverage in England using data from 40% of general practices that use TPP electronic health record software. **The data requires careful interpretation and there are a number of caveats. Please read the full detail about our methods and discussion of our earlier results (as of 17 March 2021) in our paper available [here](https://doi.org/10.3399/BJGP.2021.0376).** 
+# This is an extension of our [regular weekly report](https://reports.opensafely.org/reports/vaccine-coverage/) on COVID-19 vaccination coverage in England using data from 40% of general practices that use TPP electronic health record software. **The data requires careful interpretation and there are a number of caveats. Please read the full detail about our methods and discussion of our earlier results (as of 17 March 2021) in our [peer-reviewed publication in the British Journal of General Practice](https://doi.org/10.3399/BJGP.2021.0376).** 
 # 
 # The full analytical methods behind the latest results in this report are available [here](https://github.com/opensafely/nhs-covid-vaccination-uptake).
 # 
@@ -78,12 +78,9 @@ for x in additional_stats.index[0:3]:
 # - [**55-59** population](#Cumulative-third-dose-vaccination-figures-among-55-59-population)
 # - [**50-54** population](#Cumulative-third-dose-vaccination-figures-among-50-54-population)
 # - [**40-49** population](#Cumulative-third-dose-vaccination-figures-among-40-49-population)
-# 
-# 
-# - [**All groups (Summary)**](#Summary))
-# 
-# 
-# 
+# - [**30-39** population](#Cumulative-third-dose-vaccination-figures-among-30-39-population)
+# - [**18-29** population](#Cumulative-third-dose-vaccination-figures-among-18-29-population)
+# - [**All groups (Summary)**](#Summary)
 # 
 
 # In[3]:
@@ -112,7 +109,7 @@ tablelist_2nd = find_and_sort_filenames("tables", by_demographics_or_population=
                                         )
 
 
-second_third_doses(tablelist, tablelist_2nd, cohorts=["80+", "70-79", "care home", "shielding (aged 16-69)", "65-69", "60-64", "55-59", "50-54", "LD (aged 16-64)", "40-49"], dose_type="Third", time_period=latest_date_3rdDUE_delay,
+second_third_doses(tablelist, tablelist_2nd, cohorts=["80+", "70-79", "care home", "shielding (aged 16-69)", "65-69", "60-64", "55-59", "50-54", "LD (aged 16-64)", "40-49", "30-39","18-29"], dose_type="Third", time_period=latest_date_3rdDUE_delay,
                    max_ylim=100,
                    latest_date_fmt=latest_date_fmt,
                    latest_date_fmt_2=latest_date_3rdDUE_fmt, 
