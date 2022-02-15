@@ -21,7 +21,7 @@ def create_output_dirs(subfolder=None):
     """
     # create /assign directories for exporting figures and tables
     savepath = {}
-    for filetype in ["tables", "figures", "text"]:
+    for filetype in ["tables", "figures", "text", "objects"]:
         if subfolder:
             savepath[filetype] = os.path.abspath(os.path.join("..", "interim-outputs", subfolder, filetype))
         else:
