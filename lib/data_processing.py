@@ -4,13 +4,14 @@
 import pandas as pd
 import numpy as np
 import os
+import re
 
 # Errors
 from errors import DataCleaningError
 
 
 
-def load_data(input_file='input_delivery.csv.gz', input_path="output"):
+def load_data(input_file='input_delivery.csv.gz', input_path="output", save_path={} ):
     """
     This reads in a csv that must be in output/ directory and cleans the
     data ready for use in the graphs and tables
@@ -137,9 +138,9 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
                     (df["LD"]==0) & (df["dementia"]==0), 1, 0))
 
     # Replace a region and STP with a value `0` with Unknown
-#     df = df.assign(
-#         region = df['region'].replace(0, "Unknown"),
-#         stp = df['stp'].replace(0, "Unknown"))
+    # df = df.assign(
+    #     region = df['region'].replace(0, "Unknown"),
+    #     stp = df['stp'].replace(0, "Unknown"))
 
     # Replace `I` or `U` for sex with `Other/Unknown`
     df = df.assign(
@@ -188,11 +189,21 @@ def load_data(input_file='input_delivery.csv.gz', input_path="output"):
 
 
     # get total population sizes and names for each STP
-    # stps = pd.read_csv(os.path.join("..","lib","stp_dict.csv"), usecols=["stp_id","name","list_size_o80"])
+    # stps = pd.read_csv(os.path.join("..","lib","stp_dict_total.csv"), usecols=["stp_id","name","total_list_size"])
     # df = df.merge(stps, left_on="stp", right_on="stp_id", how="left").rename(columns={"name":"stp_name"})
-    
+
+    # missing_stps = set(stps['name']).difference( set( df['stp_name'] ) )
+    # dummy_regex = re.compile(r'^Dummy STP \d+$')
+    # missing_stps_final = [ele for ele in missing_stps if not dummy_regex.match(ele)]
+
+    # if save_path:
+    #     with open(os.path.join(save_path["text"], f"Missing_STPs.txt"), "w") as text_file:
+    #         text_file.write(f"{len(missing_stps_final)} STPs are not represented in our dataset.")
+    #         for this_missing_stp in missing_stps_final:
+    #             text_file.write(f"\n- {this_missing_stp}")
+
     # drop additional columns
-    df = df.drop(['care_home', 'age'], 1)  
+    df = df.drop(['care_home', 'age'], 1)
 
     return df
 
