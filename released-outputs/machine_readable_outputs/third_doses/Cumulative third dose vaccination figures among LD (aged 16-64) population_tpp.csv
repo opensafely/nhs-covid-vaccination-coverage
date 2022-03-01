@@ -1,19 +1,19 @@
-Category,Group,Third Doses due at 09 Feb 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,70133,11781,58352,83.2,85617
-Sex,F,27237,4200,23037,84.6,32347
-Sex,M,42896,7581,35315,82.3,53270
-Age band,16-17,2611,791,1820,69.69999999999999,4921
-Age band,18-29,24178,5334,18844,77.9,30961
-Age band,30-34,9114,1596,7518,82.5,11165
-Age band,35-39,6846,994,5852,85.5,8085
-Age band,40-44,5516,672,4844,87.8,6314
-Age band,45-49,5411,644,4767,88.1,6097
-Age band,50-54,5950,651,5299,89.1,6566
-Age band,55-59,5943,609,5334,89.8,6545
-Age band,60-64,4571,490,4081,89.3,4963
-Ethnicity (broad categories),Black,833,273,560,67.2,1456
-Ethnicity (broad categories),Mixed,784,203,581,74.1,1190
-Ethnicity (broad categories),Other,546,140,406,74.4,784
-Ethnicity (broad categories),South Asian,3514,1246,2268,64.5,4984
-Ethnicity (broad categories),Unknown,4557,805,3752,82.3,5614
-Ethnicity (broad categories),White,59899,9114,50785,84.8,71589
+Category,Group,Third Doses due at 16 Feb 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,70210,11620,58590,83.39999999999999,85561
+Sex,F,27272,4130,23142,84.89999999999999,32340
+Sex,M,42931,7483,35448,82.6,53221
+Age band,16-17,2632,791,1841,69.89999999999999,4928
+Age band,18-29,24220,5278,18942,78.2,30954
+Age band,30-34,9114,1575,7539,82.69999999999999,11144
+Age band,35-39,6853,973,5880,85.8,8078
+Age band,40-44,5516,658,4858,88.1,6307
+Age band,45-49,5411,637,4774,88.2,6083
+Age band,50-54,5950,630,5320,89.4,6566
+Age band,55-59,5936,595,5341,90.0,6538
+Age band,60-64,4571,476,4095,89.60000000000001,4956
+Ethnicity (broad categories),Black,833,266,567,68.10000000000001,1449
+Ethnicity (broad categories),Mixed,784,203,581,74.1,1183
+Ethnicity (broad categories),Other,546,133,413,75.6,784
+Ethnicity (broad categories),South Asian,3528,1239,2289,64.9,4977
+Ethnicity (broad categories),Unknown,4529,784,3745,82.69999999999999,5579
+Ethnicity (broad categories),White,59976,8974,51002,85.0,71575
