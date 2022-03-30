@@ -1,19 +1,19 @@
-Category,Group,Vaccinated at 16 Feb 2022 (n),Vaccinated at 16 Feb 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,75894,88.7,85561,88.7,0.0
-Sex,F,29239,90.4,32340,90.3,0.1
-Sex,M,46648,87.6,53221,87.6,0.0
-Age band,16-17,3801,77.1,4928,77.0,0.1
-Age band,18-29,26488,85.6,30954,85.5,0.1
-Age band,30-34,9772,87.7,11144,87.6,0.1
-Age band,35-39,7301,90.4,8078,90.3,0.1
-Age band,40-44,5817,92.2,6307,92.1,0.1
-Age band,45-49,5670,93.2,6083,93.2,0.0
-Age band,50-54,6174,94.0,6566,94.0,0.0
-Age band,55-59,6153,94.1,6538,94.1,0.0
-Age band,60-64,4718,95.2,4956,95.2,0.0
-Ethnicity (broad categories),Black,987,68.1,1449,68.1,0.0
-Ethnicity (broad categories),Mixed,896,75.7,1183,75.7,0.0
-Ethnicity (broad categories),Other,616,78.6,784,78.6,0.0
-Ethnicity (broad categories),South Asian,4123,82.8,4977,82.7,0.1
-Ethnicity (broad categories),Unknown,4872,87.3,5579,87.2,0.1
-Ethnicity (broad categories),White,64393,90.0,71575,89.9,0.1
+Category,Group,Vaccinated at 23 Mar 2022 (n),Vaccinated at 23 Mar 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,76223,88.8,85883,88.7,0.1
+Sex,F,29337,90.5,32431,90.4,0.1
+Sex,M,46879,87.7,53452,87.7,0.0
+Age band,16-17,3885,77.7,4998,77.6,0.1
+Age band,18-29,26628,85.6,31108,85.6,0.0
+Age band,30-34,9814,87.8,11179,87.7,0.1
+Age band,35-39,7315,90.3,8099,90.3,0.0
+Age band,40-44,5817,92.2,6307,92.2,0.0
+Age band,45-49,5677,93.3,6083,93.3,0.0
+Age band,50-54,6181,94.0,6573,94.0,0.0
+Age band,55-59,6160,94.0,6552,94.0,0.0
+Age band,60-64,4739,95.1,4984,95.1,0.0
+Ethnicity (broad categories),Black,1001,68.1,1470,68.1,0.0
+Ethnicity (broad categories),Mixed,910,76.0,1197,76.0,0.0
+Ethnicity (broad categories),Other,630,78.9,798,78.9,0.0
+Ethnicity (broad categories),South Asian,4165,83.1,5012,83.0,0.1
+Ethnicity (broad categories),Unknown,4746,87.4,5432,87.4,0.0
+Ethnicity (broad categories),White,64771,90.0,71974,90.0,0.0

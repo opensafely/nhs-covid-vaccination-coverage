@@ -1,33 +1,33 @@
-Category,Group,Vaccinated at 16 Feb 2022 (n),Vaccinated at 16 Feb 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,2513462,71.1,3534006,71.0,0.1
-Sex,F,1284955,73.7,1744064,73.5,0.2
-Sex,M,1228290,68.6,1789648,68.5,0.1
-Ethnicity (broad categories),Black,54922,51.5,106617,51.2,0.3
-Ethnicity (broad categories),Mixed,47425,59.9,79170,59.7,0.2
-Ethnicity (broad categories),Other,75852,50.3,150871,50.0,0.3
-Ethnicity (broad categories),South Asian,219310,68.9,318332,68.6,0.3
-Ethnicity (broad categories),Unknown,354060,68.5,516677,68.4,0.1
-Ethnicity (broad categories),White,1761676,74.6,2362038,74.5,0.1
-ethnicity 16 groups, African,35329,55.0,64260,54.7,0.3
-ethnicity 16 groups, Bangladeshi or British Bangladeshi,17598,73.3,23996,73.2,0.1
-ethnicity 16 groups, Caribbean,6867,40.8,16821,40.7,0.1
-ethnicity 16 groups, Chinese,28371,45.5,62293,45.1,0.4
-ethnicity 16 groups, Other,47488,53.6,88578,53.4,0.2
-ethnicity 16 groups, Other Asian,48783,66.2,73654,66.0,0.2
-ethnicity 16 groups,British or Mixed British,1579830,80.1,1973391,79.9,0.2
-ethnicity 16 groups,Indian or British Indian,88613,73.2,121100,72.9,0.3
-ethnicity 16 groups,Irish,8351,63.0,13251,62.9,0.1
-ethnicity 16 groups,Other Black,12740,49.9,25550,49.6,0.3
-ethnicity 16 groups,Other White,173411,46.2,375354,46.1,0.1
-ethnicity 16 groups,Other mixed,17395,58.6,29701,58.4,0.2
-ethnicity 16 groups,Pakistani or British Pakistani,64288,64.6,99533,64.4,0.2
-ethnicity 16 groups,Unknown,354151,68.5,516775,68.4,0.1
-ethnicity 16 groups,White + Asian,12208,70.5,17311,70.3,0.2
-ethnicity 16 groups,White + Black African,7623,58.6,13013,58.4,0.2
-ethnicity 16 groups,White + Black Caribbean,10199,53.3,19131,53.2,0.1
-Index of Multiple Deprivation (quintiles),1 Most deprived,489139,61.1,800933,60.9,0.2
-Index of Multiple Deprivation (quintiles),2,516733,67.9,760599,67.8,0.1
-Index of Multiple Deprivation (quintiles),3,522179,73.0,715141,72.9,0.1
-Index of Multiple Deprivation (quintiles),4,474068,76.8,617351,76.7,0.1
-Index of Multiple Deprivation (quintiles),5 Least deprived,415310,80.9,513646,80.7,0.2
-Index of Multiple Deprivation (quintiles),Unknown,95823,76.0,126035,75.9,0.1
+Category,Group,Vaccinated at 23 Mar 2022 (n),Vaccinated at 23 Mar 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,2530808,71.4,3544387,71.3,0.1
+Sex,F,1293544,74.0,1748691,73.9,0.1
+Sex,M,1237047,68.9,1795402,68.8,0.1
+Ethnicity (broad categories),Black,56077,51.9,108031,51.8,0.1
+Ethnicity (broad categories),Mixed,48195,60.3,79961,60.2,0.1
+Ethnicity (broad categories),Other,78204,51.5,151935,51.3,0.2
+Ethnicity (broad categories),South Asian,223279,69.0,323659,68.8,0.2
+Ethnicity (broad categories),Unknown,350210,69.1,506548,69.1,0.0
+Ethnicity (broad categories),White,1774619,74.8,2373959,74.7,0.1
+ethnicity 16 groups, African,35966,55.2,65212,55.0,0.2
+ethnicity 16 groups, Bangladeshi or British Bangladeshi,17850,73.0,24444,72.8,0.2
+ethnicity 16 groups, Caribbean,7007,41.6,16842,41.5,0.1
+ethnicity 16 groups, Chinese,29792,47.8,62342,47.5,0.3
+ethnicity 16 groups, Other,48440,54.0,89621,53.9,0.1
+ethnicity 16 groups, Other Asian,49693,66.6,74620,66.4,0.2
+ethnicity 16 groups,British or Mixed British,1590918,80.2,1983541,80.1,0.1
+ethnicity 16 groups,Indian or British Indian,90055,72.5,124152,72.3,0.2
+ethnicity 16 groups,Irish,8456,63.0,13412,63.0,0.0
+ethnicity 16 groups,Other Black,13090,50.4,25949,50.3,0.1
+ethnicity 16 groups,Other White,175238,46.5,377034,46.4,0.1
+ethnicity 16 groups,Other mixed,17689,59.0,29981,58.9,0.1
+ethnicity 16 groups,Pakistani or British Pakistani,65702,65.4,100450,65.3,0.1
+ethnicity 16 groups,Unknown,350168,69.1,506485,69.1,0.0
+ethnicity 16 groups,White + Asian,12390,70.7,17514,70.7,0.0
+ethnicity 16 groups,White + Black African,7756,58.7,13202,58.6,0.1
+ethnicity 16 groups,White + Black Caribbean,10374,53.8,19299,53.6,0.2
+Index of Multiple Deprivation (quintiles),1 Most deprived,492940,61.4,802984,61.3,0.1
+Index of Multiple Deprivation (quintiles),2,520772,68.2,763336,68.1,0.1
+Index of Multiple Deprivation (quintiles),3,525700,73.3,717297,73.2,0.1
+Index of Multiple Deprivation (quintiles),4,476658,77.1,618149,77.0,0.1
+Index of Multiple Deprivation (quintiles),5 Least deprived,416612,81.1,513905,81.0,0.1
+Index of Multiple Deprivation (quintiles),Unknown,97902,76.2,128422,76.1,0.1
