@@ -1,22 +1,22 @@
-Category,Group,Second Doses due at 16 Feb 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,104748,2485,102263,97.6,109501
-Sex,F,73528,1701,71827,97.7,76657
-Sex,M,31213,784,30429,97.5,32837
-Age band,65-69,5873,147,5726,97.5,6300
-Age band,70-74,9324,224,9100,97.6,9891
-Age band,75-79,13307,322,12985,97.6,14007
-Age band,80-84,19082,490,18592,97.39999999999999,19901
-Age band,85-89,24920,637,24283,97.39999999999999,25970
-Age band,90+,32235,665,31570,97.89999999999999,33432
-Ethnicity (broad categories),Black,623,28,595,95.5,735
-Ethnicity (broad categories),Mixed,322,0,322,100.0,350
-Ethnicity (broad categories),Other,490,14,476,97.1,518
-Ethnicity (broad categories),South Asian,952,35,917,96.3,1036
-Ethnicity (broad categories),Unknown,1988,49,1939,97.5,2149
-Ethnicity (broad categories),White,100359,2345,98014,97.7,104706
-Dementia,no,47705,1148,46557,97.6,50540
-Dementia,yes,57036,1337,55699,97.7,58961
-brand of first dose,Moderna,35,21,14,40.0,140
-brand of first dose,Oxford-AZ,72079,567,71512,99.2,72086
-brand of first dose,Pfizer,32480,1890,30590,94.19999999999999,33579
-brand of first dose,Unknown,147,0,147,100.0,147
+Category,Group,Second Doses due at 23 Mar 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,107163,3017,104146,97.2,111860
+Sex,F,75061,2065,72996,97.2,78106
+Sex,M,32102,952,31150,97.0,33754
+Age band,65-69,6027,182,5845,97.0,6440
+Age band,70-74,9583,273,9310,97.2,10157
+Age band,75-79,13727,385,13342,97.2,14441
+Age band,80-84,19663,595,19068,97.0,20475
+Age band,85-89,25655,784,24871,96.89999999999999,26677
+Age band,90+,32515,812,31703,97.5,33663
+Ethnicity (broad categories),Black,651,35,616,94.6,756
+Ethnicity (broad categories),Mixed,329,7,322,97.89999999999999,357
+Ethnicity (broad categories),Other,511,14,497,97.3,539
+Ethnicity (broad categories),South Asian,994,49,945,95.1,1071
+Ethnicity (broad categories),Unknown,1988,63,1925,96.8,2212
+Ethnicity (broad categories),White,102697,2856,99841,97.2,106932
+Dementia,no,48825,1407,47418,97.1,51583
+Dementia,yes,58338,1617,56721,97.2,60270
+brand of first dose,Moderna,91,77,14,15.4,154
+brand of first dose,Oxford-AZ,72408,539,71869,99.3,72415
+brand of first dose,Pfizer,34496,2401,32095,93.0,35063
+brand of first dose,Unknown,168,7,161,95.8,168
