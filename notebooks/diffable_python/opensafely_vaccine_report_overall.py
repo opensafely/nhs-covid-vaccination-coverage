@@ -11,7 +11,7 @@
 # 
 # **Update: As of 17th January 2022, our vaccine reports will be published fortnightly.  If you rely on weekly data updates for your own reporting or analysis please contact team@opensafely.org to let us know.**
 
-# In[1]:
+# In[ ]:
 
 
 from datetime import datetime
@@ -70,11 +70,10 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 # - Appendix: <a href=#ethnicity>Proportion of each population group for whom ethnicity is known</a>
 # 
 
-# # 
-# ## Overview of Vaccination Figures to date <a name='summary' />
 # 
+# ## Overview of Vaccination Figures to date <a name='summary' />
 
-# In[2]:
+# In[ ]:
 
 
 import json
@@ -125,7 +124,7 @@ for x in additional_stats.index[7:]:
 # 
 # ## Summary Charts <a name='summarychart' />
 
-# In[3]:
+# In[ ]:
 
 
 import sys
@@ -144,7 +143,7 @@ show_chart(f"Cumulative first dose vaccination figures by priority group.{IMAGE_
 # ## Trends in vaccination rates of **80+** population according to demographic/clinical features, cumulatively by day. <a name='charts80' />
 # **\*_Latest overall cohort rate_ calculated as at latest date for vaccinations recorded across all TPP practices.**
 
-# In[4]:
+# In[ ]:
 
 
 chartlist = find_and_sort_filenames(foldername="figures", file_extension=IMAGE_FORMAT.extension)
@@ -159,7 +158,7 @@ for item in chartlist:
 # **\*National rate calculated as at latest date for vaccinations recorded across all TPP practices.**
 #     
 
-# In[5]:
+# In[ ]:
 
 
 display(Markdown("## 70-79 population"))
@@ -174,7 +173,7 @@ for item in chartlist2:
 # **\*National rate calculated as at latest date for vaccinations recorded across all TPP practices.**
 # 
 
-# In[6]:
+# In[ ]:
 
 
 display(Markdown("## Shielding population (aged 16-69)"))
@@ -188,7 +187,7 @@ for item in chartlist2:
 # ## Trends in vaccination rates of 65-69 population according to demographic/clinical features, cumulatively by day. <a name='charts65' />
 # **\*National rate calculated as at latest date for vaccinations recorded across all TPP practices.**
 
-# In[7]:
+# In[ ]:
 
 
 display(Markdown("## 65-69 population"))
@@ -203,7 +202,7 @@ for item in chartlist2:
 # **\*National rate calculated as at latest date for vaccinations recorded across all TPP practices.**
 # 
 
-# In[8]:
+# In[ ]:
 
 
 display(Markdown("## 60-64 population"))
@@ -217,7 +216,7 @@ for item in chartlist2:
 # ## Trends in vaccination rates of 55-59 population according to demographic/clinical features, cumulatively by day. <a name='charts55' />
 # **\*National rate calculated as at latest date for vaccinations recorded across all TPP practices.**
 
-# In[9]:
+# In[ ]:
 
 
 display(Markdown("## 55-59 population"))
@@ -233,7 +232,7 @@ for item in chartlist2:
 # 
 # +
 
-# In[10]:
+# In[ ]:
 
 
 display(Markdown("## 50-54 population"))
@@ -247,7 +246,7 @@ for item in chartlist2:
 # ## Trends in vaccination rates of 40-49 population according to demographic/clinical features, cumulatively by day. <a name='charts40' />
 # **\*National rate calculated as at latest date for vaccinations recorded across all TPP practices.**
 
-# In[11]:
+# In[ ]:
 
 
 display(Markdown("## 40-49 population"))
@@ -274,7 +273,7 @@ for item in chartlist2:
 #   - <a href=#Cumulative-vaccination-figures-among-16-17-population>16-17</a>  population
 # <br>
 
-# In[12]:
+# In[ ]:
 
 
 tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population", 
@@ -284,14 +283,23 @@ tablelist = find_and_sort_filenames("tables", by_demographics_or_population="pop
     
 for filename in tablelist:
     df, title = import_table(filename, latest_date_fmt, show_carehomes=True, suffix=suffix)
-    show_table(df, title, latest_date_fmt, show_carehomes=True)
+
+    ### Can't embed this in the f string below due to curly brackets
+    date_string = latest_date_fmt.replace(' 202\d{1}','')
+
+    column_list = [
+        f"Vaccinated at {date_string} (n)", 
+        f"Total eligible"
+    ]
+            
+    show_table(df, title, latest_date_fmt, count_columns=column_list, show_carehomes=True)
 
 
 # ### 
 # ## Appendix 
 # ### Ethnicity coverage for each eligible group <a name='ethnicity' />
 
-# In[13]:
+# In[ ]:
 
 
 from create_report import get_savepath
