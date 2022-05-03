@@ -3,6 +3,7 @@ import pandas as pd
 from IPython.display import display, Markdown
 from collections import OrderedDict
 from operator import itemgetter
+from os.path import exists
 
 
 # we create a dict for renaming population variables into suitable longer/correctly capitalised forms for presentation as titles
@@ -40,7 +41,7 @@ def get_savepath(subfolder=None):
     '''
     
     savepath = {}
-    for filetype in ["tables", "figures", "text"]:
+    for filetype in ["tables", "figures", "text", "objects"]:
         if subfolder:
             savepath[filetype] = os.path.abspath(os.path.join("..", "interim-outputs", subfolder, filetype))   
         else:
@@ -170,16 +171,18 @@ def show_chart(filepath, image_format, org_breakdown="", subfolder="", title="on
     else:
         imgpath = os.path.join(savepath["figures"], filepath)
     
-    if title == "on":
-        title_string = filepath
-        for v in variable_renaming: # replace short strings with full variable names
-            title_string = title_string.replace(v, f"{variable_renaming[v]}")
-        title_string = title_string.replace(" by","\n ### by").replace(f".{image_format.extension}", "")
-        display(Markdown(f"### {title_string}"))
-        if (len(subfolder)>0) & (~any(s in filepath for s in ["overall","sex","imd_categories"])):
-            display(Markdown(f"Zero percentages may represent suppressed low numbers; raw numbers were rounded to nearest 7"))
-           
-    display(image_format.formatter(filename=imgpath))
+    if exists(imgpath): 
+        if title == "on":
+            title_string = filepath
+
+            for v in variable_renaming: # replace short strings with full variable names
+                title_string = title_string.replace(v, f"{variable_renaming[v]}")
+            title_string = title_string.replace(" by","\n ### by").replace(f".{image_format.extension}", "")
+            display(Markdown(f"### {title_string}"))
+            if (len(subfolder)>0) & (~any(s in filepath for s in ["overall","sex","imd_categories"])):
+                display(Markdown(f"Zero percentages may represent suppressed low numbers; raw numbers were rounded to nearest 7"))
+            
+        display(image_format.formatter(filename=imgpath))
 
 
 def import_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=False, 
@@ -191,7 +194,7 @@ def import_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehome
     Inputs:
     filename (str): name of file
     latest_date_fmt (str): latest date of vaccination in dataset
-    org_breakdown (str)
+    org_breakdown (str): Type of org breakdown (e.g "stp"); also used for patient subsets (e.g., "u16")
     show_carehomes (bool): whether or not to show care homes table
     rows_to_exclude (list): list of variables to exlude from all tables
     export_csv (bool): whether or not to save table as csv
@@ -201,17 +204,20 @@ def import_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehome
     title (str): title to display with table
     '''
     savepath = get_savepath(org_breakdown)
-    
+
     # get table
     tab = pd.read_csv(os.path.join(savepath["tables"], filename))
+    
+    ### Can't embed this in the f string below due to curly brackets
+    date_string = latest_date_fmt.replace(' 202\d{1}','')
     
     # rename columns
     tab = tab.rename(columns={"category":"Category",
                               "group":"Group",
                               "stp_name":"STP Name",
                               "region":"Region",
-                              "vaccinated":f"Vaccinated at {latest_date_fmt.replace(' 2021','')} (n)",
-                              "percent":f"Vaccinated at {latest_date_fmt.replace(' 2021','')} (%)",
+                              "vaccinated":f"Vaccinated at {date_string} (n)",
+                              "percent":f"Vaccinated at {date_string} (%)",
                               "total": "Total eligible",
                               "vaccinated 7d previous (percent)":"Previous week's vaccination coverage (%)",
                               "vaccinated 7d previous":"Previous week's vaccination figure (n)",
@@ -219,6 +225,8 @@ def import_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehome
                               "Uptake over last 7d": "Vaccinated over last 7d (n)",
                               "Increase in uptake (%)": "Increase in coverage over last 7d (%)",
                               "proportion of 80+ population included (%)": "Proportion of 80+ population included (%)",
+                              "STP rate, to date (percent)": "STP rate, to date (% of due)",
+                              "STP rate, last 7d (percent)": "STP rate, last 7d (% of due)",
                               "[White - Black] abs difference": "White-Black ethncity: disparity in vaccination % (abs difference +/- range of uncertainty)", 
                               "[5 Least deprived - 1 Most deprived] abs difference": "Least deprived - Most deprived IMD quintile: disparity in vaccination % (abs difference +/- range of uncertainty)"})
     
@@ -257,15 +265,19 @@ def import_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehome
     
 
         
-def show_table(df, title, latest_date_fmt, *, org_breakdown=None, show_carehomes=False):
+def show_table(df, title, latest_date_fmt, *, count_columns=[], org_breakdown=None, show_carehomes=False, perc_only=False, stp_summary=False, stp_pop_coverage=False):
     '''
     Show table with specified filename. Rename row and column headers.
     
     Inputs:
     df: dataframe
     latest_date_fmt (str): latest date of vaccination in dataset
+    count_columns (list): a list of columns (str) to format with commas
     org_breakdown (str): e.g. "stp"
     show_carehomes (bool): whether or not we are showing care homes table
+    perc_only (bool): to indicate whether only percentages are being presented; if so, the footnote regarding rounding to 7 need not be displayed
+    stp_summary (bool): to indicate whether summarised STP data are being presented; if so, footnotes specific to non-summarised data will not be displayed
+    stp_pop_coverage (bool): to indicate whether STP population coverage data are being presented; if so, 
     
     Outputs:
     tab (dataframe): formatted table (preceded by title derived from filename & intro text)   
@@ -279,12 +291,27 @@ def show_table(df, title, latest_date_fmt, *, org_breakdown=None, show_carehomes
         title = title.replace("LD", "Learning Disabilities")
     display(Markdown(f"## \n ## {title} \n Please refer to footnotes below table for information."))
     
+    if org_breakdown == "stp":
+        if stp_pop_coverage:
+            display(Markdown("The percentage coverage of each STP population by TPP practices is shown below. \
+                The 'Adequate coverage' column indicates whether at least 10% of the STP population is available in TPP \
+                (the 10% threshold is an arbitrary cutoff)."))
+        else:
+            display(Markdown("Vaccination coverage is calculated as a percentage of those who are due their booster/third dose. \
+                              Note that STPs with less than 10% population coverage in TPP practices are not shown."))
+
+    tab_to_show = tab.copy()
+    for c in count_columns:
+        tab_to_show[c] = tab_to_show[c].apply('{:,}'.format)
+
     # display table
-    display(tab)
+    display(tab_to_show)
     
+    display(Markdown("**Footnotes:**\n"))
+
     # display footnotes
-    display(Markdown("**Footnotes:**\n"\
-                       f"- Patient counts rounded to the nearest 7"))
+    if ( not perc_only ):
+        display(Markdown(f"- Patient counts rounded to the nearest 7."))
     
     if ("second" in title.lower()):
         display(Markdown(f"- Only persons who are currently registered and had their first dose at least 14 weeks ago are included in the 'due' group."))
@@ -303,12 +330,13 @@ def show_table(df, title, latest_date_fmt, *, org_breakdown=None, show_carehomes
     
     # display footnotes related to STPs   
     if org_breakdown=="stp":
-        display(Markdown("- The percentage coverage of each STP population by TPP practices for over 80s is displayed, and STPs with less than 10% coverage are not shown.\n"\
-                         "- The subset of the population covered by TPP in each STP may not be representative of the whole STP. \n"\
-                         "- Practice-STP mappings and total 80+ population used to calculate the coverage are as of March 2020 and some borders and population sizes may have changed. \n"\
-                         "- “Disparity in vaccination” figures may be subject to large variation caused by rounding of small numbers - an indication of the possible range of values is therefore shown; the specific groups compared are those with most disparity on a national level but may not represent the biggest disparity present within each STP. "
-                          "- 'Date projected to reach 90%' is an estimate based on the previous 7 days' uptake; being 'unknown' indicates projection of >6mo (likely insufficient information)"))
-    
+        display(Markdown("- The subset of the population covered by TPP in each STP may not be representative of the whole STP."))
+        display(Markdown("- Practice-STP mappings used to calculate the coverage are as of March 2020 and some borders and population sizes may have changed."))
+
+        if not stp_summary:
+            display(Markdown("- “Disparity in vaccination” figures may be subject to large variation caused by rounding of small numbers - an indication of the possible range of values is therefore shown; the specific groups compared are those with most disparity on a national level but may not represent the biggest disparity present within each STP."))
+            display(Markdown("- 'Date projected to reach 90%' is an estimate based on the previous 7 days' uptake; being 'unknown' indicates projection of >6mo (likely insufficient information)."))
+
     if variable_renaming["ssri"] in tab.index:
         display(Markdown("- SSRIs group excludes individuals with Psychosis/ schizophrenia/bipolar, LD, or Dementia."))
     

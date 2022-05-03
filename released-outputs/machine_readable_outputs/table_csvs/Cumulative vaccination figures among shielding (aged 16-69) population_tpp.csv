@@ -1,27 +1,27 @@
-Category,Group,Vaccinated at 23 Mar 2022 (n),Vaccinated at 23 Mar 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
-overall,overall,757505,92.2,821709,92.2,0.0
-newly shielded since feb 15,no,453334,93.9,483007,93.8,0.1
-newly shielded since feb 15,yes,304171,89.8,338709,89.8,0.0
-Sex,F,427259,92.1,463834,92.1,0.0
-Sex,M,330232,92.3,357861,92.3,0.0
-Age band,16-29,57078,85.4,66871,85.3,0.1
-Age band,30-39,110124,87.4,125937,87.4,0.0
-Age band,40-49,150724,91.2,165179,91.2,0.0
-Age band,50-59,213871,93.8,228123,93.7,0.1
-Age band,60-69,225694,95.8,235585,95.8,0.0
-Ethnicity (broad categories),Black,35721,80.2,44562,80.1,0.1
-Ethnicity (broad categories),Mixed,11844,82.7,14315,82.7,0.0
-Ethnicity (broad categories),Other,15323,85.1,18011,85.1,0.0
-Ethnicity (broad categories),South Asian,98644,91.6,107730,91.5,0.1
-Ethnicity (broad categories),Unknown,20524,88.7,23135,88.7,0.0
-Ethnicity (broad categories),White,575428,93.7,613942,93.7,0.0
-Index of Multiple Deprivation (quintiles),1 Most deprived,212891,89.1,238938,89.1,0.0
-Index of Multiple Deprivation (quintiles),2,169204,91.6,184716,91.6,0.0
-Index of Multiple Deprivation (quintiles),3,145831,93.2,156457,93.2,0.0
-Index of Multiple Deprivation (quintiles),4,116676,94.7,123249,94.7,0.0
-Index of Multiple Deprivation (quintiles),5 Least deprived,92274,96.1,96012,96.1,0.0
-Index of Multiple Deprivation (quintiles),Unknown,20615,92.4,22316,92.4,0.0
-Learning disability,no,732046,92.1,794780,92.1,0.0
-Learning disability,yes,25445,94.5,26915,94.5,0.0
-Chronic kidney disease,no,703094,92.0,764316,92.0,0.0
-Chronic kidney disease,yes,54397,94.8,57386,94.8,0.0
+Category,Group,Vaccinated at 20 Apr 2022 (n),Vaccinated at 20 Apr 2022 (%),Total eligible,Previous week's vaccination coverage (%),Vaccinated over last 7d (%)
+overall,overall,755958,92.2,819854,92.2,0.0
+newly shielded since feb 15,no,452123,93.9,481684,93.9,0.0
+newly shielded since feb 15,yes,303835,89.8,338170,89.8,0.0
+Sex,F,426587,92.1,463022,92.1,0.0
+Sex,M,329357,92.3,356818,92.3,0.0
+Age band,16-29,57078,85.4,66808,85.4,0.0
+Age band,30-39,110033,87.5,125811,87.4,0.1
+Age band,40-49,150577,91.3,164955,91.3,0.0
+Age band,50-59,213423,93.8,227591,93.8,0.0
+Age band,60-69,224833,95.8,234661,95.8,0.0
+Ethnicity (broad categories),Black,35714,80.2,44534,80.2,0.0
+Ethnicity (broad categories),Mixed,11830,82.8,14280,82.8,0.0
+Ethnicity (broad categories),Other,15330,85.2,17983,85.2,0.0
+Ethnicity (broad categories),South Asian,98616,91.6,107611,91.6,0.0
+Ethnicity (broad categories),Unknown,19880,88.8,22386,88.8,0.0
+Ethnicity (broad categories),White,574560,93.7,613046,93.7,0.0
+Index of Multiple Deprivation (quintiles),1 Most deprived,212380,89.1,238245,89.1,0.0
+Index of Multiple Deprivation (quintiles),2,168735,91.6,184170,91.6,0.0
+Index of Multiple Deprivation (quintiles),3,145537,93.2,156135,93.2,0.0
+Index of Multiple Deprivation (quintiles),4,116473,94.7,123032,94.7,0.0
+Index of Multiple Deprivation (quintiles),5 Least deprived,92092,96.1,95830,96.1,0.0
+Index of Multiple Deprivation (quintiles),Unknown,20727,92.4,22421,92.4,0.0
+Learning disability,no,730506,92.1,792932,92.1,0.0
+Learning disability,yes,25438,94.6,26901,94.5,0.1
+Chronic kidney disease,no,701470,92.0,762377,92.0,0.0
+Chronic kidney disease,yes,54467,94.8,57463,94.8,0.0

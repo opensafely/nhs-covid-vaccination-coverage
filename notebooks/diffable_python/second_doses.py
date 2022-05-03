@@ -64,6 +64,7 @@ display(Markdown(
 # - [**40-49** population](#Cumulative-second-dose-vaccination-figures-among-40-49-population)
 # - [**30-39** population](#Cumulative-second-dose-vaccination-figures-among-30-39-population)
 # - [**18-29** population](#Cumulative-second-dose-vaccination-figures-among-18-29-population)
+# - [**16-17** population](#Cumulative-second-dose-vaccination-figures-among-16-17-population)
 # 
 # [**SUMMARY**](#Summary)
 # 
@@ -82,14 +83,14 @@ with open('../lib/group_definitions.txt') as f:
 tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population", 
                                     pre_string="among ", tail_string=" population.csv",
                                     population_subset="Cumulative first dose 14w ago",
-                                    files_to_exclude=["Cumulative first dose 14w ago vaccination figures among 16-17 population.csv"],
+                                    # files_to_exclude=["Cumulative first dose 14w ago vaccination figures among 16-17 population.csv"],
                                     )
     
 # get 2nd dose figures for each group
 tablelist_2nd = find_and_sort_filenames("tables", by_demographics_or_population="population", 
                                         pre_string="among ", tail_string=" population.csv",
                                         population_subset="Cumulative second dose vaccination",
-                                        files_to_exclude=["Cumulative second dose vaccination figures among 16-17 population.csv"],
+                                        # files_to_exclude=["Cumulative second dose vaccination figures among 16-17 population.csv"],
                                         )
 
 
