@@ -1,33 +1,33 @@
-Category,Group,Third Doses due at 20 Apr 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,2186149,872088,1314061,60.099999999999994,3548622
-Sex,F,1123948,414470,709478,63.1,1750112
-Sex,M,1062019,457555,604464,56.89999999999999,1798216
-Ethnicity (broad categories),Black,39949,26404,13545,33.900000000000006,109004
-Ethnicity (broad categories),Mixed,38983,17941,21042,54.0,80479
-Ethnicity (broad categories),Other,58394,25900,32494,55.60000000000001,152572
-Ethnicity (broad categories),South Asian,179753,94262,85491,47.599999999999994,326963
-Ethnicity (broad categories),Unknown,303310,120757,182553,60.199999999999996,496580
-Ethnicity (broad categories),White,1565571,586754,978817,62.5,2382737
-ethnicity 16 groups, African,25515,17269,8246,32.300000000000004,65870
-ethnicity 16 groups, Bangladeshi or British Bangladeshi,14413,8218,6195,43.0,24703
-ethnicity 16 groups, Caribbean,5117,3122,1995,39.0,16856
-ethnicity 16 groups, Chinese,20006,6755,13251,66.2,62118
-ethnicity 16 groups, Other,38381,19152,19229,50.1,90426
-ethnicity 16 groups, Other Asian,39802,18585,21217,53.300000000000004,75201
-ethnicity 16 groups,British or Mixed British,1412180,513744,898436,63.6,1990800
-ethnicity 16 groups,Indian or British Indian,75292,33313,41979,55.800000000000004,125776
-ethnicity 16 groups,Irish,7161,2730,4431,61.9,13475
-ethnicity 16 groups,Other Black,9317,6013,3304,35.5,26271
-ethnicity 16 groups,Other White,146300,70280,76020,52.0,378581
-ethnicity 16 groups,Other mixed,14434,6545,7889,54.7,30219
-ethnicity 16 groups,Pakistani or British Pakistani,50239,34153,16086,32.0,101255
-ethnicity 16 groups,Unknown,303261,120750,182511,60.199999999999996,496517
-ethnicity 16 groups,White + Asian,10458,3892,6566,62.8,17626
-ethnicity 16 groups,White + Black African,5915,3325,2590,43.8,13293
-ethnicity 16 groups,White + Black Caribbean,8169,4165,4004,49.0,19355
-Index of Multiple Deprivation (quintiles),1 Most deprived,401289,208649,192640,48.0,804699
-Index of Multiple Deprivation (quintiles),2,441245,194082,247163,56.00000000000001,764106
-Index of Multiple Deprivation (quintiles),3,458311,174692,283619,61.9,717892
-Index of Multiple Deprivation (quintiles),4,422821,146265,276556,65.4,617967
-Index of Multiple Deprivation (quintiles),5 Least deprived,376936,117110,259826,68.89999999999999,513576
-Index of Multiple Deprivation (quintiles),Unknown,85365,31220,54145,63.4,130095
+Category,Group,Third Doses due at 11 May 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,2216116,872592,1343524,60.6,3553935
+Sex,F,1139229,414687,724542,63.6,1752149
+Sex,M,1076691,457835,618856,57.49999999999999,1801485
+Ethnicity (broad categories),Black,41734,27811,13923,33.4,109620
+Ethnicity (broad categories),Mixed,39844,18242,21602,54.2,80801
+Ethnicity (broad categories),Other,60375,26845,33530,55.50000000000001,152999
+Ethnicity (broad categories),South Asian,184674,97475,87199,47.199999999999996,329280
+Ethnicity (broad categories),Unknown,301196,117523,183673,61.0,488306
+Ethnicity (broad categories),White,1588090,584619,1003471,63.2,2392628
+Ethnicity (detailed categories), African,26642,18172,8470,31.8,66227
+Ethnicity (detailed categories), Bangladeshi or British Bangladeshi,14798,8498,6300,42.6,24871
+Ethnicity (detailed categories), Caribbean,5327,3269,2058,38.6,16905
+Ethnicity (detailed categories), Chinese,21021,7217,13804,65.7,61999
+Ethnicity (detailed categories), Other,39333,19628,19705,50.1,90958
+Ethnicity (detailed categories), Other Asian,40845,19096,21749,53.2,75705
+Ethnicity (detailed categories),British or Mixed British,1430954,510244,920710,64.3,1998710
+Ethnicity (detailed categories),Indian or British Indian,76650,33915,42735,55.800000000000004,126826
+Ethnicity (detailed categories),Irish,7259,2730,4529,62.4,13517
+Ethnicity (detailed categories),Other Black,9765,6370,3395,34.8,26474
+Ethnicity (detailed categories),Other White,149800,71631,78169,52.2,380338
+Ethnicity (detailed categories),Other mixed,14693,6622,8071,54.900000000000006,30282
+Ethnicity (detailed categories),Pakistani or British Pakistani,52381,35966,16415,31.3,101871
+Ethnicity (detailed categories),Unknown,301280,117551,183729,61.0,488397
+Ethnicity (detailed categories),White + Asian,10647,3927,6720,63.1,17710
+Ethnicity (detailed categories),White + Black African,6125,3444,2681,43.8,13384
+Ethnicity (detailed categories),White + Black Caribbean,8414,4256,4158,49.4,19460
+Index of Multiple Deprivation (quintiles),1 Most deprived,409192,211344,197848,48.4,805308
+Index of Multiple Deprivation (quintiles),2,447832,195062,252770,56.39999999999999,764533
+Index of Multiple Deprivation (quintiles),3,465101,174797,290304,62.4,720384
+Index of Multiple Deprivation (quintiles),4,426874,144760,282114,66.10000000000001,618156
+Index of Multiple Deprivation (quintiles),5 Least deprived,379561,115143,264418,69.69999999999999,513534
+Index of Multiple Deprivation (quintiles),Unknown,87360,31409,55951,64.0,131719
