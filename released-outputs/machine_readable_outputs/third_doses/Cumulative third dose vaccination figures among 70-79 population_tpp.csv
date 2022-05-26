@@ -1,63 +1,63 @@
-Category,Group,Third Doses due at 20 Apr 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,1992081,56091,1935990,97.2,2087960
-Sex,F,1047641,31255,1016386,97.0,1097446
-Sex,M,944426,24822,919604,97.39999999999999,990500
-Age band,70-74,1136450,35119,1101331,96.89999999999999,1196699
-Age band,75-79,855617,20965,834652,97.5,891254
-Ethnicity (broad categories),Black,11081,1659,9422,85.0,14910
-Ethnicity (broad categories),Mixed,5579,497,5082,91.10000000000001,6699
-Ethnicity (broad categories),Other,13244,1071,12173,91.9,16296
-Ethnicity (broad categories),South Asian,50232,5614,44618,88.8,57274
-Ethnicity (broad categories),Unknown,92120,3822,88298,95.89999999999999,106428
-Ethnicity (broad categories),White,1819811,43407,1776404,97.6,1886339
-ethnicity 16 groups, African,3759,672,3087,82.1,5383
-ethnicity 16 groups, Bangladeshi or British Bangladeshi,1610,329,1281,79.60000000000001,1932
-ethnicity 16 groups, Caribbean,5201,700,4501,86.5,6762
-ethnicity 16 groups, Chinese,3514,182,3332,94.8,4403
-ethnicity 16 groups, Other,9723,882,8841,90.9,11893
-ethnicity 16 groups, Other Asian,10094,910,9184,91.0,11767
-ethnicity 16 groups,British or Mixed British,1730890,39263,1691627,97.7,1786372
-ethnicity 16 groups,Indian or British Indian,28483,1862,26621,93.5,31458
-ethnicity 16 groups,Irish,14483,560,13923,96.1,15477
-ethnicity 16 groups,Other Black,2121,294,1827,86.1,2765
-ethnicity 16 groups,Other White,74466,3591,70875,95.19999999999999,84518
-ethnicity 16 groups,Other mixed,2289,189,2100,91.7,2674
-ethnicity 16 groups,Pakistani or British Pakistani,10038,2513,7525,75.0,12110
-ethnicity 16 groups,Unknown,92099,3829,88270,95.8,106407
-ethnicity 16 groups,White + Asian,1253,77,1176,93.89999999999999,1428
-ethnicity 16 groups,White + Black African,854,119,735,86.1,1099
-ethnicity 16 groups,White + Black Caribbean,1183,119,1064,89.9,1491
-Index of Multiple Deprivation (quintiles),1 Most deprived,250719,13839,236880,94.5,270032
-Index of Multiple Deprivation (quintiles),2,332038,11921,320117,96.39999999999999,351659
-Index of Multiple Deprivation (quintiles),3,445725,11298,434427,97.5,466193
-Index of Multiple Deprivation (quintiles),4,464534,9751,454783,97.89999999999999,483231
-Index of Multiple Deprivation (quintiles),5 Least deprived,459648,7840,451808,98.3,474446
-Index of Multiple Deprivation (quintiles),Unknown,39403,1442,37961,96.3,42392
-BMI,30+,500178,13818,486360,97.2,516152
-BMI,under 30,1491889,42266,1449623,97.2,1571794
-Housebound,no,1953343,53837,1899506,97.2,2046996
-Housebound,yes,38724,2247,36477,94.19999999999999,40950
-Chronic cardiac disease,no,1621473,44954,1576519,97.2,1704598
-Chronic cardiac disease,yes,370594,11130,359464,97.0,383348
-Current COPD,no,1800897,49455,1751442,97.3,1890385
-Current COPD,yes,191170,6629,184541,96.5,197561
-DMARDs,no,1919477,54404,1865073,97.2,2013550
-DMARDs,yes,72597,1680,70917,97.7,74396
-Dementia,no,1949031,53998,1895033,97.2,2043034
-Dementia,yes,43043,2086,40957,95.19999999999999,44912
-"Psychosis, schizophrenia, or bipolar",no,1973650,54936,1918714,97.2,2067772
-"Psychosis, schizophrenia, or bipolar",yes,18424,1148,17276,93.8,20174
-Learning disability,no,1989365,55867,1933498,97.2,2085076
-Learning disability,yes,2709,224,2485,91.7,2870
-SSRI (last 12 months),no,1889482,53060,1836422,97.2,1982638
-SSRI (last 12 months),yes,102585,3024,99561,97.1,105308
-Chemo or radiotherapy,no,1921094,54516,1866578,97.2,2015174
-Chemo or radiotherapy,yes,70973,1568,69405,97.8,72772
-Cancer (lung),no,1978732,55643,1923089,97.2,2074212
-Cancer (lung),yes,13335,434,12901,96.7,13734
-Cancer (excluding lung/haem),no,1698340,49693,1648647,97.1,1786022
-Cancer (excluding lung/haem),yes,293727,6391,287336,97.8,301924
-Cancer (haematological),no,1961043,55426,1905617,97.2,2056012
-Cancer (haematological),yes,31024,651,30373,97.89999999999999,31941
-Chronic kidney disease,no,1727481,48930,1678551,97.2,1815450
-Chronic kidney disease,yes,264593,7154,257439,97.3,272496
+Category,Group,Third Doses due at 11 May 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,1993019,53403,1939616,97.3,2088891
+Sex,F,1048488,29883,1018605,97.1,1098363
+Sex,M,944517,23520,920997,97.5,990521
+Age band,70-74,1137640,34342,1103298,97.0,1197931
+Age band,75-79,855365,19061,836304,97.8,890953
+Ethnicity (broad categories),Black,11109,1652,9457,85.1,14938
+Ethnicity (broad categories),Mixed,5586,483,5103,91.4,6699
+Ethnicity (broad categories),Other,13279,1043,12236,92.10000000000001,16338
+Ethnicity (broad categories),South Asian,50253,5572,44681,88.9,57267
+Ethnicity (broad categories),Unknown,89992,3668,86324,95.89999999999999,104104
+Ethnicity (broad categories),White,1822779,40964,1781815,97.8,1889531
+Ethnicity (detailed categories), African,3773,672,3101,82.19999999999999,5390
+Ethnicity (detailed categories), Bangladeshi or British Bangladeshi,1624,329,1295,79.7,1939
+Ethnicity (detailed categories), Caribbean,5194,686,4508,86.8,6755
+Ethnicity (detailed categories), Chinese,3535,182,3353,94.89999999999999,4431
+Ethnicity (detailed categories), Other,9737,868,8869,91.10000000000001,11893
+Ethnicity (detailed categories), Other Asian,10108,896,9212,91.10000000000001,11774
+Ethnicity (detailed categories),British or Mixed British,1732143,36946,1695197,97.89999999999999,1787765
+Ethnicity (detailed categories),Indian or British Indian,28455,1813,26642,93.60000000000001,31444
+Ethnicity (detailed categories),Irish,14504,525,13979,96.39999999999999,15498
+Ethnicity (detailed categories),Other Black,2142,294,1848,86.3,2793
+Ethnicity (detailed categories),Other White,76118,3493,72625,95.39999999999999,86247
+Ethnicity (detailed categories),Other mixed,2303,175,2128,92.4,2688
+Ethnicity (detailed categories),Pakistani or British Pakistani,10066,2541,7525,74.8,12110
+Ethnicity (detailed categories),Unknown,90013,3675,86338,95.89999999999999,104125
+Ethnicity (detailed categories),White + Asian,1246,77,1169,93.8,1428
+Ethnicity (detailed categories),White + Black African,861,119,742,86.2,1099
+Ethnicity (detailed categories),White + Black Caribbean,1190,119,1071,90.0,1491
+Index of Multiple Deprivation (quintiles),1 Most deprived,250243,13370,236873,94.69999999999999,269402
+Index of Multiple Deprivation (quintiles),2,331821,11396,320425,96.6,351379
+Index of Multiple Deprivation (quintiles),3,447734,10787,436947,97.6,468279
+Index of Multiple Deprivation (quintiles),4,464499,9205,455294,98.0,483203
+Index of Multiple Deprivation (quintiles),5 Least deprived,459158,7301,451857,98.4,474005
+Index of Multiple Deprivation (quintiles),Unknown,39557,1351,38206,96.6,42595
+BMI,30+,499940,13076,486864,97.39999999999999,515879
+BMI,under 30,1493065,40320,1452745,97.3,1572998
+Housebound,no,1954386,51296,1903090,97.39999999999999,2048095
+Housebound,yes,38619,2100,36519,94.6,40782
+Chronic cardiac disease,no,1621613,42868,1578745,97.39999999999999,1704752
+Chronic cardiac disease,yes,371399,10542,360857,97.2,384125
+Current COPD,no,1801765,47124,1754641,97.39999999999999,1891295
+Current COPD,yes,191247,6279,184968,96.7,197582
+DMARDs,no,1920338,51821,1868517,97.3,2014404
+DMARDs,yes,72674,1589,71085,97.8,74473
+Dementia,no,1949801,51429,1898372,97.39999999999999,2043811
+Dementia,yes,43204,1967,41237,95.39999999999999,45073
+"Psychosis, schizophrenia, or bipolar",no,1974595,52283,1922312,97.39999999999999,2068731
+"Psychosis, schizophrenia, or bipolar",yes,18417,1127,17290,93.89999999999999,20146
+Learning disability,no,1990324,53193,1937131,97.3,2086028
+Learning disability,yes,2681,210,2471,92.2,2849
+SSRI (last 12 months),no,1890707,50575,1840132,97.3,1983884
+SSRI (last 12 months),yes,102305,2835,99470,97.2,105000
+Chemo or radiotherapy,no,1921913,51926,1869987,97.3,2016007
+Chemo or radiotherapy,yes,71099,1484,69615,97.89999999999999,72870
+Cancer (lung),no,1979684,52983,1926701,97.3,2075164
+Cancer (lung),yes,13321,413,12908,96.89999999999999,13713
+Cancer (excluding lung/haem),no,1698473,47439,1651034,97.2,1786134
+Cancer (excluding lung/haem),yes,294539,5971,288568,98.0,302743
+Cancer (haematological),no,1961869,52780,1909089,97.3,2056852
+Cancer (haematological),yes,31136,616,30520,98.0,32025
+Chronic kidney disease,no,1727061,46613,1680448,97.3,1815016
+Chronic kidney disease,yes,265951,6797,259154,97.39999999999999,273861
