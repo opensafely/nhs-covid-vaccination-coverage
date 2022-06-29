@@ -1,31 +1,33 @@
-Category,Group,Second Doses due at 11 May 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,753970,17486,736484,97.7,819252
-newly shielded since feb 15,no,451066,8211,442855,98.2,481334
-newly shielded since feb 15,yes,302897,9268,293629,96.89999999999999,337918
-Sex,F,425628,10507,415121,97.5,462910
-Sex,M,328328,6986,321342,97.89999999999999,356321
-Age band,16-29,56735,2996,53739,94.69999999999999,66815
-Age band,30-39,109669,4361,105308,96.0,125832
-Age band,40-49,150234,3955,146279,97.39999999999999,164878
-Age band,50-59,213087,3654,209433,98.3,227500
-Age band,60-69,224224,2513,221711,98.9,234206
-Ethnicity (broad categories),Black,35532,1645,33887,95.39999999999999,44513
-Ethnicity (broad categories),Mixed,11767,490,11277,95.8,14273
-Ethnicity (broad categories),Other,15253,539,14714,96.5,17969
-Ethnicity (broad categories),South Asian,98301,3129,95172,96.8,107590
-Ethnicity (broad categories),Unknown,19348,371,18977,98.1,21819
-Ethnicity (broad categories),White,573755,11312,562443,98.0,613067
-Index of Multiple Deprivation (quintiles),1 Most deprived,211498,6685,204813,96.8,237804
-Index of Multiple Deprivation (quintiles),2,168063,4102,163961,97.6,183813
-Index of Multiple Deprivation (quintiles),3,145565,2842,142723,98.0,156429
-Index of Multiple Deprivation (quintiles),4,116214,1967,114247,98.3,122948
-Index of Multiple Deprivation (quintiles),5 Least deprived,91805,1239,90566,98.7,95662
-Index of Multiple Deprivation (quintiles),Unknown,20804,651,20153,96.89999999999999,22575
-Learning disability,no,728560,16926,711634,97.7,792295
-Learning disability,yes,25396,567,24829,97.8,26936
-Chronic kidney disease,no,699412,16674,682738,97.6,761614
-Chronic kidney disease,yes,54544,812,53732,98.5,57624
-brand of first dose,Moderna,3129,1183,1946,62.2,3430
-brand of first dose,Oxford-AZ,468209,7329,460880,98.4,468209
-brand of first dose,Pfizer,281946,8932,273014,96.8,283192
-brand of first dose,Unknown,665,42,623,93.7,679
+Category,Group,Second Doses due at 22 Jun 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,734839,17311,717528,97.6,799470
+newly shielded since feb 15,no,435134,8120,427014,98.1,465108
+newly shielded since feb 15,yes,299712,9205,290507,96.89999999999999,334362
+Sex,F,416192,10374,405818,97.5,453026
+Sex,M,318633,6937,311696,97.8,346430
+Age band,16-29,51072,2849,48223,94.39999999999999,60305
+Age band,30-39,105469,4291,101178,95.89999999999999,121254
+Age band,40-49,145831,3983,141848,97.3,160580
+Age band,50-59,208733,3612,205121,98.3,223146
+Age band,60-69,223727,2583,221144,98.8,234178
+Ethnicity (broad categories),Black,35385,1652,33733,95.3,44282
+Ethnicity (broad categories),Mixed,11704,497,11207,95.8,14203
+Ethnicity (broad categories),Other,15113,532,14581,96.5,17787
+Ethnicity (broad categories),South Asian,97272,3115,94157,96.8,106400
+Ethnicity (broad categories),Unknown,18165,350,17815,98.1,20552
+Ethnicity (broad categories),White,557186,11165,546021,98.0,596225
+Index of Multiple Deprivation (quintiles),1 Most deprived,206773,6664,200109,96.8,232701
+Index of Multiple Deprivation (quintiles),2,163877,4046,159831,97.5,179459
+Index of Multiple Deprivation (quintiles),3,141659,2793,138866,98.0,152439
+Index of Multiple Deprivation (quintiles),4,112847,1960,110887,98.3,119525
+Index of Multiple Deprivation (quintiles),5 Least deprived,88984,1197,87787,98.7,92841
+Index of Multiple Deprivation (quintiles),Unknown,20692,665,20027,96.8,22491
+Learning disability,no,709555,16744,692811,97.6,772625
+Learning disability,yes,25270,574,24696,97.7,26831
+Chronic kidney disease,no,682934,16527,666407,97.6,744520
+Chronic kidney disease,yes,51891,791,51100,98.5,54929
+Immune-mediated inflammatory disease,no,602350,15120,587230,97.5,659449
+Immune-mediated inflammatory disease,yes,132475,2198,130277,98.3,140007
+brand of first dose,Moderna,3178,1190,1988,62.6,3633
+brand of first dose,Oxford-AZ,454650,7126,447524,98.4,454650
+brand of first dose,Pfizer,276311,8960,267351,96.8,276927
+brand of first dose,Unknown,686,42,644,93.89999999999999,700

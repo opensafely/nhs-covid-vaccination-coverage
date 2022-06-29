@@ -1,20 +1,20 @@
-Category,Group,Second Doses due at 11 May 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
-overall,overall,369670,67424,302246,81.8,539826
-Sex,F,187187,32690,154497,82.5,264117
-Sex,M,182448,34720,147728,81.0,275667
-Ethnicity (broad categories),Black,6783,2352,4431,65.3,17787
-Ethnicity (broad categories),Mixed,7791,1792,5999,77.0,14630
-Ethnicity (broad categories),Other,7406,1680,5726,77.3,15057
-Ethnicity (broad categories),South Asian,27531,6769,20762,75.4,46011
-Ethnicity (broad categories),Unknown,68859,11319,57540,83.6,98637
-Ethnicity (broad categories),White,251272,43505,207767,82.69999999999999,347669
-Index of Multiple Deprivation (quintiles),1 Most deprived,64484,18109,46375,71.89999999999999,122052
-Index of Multiple Deprivation (quintiles),2,64421,14098,50323,78.10000000000001,101885
-Index of Multiple Deprivation (quintiles),3,73934,13076,60858,82.3,103852
-Index of Multiple Deprivation (quintiles),4,76825,11060,65765,85.6,100303
-Index of Multiple Deprivation (quintiles),5 Least deprived,81571,9506,72065,88.3,99505
-Index of Multiple Deprivation (quintiles),Unknown,8400,1568,6832,81.3,12180
-brand of first dose,Moderna,1218,609,609,50.0,1792
-brand of first dose,Oxford-AZ,2002,77,1925,96.2,2002
-brand of first dose,Pfizer,366282,66710,299572,81.8,377741
-brand of first dose,Unknown,133,7,126,94.69999999999999,140
+Category,Group,Second Doses due at 22 Jun 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,359163,80780,278383,77.5,546658
+Sex,F,180292,39585,140707,78.0,267827
+Sex,M,178843,41195,137648,77.0,278782
+Ethnicity (broad categories),Black,6580,2611,3969,60.3,18340
+Ethnicity (broad categories),Mixed,7861,2107,5754,73.2,15274
+Ethnicity (broad categories),Other,7343,1946,5397,73.5,15225
+Ethnicity (broad categories),South Asian,27524,7924,19600,71.2,48118
+Ethnicity (broad categories),Unknown,58478,11718,46760,80.0,87185
+Ethnicity (broad categories),White,251356,54481,196875,78.3,362460
+Index of Multiple Deprivation (quintiles),1 Most deprived,61488,20664,40824,66.4,124243
+Index of Multiple Deprivation (quintiles),2,62706,16786,45920,73.2,103691
+Index of Multiple Deprivation (quintiles),3,71806,15834,55972,77.9,105035
+Index of Multiple Deprivation (quintiles),4,74921,13776,61145,81.6,101087
+Index of Multiple Deprivation (quintiles),5 Least deprived,79688,11795,67893,85.2,99785
+Index of Multiple Deprivation (quintiles),Unknown,8526,1918,6608,77.5,12775
+brand of first dose,Moderna,315,147,168,53.300000000000004,343
+brand of first dose,Oxford-AZ,707,28,679,96.0,707
+brand of first dose,Pfizer,358008,80577,277431,77.5,366051
+brand of first dose,Unknown,98,7,91,92.9,105
