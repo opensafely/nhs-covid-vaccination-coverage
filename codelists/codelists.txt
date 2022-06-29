@@ -37,3 +37,11 @@ primis-covid19-vacc-uptake/nonshield/v1
 primis-covid19-vacc-uptake/ckd_cov/v1.2.1
 primis-covid19-vacc-uptake/ckd15/v1
 primis-covid19-vacc-uptake/ckd35/v1
+opensafely/crohns-disease/223a39f5
+opensafely/ulcerative-colitis/3b49ad2a
+opensafely/inflammatory-bowel-disease-unclassified/092ac6c0
+opensafely/psoriasis/01091de1
+opensafely/hidradenitis-suppurativa/2020-08-03
+opensafely/psoriatic-arthritis/2020-10-21
+opensafely/rheumatoid-arthritis/2020-05-12
+user/mark-yates/axial-spondyloarthritis/3da730d4

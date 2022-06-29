@@ -192,3 +192,40 @@ ckd15 = codelist_from_csv(
 ckd35 = codelist_from_csv(
     "codelists/primis-covid19-vacc-uptake-ckd35.csv", system="snomed", column="code"
 )
+
+
+### Immune-mediated inflammatory diseases (IMID), as used here:
+### https://www.medrxiv.org/content/10.1101/2021.09.03.21262888v1
+
+# CLINICAL CONDITIONS CODELISTS
+crohns_disease_codes = codelist_from_csv(
+    "codelists/opensafely-crohns-disease.csv", system="ctv3", column="code",
+)
+
+ulcerative_colitis_codes = codelist_from_csv(
+    "codelists/opensafely-ulcerative-colitis.csv", system="ctv3", column="code",
+)
+
+inflammatory_bowel_disease_unclassified_codes = codelist_from_csv(
+    "codelists/opensafely-inflammatory-bowel-disease-unclassified.csv", system="ctv3", column="code",
+)
+
+ankylosing_spondylitis_codes = codelist_from_csv(
+    "codelists/user-mark-yates-axial-spondyloarthritis.csv", system="snomed", column="code",
+)
+
+psoriasis_codes = codelist_from_csv(
+    "codelists/opensafely-psoriasis.csv", system="ctv3", column="code",
+)
+
+hidradenitis_suppurativa_codes = codelist_from_csv(
+    "codelists/opensafely-hidradenitis-suppurativa.csv", system="ctv3", column="CTV3ID",
+)
+
+psoriatic_arthritis_codes = codelist_from_csv(
+    "codelists/opensafely-psoriatic-arthritis.csv", system="snomed", column="id",
+)
+
+rheumatoid_arthritis_codes = codelist_from_csv(
+    "codelists/opensafely-rheumatoid-arthritis.csv", system="ctv3", column="CTV3ID",
+)
