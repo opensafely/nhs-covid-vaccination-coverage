@@ -30,7 +30,6 @@ get_ipython().run_line_magic('load_ext', 'autoreload')
 get_ipython().run_line_magic('autoreload', '2')
 
 import pandas as pd
-import numpy as np
 import json
 from datetime import datetime, timedelta
 import subprocess
@@ -60,9 +59,7 @@ sys.path.append('../lib/')
 # In[5]:
 
 
-
-
-from data_processing import load_data
+from data_processing import load_adult_data
 from second_third_doses import abbreviate_time_period
 
 
@@ -90,8 +87,7 @@ savepath, savepath_figure_csvs, savepath_table_csvs = create_output_dirs()
 
 
 
-
-df = load_data( save_path = savepath )
+df = load_adult_data( save_path = savepath )
 
 
 # In[9]:
@@ -154,7 +150,7 @@ groups = population_subgroups.keys()
 DEFAULT = ["sex","ageband_5yr","ethnicity_6_groups","ethnicity_16_groups", "imd_categories", 
                               "bmi", "housebound", "chronic_cardiac_disease", "current_copd", "dmards", "dementia",
                               "psychosis_schiz_bipolar","LD","ssri",
-                              "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "ckd"]
+                              "chemo_or_radio", "lung_cancer", "cancer_excl_lung_and_haem", "haematological_cancer", "ckd", "imid"]
 #for specific age bands remove features which are included elsehwere or not prevalent
 o65 = [d for d in DEFAULT if d not in ("ageband_5yr", "dialysis")]
 o60 = [d for d in DEFAULT if d not in ("ageband_5yr", "dialysis", "LD", "housebound")]
@@ -171,7 +167,7 @@ u40 = ["sex", "ethnicity_6_groups", "ethnicity_16_groups","imd_categories"]
 features_dict = {0:    u40, ## patients not assigned to a priority group
                  "care home": ["sex", "ageband_5yr", "ethnicity_6_groups", "dementia"],
                  "shielding (aged 16-69)": ["newly_shielded_since_feb_15", "sex", "ageband", "ethnicity_6_groups", "imd_categories",
-                                           "LD", "ckd"],
+                                           "LD", "ckd", "imid"],
                  "65-69":    o65,
                  "60-64":    o60,
                  "55-59":    o50,
@@ -186,7 +182,6 @@ features_dict = {0:    u40, ## patients not assigned to a priority group
 
 
 # In[13]:
-
 
 
 
@@ -554,7 +549,7 @@ create_detailed_summary_uptake(third_dose_summarised_data_dict, formatted_latest
 
 
 
-display(Markdown(f"## For comparison look at second dose coverate UP TO {booster_delay_number} {booster_delay_unit.upper()} AGO"))
+display(Markdown(f"## For comparison look at second dose coverage UP TO {booster_delay_number} {booster_delay_unit.upper()} AGO"))
 
 
 # In[39]:
@@ -590,18 +585,18 @@ create_detailed_summary_uptake(summarised_data_dict_3rdDUE, formatted_latest_dat
 
 
 
-df_dict_cum_3rdDUE = cumulative_sums(
-    df_3rdDUE, groups_of_interest=population_subgroups_third, features_dict=features_dict,
-    latest_date=date_3rdDUE,
-                                  reference_column_name="covid_vacc_second_dose_date"
-                                  )
+# df_dict_cum_3rdDUE = cumulative_sums(
+#     df_3rdDUE, groups_of_interest=population_subgroups_third, features_dict=features_dict,
+#     latest_date=date_3rdDUE,
+#                                   reference_column_name="covid_vacc_second_dose_date"
+#                                   )
 
-summarised_data_dict_3rdDUE = summarise_data_by_group(
-                                                   df_dict_cum_3rdDUE, latest_date=date_3rdDUE,
-                                                   groups=population_subgroups_third.keys()
-                                                   )
+# summarised_data_dict_3rdDUE = summarise_data_by_group(
+#                                                    df_dict_cum_3rdDUE, latest_date=date_3rdDUE,
+#                                                    groups=population_subgroups_third.keys()
+#                                                    )
 
-create_detailed_summary_uptake(summarised_data_dict_3rdDUE, formatted_latest_date=date_3rdDUE,
-                               groups=population_subgroups_third.keys(),
-                               savepath=savepath, vaccine_type=f"second_dose_{booster_delay_number}{booster_delay_unit_short}_ago")
+# create_detailed_summary_uptake(summarised_data_dict_3rdDUE, formatted_latest_date=date_3rdDUE,
+#                                groups=population_subgroups_third.keys(),
+#                                savepath=savepath, vaccine_type=f"second_dose_{booster_delay_number}{booster_delay_unit_short}_ago")
 
