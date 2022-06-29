@@ -13,10 +13,12 @@ variable_renaming = { 'ageband 5yr': "Age band",
                       'bmi':"BMI",   
                       'housebound':'Housebound',
                       'ethnicity 6 groups':"Ethnicity (broad categories)",
+                      'ethnicity 16 groups':"Ethnicity (detailed categories)",
                       'imd categories':"Index of Multiple Deprivation (quintiles)",
                       'chronic cardiac disease': 'Chronic cardiac disease',
                       'current copd': 'Current COPD',
                       'ckd': 'Chronic kidney disease',
+                      'imid': 'Immune-mediated inflammatory disease',
                       'dmards': 'DMARDs',
                       'dementia': 'Dementia',
                       'psychosis schiz bipolar': 'Psychosis, schizophrenia, or bipolar',
@@ -53,7 +55,8 @@ def get_savepath(subfolder=None):
 def find_and_sort_filenames(foldername, *, 
                             org_breakdown=None,
                             subfolder="",
-                            by_demographics_or_population="demographics", 
+                            by_demographics_or_population="demographics",
+                            population_override=[],
                             population_subset="80+",
                             demographics_subset=[],
                             file_extension="csv",
@@ -66,8 +69,10 @@ def find_and_sort_filenames(foldername, *,
     foldername (str):   Name of target folder in which "figures" or "tables" are found
     org_breakdown (str): Type of org breakdown (e.g "stp")
     subfolder (str): subfolder of in which to find files (e.g an individual org)
-    by_demographics_or_population (str): type of sort
+    by_demographics_or_population (str): type of sort, options are: "demographics", "population", "population_reversed" or "override";
+        if "override" is specified, use the "population_override" parameter to specify populations to display
     population_subset (str): population group to include
+    population_override (str): populations to display, in the order in which they are to be displayed
     demographics_subset (list): list of strings to filter filenames to a subset of demographic features
                                 (e.g. ["ethnicity_6_groups", "imd_categories"])
     file_extension (str): extension of the files to list (use to pick out either SVGs or PNGs)
@@ -91,7 +96,7 @@ def find_and_sort_filenames(foldername, *,
     for f in files_to_exclude:
         if f in file_list:
             file_list.remove(f)
-
+    
     # restrict to files with the specified extension
     file_list = [f for f in file_list if f.endswith(f".{file_extension}")]
 
@@ -109,6 +114,7 @@ def find_and_sort_filenames(foldername, *,
                         'ageband_5yr',
                         'sex',
                         'ethnicity 6 groups',
+                        'ethnicity 16 groups',
                         'imd categories',
                         'bmi',
                         'housebound',
@@ -119,6 +125,7 @@ def find_and_sort_filenames(foldername, *,
                         'cancer excl lung and haem',
                         'chemo or radio',
                         'ckd',
+                        'imid',
                         'dmards',
                         'dementia',
                         'LD',
@@ -126,8 +133,16 @@ def find_and_sort_filenames(foldername, *,
                         'ssri'
                         ]
         sort_order = {key: ix for ix, key in enumerate(ordered_dems)}
+    elif by_demographics_or_population=="population_reversed":
+        ordered_pops = ['80+', '70-79', 'care home', 'shielding (aged 16-69)', '65-69', 'LD (aged 16-64)', '60-64', '55-59', '50-54','40-49', '30-39', '18-29', '16-17', '12-15', '5-11', '16-49, not in other eligible groups shown']
+        ordered_pops.reverse()
+        sort_order = {key: ix for ix, key in enumerate(ordered_pops)}
     elif by_demographics_or_population=="population":
-        ordered_pops = ['80+', '70-79', 'care home', 'shielding (aged 16-69)', '65-69', 'LD (aged 16-64)', '60-64', '55-59', '50-54','40-49', '30-39', '18-29', '16-49, not in other eligible groups shown']
+        ordered_pops = ['80+', '70-79', 'care home', 'shielding (aged 16-69)', '65-69', 'LD (aged 16-64)', '60-64', '55-59', '50-54','40-49', '30-39', '18-29', '16-17', '12-15', '5-11', '16-49, not in other eligible groups shown']
+
+        sort_order = {key: ix for ix, key in enumerate(ordered_pops)}
+    elif by_demographics_or_population=="override":
+        ordered_pops = population_override
         sort_order = {key: ix for ix, key in enumerate(ordered_pops)}
     else:
         display("sort_by_population_or_demographics received an invalid value")
@@ -144,7 +159,6 @@ def find_and_sort_filenames(foldername, *,
         else: # if some items already in new dict, one or more new items may already have been added     
             sort_order2[item] = 1 + max(max(sort_order.values()), 
                                     max(sort_order2.values())) 
-        
 
     out_list = OrderedDict(sorted(sort_order2.items(), key=itemgetter(1)))
     return(out_list.keys())
@@ -182,7 +196,7 @@ def show_chart(filepath, image_format, org_breakdown="", subfolder="", title="on
             if (len(subfolder)>0) & (~any(s in filepath for s in ["overall","sex","imd_categories"])):
                 display(Markdown(f"Zero percentages may represent suppressed low numbers; raw numbers were rounded to nearest 7"))
             
-        display(image_format.formatter(filename=imgpath))
+        display(image_format.formatter(filename=imgpath,width="100%"))
 
 
 def import_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehomes=False, 
@@ -265,7 +279,11 @@ def import_table(filename, latest_date_fmt, *, org_breakdown=None, show_carehome
     
 
         
-def show_table(df, title, latest_date_fmt, *, count_columns=[], org_breakdown=None, show_carehomes=False, perc_only=False, stp_summary=False, stp_pop_coverage=False):
+def show_table(df, title, latest_date_fmt, *, count_columns=[], org_breakdown=None, show_carehomes=False,
+    perc_only=False, ### If True, this suppresses any mention of rounding to 7.
+    stp_notes=None, ### If True, an STP preamble is included.
+    preamble_text="" ### Any other text to be included before the table
+    ):
     '''
     Show table with specified filename. Rename row and column headers.
     
@@ -276,9 +294,9 @@ def show_table(df, title, latest_date_fmt, *, count_columns=[], org_breakdown=No
     org_breakdown (str): e.g. "stp"
     show_carehomes (bool): whether or not we are showing care homes table
     perc_only (bool): to indicate whether only percentages are being presented; if so, the footnote regarding rounding to 7 need not be displayed
-    stp_summary (bool): to indicate whether summarised STP data are being presented; if so, footnotes specific to non-summarised data will not be displayed
-    stp_pop_coverage (bool): to indicate whether STP population coverage data are being presented; if so, 
-    
+    stp_notes (str): options are None (to include no notes about STP calculations, this is default behaviour); 'overall_coverage' to include notes about STP coverage; 'breakdown' to indicate that summarised STP data are being presented
+    preamble_text (str): any other text to be included after the title of the section but before the table
+
     Outputs:
     tab (dataframe): formatted table (preceded by title derived from filename & intro text)   
     '''
@@ -289,16 +307,14 @@ def show_table(df, title, latest_date_fmt, *, count_columns=[], org_breakdown=No
     # display title
     if " LD " in title:
         title = title.replace("LD", "Learning Disabilities")
-    display(Markdown(f"## \n ## {title} \n Please refer to footnotes below table for information."))
     
-    if org_breakdown == "stp":
-        if stp_pop_coverage:
-            display(Markdown("The percentage coverage of each STP population by TPP practices is shown below. \
-                The 'Adequate coverage' column indicates whether at least 10% of the STP population is available in TPP \
-                (the 10% threshold is an arbitrary cutoff)."))
-        else:
-            display(Markdown("Vaccination coverage is calculated as a percentage of those who are due their booster/third dose. \
-                              Note that STPs with less than 10% population coverage in TPP practices are not shown."))
+    display(Markdown(f"## \n ## {title} \n {preamble_text} \n Please refer to footnotes below table for information."))
+    
+    if stp_notes == "overall_coverage":
+        display(Markdown("The percentage coverage of each STP population by TPP practices is shown below."))
+    elif stp_notes == "breakdown":
+        display(Markdown("Vaccination coverage is calculated as a percentage of those who are due the relevant dose. \
+                        Note that STPs that do not have adequate population coverage (see note above) in TPP practices have been removed."))
 
     tab_to_show = tab.copy()
     for c in count_columns:
@@ -329,13 +345,15 @@ def show_table(df, title, latest_date_fmt, *, count_columns=[], org_breakdown=No
         display(Markdown(f"- Population excludes those who are shielding."))
     
     # display footnotes related to STPs   
-    if org_breakdown=="stp":
-        display(Markdown("- The subset of the population covered by TPP in each STP may not be representative of the whole STP."))
+    if stp_notes:
         display(Markdown("- Practice-STP mappings used to calculate the coverage are as of March 2020 and some borders and population sizes may have changed."))
 
-        if not stp_summary:
-            display(Markdown("- “Disparity in vaccination” figures may be subject to large variation caused by rounding of small numbers - an indication of the possible range of values is therefore shown; the specific groups compared are those with most disparity on a national level but may not represent the biggest disparity present within each STP."))
-            display(Markdown("- 'Date projected to reach 90%' is an estimate based on the previous 7 days' uptake; being 'unknown' indicates projection of >6mo (likely insufficient information)."))
+        if stp_notes=="breakdown":
+            display(Markdown("- The subset of the population covered by TPP in each STP may not be representative of the whole STP."))
+        
+        # if not stp_summary:
+        #     display(Markdown("- “Disparity in vaccination” figures may be subject to large variation caused by rounding of small numbers - an indication of the possible range of values is therefore shown; the specific groups compared are those with most disparity on a national level but may not represent the biggest disparity present within each STP."))
+        #     display(Markdown("- 'Date projected to reach 90%' is an estimate based on the previous 7 days' uptake; being 'unknown' indicates projection of >6mo (likely insufficient information)."))
 
     if variable_renaming["ssri"] in tab.index:
         display(Markdown("- SSRIs group excludes individuals with Psychosis/ schizophrenia/bipolar, LD, or Dementia."))
@@ -343,6 +361,8 @@ def show_table(df, title, latest_date_fmt, *, count_columns=[], org_breakdown=No
     if variable_renaming["ckd"] in tab.index:
         display(Markdown(f"- Chronic kidney disease is defined as the presence of a relevant diagnostic code, or a most recent stage recorded >= 3."))
     
+    if variable_renaming["imid"] in tab.index:
+        display(Markdown(f"- Immune-mediated inflammatory disease is defined as the presence of a relevant diagnostic code."))
 
         
         

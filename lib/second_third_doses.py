@@ -26,7 +26,7 @@ def abbreviate_time_period(time_period):
     return( time_period_abbr )
 
 
-def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, dose_type="Second", time_period="14 weeks", latest_date_fmt, latest_date_fmt_2,
+def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, org_breakdown=None, dose_type="Second", time_period="14 weeks", latest_date_fmt, latest_date_fmt_2,
                        max_ylim=12, 
                        backend="expectations", suffix = "_tpp"):
     
@@ -37,6 +37,7 @@ def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, dose_type="Sec
     INPUTS
     tablelist (list): list of tables, each containing data for a single cohort on the "previous" dose (1st or 2nd)
     tablelist_2nd (list):  list of tables, each containing data for a single cohort on the dose of interest (2nd or 3rd)
+    org_breakdown (str): Type of org breakdown (e.g "stp"); also used for patient subsets (e.g., "u16")
     dose_type (str): "Second" or "Third"
     time_period (str): E.g. "14 weeks"
     latest_date_fmt (str): latest date of any vaccines
@@ -64,14 +65,15 @@ def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, dose_type="Sec
     # create empty df for summary results ("overall" row for each cohort)
     summary = pd.DataFrame()
 
+    ### Can't embed this in the f string below due to curly brackets
+    date_string = latest_date_fmt.replace(' 202\d{1}','')
 
     for f, f2 in zip(tablelist, tablelist_2nd):
-        
-        df, _ = import_table(f, latest_date_fmt=latest_date_fmt_2, show_carehomes=True, suffix=suffix, export_csv=False)
-        df = df.drop(["Previous week's vaccination coverage (%)", "Total eligible", "Vaccinated over last 7d (%)"],1)
+        df, _ = import_table(f, latest_date_fmt=latest_date_fmt_2, org_breakdown=org_breakdown, show_carehomes=True, suffix=suffix, export_csv=False)
+        df = df.drop(columns=["Previous week's vaccination coverage (%)", "Total eligible", "Vaccinated over last 7d (%)"])
 
-        df2, title = import_table(f2, latest_date_fmt, show_carehomes=True, suffix=suffix, export_csv=False)
-        df2 = df2.drop(["Previous week's vaccination coverage (%)", "Vaccinated over last 7d (%)"],1)
+        df2, title = import_table(f2, latest_date_fmt, org_breakdown=org_breakdown, show_carehomes=True, suffix=suffix, export_csv=False)
+        df2 = df2.drop(columns=["Previous week's vaccination coverage (%)", "Vaccinated over last 7d (%)"])
 
         # column renaming and number formatting
         for c in df2.columns:
@@ -81,29 +83,29 @@ def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, dose_type="Sec
         for c in df.columns:
             if "(n)" in c:
                 # the number of doses due is the number of previous doses given <time period> ago
-                df = df.rename(columns={c:f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)"})
+                df = df.rename(columns={c:f"{dose_type} Doses due at {date_string} (n)"})
 
         df = df2.join(df)
 
         df = df.rename(columns={"Total eligible":"Total population"})
 
         # only show tables where a significant proportion of the total population are due second dose
-        df[f"{dose_type} Doses due (% of total)"] = 100*df[f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]\
+        df[f"{dose_type} Doses due (% of total)"] = 100*df[f"{dose_type} Doses due at {date_string} (n)"]\
                                               /df["Total population"]
         if backend != "expectations" and (
             df[f"{dose_type} Doses due (% of total)"][("overall","overall")] < 0.50):
             continue    
-        df = df.drop(f"{dose_type} Doses due (% of total)", 1)
+        df = df.drop(columns=f"{dose_type} Doses due (% of total)")
 
         # calculate difference from expected
         df[f"{dose_type} doses given (% of due)"] = 100*(df[f"{dose_type} doses given (n)"]/\
-                                                     df[f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]).round(3)
+                                                     df[f"{dose_type} Doses due at {date_string} (n)"]).round(3)
 
-        df[f"{dose_type} doses overdue (n)"] = df[f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)"] -\
+        df[f"{dose_type} doses overdue (n)"] = df[f"{dose_type} Doses due at {date_string} (n)"] -\
                                           df[f"{dose_type} doses given (n)"]
 
         # column order
-        df = df[[f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)", f"{dose_type} doses overdue (n)",
+        df = df[[f"{dose_type} Doses due at {date_string} (n)", f"{dose_type} doses overdue (n)",
                  f"{dose_type} doses given (n)", f"{dose_type} doses given (% of due)", "Total population"]]
 
         export_path = os.path.join("..", "output", "machine_readable_outputs", dose_file_name)
@@ -126,10 +128,12 @@ def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, dose_type="Sec
         
         # add comma separators to numbers before displaying table
         df_to_show = df.copy()
-        for c in [f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)", 
-                  f"{dose_type} doses overdue (n)", f"{dose_type} doses given (n)", "Total population"]:
-            df_to_show[c] = df_to_show[c].apply('{:,}'.format)
-        show_table(df_to_show, title, latest_date_fmt, show_carehomes=True)    
+        column_list = [
+            f"{dose_type} Doses due at {date_string} (n)", 
+            f"{dose_type} doses overdue (n)", f"{dose_type} doses given (n)", "Total population"
+            ]
+
+        show_table(df_to_show, title, latest_date_fmt, count_columns=column_list, show_carehomes=True)    
 
         df[f"{dose_type} doses overdue (% of due)"] = 100 - df[f"{dose_type} doses given (% of due)"]
 
@@ -149,11 +153,11 @@ def second_third_doses(tablelist, tablelist_2nd, cohorts=None, *, dose_type="Sec
 
         # find errors based on rounding
         # both num and denom are rounded to nearest 7 so both may be out by <=3 
-        df["pos_error"] = 100*3/(df[f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]-3)
-        df["neg_error"] = 100*3/(df[f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]+3)
+        df["pos_error"] = 100*3/(df[f"{dose_type} Doses due at {date_string} (n)"]-3)
+        df["neg_error"] = 100*3/(df[f"{dose_type} Doses due at {date_string} (n)"]+3)
 
         # do not show in charts values representing less than 100 people
-        df.loc[df[f"{dose_type} Doses due at {latest_date_fmt.replace(' 2021','')} (n)"]<100, 
+        df.loc[df[f"{dose_type} Doses due at {date_string} (n)"] < 100,
                  [f"{dose_type} doses overdue (% of due)","neg_error","pos_error"]] = 0
 
         # find ymax
