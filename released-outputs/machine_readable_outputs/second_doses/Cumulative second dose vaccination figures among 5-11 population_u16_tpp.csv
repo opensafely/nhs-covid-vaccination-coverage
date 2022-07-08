@@ -1,0 +1,37 @@
+Category,Group,Second Doses due at 22 Jun 2022 (n),Second doses overdue (n),Second doses given (n),Second doses given (% of due),Total population
+overall,overall,14875,5915,8960,60.199999999999996,2018618
+Sex,F,6076,2324,3752,61.8,983283
+Sex,M,8799,3598,5201,59.099999999999994,1035321
+Ethnicity (broad categories),Black,217,105,112,51.6,64694
+Ethnicity (broad categories),Mixed,441,168,273,61.9,77252
+Ethnicity (broad categories),Other,259,112,147,56.8,56700
+Ethnicity (broad categories),South Asian,847,336,511,60.3,193025
+Ethnicity (broad categories),Unknown,574,245,329,57.3,218995
+Ethnicity (broad categories),White,12544,4963,7581,60.4,1407924
+Ethnicity (detailed categories), African,154,70,84,54.50000000000001,42007
+Ethnicity (detailed categories), Bangladeshi or British Bangladeshi,91,35,56,61.5,16478
+Ethnicity (detailed categories), Caribbean,14,7,7,50.0,7126
+Ethnicity (detailed categories), Chinese,77,42,35,45.5,10570
+Ethnicity (detailed categories), Other,182,70,112,61.5,46151
+Ethnicity (detailed categories), Other Asian,140,56,84,60.0,36736
+Ethnicity (detailed categories),British or Mixed British,11872,4683,7189,60.6,1237579
+Ethnicity (detailed categories),Indian or British Indian,350,119,231,66.0,63637
+Ethnicity (detailed categories),Irish,21,7,14,66.7,3892
+Ethnicity (detailed categories),Other Black,49,28,21,42.9,15575
+Ethnicity (detailed categories),Other White,644,266,378,58.699999999999996,166432
+Ethnicity (detailed categories),Other mixed,182,70,112,61.5,29547
+Ethnicity (detailed categories),Pakistani or British Pakistani,266,119,147,55.300000000000004,76167
+Ethnicity (detailed categories),Unknown,574,245,329,57.3,218988
+Ethnicity (detailed categories),White + Asian,126,42,84,66.7,17976
+Ethnicity (detailed categories),White + Black African,70,28,42,60.0,12649
+Ethnicity (detailed categories),White + Black Caribbean,63,28,35,55.60000000000001,17087
+Index of Multiple Deprivation (quintiles),1 Most deprived,2590,1190,1400,54.1,482552
+Index of Multiple Deprivation (quintiles),2,2646,1106,1540,58.199999999999996,392119
+Index of Multiple Deprivation (quintiles),3,3045,1162,1883,61.8,379827
+Index of Multiple Deprivation (quintiles),4,2968,1141,1827,61.6,350350
+Index of Multiple Deprivation (quintiles),5 Least deprived,2968,1078,1890,63.7,329126
+Index of Multiple Deprivation (quintiles),Unknown,658,231,427,64.9,84623
+brand of first dose,Other,14,14,0,0.0,56
+brand of first dose,Pfizer (10 micrograms),14245,5586,8659,60.8,195825
+brand of first dose,Pfizer (30 micrograms),504,252,252,50.0,1421
+brand of first dose,Unknown,112,77,35,31.2,238

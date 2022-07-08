@@ -1,19 +1,19 @@
-Category,Group,Third Doses due at 11 May 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,72709,11718,60991,83.89999999999999,86394
-Sex,F,28161,4109,24052,85.39999999999999,32648
-Sex,M,44548,7609,36939,82.89999999999999,53739
-Age band,16-17,3283,1113,2170,66.10000000000001,5110
-Age band,18-29,25144,5348,19796,78.7,31311
-Age band,30-34,9394,1568,7826,83.3,11221
-Age band,35-39,7021,952,6069,86.4,8134
-Age band,40-44,5600,623,4977,88.9,6321
-Age band,45-49,5523,616,4907,88.8,6111
-Age band,50-54,6062,574,5488,90.5,6601
-Age band,55-59,6041,525,5516,91.3,6573
-Age band,60-64,4655,420,4235,91.0,4998
-Ethnicity (broad categories),Black,896,280,616,68.8,1484
-Ethnicity (broad categories),Mixed,840,217,623,74.2,1211
-Ethnicity (broad categories),Other,581,140,441,75.9,805
-Ethnicity (broad categories),South Asian,3808,1379,2429,63.800000000000004,5082
-Ethnicity (broad categories),Unknown,4354,714,3640,83.6,5236
-Ethnicity (broad categories),White,62230,8995,53235,85.5,72569
+Category,Group,Third Doses due at 22 Jun 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,73465,12369,61096,83.2,87794
+Sex,F,28385,4291,24094,84.89999999999999,33082
+Sex,M,45080,8085,36995,82.1,54712
+Age band,16-17,2702,1309,1393,51.6,4746
+Age band,18-29,25249,5537,19712,78.10000000000001,31577
+Age band,30-34,9821,1659,8162,83.1,11760
+Age band,35-39,7322,1050,6272,85.7,8519
+Age band,40-44,5852,686,5166,88.3,6629
+Age band,45-49,5362,567,4795,89.4,5922
+Age band,50-54,6083,588,5495,90.3,6622
+Age band,55-59,6167,511,5656,91.7,6713
+Age band,60-64,4893,448,4445,90.8,5299
+Ethnicity (broad categories),Black,917,294,623,67.9,1554
+Ethnicity (broad categories),Mixed,875,238,637,72.8,1274
+Ethnicity (broad categories),Other,609,161,448,73.6,847
+Ethnicity (broad categories),South Asian,3962,1484,2478,62.5,5292
+Ethnicity (broad categories),Unknown,4270,735,3535,82.8,5159
+Ethnicity (broad categories),White,62825,9450,53375,85.0,73668

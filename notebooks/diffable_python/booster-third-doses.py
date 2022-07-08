@@ -13,7 +13,7 @@
 
 # ## Booster/Third doses
 
-# In[1]:
+# In[ ]:
 
 
 from datetime import datetime
@@ -49,7 +49,7 @@ latest_date_3rdDUE_delay_abbreviated = abbreviate_time_period(latest_date_3rdDUE
 additional_stats = pd.read_csv(os.path.join("..", "interim-outputs", "text", "additional_stats_third_dose.txt")).set_index("Unnamed: 0")
 
 
-# In[2]:
+# In[ ]:
 
 
 display(Markdown(f"This report is intended to highlight any differences between subgroups of priority cohorts in receiving 'booster' doses (or third primary doses where eligible), at least {latest_date_3rdDUE_delay} after their second dose."))
@@ -67,23 +67,23 @@ for x in additional_stats.index[0:3]:
 
 # ## Contents
 # 
-# **Cumulative third dose vaccination figures among:**
-# - [**80+** population](#Cumulative-third-dose-vaccination-figures-among-80+-population)
-# - [**70-79** population](#Cumulative-third-dose-vaccination-figures-among-70-79-population)
-# - [**Care home** population](#Cumulative-third-dose-vaccination-figures-among-care-home-population)
-# - <a href="#Cumulative-third-dose-vaccination-figures-among-shielding-(aged-16-69)-population"><strong>Shielding (aged 16-69)</strong> population</a>
-# - [**65-69** population](#Cumulative-third-dose-vaccination-figures-among-65-69-population)
-# - <a href="#Cumulative-third-dose-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population"><strong>LD (aged 16-64)</strong> population</a>
-# - [**60-64** population](#Cumulative-third-dose-vaccination-figures-among-60-64-population)
-# - [**55-59** population](#Cumulative-third-dose-vaccination-figures-among-55-59-population)
-# - [**50-54** population](#Cumulative-third-dose-vaccination-figures-among-50-54-population)
-# - [**40-49** population](#Cumulative-third-dose-vaccination-figures-among-40-49-population)
-# - [**30-39** population](#Cumulative-third-dose-vaccination-figures-among-30-39-population)
-# - [**18-29** population](#Cumulative-third-dose-vaccination-figures-among-18-29-population)
-# - [**All groups (Summary)**](#Summary)
+# - **Tables and figures:** Cumulative third dose vaccination figures among:**
+#     - [**80+** population](#Cumulative-third-dose-vaccination-figures-among-80+-population)
+#     - [**70-79** population](#Cumulative-third-dose-vaccination-figures-among-70-79-population)
+#     - [**Care home** population](#Cumulative-third-dose-vaccination-figures-among-care-home-population)
+#     - <a href="#Cumulative-third-dose-vaccination-figures-among-shielding-(aged-16-69)-population"><strong>Shielding (aged 16-69)</strong> population</a>
+#     - [**65-69** population](#Cumulative-third-dose-vaccination-figures-among-65-69-population)
+#     - <a href="#Cumulative-third-dose-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population"><strong>LD (aged 16-64)</strong> population</a>
+#     - [**60-64** population](#Cumulative-third-dose-vaccination-figures-among-60-64-population)
+#     - [**55-59** population](#Cumulative-third-dose-vaccination-figures-among-55-59-population)
+#     - [**50-54** population](#Cumulative-third-dose-vaccination-figures-among-50-54-population)
+#     - [**40-49** population](#Cumulative-third-dose-vaccination-figures-among-40-49-population)
+#     - [**30-39** population](#Cumulative-third-dose-vaccination-figures-among-30-39-population)
+#     - [**18-29** population](#Cumulative-third-dose-vaccination-figures-among-18-29-population)
+#     - [**All groups (Summary)**](#Summary)
 # 
 
-# In[3]:
+# In[ ]:
 
 
 with open('../lib/group_definitions.txt') as f:
@@ -91,7 +91,7 @@ with open('../lib/group_definitions.txt') as f:
     display(Markdown(group_defs))
 
 
-# In[4]:
+# In[ ]:
 
 
 tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population", 

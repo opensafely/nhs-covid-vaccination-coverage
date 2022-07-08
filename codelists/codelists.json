@@ -39,8 +39,8 @@
     "opensafely-chemotherapy-or-radiotherapy.csv": {
       "id": "opensafely/chemotherapy-or-radiotherapy/2020-04-15",
       "url": "https://codelists.opensafely.org/codelist/opensafely/chemotherapy-or-radiotherapy/2020-04-15/",
-      "downloaded_at": "2021-02-10 14:28:09.745529Z",
-      "sha": "cd33b4059bb1f9afcf4d04ff46bf72f088548750"
+      "downloaded_at": "2022-03-24 14:57:13.475178Z",
+      "sha": "41cd7183aee6e1932c4f9b09e8e93f3c7741d4e3"
     },
     "opensafely-covid-identification-in-primary-care-probable-covid-positive-test.csv": {
       "id": "opensafely/covid-identification-in-primary-care-probable-covid-positive-test/2020-07-16",
@@ -87,8 +87,8 @@
     "opensafely-dialysis.csv": {
       "id": "opensafely/dialysis/2020-07-16",
       "url": "https://codelists.opensafely.org/codelist/opensafely/dialysis/2020-07-16/",
-      "downloaded_at": "2021-02-10 14:28:10.659527Z",
-      "sha": "9ef20ad32280d276774f5b99b12c6a46513fc478"
+      "downloaded_at": "2022-03-24 14:57:16.476524Z",
+      "sha": "3404a792805335e5501bdff03bb900c06fed248b"
     },
     "opensafely-ethnicity.csv": {
       "id": "opensafely/ethnicity/2020-04-27",
@@ -233,6 +233,54 @@
       "url": "https://codelists.opensafely.org/codelist/primis-covid19-vacc-uptake/ckd35/v1/",
       "downloaded_at": "2021-12-06 12:52:27.332380Z",
       "sha": "3a32f20ef7b33b9cdda2128754d3f394f28f0165"
+    },
+    "opensafely-crohns-disease.csv": {
+      "id": "opensafely/crohns-disease/223a39f5",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/crohns-disease/223a39f5/",
+      "downloaded_at": "2022-03-24 14:57:24.724446Z",
+      "sha": "63230a0cc37cc199ffd4920cfcbe6d3188c602bf"
+    },
+    "opensafely-ulcerative-colitis.csv": {
+      "id": "opensafely/ulcerative-colitis/3b49ad2a",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/ulcerative-colitis/3b49ad2a/",
+      "downloaded_at": "2022-03-24 14:57:25.040851Z",
+      "sha": "9add66e0b6b15665c772806314c2f481ed56c468"
+    },
+    "opensafely-inflammatory-bowel-disease-unclassified.csv": {
+      "id": "opensafely/inflammatory-bowel-disease-unclassified/092ac6c0",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/inflammatory-bowel-disease-unclassified/092ac6c0/",
+      "downloaded_at": "2022-03-24 14:57:25.332361Z",
+      "sha": "e935dd4ccff7936cf8a80185469bbbcad9c02af9"
+    },
+    "opensafely-psoriasis.csv": {
+      "id": "opensafely/psoriasis/01091de1",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/psoriasis/01091de1/",
+      "downloaded_at": "2022-03-24 14:57:25.641480Z",
+      "sha": "9bcaf40cef8b3624037e8b4ed318cefa62f8cc8c"
+    },
+    "opensafely-hidradenitis-suppurativa.csv": {
+      "id": "opensafely/hidradenitis-suppurativa/2020-08-03",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/hidradenitis-suppurativa/2020-08-03/",
+      "downloaded_at": "2022-03-24 14:57:25.937288Z",
+      "sha": "9bd57a9e5e4de0aefda6e4cf52f1a152c21d6638"
+    },
+    "opensafely-psoriatic-arthritis.csv": {
+      "id": "opensafely/psoriatic-arthritis/2020-10-21",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/psoriatic-arthritis/2020-10-21/",
+      "downloaded_at": "2022-03-24 14:57:26.234359Z",
+      "sha": "c4188c7e914b59f058ad61bd39e005ee976e1ee5"
+    },
+    "opensafely-rheumatoid-arthritis.csv": {
+      "id": "opensafely/rheumatoid-arthritis/2020-05-12",
+      "url": "https://codelists.opensafely.org/codelist/opensafely/rheumatoid-arthritis/2020-05-12/",
+      "downloaded_at": "2022-03-24 14:57:26.514831Z",
+      "sha": "4042d1daebf9ab893093d0eeff6b62ad5927c86e"
+    },
+    "user-mark-yates-axial-spondyloarthritis.csv": {
+      "id": "user/mark-yates/axial-spondyloarthritis/3da730d4",
+      "url": "https://codelists.opensafely.org/codelist/user/mark-yates/axial-spondyloarthritis/3da730d4/",
+      "downloaded_at": "2022-03-24 14:57:26.834794Z",
+      "sha": "d3c091494b47af3c426716f97b4869b18b260ca9"
     }
   }
 }

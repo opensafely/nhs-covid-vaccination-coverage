@@ -52,7 +52,7 @@ common_variables = dict(
 
     # Demographic information
     age=patients.age_as_of(
-        "2021-08-31",  # PHE defined date for vaccine coverage
+        index_date, 
         return_expectations={
             "rate": "universal",
             "int": {"distribution": "population_ages"},
@@ -148,27 +148,27 @@ common_variables = dict(
         },
     ),
     # stp is an NHS administration region based on geography
-#     stp=patients.registered_practice_as_of(
-#         index_date,
-#         returning="stp_code",
-#         return_expectations={
-#             "rate": "universal",
-#             "category": {
-#                 "ratios": {
-#                     "STP1": 0.1,
-#                     "STP2": 0.1,
-#                     "STP3": 0.1,
-#                     "STP4": 0.1,
-#                     "STP5": 0.1,
-#                     "STP6": 0.1,
-#                     "STP7": 0.1,
-#                     "STP8": 0.1,
-#                     "STP9": 0.1,
-#                     "STP10": 0.1,
-#                 }
-#             },
-#         },
-#     ),
+    stp=patients.registered_practice_as_of(
+        index_date,
+        returning="stp_code",
+        return_expectations={
+            "rate": "universal",
+            "category": {
+                "ratios": {
+                    "STP1": 0.1,
+                    "STP2": 0.1,
+                    "STP3": 0.1,
+                    "STP4": 0.1,
+                    "STP5": 0.1,
+                    "STP6": 0.1,
+                    "STP7": 0.1,
+                    "STP8": 0.1,
+                    "STP9": 0.1,
+                    "STP10": 0.1,
+                }
+            },
+        },
+    ),
     # NHS administrative region
     region=patients.registered_practice_as_of(
         index_date,
@@ -397,8 +397,7 @@ common_variables = dict(
         ),
         
     ),
-        
-                
+
     LD = patients.with_these_clinical_events(
             wider_ld_codes, 
             return_expectations={"incidence": 0.02,},
@@ -417,6 +416,89 @@ common_variables = dict(
             },
                 "incidence":0.04
         },
+    ),
+    
+    imid = patients.satisfying(
+        """crohns_disease 
+            OR
+            ulcerative_colitis
+            OR
+            inflammatory_bowel_disease_unclassified
+            OR
+            psoriasis
+            OR
+            hidradenitis_suppurativa
+            OR
+            psoriatic_arthritis
+            OR
+            rheumatoid_arthritis
+            OR
+            ankylosing_spondylitis
+        """,
+        crohns_disease=patients.with_these_clinical_events(
+            crohns_disease_codes,
+            returning="date",
+            find_first_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+
+        ulcerative_colitis=patients.with_these_clinical_events(
+            ulcerative_colitis_codes,
+            returning="date",
+            find_first_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+
+        inflammatory_bowel_disease_unclassified=patients.with_these_clinical_events(
+            inflammatory_bowel_disease_unclassified_codes,
+            returning="date",
+            find_first_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+
+        psoriasis=patients.with_these_clinical_events(
+            psoriasis_codes,
+            returning="date",
+            find_first_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+
+        hidradenitis_suppurativa=patients.with_these_clinical_events(
+            hidradenitis_suppurativa_codes,
+            returning="date",
+            find_first_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+
+        psoriatic_arthritis=patients.with_these_clinical_events(
+            psoriatic_arthritis_codes,
+            returning="date",
+            find_first_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+
+        rheumatoid_arthritis=patients.with_these_clinical_events(
+            rheumatoid_arthritis_codes,
+            returning="date",
+            find_first_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+
+        ankylosing_spondylitis=patients.with_these_clinical_events(
+            ankylosing_spondylitis_codes,
+            returning="date",
+            find_first_match_in_period=True,
+            on_or_before="index_date",
+            date_format="YYYY-MM-DD",
+        ),
+        
     ),
             
 )

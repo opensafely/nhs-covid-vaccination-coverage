@@ -23,8 +23,6 @@ CTV3ID,CTV3PreferredTermDesc,CTV3Source
 7L1C0,Insertion of temporary peritoneal dialysis catheter,CTV3Map_Code_And_Term
 7L1Cy,Placement other apparatus- compensate for renal failure OS,CTV3Map_Code_And_Term
 7L1Cz,Placement other apparatus- compensate for renal failure NOS,CTV3Map_Code_And_Term
-8877,Ultrafiltration,CTV3_Children
-8882,Intestinal dialysis,High_Level_SNOMED
 G760.,Acquired arteriovenous fistula,CTV3Map_Code_And_Term
 TA020,"Accid cut,puncture,perf,h'ge - kidney dialysis",CTV3Map_Code_And_Term
 TA020,"Accid cut,puncture,perf,h'ge - kidney dialysis",CTV3Map_Code_Only

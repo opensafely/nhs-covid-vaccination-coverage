@@ -1,24 +1,24 @@
 version: '3.0'
 
 expectations:
-  population_size: 10000
+  population_size: 100000
+    # dummy population size must be at least 50000 to ensure the STP analysis can run successfully
     
 actions:
 
   generate_delivery_cohort:
     run: cohortextractor:latest generate_cohort --study-definition study_definition_delivery --output-format=csv.gz
-
     outputs:
       highly_sensitive:
         cohort: output/input_delivery.csv.gz
-  
+
   generate_notebook:
     run: jupyter:latest jupyter nbconvert /workspace/notebooks/population_characteristics.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --debug
-
     needs: [generate_delivery_cohort]
     outputs:
       moderately_sensitive:
-        notebook: output/population_characteristics.html 
+        notebook: output/population_characteristics.html
+        ### first, second, third/booster doses
         figures: interim-outputs/figures/*
         tables: interim-outputs/tables/*
         fig_csvs_1: output/machine_readable_outputs/figure_csvs/*ethnicity*.csv 
@@ -28,17 +28,14 @@ actions:
         fig_csvs_5: output/machine_readable_outputs/figure_csvs/*eligible*.csv 
         text: interim-outputs/text/*
         
-        
   generate_simple_report:
     run: jupyter:latest env IMAGE_FORMAT=png jupyter nbconvert /workspace/notebooks/opensafely_vaccine_report_overall.ipynb --execute --to html --template basic --output=/workspace/output/opensafely_vaccine_report_overall_simple.html --ExecutePreprocessor.timeout=86400 --no-input
-
     needs: [generate_delivery_cohort, generate_notebook]
     outputs:
       moderately_sensitive:
         notebook: output/opensafely_vaccine_report_overall_simple.html
         csvs: output/machine_readable_outputs/table_csvs/*
 
-        
   generate_report_second_doses:
     run: jupyter:latest jupyter nbconvert /workspace/notebooks/second_doses.ipynb --execute --to html --template basic --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
 
@@ -47,13 +44,44 @@ actions:
       moderately_sensitive:
         notebook: output/second_doses.html
         tables: output/machine_readable_outputs/second_doses/*.csv
-       
+
   generate_report_third_doses:
     run: jupyter:latest jupyter nbconvert /workspace/notebooks/booster-third-doses.ipynb --execute --to html --template basic --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
-
     needs: [generate_notebook]
     outputs:
       moderately_sensitive:
         notebook: output/booster-third-doses.html
         tables: output/machine_readable_outputs/third_doses/*.csv
-       
+
+  generate_u16_cohort:
+    run: cohortextractor:latest generate_cohort --study-definition study_definition_delivery_u16 --output-format=csv.gz
+    outputs:
+      highly_sensitive:
+        cohort: output/input_delivery_u16.csv.gz
+
+  generate_u16_notebook:
+    run: jupyter:latest jupyter nbconvert /workspace/notebooks/population_characteristics_u16.ipynb --execute --to html --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --debug
+    needs: [generate_u16_cohort]
+    outputs:
+      moderately_sensitive:
+        notebook: output/population_characteristics_u16.html 
+        figures: interim-outputs/u16/figures/*
+        tables: interim-outputs/u16/tables/*
+        fig_csvs: output/machine_readable_outputs/figure_csvs/*_u16*.csv 
+        text: interim-outputs/u16/text/*
+
+  generate_u16_simple_report:
+    run: jupyter:latest env IMAGE_FORMAT=png jupyter nbconvert /workspace/notebooks/first_dose_u16.ipynb --execute --to html --template basic --output=/workspace/output/first_dose_u16.html --ExecutePreprocessor.timeout=86400 --no-input
+    needs: [generate_u16_cohort, generate_u16_notebook]
+    outputs:
+      moderately_sensitive:
+        notebook: output/first_dose_u16.html
+        csvs: output/machine_readable_outputs/table_csvs/*_u16*.csv
+        
+  generate_u16_report_second_doses:
+    run: jupyter:latest jupyter nbconvert /workspace/notebooks/second_doses_u16.ipynb --execute --to html --template basic --output-dir=/workspace/output --ExecutePreprocessor.timeout=86400 --no-input
+    needs: [generate_u16_notebook]
+    outputs:
+      moderately_sensitive:
+        notebook: output/second_doses_u16.html
+        tables: output/machine_readable_outputs/second_doses/*_u16*.csv

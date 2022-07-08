@@ -12,8 +12,9 @@ from cohortextractor import (
 # Import codelists
 
 from codelists import *
-from study_definition_delivery_common import common_variables, campaign_start, index_date
-    
+from study_definition_delivery_common import common_variables, index_date
+
+
 # Specify study definition
 
 study = StudyDefinition(
@@ -276,7 +277,7 @@ study = StudyDefinition(
     ),
     # COVID VACCINATION - Oxford AZ
     covid_vacc_oxford_date=patients.with_tpp_vaccination_record(
-        product_name_matches="COVID-19 Vac AstraZeneca (ChAdOx1 S recomb) 5x10000000000 viral particles/0.5ml dose sol for inj MDV",
+        product_name_matches = "COVID-19 Vaccine Vaxzevria 0.5ml inj multidose vials (AstraZeneca)",
         on_or_after="2020-12-01",  # check all december to date
         find_first_match_in_period=True,
         returning="date",
@@ -326,7 +327,7 @@ study = StudyDefinition(
     
     # BOOSTER (3rd) DOSE COVID VACCINATION - Oxford AZ
     covid_vacc_third_dose_oxford_date=patients.with_tpp_vaccination_record(
-        product_name_matches="COVID-19 Vac AstraZeneca (ChAdOx1 S recomb) 5x10000000000 viral particles/0.5ml dose sol for inj MDV",
+        product_name_matches = "COVID-19 Vaccine Vaxzevria 0.5ml inj multidose vials (AstraZeneca)",
         on_or_after="covid_vacc_second_dose_date + 56 days", 
         find_first_match_in_period=True,
         returning="date",
@@ -355,6 +356,6 @@ study = StudyDefinition(
                 "incidence": 0.25
         },
     ),
-    
+
     **common_variables
 )

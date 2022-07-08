@@ -34,7 +34,7 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 
 # #### 
 # ## Contents:
-# - **<a href=#summary>Overview</a>**   (NEW: now includes third/booster dose counts)
+# - **<a href=#summary>Overview</a>**
 # <br>
 # <br>
 # - **<a href=#summarychart>Summary Charts</a>**
@@ -49,22 +49,6 @@ with open(os.path.join("..", "interim-outputs","text", "latest_date_of_first_dos
 #  - <a href=#charts55>55-59 population</a>
 #  - <a href=#charts50>50-54 population</a>
 #  - <a href=#charts40>40-49 population</a>
-# <br>
-# <br>
-# - **Tables:** Current first dose vaccination coverage according to demographic/clinical features, for:
-#   - <a href=#Cumulative-vaccination-figures-among-80+-population>80+</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-70-79-population>70-79</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-care-home-population>care home (65+)</a> population
-#   - <a href=#Cumulative-vaccination-figures-among-shielding-(aged-16-69)-population>shielding (aged 16-69)</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-65-69-population>65-69</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-Learning-Disabilities-(aged-16-64)-population>LD (aged 16-64)</a> populations.
-#   - <a href=#Cumulative-vaccination-figures-among-60-64-population>60-64</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-55-59-population>55-59</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-50-54-population>50-54</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-40-49-population>40-49</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-30-39-population>30-39</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-18-29-population>18-29</a>  population
-#   - <a href=#Cumulative-vaccination-figures-among-16-17-population>16-17</a>  population
 # <br>
 # <br>
 # - Appendix: <a href=#ethnicity>Proportion of each population group for whom ethnicity is known</a>

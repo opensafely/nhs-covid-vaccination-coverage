@@ -9,7 +9,9 @@ import sys
 sys.path.append('../lib/')
 from report_results import create_output_dirs, round7
 
-def ethnicity_completeness(df, groups_of_interest):
+DEFAULT = object()
+
+def ethnicity_completeness(df, groups_of_interest, savepath=DEFAULT):
 
     '''
     Describe completeness of ethnicity coding for group of interest
@@ -18,7 +20,8 @@ def ethnicity_completeness(df, groups_of_interest):
     df (dataframe): processed patient-level dataframe containing "ethnicity_6_groups" column,
                     as well as "group"&""group_name" (to identify vaccine priority group) and "patient_id" (for counting)
     groups_of_interest (dict): dict mapping names of population/eligible subgroups to integers (1-9, and 0 for "other")
-    
+    savepath (string): an optional directory to which the results should be written (if not present, the function create_output_dirs() will create this)
+
     Outputs:
     displays string describing n and % of given group with ethnicity known
     
@@ -28,7 +31,10 @@ def ethnicity_completeness(df, groups_of_interest):
     
     ethnicity_coverage = pd.DataFrame(columns=["group", "n with ethnicity", "total population (n)", "ethnicity coverage (%)"])
     
-    
+    if ( savepath is DEFAULT ):
+        # export ethnicity coverage stats to text file
+        savepath, _, _ = create_output_dirs()
+
     for i, (groupname, groupno) in enumerate(groups_of_interest.items()):
         out = df[cols].copy()
         # filter dataframe to eligible group
@@ -41,13 +47,9 @@ def ethnicity_completeness(df, groups_of_interest):
         known_eth = round7(known_eth)
         percent = round(100*(known_eth/total), 1)
         
-        # export ethnicity coverage stats to text file
-        savepath, _, _ = create_output_dirs()
-        
         ethnicity_coverage.loc[i] = [groupname, known_eth, total, percent]
         ethnicity_coverage.to_csv(os.path.join(savepath["text"], "ethnicity_coverage.csv"), index=False)
         
-
         display(Markdown(f"Total **{groupname}** population with ethnicity recorded {known_eth:,d} ({percent}%)"))
         
 

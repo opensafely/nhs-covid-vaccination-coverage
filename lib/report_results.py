@@ -88,7 +88,7 @@ def find_and_save_latest_date(df, savepath, reference_column_name="covid_vacc_da
     return latest_date, latest_date_fmt
 
 
-def filtering(d):
+def filtering(d, all_keys = [0,1,2,3,4,5,6,7,8,9]):
     '''
     Find items from the full set of single digit numbers (0-9) which are not present as values in a given dict
     
@@ -99,15 +99,13 @@ def filtering(d):
     l (list): a list containing zero and all the single digit numbers (0-9) which do not appear in d
     
     '''
-    all_keys = [0,1,2,3,4,5,6,7,8,9]
     keys = list(d.values())
 
     # check which of `all_keys` are absent in `keys` and return them as a list (but always include 0)
     l = [k for k in all_keys if ((k not in keys)|(k==0))]
-    return l
+    return l    
 
-
-def cumulative_sums(df, groups_of_interest, features_dict, latest_date, reference_column_name="covid_vacc_date"):
+def cumulative_sums(df, groups_of_interest, features_dict, latest_date, reference_column_name="covid_vacc_date", all_keys = [0,1,2,3,4,5,6,7,8,9]):
     '''
     Calculate cumulative sums across groups
     
@@ -131,7 +129,7 @@ def cumulative_sums(df, groups_of_interest, features_dict, latest_date, referenc
     # in much more detail such as comorbidities and ethnicity in 16 groups. 
     
     # make a new field for the priority groups we are looking at (where any we have not specifically listed are regrouped as 0/"other")
-    items_to_group = filtering(groups_of_interest)
+    items_to_group = filtering(groups_of_interest, all_keys=all_keys)
     df["group"] = np.where(df["priority_group"].isin(items_to_group), 0, df["priority_group"])
     # translate number into name
     for name, number in groups_of_interest.items():
@@ -189,7 +187,7 @@ def filtered_cumulative_sum(df, columns, latest_date, reference_column_name="cov
 
     # group by date of covid vaccines to calculate cumulative sum of vaccines at each date of the campaign
     out2 = pd.DataFrame(filtered.groupby([reference_column_name])[["patient_id"]].nunique().unstack().fillna(0).cumsum()).reset_index()
-    out2 = out2.rename(columns={0:"overall"}).drop(["level_0"],1)
+    out2 = out2.rename(columns={0:"overall"}).drop(columns=["level_0"])
 
     # filter to latest date and earlier (usually no effect unless a date earlier than the latest available data is passed)
     out2 = out2.loc[out2[reference_column_name] <= latest_date]
@@ -273,6 +271,7 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs,
     else:
         reference_column_name=f"covid_vacc_{vaccine_type}_date"
         title=f"Cumulative {vaccine_type.replace('_',' ')} vaccination figures"
+
     if  grouping=="group_name":
         title=title+f" by priority group"
     else:
@@ -308,7 +307,7 @@ def make_vaccine_graphs(df, latest_date, savepath, savepath_figure_csvs,
     
     # drop total from chart if required
     if include_total == False:
-        dfp = dfp.drop("total", 1)
+        dfp = dfp.drop(columns="total")
     
     # divide numbers into millions if exceeding 10m, otherwise thousands
     if dfp.max().max() >= 1e7:
@@ -409,7 +408,7 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
                 date_reached[i] = (latest + pd.DateOffset(days=weeks_to_target*7)).strftime('%d-%b')
             else:
                 date_reached[i] = "unknown"
-        out = out.transpose().append(date_reached).transpose().drop("weeks_to_target",1)
+        out = out.transpose().append(date_reached).transpose().drop(columns="weeks_to_target")
         out = out[[lastweek,"weeklyrate","date_reached","Increase in uptake (%)"]].rename(columns={lastweek: f"vaccinated 7d previous{col_str}", "weeklyrate":f"Uptake over last 7d{col_str}", "date_reached":"Date projected to reach 90%"})    
         out.index = out.index.str.replace("_percent","")    
         out = out.reset_index().rename(columns={category:"group", "index":"group"})
@@ -419,7 +418,7 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
 
         ##### n, percent and total pop figures for latest date
         out2 = df_dict_cum[group][category].reset_index()
-        out2 = out2.loc[out2[reference_column_name]==latest_date].reset_index().set_index(reference_column_name).drop(["index"], 1).transpose()
+        out2 = out2.loc[out2[reference_column_name]==latest_date].reset_index().set_index(reference_column_name).drop(columns=["index"]).transpose()
         # split field names e.g. "M_percent" ->"M""percent"
         
         out2.index = pd.MultiIndex.from_tuples(out2.index.str.split('_').tolist())
@@ -435,9 +434,9 @@ def report_results(df_dict_cum, group, latest_date, breakdown=None):
         out3 = out3.append(out2)   
 
     if "not in other eligible groups" in group:
-        out3 = out3.drop(["percent","total","Date projected to reach 90%"],1)
+        out3 = out3.drop(columns=["percent","total","Date projected to reach 90%"])
     else:
-        out3 = out3.drop(["Increase in uptake (%)"],1)
+        out3 = out3.drop(columns=["Increase in uptake (%)"])
     
     return out3
 
@@ -490,6 +489,73 @@ def round7(input_):
         return ( 7*round((input_/7),0) )
     else:
         return ( int(7*round((input_/7),0)) )
+
+
+def create_summary_stats_nobrands(df, summarised_data_dict,  formatted_latest_date, savepath,  vaccine_type="first_dose",
+reference_column_name = None, groups=["80+", "70-79", "care home", "shielding (aged 16-69)"], suffix=""):
+    """
+    This takes in the large summarised_data_dict that is created by summarise_data_by_group()
+    and the original dataframe and loops through the specified groups and rounds the values 
+    of the number vaccinated to the nearest 7 using the function round7(). It then 
+    adds the results to a new dictionary and returns this.
+
+    It also outputs the results into a text file.
+
+    This does the same calculation as create_summary_stats() but does not calculated brand counts.
+
+    Args:
+        df (Dataframe): pandas dataframe that is created by the load_data() function
+        summarised_data_dict (dict): dictionary that is created by running summarise_data_by_group()
+        formatted_latest_date (str): str that is created by running 
+            find_and_save_latest_date()
+        savepath (dict): location to save summary stats
+        vaccine_type (str): used in output strings to describe type of vaccine received e.g. "first_dose", "moderna". 
+                            Also appended to filename of output. 
+        reference_column_name (str): this allows the reference column to be defined directly, rather
+            than being inferred from vaccine_type
+        groups (list): groups of interest
+        suffix (str): provider name to append to output
+
+    Returns:
+        dict (summary_stats): dictionary of the results
+    """
+
+    # create a series to store results for display and exporting
+    summary_stats= pd.Series(dtype="str", name=f"{vaccine_type.replace('_',' ')} as at {formatted_latest_date}")
+    additional_stats =  pd.Series(dtype="str", name=f"Vaccination counts summary")
+    
+    # get the total vaccinated and round to the nearest 7
+    if not reference_column_name:
+        if vaccine_type=="first_dose":
+            reference_column_name="covid_vacc_date"
+        elif reference_column_name:
+            reference_column_name=f"covid_vacc_{vaccine_type}_date" 
+
+    vaccinated_total = round7( df.loc[df[reference_column_name]!=0]["patient_id"].nunique() )
+
+    # add the results fo the summary_stats dict 
+    suffix_str = suffix.replace("_","").upper()
+    summary_stats[f"Total vaccinated in {suffix_str}"] = f"{vaccinated_total:,d}"
+
+    # loop through the specified groups and calculate number vaccinated in the groups
+    # add the results to the dict
+    for group in groups:
+        out = summarised_data_dict[group]
+        vaccinated = round7(out.loc[("overall","overall")]["vaccinated"])
+        if "not in other eligible groups" not in group:
+            percent = out.loc[("overall","overall")]["percent"].round(1)
+            total = out.loc[("overall","overall")]["total"].astype(int)
+            summary_stats[f"{group}"] = f"{percent}% ({vaccinated:,} of {total:,})"
+            #out_str = f"**{k}** population vaccinated {vaccinated:,} ({percent}% of {total:,})"
+        else:
+            #out_str = f"**{k}** population vaccinated {vaccinated:,}"
+            summary_stats[f"{group}"] = f"{vaccinated:,}"
+
+    # export summary stats to text file
+    summary_stats.to_csv(os.path.join(savepath["text"], f"summary_stats_{vaccine_type}.txt"))
+    additional_stats.to_csv(os.path.join(savepath["text"], f"additional_stats_{vaccine_type}.txt"))
+
+    return summary_stats, additional_stats
 
 
 def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savepath,  vaccine_type="first_dose",
@@ -608,6 +674,169 @@ def create_summary_stats(df, summarised_data_dict,  formatted_latest_date, savep
 
     return summary_stats, additional_stats
 
+def generate_brand_crosstabs(df, formatted_latest_date, savepath, vaccine_type="first_dose", groups=[], suffix="" ):
+    """
+    This takes in the large data frame containing all the data and generates
+    counts for the specified brand across the specified groups.
+
+    Args:
+
+    """
+
+
+def create_summary_stats_children(df, summarised_data_dict,  formatted_latest_date, savepath,  vaccine_type="first_dose",
+                         groups=[],
+                         suffix=""):
+    """
+    This takes in the large summarised_data_dict for the _CHILD_ data that is created by
+    summarise_data_by_group() and the original dataframe and loops through the specified
+    groups and rounds the values of the number vaccinated to the nearest 7 using the
+    function round7(). It then adds the results to a new dictionary and returns this. 
+
+    It also outputs the results into a text file. 
+
+    Args:
+        df (Dataframe): pandas dataframe that is created by the load_data() function
+        summarised_data_dict (dict): dictionary that is created by running summarise_data_by_group()
+        formatted_latest_date (str): str that is created by running 
+            find_and_save_latest_date()
+        savepath (dict): location to save summary stats
+        vaccine_type (str): used in output strings to describe type of vaccine received e.g. "first_dose", "moderna". 
+                            Also appended to filename of output. 
+        groups (list): groups of interest. 
+        suffix (str): provider name to append to output
+
+    Returns:
+        dict (summary_stats): dictionary of the results
+    """
+
+    # create a series to store results for display and exporting
+    summary_stats= pd.Series(dtype="str", name=f"{vaccine_type.replace('_',' ')} as at {formatted_latest_date}")
+    additional_stats =  pd.Series(dtype="str", name=f"Vaccine types and second doses")
+    
+    # Create a dataframe to store group/brand counts/percentages
+    group_vaccine_brand_df = pd.DataFrame()
+
+    # get the total vaccinated and round to the nearest 7
+    if vaccine_type=="first_dose":
+        reference_column_name="covid_vacc_date"
+    else:
+        reference_column_name=f"covid_vacc_{vaccine_type}_date"
+    vaccinated_total = round7( df.loc[df[reference_column_name]!=0]["patient_id"].nunique() )
+
+    # add the results fo the summary_stats dict 
+    suffix_str = suffix.replace("_","").upper()
+    summary_stats[f"Total vaccinated in {suffix_str}"] = f"{vaccinated_total:,d}"
+
+    # loop through the specified groups and calculate number vaccinated in the groups
+    # add the results to the dict
+    for group in groups:
+        out = summarised_data_dict[group]
+        vaccinated = round7(out.loc[("overall","overall")]["vaccinated"])
+        if "not in other eligible groups" not in group:
+            percent = out.loc[("overall","overall")]["percent"].round(1)
+            total = out.loc[("overall","overall")]["total"].astype(int)
+            summary_stats[f"{group}"] = f"{percent}% ({vaccinated:,} of {total:,})"
+            #out_str = f"**{k}** population vaccinated {vaccinated:,} ({percent}% of {total:,})"
+        else:
+            #out_str = f"**{k}** population vaccinated {vaccinated:,}"
+            summary_stats[f"{group}"] = f"{vaccinated:,}"
+
+    # if summarising first doses, perform some additional calculations     
+    if vaccine_type=="first_dose":
+        # calculate the proportion of first doses which were of each brand available 
+        vaccine_brands = {}
+        vaccine_brands["pfizerA"], vaccine_brands["pfizerC"], vaccine_brands["other"] = {}, {}, {}
+        # count each vax type as a proportion of total; filter to date of first vax only in case of patients having mixed types
+        # note that the first vaccine date being equal to the specific brand date could include unvaccinated people (0=0) so need to sum the specific flag
+        for x, y in [("pfizerA", "pfizerA"), ("pfizerC", "pfizerC"), ("other","other")]:
+            vaccine_brands[x]["first_doses"] = round7(df.copy().loc[df["covid_vacc_date"]==df[f"covid_vacc_{x}_date"]][f"covid_vacc_flag_{y}"].sum())
+            vaccine_brands[x]["percent"] = round(100*vaccine_brands[x]["first_doses"]/vaccinated_total, 1)
+        
+        ### Create cross tabulations for the vaccine brand and the groups
+        group_first_vaccine_brand_dict = {}
+
+        for group in groups:
+            group_first_vaccine_brand_dict[group] = {}
+            group_first_vaccine_brand_dict[group]["Pfizer (30 micrograms)"], group_first_vaccine_brand_dict[group]["Pfizer (10 micrograms)"], group_first_vaccine_brand_dict[group]["Other"] = {}, {}, {}
+            for x, y in [("pfizerA", "Pfizer (30 micrograms)"), ("pfizerC", "Pfizer (10 micrograms)"), ("other","Other")]:
+                group_first_vaccine_brand_dict[group][y]["first_doses"] = round7(df.copy().loc[(df["covid_vacc_date"]==df[f"covid_vacc_{x}_date"]) & (df["group_name"] == group)][f"covid_vacc_flag_{x}"].sum())
+    
+        group_first_vaccine_brand_df = pd.concat({k: pd.DataFrame(v).T for k, v in group_first_vaccine_brand_dict.items()}, axis=0).reset_index()
+        
+        group_totals = group_first_vaccine_brand_df.groupby(['level_0'])['first_doses'].agg('sum')
+        group_totals = group_totals.reset_index().rename(columns={"first_doses":"first_doses_total"})
+        
+        group_first_vaccine_brand_df = group_first_vaccine_brand_df.merge(group_totals)
+        group_first_vaccine_brand_df['first_doses_perc'] = round(100*group_first_vaccine_brand_df['first_doses']/group_first_vaccine_brand_df['first_doses_total'],2)
+
+        # second doses
+        second_doses = round7(df["covid_vacc_2nd"].sum())
+        sd_percent = round(100*second_doses/vaccinated_total, 1)
+        
+        # second doses according to brand of first dose
+        for x in ["pfizerA", "pfizerC", "other"]:
+            vaccine_brands[x]["second_doses"] = round7(df.loc[df["covid_vacc_date"]==df[f"covid_vacc_{x}_date"]]["covid_vacc_2nd"].sum())
+            denom = vaccine_brands[x]["first_doses"]
+            if denom>0: # in case of zeros in dummy data
+                out = round(100*vaccine_brands[x]["second_doses"]/denom, 1)
+            else:
+                out = 0
+            vaccine_brands[x]["second_doses_percent"] = out
+
+            group_second_vaccine_brand_dict = {}
+
+            for group in groups:
+                group_second_vaccine_brand_dict[group] = {}
+                group_second_vaccine_brand_dict[group]["Pfizer (30 micrograms)"], group_second_vaccine_brand_dict[group]["Pfizer (10 micrograms)"], group_second_vaccine_brand_dict[group]["Other"] = {}, {}, {}
+                for x, y in [("pfizerA", "Pfizer (30 micrograms)"), ("pfizerC", "Pfizer (10 micrograms)"), ("other","Other")]:
+                    group_second_vaccine_brand_dict[group][y]["second_doses"] = round7(df.loc[(df["covid_vacc_date"]==df[f"covid_vacc_{x}_date"])&(df["group_name"] == group)]["covid_vacc_2nd"].sum())
+
+            group_second_vaccine_brand_df = pd.concat({k: pd.DataFrame(v).T for k, v in group_second_vaccine_brand_dict.items()}, axis=0).reset_index()
+                        
+            group_totals = group_second_vaccine_brand_df.groupby(['level_0'])['second_doses'].agg('sum')
+            group_totals = group_totals.reset_index().rename(columns={"second_doses":"second_doses_total"})
+
+            group_second_vaccine_brand_df = group_second_vaccine_brand_df.merge(group_totals)
+            group_second_vaccine_brand_df['second_doses_perc'] = round(100*group_second_vaccine_brand_df['second_doses']/group_second_vaccine_brand_df['second_doses_total'],2)    
+        
+        group_vaccine_brand_df = group_first_vaccine_brand_df.merge( group_second_vaccine_brand_df, on=["level_0","level_1"] ).rename( columns={"level_0": "Group", "level_1": "Vaccine brand"} )
+
+        # # mixed doses
+        # for x, y, z in [("oxford", "ox", "pfz"), ("oxford","ox", "mod"),  ("moderna","mod", "pfz")]:
+        #     vaccine_brands[x][z] = round7(df[f"covid_vacc_{y}_{z}"].sum())
+        #     vaccine_brands[x][f"{z}_percent"] = round(100*vaccine_brands[x][z]/second_doses, 1)
+
+        additional_stats["Pfizer (30 micrograms) vaccines (% of all first doses)"] = f'**{vaccine_brands["pfizerA"]["percent"]}%** ({vaccine_brands["pfizerA"]["first_doses"]:,})'
+        additional_stats["Pfizer (10 micrograms) vaccines (% of all first doses)"] = f'**{vaccine_brands["pfizerC"]["percent"]}%** ({vaccine_brands["pfizerC"]["first_doses"]:,})'
+        additional_stats["Other (Oxford-AZ or Moderna) vaccines (% of all first doses)"] = f'**{vaccine_brands["other"]["percent"]}%** ({vaccine_brands["other"]["first_doses"]:,})'
+        
+        additional_stats["Second doses (% of all vaccinated)"] = f"**{sd_percent}%** ({second_doses:,})"
+        additional_stats["Second doses (% of Pfizer (30 micrograms) first doses)"] = f'**{vaccine_brands["pfizerA"]["second_doses_percent"]}%** ({vaccine_brands["pfizerA"]["second_doses"]:,})'
+        additional_stats["Second doses (% of Pfizer (10 micrograms) first doses)"] = f'**{vaccine_brands["pfizerC"]["second_doses_percent"]}%** ({vaccine_brands["pfizerC"]["second_doses"]:,})'
+        additional_stats["Second doses (% of Other (Oxford-AZ or Moderna) first doses)"] = f'**{vaccine_brands["other"]["second_doses_percent"]}%** ({vaccine_brands["other"]["second_doses"]:,})'
+
+        group_vaccine_brand_df.to_csv(os.path.join(savepath["text"], f"summary_stats_brand_counts.txt"), index=False)
+
+
+    # if vaccine_type == "third_dose":
+    #     vaccine_brands_3rd_dose = {}
+    #     vaccine_brands_3rd_dose["oxford"], vaccine_brands_3rd_dose["pfizer"], vaccine_brands_3rd_dose["moderna"] = {}, {}, {}
+
+    #     for x, y in [ ("oxford", "Oxford-AZ"), ("pfizer", "Pfizer"), ("moderna", "Moderna") ]:
+    #         vaccine_brands_3rd_dose[x]["third_doses"] = round7(df.copy().loc[df["brand_of_third_dose"] == y ]["covid_vacc_3rd"].sum())
+    #         vaccine_brands_3rd_dose[x]["percent"] = round(100*vaccine_brands_3rd_dose[x]["third_doses"]/vaccinated_total, 1)
+        
+    #     additional_stats["Oxford-AZ vaccines (% of all third doses)"] = f'**{vaccine_brands_3rd_dose["oxford"]["percent"]}%** ({vaccine_brands_3rd_dose["oxford"]["third_doses"]:,})'
+    #     additional_stats["Pfizer vaccines (% of all third doses)"] = f'**{vaccine_brands_3rd_dose["pfizer"]["percent"]}%** ({vaccine_brands_3rd_dose["pfizer"]["third_doses"]:,})'
+    #     additional_stats["Moderna vaccines (% of all third doses)"] = f'**{vaccine_brands_3rd_dose["moderna"]["percent"]}%** ({vaccine_brands_3rd_dose["moderna"]["third_doses"]:,})'
+
+    # export summary stats to text file
+    summary_stats.to_csv(os.path.join(savepath["text"], f"summary_stats_{vaccine_type}.txt"))
+    additional_stats.to_csv(os.path.join(savepath["text"], f"additional_stats_{vaccine_type}.txt"))
+
+    return summary_stats, additional_stats, group_vaccine_brand_df
+
 
 def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date, savepath, vaccine_type="first_dose", groups=["80+", "70-79", "care home", "shielding (aged 16-69)"]):
     """
@@ -641,7 +870,7 @@ def create_detailed_summary_uptake(summarised_data_dict,  formatted_latest_date,
         # saves to file
         out_csv = out.copy()
         if "Date projected to reach 90%" in out.columns:
-            out_csv = out_csv.drop("Date projected to reach 90%",1)
+            out_csv = out_csv.drop(columns="Date projected to reach 90%")
         
         if vaccine_type == "first_dose":
             out_str = ""
@@ -719,7 +948,7 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
             #  for plotting, drop vaccinated and total column but keep percentage
             cols = [c for c in out.columns if ('_percent' not in c) & ('_total' not in c)]
             for c2 in cols:
-                out = out.drop([c2, f"{c2}_total"],1)
+                out = out.drop(columns=[c2, f"{c2}_total"])
                 out = out.rename(columns={f"{c2}_percent":c2})
 
             # display title and caveats for individual chart
@@ -753,4 +982,4 @@ def plot_dem_charts(summary_stats_results, cumulative_data_dict, formatted_lates
             plt.savefig(f"{filename}.svg", dpi=300, bbox_inches='tight')
             plt.savefig(f"{filename}.png", dpi=300, bbox_inches='tight')
 
-            plt.show() 
+            plt.show()

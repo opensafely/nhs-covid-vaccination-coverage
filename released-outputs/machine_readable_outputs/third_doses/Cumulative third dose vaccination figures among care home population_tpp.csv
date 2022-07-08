@@ -1,18 +1,18 @@
-Category,Group,Third Doses due at 11 May 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
-overall,overall,103747,4368,99379,95.8,112301
-Sex,F,72695,2828,69867,96.1,78379
-Sex,M,31052,1547,29505,95.0,33915
-Age band,65-69,5887,462,5425,92.2,6545
-Age band,70-74,9429,595,8834,93.7,10360
-Age band,75-79,13524,665,12859,95.1,14735
-Age band,80-84,19159,805,18354,95.8,20748
-Age band,85-89,24815,945,23870,96.2,26845
-Age band,90+,30940,917,30023,97.0,33068
-Ethnicity (broad categories),Black,602,63,539,89.5,763
-Ethnicity (broad categories),Mixed,322,21,301,93.5,364
-Ethnicity (broad categories),Other,490,42,448,91.4,539
-Ethnicity (broad categories),South Asian,931,84,847,91.0,1057
-Ethnicity (broad categories),Unknown,1827,63,1764,96.6,2044
-Ethnicity (broad categories),White,99568,4088,95480,95.89999999999999,107527
-Dementia,no,47460,2226,45234,95.3,52066
-Dementia,yes,56294,2149,54145,96.2,60235
+Category,Group,Third Doses due at 22 Jun 2022 (n),Third doses overdue (n),Third doses given (n),Third doses given (% of due),Total population
+overall,overall,107821,3003,104818,97.2,117341
+Sex,F,74998,1876,73122,97.5,81270
+Sex,M,32823,1127,31696,96.6,36071
+Age band,65-69,5908,385,5523,93.5,6566
+Age band,70-74,8505,448,8057,94.69999999999999,9408
+Age band,75-79,13720,476,13244,96.5,15085
+Age band,80-84,18704,518,18186,97.2,20398
+Age band,85-89,25221,567,24654,97.8,27384
+Age band,90+,35763,609,35154,98.3,38493
+Ethnicity (broad categories),Black,651,56,595,91.4,812
+Ethnicity (broad categories),Mixed,329,14,315,95.7,371
+Ethnicity (broad categories),Other,525,28,497,94.69999999999999,581
+Ethnicity (broad categories),South Asian,987,77,910,92.2,1127
+Ethnicity (broad categories),Unknown,1806,35,1771,98.1,2114
+Ethnicity (broad categories),White,103523,2793,100730,97.3,112336
+Dementia,no,49686,1659,48027,96.7,54803
+Dementia,yes,58135,1344,56791,97.7,62538
