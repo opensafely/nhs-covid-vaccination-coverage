@@ -28,7 +28,10 @@ variable_renaming = { 'ageband 5yr': "Age band",
                       'chemo or radio': 'Chemo or radiotherapy',
                       'lung cancer': 'Cancer (lung)',
                       'cancer excl lung and haem': 'Cancer (excluding lung/haem)',
-                      'haematological cancer': 'Cancer (haematological)'}
+                      'haematological cancer': 'Cancer (haematological)',
+                      'brand of first dose': 'Brand of first dose',
+                      'priority status': 'Priority status',
+                      'risk status': 'Risk status'}
 
 
 def get_savepath(subfolder=None):
@@ -130,7 +133,9 @@ def find_and_sort_filenames(foldername, *,
                         'dementia',
                         'LD',
                         'psychosis schiz bipolar',
-                        'ssri'
+                        'ssri',
+                        'brand of first dose',
+                        'brand of second dose'
                         ]
         sort_order = {key: ix for ix, key in enumerate(ordered_dems)}
     elif by_demographics_or_population=="population_reversed":
@@ -364,7 +369,9 @@ def show_table(df, title, latest_date_fmt, *, count_columns=[], org_breakdown=No
     if variable_renaming["imid"] in tab.index:
         display(Markdown(f"- Immune-mediated inflammatory disease is defined as the presence of a relevant diagnostic code."))
 
-        
+    if variable_renaming["priority status"] in tab.index:
+        display(Markdown(f"- See <a href='#Group-definitions'>Group Definitions</a> section for the definition of 'In a risk group' and 'Not in a risk group'."))
+
         
 def df_column_switch(df, column1, column2):
     i = list(df.columns)
