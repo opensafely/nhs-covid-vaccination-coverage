@@ -14,21 +14,27 @@
 # In[ ]:
 
 
-
-import json
 import sys
+sys.path.append('../lib/')
+
+
+from image_formats import pick_image_format
+from create_report import find_and_sort_filenames, show_chart
+from second_third_doses import *
+import json
 import pandas as pd
 import os
 from IPython.display import display, Markdown
 from datetime import datetime
+
 get_ipython().run_line_magic('matplotlib', 'inline')
 get_ipython().run_line_magic('config', "InlineBackend.figure_format = 'png'")
 
 pd.set_option("display.max_rows", 200)
-sys.path.append('../lib/')
 
-from second_third_doses import *
-from create_report import find_and_sort_filenames
+
+IMAGE_FORMAT = pick_image_format()
+
 
 backend = os.getenv("OPENSAFELY_BACKEND", "expectations")
 group_string = "u16"
@@ -43,31 +49,57 @@ suffix = f"_{group_string}_tpp"
 
 # ## Second doses
 
-# Second doses are recommended to occur within 8 weeks for children at high risk and within 12 weeks for all other children. In this report we consider an individual to be 'due' to receive their second dose if their first dose more than 14 weeks ago. Anyone who as *not* had their second dose by 14 weeks is described as 'overdue'.
+# Second doses are recommended to occur within 8 weeks for children at high risk and within 12 weeks for all other children (see p. 13 in [The Green Book, chapter 14a](https://www.gov.uk/government/publications/covid-19-the-green-book-chapter-14a)). To accommodate short delays in the administration of second doses, in this report we consider an individual to be 'due' to receive their second dose if their first dose more than 14 weeks ago. Anyone who has *not* had their second dose by 14 weeks is described as 'overdue'.
 # 
 # **Please note**: This report is intended to highlight any differences between population subgroups in receiving second doses, only including those which are due (i.e. where at least 14 weeks has passed since the first dose) unless otherwise stated. **It is therefore NOT a comprehensive view of all second doses given to date** - to see these figures please refer to the main report.
 
 # In[ ]:
 
 
+display(
+    Markdown(f"### Report last updated **{datetime.today().strftime('%d %b %Y')}**")
+)
 
-
-display(Markdown(f"### Report last updated **{datetime.today().strftime('%d %b %Y')}**"))
-
-with open(os.path.join("..", "interim-outputs",group_string,"text", "latest_date.txt"), 'r') as file:
+with open(
+    os.path.join("..", "interim-outputs", group_string, "text", "latest_date.txt"), "r"
+) as file:
     latest_date_fmt = file.read()
-    display(Markdown(f"### Second dose vaccinations included up to **{latest_date_fmt}** inclusive"))
-    
-with open(os.path.join("..", "interim-outputs",group_string,"text", "latest_date_of_first_dose_for_due_second_doses.txt"), 'r') as file:
+    display(
+        Markdown(
+            f"### Second dose vaccinations included up to **{latest_date_fmt}** inclusive"
+        )
+    )
+
+with open(
+    os.path.join(
+        "..",
+        "interim-outputs",
+        group_string,
+        "text",
+        "latest_date_of_first_dose_for_due_second_doses.txt",
+    ),
+    "r",
+) as file:
     latest_date_secondDUE_fmt = file.read()
-    
-display(Markdown(
-    f"### Only 5-15 year olds who had their first dose between the start of the campaign (**4th August 2021**) \
-    and 7 weeks ago (**{latest_date_secondDUE_fmt}**) are included in the 'due' group."))
 
-additional_stats = pd.read_csv(os.path.join("..", "interim-outputs", group_string,"text", "additional_stats_first_dose.txt")).set_index("Unnamed: 0")
+display(
+    Markdown(
+        f"### Only 5-15 year olds who had their first dose between the start of the campaign (**4th August 2021**) \
+    and 7 weeks ago (**{latest_date_secondDUE_fmt}**) are included in the 'due' group."
+    )
+)
 
-group_brand_counts = pd.read_csv(os.path.join("..", "interim-outputs", group_string,"text", "summary_stats_brand_counts.txt")).set_index(["Group","Vaccine brand"])
+additional_stats = pd.read_csv(
+    os.path.join(
+        "..", "interim-outputs", group_string, "text", "additional_stats_first_dose.txt"
+    )
+).set_index("Unnamed: 0")
+
+group_brand_counts = pd.read_csv(
+    os.path.join(
+        "..", "interim-outputs", group_string, "text", "summary_stats_brand_counts.txt"
+    )
+).set_index(["Group", "Vaccine brand"])
 group_brand_counts = group_brand_counts[["second_doses", "second_doses_perc"]]
 
 
@@ -83,14 +115,20 @@ group_brand_counts = group_brand_counts[["second_doses", "second_doses_perc"]]
 # <br>
 # - **Table:** <a href="#Summary"> Summary of second dose vaccination coverage </a>
 # <br>
+# <br>
+# - **Figures:** <a href=#By-vaccine-brand-(first-and-second-doses)>Time to second dose plots, by vaccine brand<a>:
+#   - <a href=#Cumulative-plot-of-time-to-second-dose-(matched-brands)-among-5-11-population>5-11 population</a>
+#   - <a href=#Cumulative-plot-of-time-to-second-dose-(matched-brands)-among-12-15-population>12-15 population</a>
+# <br>
+# <br>
 # 
 
 # In[ ]:
 
 
-with open(f'../lib/group_definitions_{group_string}.txt') as f:
+with open(f"../lib/group_definitions_{group_string}.txt") as f:
     group_defs = f.read()
-    display(Markdown(group_defs))
+    display(Markdown(f"{group_defs} \n\n  #### \n"))
 
 
 # ## Brand counts <a name='brands' />
@@ -108,21 +146,27 @@ with open(f'../lib/group_definitions_{group_string}.txt') as f:
 
 
 brand_summary = group_brand_counts.rename(
-    columns={"second_doses":f"Second doses as at {latest_date_fmt}",
-            "second_doses_perc":f"% second doses as at {latest_date_fmt}" }
-    )
+    columns={
+        "second_doses": f"Second doses as at {latest_date_fmt}",
+        "second_doses_perc": f"% second doses as at {latest_date_fmt}",
+    }
+)
 
-display( brand_summary )
+display(brand_summary)
 
 
 # In[ ]:
 
 
-display(Markdown(f"##### \n" 
-                 "**Notes**\n"
-                 "\n- Patient counts are rounded to nearest 7\n"
-                 "\n- 'Other' vaccines are Oxford-AZ or Moderna\n"
-                 "\n- For the brand totals, second doses given in these timescales are counted whether or not they were 'due' according to the relevant dosing schedule at the time." ))
+display(
+    Markdown(
+        f"##### \n"
+        "**Notes**\n"
+        "\n- Patient counts are rounded to nearest 7\n"
+        "\n- 'Other' vaccines are Oxford-AZ or Moderna\n"
+        "\n- For the brand totals, second doses given in these timescales are counted whether or not they were 'due' according to the relevant dosing schedule at the time."
+    )
+)
 
 display(Markdown("##### \n"))
 
@@ -130,10 +174,13 @@ display(Markdown("##### \n"))
 # In[ ]:
 
 
-
-display(Markdown(f"### Second dose coverage by first dose brand\n\n"
-                 f"The percentage of second doses received by first dose brand are provided below.\n\n"
-                 f"Note that these figures are raw proportions and do not take into account how many are due; this may vary substantially by brand.\n\n"))
+display(
+    Markdown(
+        f"### Second dose coverage by first dose brand\n\n"
+        f"The percentage of second doses received by first dose brand are provided below.\n\n"
+        f"Note that these figures are raw proportions and do not take into account how many are due; this may vary substantially by brand.\n\n"
+    )
+)
 
 display(Markdown("##### \n"))
 
@@ -154,31 +201,79 @@ display(Markdown("##### \n"))
 # In[ ]:
 
 
-tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population_reversed", 
-                                    org_breakdown=group_string,
-                                    pre_string="among ", tail_string=" population.csv",
-                                    population_subset="Cumulative first dose 14w ago",
-                                    # files_to_exclude=["Cumulative first dose 14w ago vaccination figures among 5-11 population.csv"],
-                                    )
-    
+tablelist = find_and_sort_filenames(
+    "tables",
+    by_demographics_or_population="population_reversed",
+    org_breakdown=group_string,
+    pre_string="among ",
+    tail_string=" population.csv",
+    population_subset="Cumulative first dose 14w ago",
+    # files_to_exclude=["Cumulative first dose 14w ago vaccination figures among 5-11 population.csv"],
+)
+
 # get 2nd dose figures for each group
-tablelist_2nd = find_and_sort_filenames("tables", by_demographics_or_population="population_reversed", 
-                                        org_breakdown=group_string,
-                                        pre_string="among ", tail_string=" population.csv",
-                                        population_subset="Cumulative second dose vaccination",
-                                        # files_to_exclude=["Cumulative second dose vaccination figures among 5-11 population.csv"],
-                                        )
+tablelist_2nd = find_and_sort_filenames(
+    "tables",
+    by_demographics_or_population="population_reversed",
+    org_breakdown=group_string,
+    pre_string="among ",
+    tail_string=" population.csv",
+    population_subset="Cumulative second dose vaccination",
+    # files_to_exclude=["Cumulative second dose vaccination figures among 5-11 population.csv"],
+)
 
 
 # In[ ]:
 
 
+second_third_doses(
+    tablelist,
+    tablelist_2nd,
+    dose_type="Second",
+    time_period="14 weeks",
+    org_breakdown=group_string,
+    latest_date_fmt=latest_date_fmt,
+    latest_date_fmt_2=latest_date_secondDUE_fmt,
+    max_ylim=100,
+    backend=backend,
+    suffix=suffix,
+)
 
-second_third_doses(tablelist, tablelist_2nd, dose_type="Second", time_period="14 weeks",
-                   org_breakdown=group_string,
-                   latest_date_fmt=latest_date_fmt,
-                   latest_date_fmt_2=latest_date_secondDUE_fmt,
-                   max_ylim=100,
-                   backend=backend, suffix = suffix)
-   
+
+# 
+# ## Time to second dose
+# 
+# Find below plots showing cumulative percentage of time to second dose (all brands), for the 5-11 and 12-15 groups.
+
+# In[ ]:
+
+
+chartlist = find_and_sort_filenames(
+    foldername="figures",
+    org_breakdown="u16",
+    population_subset="5-11",
+    by_demographics_or_population="demographics",
+    file_extension=IMAGE_FORMAT.extension,
+)
+chartlist_time_to_second_dose = [k for k in chartlist if "time to second dose" in k]
+
+for item in chartlist_time_to_second_dose:
+    show_chart(item, IMAGE_FORMAT, org_breakdown="u16")
+
+
+# In[ ]:
+
+
+chartlist = find_and_sort_filenames(
+    foldername="figures",
+    org_breakdown="u16",
+    population_subset="12-15",
+    by_demographics_or_population="demographics",
+    file_extension=IMAGE_FORMAT.extension,
+)
+
+chartlist_time_to_second_dose = [k for k in chartlist if "time to second dose" in k]
+
+for item in chartlist_time_to_second_dose:
+    show_chart(item, IMAGE_FORMAT, org_breakdown="u16")
 
