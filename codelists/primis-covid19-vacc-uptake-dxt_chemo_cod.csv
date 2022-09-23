@@ -1,0 +1,247 @@
+code,term
+10611004,Teleradiotherapy protons
+1103251000000108,Injection of chemotherapeutic substance into tumour using ultrasonographic guidance
+1127003,Interstitial radium application
+113117004,Teleradiotherapy particulate radiation
+11331000224100,Tomotherapy
+1149431000000106,Intraoperative electron radiotherapy
+115959002,Stereotactic radiosurgery
+115960007,Total skin electron beam therapy
+1167461000000101,Intra-arterial injection of antineoplastic agent into left ophthalmic artery using fluoroscopic guidance with contrast
+1167471000000108,Intra-arterial injection of antineoplastic agent into right ophthalmic artery using fluoroscopic guidance with contrast
+1167481000000105,Intra-arterial injection of antineoplastic agent into bilateral ophthalmic arteries using fluoroscopic guidance with contrast
+118640001,Radioimmunotherapy
+12149006,"Chemotherapy administration, subcutaneous, with local anesthesia"
+16554781000119103,Intravenous radionuclide therapy using strontium 89
+16554931000119102,Intravenous radionuclide therapy using radium 223 dichloride
+16560241000119104,Oral radionuclide therapy
+168523002,Preoperative course of radiotherapy
+168525009,Postoperative course of radiotherapy
+168531007,Radiotherapy started
+169291001,X-ray beam therapy
+169292008,Grenz ray therapy up to 10 kV
+169293003,Superficial X-ray therapy 10-60 kV
+169294009,Half-deep therapy 60-150 kV
+169295005,Deep X-ray therapy 150-400 kV
+169296006,Ultrahard X-rays 400-2000 kV
+169297002,Short distance X-ray therapy
+169298007,Intracavitary X-ray therapy
+169299004,Combined X-ray therapy
+169301006,High-energy beam therapy
+169302004,Linear accelerator photon therapy
+169303009,Betatron photon therapy
+169304003,Van der Graaff photon therapy
+169305002,Combined photon therapy
+169307005,Fast-electron therapy
+169309008,Linear accelerator electrons
+169310003,Betatron electron therapy
+169311004,Positron therapy
+169312006,Combined fast-electron therapy
+169314007,Proton therapy
+169315008,Deuteron therapy
+169316009,Pi-meson therapy
+169317000,Neutron capture therapy
+169318005,Fast neutron therapy
+169319002,Combined heavy particle therapy
+169331000,Combined radiotherapy
+169332007,External beam with internal radiotherapy
+169333002,External beam - surgery with preoperative radiotherapy
+169334008,External beam - surgery with postoperative radiotherapy
+169335009,External beam - surgery with chemotherapy
+169336005,External beam with chemotherapy
+169340001,Internal metabolic radiotherapy
+169342009,Thyroid tumor/metastasis irradiation
+169343004,Bone marrow suppression - irradiation
+169344005,Polycythemia irradiation
+169345006,Bone tumor/metastasis irradiation
+169346007,Radioactive drug therapy
+169347003,Combined internal radiotherapy
+169349000,Internal radiotherapy - unsealed source
+169350000,Radiotherapy: infuse skull/brain
+169351001,Radiotherapy: infuse head/neck
+169352008,Radiotherapy: infuse pleural cavity
+169353003,Radiotherapy: infuse peritoneal cavity
+169354009,Radiotherapy: endolymphatic infusion
+169355005,Radiotherapy: infuse urinary bladder
+169356006,Radiotherapy: infuse organ cavity
+169357002,Radiotherapy: infiltrate tissue
+169396008,Radiomimetic chemotherapy
+169397004,Radiochemotherapy: local infiltration
+169398009,Radiochemotherapy: to stop spread
+169399001,Radiochemotherapy: oral route
+169400008,Radiochemotherapy via intravenous route
+169401007,Radiochemotherapy: for immunosuppression
+169402000,Radiochemotherapy: local artery
+169403005,Radiochemotherapy: into cavity
+171765004,Intrathecal injection of chemotherapeutic agent
+172286002,Radiotherapy to lacrimal gland
+21372000,Radium therapy
+22733003,Chemotherapy for non-malignant neoplasm
+228660009,Contact therapy
+228661008,Grenz ray therapy
+228662001,Betatron X-ray therapy
+228663006,Microtron X-ray therapy
+228664000,Van der Graaff X-ray therapy
+228666003,Teletherapy with dual headed cobalt unit
+228667007,Stereotactic cobalt teletherapy
+228671005,Linear accelerator electron teletherapy
+228672003,Microtron electron teletherapy
+228673008,Strontium 90 electron teletherapy
+228674002,Cyclotron neutron teletherapy
+228675001,Deuterium on tritium neutron teletherapy
+228676000,Hiletron neutron teletherapy
+228681009,Cobalt 60 brachytherapy
+228682002,Cobalt 60 brachytherapy manual loading
+228690002,Iodine 125 brachytherapy
+228696008,Yttrium 90 brachytherapy
+228697004,Yttrium 90 therapy
+228698009,Iodine 131 therapy
+228700000,Iodine 131 meta-iodobenzylguanidine therapy
+228701001,Strontium 89 therapy
+230857009,Injection of chemotherapeutic substance into subcutaneous reservoir
+230865007,Injection of chemotherapeutic substance into tumor of brain tissue
+231544004,Radiotherapy to orbital lesion
+231711000000108,Radiotherapy delivery
+231737005,Radiotherapy to ciliary body
+232681000000103,Chemotherapy delivery
+235331000000103,Delivery of oral chemotherapy for neoplasm
+235391000000102,Delivery of chemotherapy for neoplasm
+236221000000103,Delivery of a fraction of total body irradiation
+236231000000101,Delivery of a fraction of intracavitary radiotherapy
+236441000000109,Delivery of a fraction of radiotherapy on a superficial or orthovoltage machine
+238041000000102,Delivery of a fraction of interstitial radiotherapy
+238051000000104,Delivery of a fraction of simple radiotherapy on a megavoltage machine
+238831000000103,Delivery of exclusively oral chemotherapy for neoplasm
+238841000000107,Delivery of complex chemotherapy for neoplasm including prolonged infusional treatment at first attendance
+238851000000105,Delivery of complex parenteral chemotherapy for neoplasm at first attendance
+238861000000108,Delivery of simple parenteral chemotherapy for neoplasm at first attendance
+239071000000100,Delivery of subsequent element of cycle of chemotherapy for neoplasm
+24242005,Cobalt-60 therapy
+24977001,Topical chemotherapy for malignant neoplasm
+265760000,Intravenous chemotherapy
+265761001,Intramuscular chemotherapy
+265762008,Subcutaneous chemotherapy
+266719004,Oral chemotherapy
+284701000000103,Oral delivery of radiotherapy for thyroid ablation
+29391003,Chemotherapy administration into peritoneal cavity requiring paracentesis
+309698005,Continuous infusion of chemotherapy
+312244008,Cobalt 60 brachytherapy remote afterloading
+312248006,Heavy ion teletherapy
+314604005,Palliative course of deep X-ray therapy
+314605006,Preoperative course of deep X-ray therapy
+314606007,Postoperative course of deep X-ray therapy
+315601005,Ambulatory chemotherapy
+31632008,Stereotactic focused proton beam on cerebrum
+31652009,Intracavitary chemotherapy for malignant neoplasm
+33195004,Teleradiotherapy procedure
+33356009,Betatron teleradiotherapy
+363688001,Administration of antineoplastic agent
+367336001,Chemotherapy
+380021000000105,Megavoltage treatment for adaptive radiotherapy
+380031000000107,Megavoltage treatment for simple radiotherapy
+380041000000103,Megavoltage treatment for complex radiotherapy
+38104006,Teleradiotherapy by linear accelerator
+38216008,Infusion chemotherapy for malignant neoplasm
+394894008,Pre-operative chemotherapy
+394895009,Postoperative chemotherapy
+394918006,Iodine seed radiotherapy
+394934009,Combined pre-operative chemotherapy and radiotherapy
+394935005,Combined post-operative chemotherapy and radiotherapy
+395096001,Stereotactic radiotherapy
+39646005,Hemibody irradiation
+396780003,Chemotherapy AND/OR radiation therapy prior to lymphadenectomy
+399042005,Chemotherapy cycle
+399180008,Interstitial radioactive colloid therapy
+399315003,Radionuclide therapy
+4114003,Parenteral chemotherapy for malignant neoplasm
+427541000119103,Intravenous radionuclide therapy
+427561000119104,Intravenous radionuclide therapy using samarium Sm 153 lexidronam
+428412000,Radiotherapy to head
+428416002,Radiotherapy to neck
+428624002,Radiotherapy to chest wall
+428829005,Radiotherapy to pelvis
+428831001,Radiotherapy to perineum
+428923005,Radiotherapy to breast
+429579007,Radiotherapy to axilla
+429584001,Stereotactic radiosurgery of brain tissue
+429685005,Radiotherapy by body site
+429774000,Radiotherapy to abdomen
+431200001,Radionuclide iodine 131 therapy to thyroid
+431399005,Brachytherapy using iodine (131-I) ethiodized oil
+431588009,Radionuclide iodine 131 therapy for thyrotoxicosis
+431743005,Yttrium 90 somatostatin analog therapy
+432094005,Radiolabeled Iodine 131 antibody therapy
+438629002,High dose rate electronic brachytherapy
+441783000,Conformal radiotherapy
+441799006,Intensity modulated radiation therapy
+445232009,Boost radiation therapy
+446504008,Stereotactic destruction of lesion using gamma radiation
+447704003,Single dose stereotactic radiosurgery using linear accelerator system
+447912004,Fractionated dose stereotactic radiosurgery using linear accelerator system
+448137007,Brachytherapy using radioiodine
+448288001,Targeted radionuclide therapy
+448294009,External radiation therapy using superficial radiation
+448385000,Megavoltage radiation therapy using photons
+448461009,Stereotactic radiation therapy using megavoltage radiation
+449290006,Megavoltage radiation therapy using photons and electrons
+450827009,Induction chemotherapy
+45643008,Teleradiotherapy using electrons
+46044009,Megavoltage radiation therapy
+468111000000107,[X]Other chemotherapy
+473237008,Stereotactic radiosurgery for acoustic neuroma
+47479005,Total body irradiation
+47668009,Intracavitary radium application
+50632006,Cyclotron teleradiotherapy
+51534007,Oral chemotherapy for malignant neoplasm
+5304008,"Deep radiation therapy, 200-300 KVP"
+589631000119102,Intravenous radioimmunotherapy using monoclonal antibodies
+62867004,Teleradiotherapy with radioactive cesium
+64134004,Stereotactic focused gamma radiosurgery of cerebrum
+64291000052106,Radioactive iodine therapy
+65952009,Gamma ray therapy
+68619000,Chemotherapy for non-neoplastic disease
+6872008,Perfusion chemotherapy for malignant neoplasm
+700356003,Radium 226 brachytherapy
+700357007,Radium 223 brachytherapy
+700496000,Postoperative administration of antineoplastic agent into peritoneal cavity
+703423002,Combined chemotherapy and radiation therapy
+70446004,Chemotherapy administration into pleural cavity requiring thoracentesis
+711299007,Radiotherapy to thorax
+712746000,Total body electron beam therapy
+712753009,Administration of chemotherapeutic agent into bladder via intravesical route
+714029009,Preoperative high dose brachytherapy
+716872004,Antineoplastic chemotherapy regimen
+720379009,Hepatic arterial infusion chemotherapy
+722472009,"Rituximab, ifosfamide, carboplatin and etoposide chemotherapy regimen"
+722480002,Chemotherapy started
+722482005,"Doxorubicin, bleomycin, vinblastine and dacarbazine chemotherapy regimen"
+722491009,"Rituximab, cyclophosphamide, doxorubicin, vincristine and prednisone chemotherapy regimen"
+74023000,Teleradiotherapy of 1 to 25 mega electronvolt protons
+77613002,Teleradiotherapy with iodine-125
+77738002,Local chemotherapy for malignant neoplasm
+782204001,Superficial radiation therapy
+785706005,Hypofractionated radiation therapy of prostate
+785707001,Hypofractionated radiation therapy of entire breast
+80347004,Teleradiotherapy neutrons
+816151001,Administration of consolidation antineoplastic agent
+819971000000103,Hyperthermic intraoperative peritoneal chemotherapy
+829591000000101,Neoadjuvant chemotherapy
+830155008,Administration of hyperthermic antineoplastic agent into peritoneal cavity
+830156009,Administration of hyperthermic antineoplastic agent into thoracic cavity
+843671000000104,Electrochemotherapy
+847541000000102,Intra-arterial infusion of antineoplastic agent using fluoroscopic guidance with contrast
+847581000000105,Intra-arterial injection of antineoplastic agent into ophthalmic artery using fluoroscopic guidance with contrast
+847641000000103,Infusion of antineoplastic agent into cerebral artery using fluoroscopic guidance with contrast
+853301000000101,Stereotactic focused gamma radiosurgery of trigeminal nerve
+86036005,Intravenous chemotherapy administration by push technique
+862921000000106,Intravesical electrochemotherapy
+869901000000105,Retroorbital radiotherapy
+870249004,"Folinic acid, fluorouracil and irinotecan antineoplastic chemotherapy regimen"
+870250004,"Fluorouracil, leucovorin, irinotecan and oxaliplatin antineoplastic chemotherapy regimen"
+870385001,Hypofractionated radiation therapy
+87776000,Intra-arterial infusion of antineoplastic agent
+879915007,Radiotherapy to bone
+890093004,Administration of multiple antineoplastic agents
+895121000000103,Hypofractionated stereotactic radiotherapy using megavoltage radiation
+897713009,Antineoplastic chemoimmunotherapy
+898251000000109,Pulsed dose rate brachytherapy
