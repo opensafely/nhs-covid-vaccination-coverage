@@ -114,14 +114,17 @@ permanent_immunosuppression_codes = codelist_from_csv(
     system="ctv3",
     column="CTV3ID",
 )
+
 temporary_immunosuppression_codes = codelist_from_csv(
     "codelists/opensafely-temporary-immunosuppression.csv",
     system="ctv3",
     column="CTV3ID",
 )
+
 chronic_cardiac_disease_codes = codelist_from_csv(
     "codelists/opensafely-chronic-cardiac-disease.csv", system="ctv3", column="CTV3ID",
 )
+
 intellectual_disability_including_downs_syndrome_codes = codelist_from_csv(
     "codelists/opensafely-intellectual-disability-including-downs-syndrome.csv",
     system="ctv3",
@@ -130,22 +133,25 @@ intellectual_disability_including_downs_syndrome_codes = codelist_from_csv(
 dialysis_codes = codelist_from_csv(
     "codelists/opensafely-dialysis.csv", system="ctv3", column="CTV3ID",
 )
+
 other_respiratory_conditions_codes = codelist_from_csv(
     "codelists/opensafely-other-respiratory-conditions.csv",
     system="ctv3",
     column="CTV3ID",
 )
+
 heart_failure_codes = codelist_from_csv(
     "codelists/opensafely-heart-failure.csv", system="ctv3", column="CTV3ID",
 )
+
 other_heart_disease_codes = codelist_from_csv(
     "codelists/opensafely-other-heart-disease.csv", system="ctv3", column="CTV3ID",
 )
 
-
 chronic_liver_disease_codes = codelist_from_csv(
     "codelists/opensafely-chronic-liver-disease.csv", system="ctv3", column="CTV3ID",
 )
+
 other_neuro_codes = codelist_from_csv(
     "codelists/opensafely-other-neurological-conditions.csv",
     system="ctv3",
@@ -193,7 +199,6 @@ ckd35 = codelist_from_csv(
     "codelists/primis-covid19-vacc-uptake-ckd35.csv", system="snomed", column="code"
 )
 
-
 ### Immune-mediated inflammatory diseases (IMID), as used here:
 ### https://www.medrxiv.org/content/10.1101/2021.09.03.21262888v1
 
@@ -229,3 +234,153 @@ psoriatic_arthritis_codes = codelist_from_csv(
 rheumatoid_arthritis_codes = codelist_from_csv(
     "codelists/opensafely-rheumatoid-arthritis.csv", system="ctv3", column="CTV3ID",
 )
+
+### Adding relevant PRIMIS codes to generate at risk group
+immdx_cov_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-immdx_cov.csv",
+    system="snomed",
+    column="code",
+)
+
+immrx_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-immrx.csv",
+    system="snomed",
+    column="code",
+)
+
+dxt_chemo_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-dxt_chemo_cod.csv",
+    system="snomed",
+    column="code",
+)
+
+ckd_cov_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-ckd_cov.csv",
+    system="snomed",
+    column="code",
+)
+
+ckd15_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-ckd15.csv",
+    system="snomed",
+    column="code",
+)
+
+ckd35_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-ckd35.csv",
+    system="snomed",
+    column="code",
+)
+
+astadm_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-astadm.csv",
+    system="snomed",
+    column="code",
+)
+
+ast_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-ast.csv",
+    system="snomed",
+    column="code",
+)
+
+astrxm1_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-astrxm1.csv",
+    system="snomed",
+    column="code",
+)
+
+astrxm2_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-astrxm2.csv",
+    system="snomed",
+    column="code",
+)
+
+resp_cov_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-resp_cov.csv",
+    system="snomed",
+    column="code",
+)
+
+diab_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-diab.csv",
+    system="snomed",
+    column="code",
+)
+
+dmres_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-dmres.csv",
+    system="snomed",
+    column="code",
+)
+
+addis_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-addis_cod.csv",
+    system="snomed",
+    column="code",
+)
+gdiab_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-gdiab_cod.csv",
+    system="snomed",
+    column="code",
+)
+
+preg_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-preg.csv",
+    system="snomed",
+    column="code",
+)
+
+pregdel_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-pregdel.csv",
+    system="snomed",
+    column="code",
+)
+
+cld_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-cld.csv",
+    system="snomed",
+    column="code",
+)
+
+cns_cov_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-cns_cov.csv",
+    system="snomed",
+    column="code",
+)
+
+chd_cov_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-chd_cov.csv",
+    system="snomed",
+    column="code",
+)
+
+spln_cov_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-spln_cov.csv",
+    system="snomed",
+    column="code",
+)
+
+learndis_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-learndis.csv",
+    system="snomed",
+    column="code",
+)
+
+sev_mental_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-sev_mental.csv",
+    system="snomed",
+    column="code",
+)
+
+smhres_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-smhres.csv",
+    system="snomed",
+    column="code",
+)
+
+hhld_imdef_cod=codelist_from_csv(
+    "codelists/primis-covid19-vacc-uptake-hhld_imdef.csv",
+    system="snomed",
+    column="code",
+) 
