@@ -19,6 +19,7 @@ from datetime import datetime
 from IPython.display import display, Markdown
 import os
 import pandas as pd
+
 pd.set_option("display.max_rows", 200)
 
 group_string = "u16"
@@ -58,15 +59,21 @@ suffix = f"_{group_string}_tpp"
 # In[ ]:
 
 
-with open(os.path.join("..", "interim-outputs", group_string, "text", "latest_date.txt"), 'r') as file:
+with open(
+    os.path.join("..", "interim-outputs", group_string, "text", "latest_date.txt"), "r"
+) as file:
     latest_date_fmt = file.read()
-    display(Markdown(f"### Vaccinations included up to **{latest_date_fmt}** inclusive"))
+    display(
+        Markdown(f"### Vaccinations included up to **{latest_date_fmt}** inclusive")
+    )
 
 
 # In[ ]:
 
 
-display(Markdown(f"### Report last updated **{datetime.today().strftime('%d %b %Y')}**"))
+display(
+    Markdown(f"### Report last updated **{datetime.today().strftime('%d %b %Y')}**")
+)
 
 
 # 
@@ -76,10 +83,27 @@ display(Markdown(f"### Report last updated **{datetime.today().strftime('%d %b %
 
 
 import json
-summary_stats_1 = pd.read_csv(os.path.join("..", "interim-outputs", group_string,"text", "summary_stats_first_dose.txt")).set_index("Unnamed: 0")
-summary_stats_2 = pd.read_csv(os.path.join("..", "interim-outputs", group_string,"text", "summary_stats_second_dose.txt")).set_index("Unnamed: 0")
-additional_stats = pd.read_csv(os.path.join("..", "interim-outputs", group_string,"text", "additional_stats_first_dose.txt")).set_index("Unnamed: 0")
-group_brand_counts = pd.read_csv(os.path.join("..", "interim-outputs", group_string,"text", "summary_stats_brand_counts.txt")).set_index(["Group","Vaccine brand"])
+
+summary_stats_1 = pd.read_csv(
+    os.path.join(
+        "..", "interim-outputs", group_string, "text", "summary_stats_first_dose.txt"
+    )
+).set_index("Unnamed: 0")
+summary_stats_2 = pd.read_csv(
+    os.path.join(
+        "..", "interim-outputs", group_string, "text", "summary_stats_second_dose.txt"
+    )
+).set_index("Unnamed: 0")
+additional_stats = pd.read_csv(
+    os.path.join(
+        "..", "interim-outputs", group_string, "text", "additional_stats_first_dose.txt"
+    )
+).set_index("Unnamed: 0")
+group_brand_counts = pd.read_csv(
+    os.path.join(
+        "..", "interim-outputs", group_string, "text", "summary_stats_brand_counts.txt"
+    )
+).set_index(["Group", "Vaccine brand"])
 group_brand_counts = group_brand_counts[["first_doses", "first_doses_perc"]]
 
 
@@ -87,14 +111,14 @@ group_brand_counts = group_brand_counts[["first_doses", "first_doses_perc"]]
 
 
 # first display group definitions/caveats
-with open(f'../lib/group_definitions_{group_string}.txt') as f:
+with open(f"../lib/group_definitions_{group_string}.txt") as f:
     group_defs = f.read()
-    display(Markdown(f"{group_defs} #### \n"))
-    
+    display(Markdown(f"{group_defs} \n \n #### \n"))
+
 # display summary table
 out = summary_stats_1.join(summary_stats_2)
 # out = out.join(summary_stats_3)
-out.index = out.index.str.replace(f' in {suffix.replace("_","").upper()}', '')
+out.index = out.index.str.replace(f' in {suffix.replace("_","").upper()}', "")
 out.index = out.index.rename("Group")
 display(out)
 
@@ -102,12 +126,15 @@ display(out)
 # In[ ]:
 
 
-
-display(Markdown(f"##### \n" 
-                 "**Notes**\n"
-                 "\n- Patient counts are rounded to nearest 7\n"
-                 "\n- Second doses are at least 49 days after the first\n"
-                 "\n- All second doses given in these timescales are counted whether or not they were 'due' according to the relevant dosing schedule at the time\n" ))
+display(
+    Markdown(
+        f"##### \n"
+        "**Notes**\n"
+        "\n- Patient counts are rounded to nearest 7\n"
+        "\n- Second doses are at least 49 days after the first\n"
+        "\n- All second doses given in these timescales are counted whether or not they were 'due' according to the relevant dosing schedule at the time\n"
+    )
+)
 
 display(Markdown("##### \n"))
 
@@ -126,20 +153,26 @@ display(Markdown("##### \n"))
 
 
 brand_summary = group_brand_counts.rename(
-    columns={"first_doses":f"First doses as at {latest_date_fmt}",
-            "first_doses_perc":f"% first doses as at {latest_date_fmt}" }
-    )
+    columns={
+        "first_doses": f"First doses as at {latest_date_fmt}",
+        "first_doses_perc": f"% first doses as at {latest_date_fmt}",
+    }
+)
 
-display( brand_summary )
+display(brand_summary)
 
 
 # In[ ]:
 
 
-display(Markdown(f"##### \n" 
-                 "**Notes**\n"
-                 "\n- Patient counts are rounded to nearest 7\n"
-                 "\n- 'Other' vaccines are Oxford-AZ or Moderna\n" ))
+display(
+    Markdown(
+        f"##### \n"
+        "**Notes**\n"
+        "\n- Patient counts are rounded to nearest 7\n"
+        "\n- 'Other' vaccines are Oxford-AZ or Moderna\n"
+    )
+)
 
 display(Markdown("##### \n"))
 
@@ -147,25 +180,37 @@ display(Markdown("##### \n"))
 # # 
 # 
 # ## Summary Charts <a name='summarychart' />
-# 
-# Priority status will be added in an upcoming release, total data are provided below.
-# 
 
 # In[ ]:
 
 
 import sys
-sys.path.append('../lib/')
+
+sys.path.append("../lib/")
 from create_report import *
 from image_formats import pick_image_format
 
 IMAGE_FORMAT = pick_image_format()
 
-show_chart(f"Cumulative first dose vaccination figures by priority status.{IMAGE_FORMAT.extension}", IMAGE_FORMAT, org_breakdown=group_string, title="off")
+show_chart(
+    f"Cumulative first dose vaccination figures by risk status.{IMAGE_FORMAT.extension}",
+    IMAGE_FORMAT,
+    org_breakdown=group_string,
+    title="off",
+)
 
-display(Markdown("**Note:** 'Priority groups' only includes those identified as being in a priority group by our methodology."))
+display(
+    Markdown(
+        "**Note:** The 'In a risk group' includes those identified as being at higher risk of severe COVID-19 (for details see the <a href='#Group-definitions'>Group Definitions</a> section)."
+    )
+)
 
-show_chart(f"Cumulative first dose vaccination figures by priority group.{IMAGE_FORMAT.extension}", IMAGE_FORMAT, org_breakdown=group_string, title="off")
+show_chart(
+    f"Cumulative first dose vaccination figures by age group.{IMAGE_FORMAT.extension}",
+    IMAGE_FORMAT,
+    org_breakdown=group_string,
+    title="off",
+)
 
 
 #  
@@ -177,10 +222,17 @@ show_chart(f"Cumulative first dose vaccination figures by priority group.{IMAGE_
 # In[ ]:
 
 
-
 display(Markdown("## 5-11 population"))
 
-chartlist1 = find_and_sort_filenames(foldername="figures", org_breakdown="u16", population_subset="5-11", file_extension=IMAGE_FORMAT.extension)
+chartlist1 = find_and_sort_filenames(
+    foldername="figures",
+    org_breakdown="u16",
+    population_subset="5-11",
+    file_extension=IMAGE_FORMAT.extension,
+    files_to_exclude=[
+        f"Cumulative plot of time to second dose among 5-11 population by all.{IMAGE_FORMAT.extension}"
+    ],
+)
 
 for item in chartlist1:
     show_chart(item, IMAGE_FORMAT, org_breakdown="u16")
@@ -191,7 +243,15 @@ for item in chartlist1:
 
 display(Markdown("## 12-15 population"))
 
-chartlist2 = find_and_sort_filenames(foldername="figures", org_breakdown="u16", population_subset="12-15", file_extension=IMAGE_FORMAT.extension)
+chartlist2 = find_and_sort_filenames(
+    foldername="figures",
+    org_breakdown="u16",
+    population_subset="12-15",
+    file_extension=IMAGE_FORMAT.extension,
+    files_to_exclude=[
+        f"Cumulative plot of time to second dose among 12-15 population by all.{IMAGE_FORMAT.extension}"
+    ],
+)
 
 for item in chartlist2:
     show_chart(item, IMAGE_FORMAT, org_breakdown="u16")
@@ -206,29 +266,37 @@ for item in chartlist2:
 # In[ ]:
 
 
-tablelist = find_and_sort_filenames("tables", by_demographics_or_population="population",
-                            org_breakdown=group_string,
-                            pre_string="among ", tail_string=" population.csv",
-                            population_subset="Cumulative vaccination figures",
-                            files_to_exclude=[])
+tablelist = find_and_sort_filenames(
+    "tables",
+    by_demographics_or_population="population",
+    org_breakdown=group_string,
+    pre_string="among ",
+    tail_string=" population.csv",
+    population_subset="Cumulative vaccination figures",
+    files_to_exclude=[],
+)
 
 
 # In[ ]:
 
 
-
 for filename in tablelist:
-    df, title = import_table(filename, latest_date_fmt, show_carehomes=True, org_breakdown=group_string, suffix=suffix)
+    df, title = import_table(
+        filename,
+        latest_date_fmt,
+        show_carehomes=True,
+        org_breakdown=group_string,
+        suffix=suffix,
+    )
 
     ### Can't embed this in the f string below due to curly brackets
-    date_string = latest_date_fmt.replace(' 202\d{1}','')
+    date_string = latest_date_fmt.replace(" 202\d{1}", "")
 
-    column_list = [
-        f"Vaccinated at {date_string} (n)", 
-        f"Total eligible"
-    ]
-            
-    show_table(df, title, latest_date_fmt, count_columns=column_list, show_carehomes=True)
+    column_list = [f"Vaccinated at {date_string} (n)", f"Total eligible"]
+
+    show_table(
+        df, title, latest_date_fmt, count_columns=column_list, show_carehomes=True
+    )
 
 
 # ### 
@@ -241,10 +309,21 @@ for filename in tablelist:
 
 
 from create_report import get_savepath
-savepath = get_savepath(subfolder=group_string)
-tab = pd.read_csv(os.path.join(savepath["text"], "ethnicity_coverage.csv")).set_index("group")
-# tab.index = tab.index.str.replace("vaccinated 18-29", "18-29")
-display(Markdown("- Ethnicity information is primarily retrieved from GP records.                  \n- Where missing in GP records, as of March 8 2021, it is then retrieved from hospital records if present.                  \n - For patients with multiple different ethnicities recorded, we use the most common non-missing ethnicity                  \n recorded in inpatients, outpatients or A&E over the last ~5 years (or latest if tied).                 \n- Patient counts are rounded to the nearest 7"))
 
-tab[["total population (n)","ethnicity coverage (%)"]]
+savepath = get_savepath(subfolder=group_string)
+tab = pd.read_csv(os.path.join(savepath["text"], "ethnicity_coverage.csv")).set_index(
+    "group"
+)
+# tab.index = tab.index.str.replace("vaccinated 18-29", "18-29")
+display(
+    Markdown(
+        "- Ethnicity information is primarily retrieved from GP records. \
+                 \n- Where missing in GP records, as of March 8 2021, it is then retrieved from hospital records if present. \
+                 \n - For patients with multiple different ethnicities recorded, we use the most common non-missing ethnicity \
+                 \n recorded in inpatients, outpatients or A&E over the last ~5 years (or latest if tied).\
+                 \n- Patient counts are rounded to the nearest 7"
+    )
+)
+
+tab[["total population (n)", "ethnicity coverage (%)"]]
 
