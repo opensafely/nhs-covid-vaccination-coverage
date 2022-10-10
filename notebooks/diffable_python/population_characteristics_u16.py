@@ -637,7 +637,7 @@ plot_cumulative_charts(
     formatted_latest_date,
     pop_subgroups=["5-11", "12-15"],
     groups_dict=features_dict_all,
-    file_stump="Cumulative plot of",
+    file_stump="Cumulative plot",
     data_type="time to second dose",
     xlabel="Days since first vaccination",
     ylabel="Second doses given\n(cumulative % of patients\nwho have received first dose)",
