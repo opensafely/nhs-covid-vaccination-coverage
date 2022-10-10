@@ -21,6 +21,9 @@ code,term
 324471000000100,Chronic kidney disease stage 4 without proteinuria
 324501000000107,Chronic kidney disease stage 5 with proteinuria
 324541000000105,Chronic kidney disease stage 5 without proteinuria
+368441000119102,Chronic kidney disease stage 3 due to drug induced diabetes mellitus
+368451000119100,Chronic kidney disease stage 4 due to drug induced diabetes mellitus
+368461000119103,Chronic kidney disease stage 5 due to drug induced diabetes mellitus
 431857002,Chronic kidney disease stage 4
 433144002,Chronic kidney disease stage 3
 433146000,Chronic kidney disease stage 5

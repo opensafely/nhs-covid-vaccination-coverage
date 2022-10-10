@@ -1,0 +1,939 @@
+code,term
+100801000119107,Maternal tobacco use in pregnancy
+10231000132102,In-vitro fertilization pregnancy
+102872000,Pregnancy on oral contraceptive
+102875003,Surrogate pregnancy
+102876002,Multigravida
+102881006,Normal placental secretion of chorionic gonadotropin
+102882004,Abnormal placental secretion of chorionic gonadotropin
+102883009,Increased placental secretion of chorionic gonadotropin
+102884003,Decreased placental secretion of chorionic gonadotropin
+102885002,Absence of placental secretion of chorionic gonadotropin
+102886001,Increased amniotic fluid production
+102887005,Decreased amniotic fluid production
+102955006,Contraception failure
+1031000119109,Insufficient prenatal care
+10423003,Braun von Fernwald's sign
+1052284009,Restless leg syndrome in pregnancy
+106004004,Hemorrhagic complication of pregnancy
+106009009,Fetal condition affecting obstetrical care of mother
+106111002,Clinical sign related to pregnancy
+10629511000119102,Rhinitis of pregnancy
+10741871000119101,Alcohol dependence in pregnancy
+10743651000119105,Inflammation of cervix in pregnancy
+10743831000119100,Neoplasm of uterus affecting pregnancy
+10743881000119104,Suspected fetal abnormality affecting management of mother
+10745231000119102,Cardiac arrest due to administration of anesthesia for obstetric procedure in pregnancy
+10749871000119100,Malignant neoplastic disease in pregnancy
+10750111000119108,Breast lump in pregnancy
+10750161000119106,Cholestasis of pregnancy complicating childbirth
+10750801000119102,False labor before 37 completed weeks of gestation
+10750991000119101,Cyst of ovary in pregnancy
+10751771000119107,Placental abruption due to afibrinogenemia
+10752251000119103,Galactorrhea in pregnancy
+10753491000119101,Gestational diabetes mellitus in childbirth
+10755951000119102,Heart murmur in mother in childbirth
+10756261000119102,Physical abuse complicating childbirth
+10756301000119105,Physical abuse complicating pregnancy
+10759231000119102,Salpingo-oophoritis in pregnancy
+10760221000119101,Uterine prolapse in pregnancy
+10760541000119109,Traumatic injury to vulva during pregnancy
+10760581000119104,Pain in round ligament in pregnancy
+10760981000119107,Psychological abuse complicating pregnancy
+10761061000119107,Sexual abuse complicating pregnancy
+10761341000119105,Preterm labor without delivery
+1076861000000103,Ultrasonography of retained products of conception
+1079101000000101,Antenatal screening shows higher risk of Down syndrome
+1079111000000104,Antenatal screening shows lower risk of Down syndrome
+1079121000000105,Antenatal screening shows higher risk of Edwards and Patau syndromes
+1079131000000107,Antenatal screening shows lower risk of Edwards and Patau syndromes
+10807061000119103,Liver disorder in mother complicating childbirth
+10835571000119102,Antepartum hemorrhage due to disseminated intravascular coagulation
+10835971000119109,Anti-A sensitization in pregnancy
+10836071000119101,Dislocation of symphysis pubis in pregnancy
+110081000119109,Bacterial vaginosis in pregnancy
+11082009,Abnormal pregnancy
+1109951000000101,Pregnancy insufficiently advanced for reliable antenatal screening
+1109971000000105,Pregnancy too advanced for reliable antenatal screening
+111208003,Melasma gravidarum
+111424000,Retained products of conception not following abortion
+111447004,Placental condition affecting management of mother
+11337002,Quickening of fetus
+11454006,Failed attempted abortion with amniotic fluid embolism
+1148801000000108,Monochorionic monoamniotic triplet pregnancy
+1148811000000105,Trichorionic triamniotic triplet pregnancy
+1148821000000104,Dichorionic triamniotic triplet pregnancy
+1148841000000106,Dichorionic diamniotic triplet pregnancy
+1149411000000103,Monochorionic diamniotic triplet pregnancy
+1149421000000109,Monochorionic triamniotic triplet pregnancy
+1167981000000101,Ultrasound scan for chorionicity
+11687002,Gestational diabetes mellitus
+11718971000119100,Diarrhea in pregnancy
+118178000,Finding of placental function
+118179008,Finding related to placental secretion of chorionic gonadotropin
+118180006,Finding related to amniotic fluid function
+118181005,Finding related to amniotic fluid production
+118182003,Finding related to amniotic fluid turnover
+118185001,Finding related to pregnancy
+118189007,Prenatal finding
+11914001,Transverse OR oblique presentation of fetus
+119901000119109,Hemorrhage co-occurrent and due to partial placenta previa
+12275071000119109,Conjoined twin pregnancy
+12349003,Danforth's sign
+127363001,"Number of pregnancies, currently pregnant"
+127364007,Primigravida
+127365008,Gravida 2
+127366009,Gravida 3
+127367000,Gravida 4
+127368005,Gravida 5
+127369002,Gravida 6
+127370001,Gravida 7
+127371002,Gravida 8
+127372009,Gravida 9
+127373004,Gravida 10
+127374005,Gravida more than 10
+12803000,High maternal weight gain
+12867002,Fetal distress affecting management of mother
+129597002,Moderate hyperemesis gravidarum
+129598007,Severe hyperemesis gravidarum
+12983003,Failed attempted abortion with septic shock
+1323351000000104,First trimester bleeding
+13404009,Twin-to-twin blood transfer
+134435003,Routine antenatal care
+134781000119106,High risk pregnancy due to recurrent miscarriage
+135881001,Pregnancy review
+13763000,"Gestation period, 34 weeks"
+13798002,"Gestation period, 38 weeks"
+13866000,Fetal acidemia affecting management of mother
+13943000,Failed attempted abortion complicated by embolism
+14049007,Chaussier's sign
+14094001,Excessive vomiting in pregnancy
+14418008,Precocious pregnancy
+15196006,Intraplacental hematoma
+15230009,Liver disorder in pregnancy
+1538006,Central nervous system malformation in fetus affecting obstetrical care
+15633004,"Gestation period, 16 weeks"
+15643101000119103,Gastroesophageal reflux disease in pregnancy
+15663008,Placenta previa centralis
+1592005,Failed attempted abortion with uremia
+16271000119108,Pyelonephritis in pregnancy
+16320551000119109,Bleeding from female genital tract co-occurrent with pregnancy
+16356006,Multiple pregnancy
+1639007,Abnormality of organs AND/OR soft tissues of pelvis affecting pregnancy
+16437531000119105,Ultrasonography for qualitative deepest pocket amniotic fluid volume
+164817009,Placental localization
+16836391000119105,Pregnancy of left fallopian tube
+16836891000119104,Pregnancy of right fallopian tube
+169224002,Ultrasound scan for fetal cephalometry
+169225001,Ultrasound scan for fetal maturity
+169228004,Ultrasound scan for fetal presentation
+169229007,Dating/booking ultrasound scan
+169230002,Ultrasound scan for fetal viability
+169470007,Combined oral contraceptive pill failure
+169471006,Progestogen-only pill failure
+169488004,Contraceptive intrauterine device failure - pregnant
+169501005,"Pregnant, diaphragm failure"
+169508004,"Pregnant, sheath failure"
+169524003,Depot contraceptive failure
+169533001,Contraceptive sponge failure
+169539002,Symptothermal contraception failure
+169544009,Postcoital oral contraceptive pill failure
+169545005,Postcoital intrauterine contraceptive device failure
+169548007,Vasectomy failure
+169550004,Female sterilization failure
+169560008,Pregnant - urine test confirms
+169561007,Pregnant - blood test confirms
+169562000,Pregnant - vaginal examination confirms
+169563005,Pregnant - on history
+169564004,Pregnant - on abdominal palpation
+169565003,Pregnant - planned
+169566002,Pregnancy unplanned but wanted
+169567006,Pregnancy unplanned and unwanted
+169568001,Unplanned pregnancy unknown if child is wanted
+169569009,Questionable if pregnancy was planned
+169572002,Antenatal care categorized by gravida number
+169573007,Antenatal care of primigravida
+169574001,Antenatal care of second pregnancy
+169575000,Antenatal care of third pregnancy
+169576004,Antenatal care of multipara
+169578003,Antenatal care: obstetric risk
+169579006,Antenatal care: uncertain dates
+169582001,Antenatal care: history of stillbirth
+169583006,Antenatal care: history of perinatal death
+169584000,Antenatal care: poor obstetric history
+169585004,Antenatal care: history of trophoblastic disease
+169587007,Antenatal care: precious pregnancy
+169588002,Antenatal care: elderly primiparous
+169589005,Antenatal care: history of infertility
+169591002,Antenatal care: social risk
+169595006,Antenatal care: history of child abuse
+169597003,Antenatal care: medical risk
+169598008,Antenatal care: gynecological risk
+169600002,Antenatal care: under 5ft tall
+169602005,Antenatal care: 10 years plus since last pregnancy
+169603000,"Antenatal care: primiparous, under 17 years"
+169604006,"Antenatal care: primiparous, older than 30 years"
+169605007,"Antenatal care: multiparous, older than 35 years"
+169613008,Antenatal care provider
+169614002,Antenatal care from general practitioner
+169615001,Antenatal care from consultant
+169616000,Antenatal - shared care
+169620001,Delivery: no place booked
+169628008,Delivery booking - length of stay
+169646002,Antenatal amniocentesis
+169650009,Antenatal amniocentesis wanted
+169651008,Antenatal amniocentesis - awaited
+169652001,Antenatal amniocentesis - normal
+169653006,Antenatal amniocentesis - abnormal
+169657007,Antenatal ultrasound scan status
+169661001,Antenatal ultrasound scan wanted
+169662008,Antenatal ultrasound scan awaited
+169667002,Antenatal ultrasound scan for slow growth
+169668007,Antenatal ultrasound scan 4-8 weeks
+169669004,Antenatal ultrasound scan at 9-16 weeks
+169670003,Antenatal ultrasound scan at 17-22 weeks
+169711001,Antenatal booking examination
+169712008,Antenatal 12 weeks examination
+169713003,Antenatal 16 week examination
+169714009,Antenatal 20 week examination
+169715005,Antenatal 24 week examination
+169716006,Antenatal 28 week examination
+169717002,Antenatal 30 week examination
+169718007,Antenatal 32 week examination
+169719004,Antenatal 34 week examination
+169720005,Antenatal 35 week examination
+169721009,Antenatal 36 week examination
+169722002,Antenatal 37 week examination
+169723007,Antenatal 38 week examination
+169724001,Antenatal 39 week examination
+169725000,Antenatal 40 week examination
+169726004,Antenatal 41 week examination
+169727008,Antenatal 42 week examination
+173300003,Disorder of pregnancy
+17380002,Failed attempted abortion with acute renal failure
+17382005,Cervical incompetence
+17532001,Breech malpresentation successfully converted to cephalic presentation
+17594002,Fetal bradycardia affecting management of mother
+17787002,Peripheral neuritis in pregnancy
+18114009,Prenatal examination and care of mother
+18122002,Normal uterine contraction wave
+19099008,Failed attempted abortion with laceration of bladder
+19228003,Failed attempted abortion with perforation of bladder
+19363005,Failed attempted abortion with blood-clot embolism
+19569008,Mild hyperemesis gravidarum
+19866007,Previous operation to cervix affecting pregnancy
+198806007,Failed attempted abortion with genital tract or pelvic infection
+198807003,Failed attempted abortion with delayed or excessive hemorrhage
+198808008,Failed attempted abortion with damage to pelvic organs or tissues
+198809000,Failed attempted abortion with renal failure
+198810005,Failed attempted abortion with metabolic disorder
+198811009,Failed attempted abortion with shock
+198812002,Failed attempted abortion with embolism
+198874006,"Failed medical abortion, complicated by genital tract and pelvic infection"
+198875007,"Failed medical abortion, complicated by delayed or excessive hemorrhage"
+198876008,"Failed medical abortion, complicated by embolism"
+198878009,"Failed medical abortion, without complication"
+198900002,Placenta previa without hemorrhage - not delivered
+198903000,Placenta previa with hemorrhage
+198906008,Placenta previa with hemorrhage - not delivered
+198911005,Placental abruption - not delivered
+198918004,Antepartum hemorrhage with coagulation defect - not delivered
+198920001,Antepartum hemorrhage with trauma
+198923004,Antepartum hemorrhage with trauma - not delivered
+198925006,Antepartum hemorrhage with uterine leiomyoma
+198928008,Antepartum hemorrhage with uterine leiomyoma - not delivered
+198992004,Eclampsia in pregnancy
+199023008,Mild hyperemesis-not delivered
+199025001,Hyperemesis gravidarum with metabolic disturbance
+199028004,Hyperemesis gravidarum with metabolic disturbance - not delivered
+199047001,False labor
+199049003,Threatened premature labor - not delivered
+199050003,False labor at or after 37 completed weeks of gestation
+199064003,Post-term pregnancy - not delivered
+199088001,Habitual aborter - not delivered
+199095005,Peripheral neuritis in pregnancy - not delivered
+199101006,Asymptomatic bacteriuria in pregnancy - not delivered
+199110003,Infections of kidney in pregnancy
+199112006,Infections of the genital tract in pregnancy
+199118005,Liver disorder in pregnancy - not delivered
+199123005,Fatigue during pregnancy - not delivered
+199129009,Herpes gestationis - not delivered
+199139003,Pregnancy-induced edema and proteinuria without hypertension
+199141002,Gestational edema with proteinuria
+199194006,Maternal rubella during pregnancy - baby not yet delivered
+199227004,Diabetes mellitus during pregnancy - baby not yet delivered
+199246003,Anemia during pregnancy - baby not yet delivered
+199254001,Drug dependence during pregnancy - baby not yet delivered
+199305006,Complications specific to multiple gestation
+199306007,Continuing pregnancy after abortion of one fetus or more
+199307003,Continuing pregnancy after intrauterine death of one or more fetuses
+199314001,Normal delivery but ante- or post- natal conditions present
+199318003,Twin pregnancy with antenatal problem
+199322008,Triplet pregnancy with antenatal problem
+199326006,Quadruplet pregnancy with antenatal problem
+199345002,Unstable lie with antenatal problem
+199359009,Oblique lie with antenatal problem
+199363002,Transverse lie with antenatal problem
+199378009,Multiple pregnancy with malpresentation
+199381004,Multiple pregnancy with malpresentation with antenatal problem
+199397009,Cephalopelvic disproportion
+199406006,Generally contracted pelvis with antenatal problem
+199410009,Inlet pelvic contraction with antenatal problem
+199414000,Outlet pelvic contraction with antenatal problem
+199416003,Mixed feto-pelvic disproportion
+199419005,Mixed feto-pelvic disproportion with antenatal problem
+199423002,Large fetus causing disproportion with antenatal problem
+199425009,Hydrocephalic disproportion
+199428006,Hydrocephalic disproportion with antenatal problem
+199466009,Retroverted incarcerated gravid uterus
+199470001,Retroverted incarcerated gravid uterus with antenatal problem
+199484006,Cervical incompetence with antenatal problem
+199577000,Fetal-maternal hemorrhage - delivered
+199578005,Fetal-maternal hemorrhage with antenatal problem
+199582007,Rhesus isoimmunization - delivered
+199583002,Rhesus isoimmunization with antenatal problem
+199625002,Placental transfusion syndromes
+199719009,Elderly primigravida with antenatal problem
+199732004,Abnormal findings on antenatal screening of mother
+199733009,Abnormal hematologic finding on antenatal screening of mother
+199734003,Abnormal biochemical finding on antenatal screening of mother
+199735002,Abnormal cytological finding on antenatal screening of mother
+199737005,Abnormal radiological finding on antenatal screening of mother
+199738000,Abnormal chromosomal and genetic finding on antenatal screening of mother
+199741009,Malnutrition in pregnancy
+200233001,Antenatal deep vein thrombosis with antenatal complication
+200444007,Galactorrhea in pregnancy and the puerperium
+200448005,Galactorrhea in pregnancy and the puerperium with antenatal complication
+201134009,Alopecia of pregnancy
+20286008,Gorissenne's sign
+20753005,Hypertensive heart disease complicating AND/OR reason for care during pregnancy
+20845005,Meconium in amniotic fluid affecting management of mother
+21334005,Failed attempted abortion with oliguria
+21346009,Double uterus affecting pregnancy
+21623001,Fetal biophysical profile
+21737000,Retained fetal tissue
+21882006,Face presentation of fetus
+22173004,Excessive fetal growth affecting management of mother
+22281000119101,Post-term pregnancy of 40 to 42 weeks
+22288000,Tumor of cervix affecting pregnancy
+223003,Tumor of body of uterus affecting pregnancy
+22753004,Fetal AND/OR placental disorder affecting management of mother
+22758008,Spalding-Horner sign
+228471000000102,Routine obstetric scan
+228531000000103,Cervical length scanning at 24 weeks
+228551000000105,Mid trimester scan
+228691000000101,Non routine obstetric scan for fetal observations
+228701000000101,Fetal ascites scan
+228711000000104,Rhesus detailed scan
+228881000000102,Ultrasound monitoring of early pregnancy
+228921000000108,Obstetric ultrasound monitoring
+22966008,Hypertensive heart AND renal disease complicating AND/OR reason for care during pregnancy
+23001005,Stenosis AND/OR stricture of cervix affecting pregnancy
+23177005,Crepitus uteri
+232671000000100,Fetal measurement scan
+234058009,Genital varices in pregnancy
+23464008,"Gestation period, 20 weeks"
+235888006,Cholestasis of pregnancy
+23717007,Benign essential hypertension complicating AND/OR reason for care during pregnancy
+237201006,Rectocele complicating antenatal care - baby not yet delivered
+237205002,Rectocele affecting obstetric care
+237230004,Uremia in pregnancy without hypertension
+237233002,Concealed pregnancy
+237234008,Undiagnosed pregnancy
+237235009,Undiagnosed breech
+237236005,Undiagnosed multiple pregnancy
+237237001,Undiagnosed twin
+237238006,Pregnancy with uncertain dates
+237239003,Low risk pregnancy
+237240001,Teenage pregnancy
+237241002,Viable pregnancy
+237243004,Biochemical pregnancy
+237244005,Single pregnancy
+237247003,Continuing pregnancy after abortion of sibling fetus
+237249000,Complete hydatidiform mole
+237250000,Incomplete hydatidiform mole
+237253003,Viable fetus in abdominal pregnancy
+237254009,Unruptured tubal pregnancy
+237256006,Disorder of pelvic size and disproportion
+237257002,Midpelvic contraction
+237259004,Variation of placental position
+237270006,Antepartum hemorrhage with hypofibrinogenemia
+237271005,Antepartum hemorrhage with hyperfibrinolysis
+237272003,Antepartum hemorrhage with afibrinogenemia
+237273008,Revealed accidental hemorrhage
+237274002,Concealed accidental hemorrhage
+237275001,Mixed accidental hemorrhage
+237276000,Indeterminate antepartum hemorrhage
+237277009,Marginal placental hemorrhage
+237284001,Symptomatic disorders in pregnancy
+237285000,Gestational edema
+237286004,Vulval varices in pregnancy
+237288003,Abnormal weight gain in pregnancy
+237292005,Placental insufficiency
+237298009,Maternofetal transfusion
+237300009,Pregnancy with isoimmunization
+237302001,Kell isoimmunization in pregnancy
+237303006,Duffy isoimmunization in pregnancy
+237304000,Lewis isoimmunization in pregnancy
+238613007,Generalized pustular psoriasis of pregnancy
+238820002,Erythema multiforme of pregnancy
+239101008,Pregnancy eruption
+239102001,Pruritus of pregnancy
+239103006,Prurigo of pregnancy
+239104000,Pruritic folliculitis of pregnancy
+240160002,Transient osteoporosis of hip in pregnancy
+24095001,Placenta previa partialis
+241491007,Ultrasound scan of fetus
+241493005,Ultrasound scan for fetal growth
+241494004,Ultrasound scan for amniotic fluid volume
+243826008,Antenatal care status
+243827004,Antenatal RhD antibody status
+24444009,Failed attempted abortion with sepsis
+248985009,Presentation of pregnancy
+248996001,Transversely contracted pelvis
+249013004,Pregnant abdomen finding
+249014005,Finding of shape of pregnant abdomen
+249017003,Pregnant uterus displaced laterally
+249018008,Irritable uterus
+249020006,Cervical observation during pregnancy and labor
+249064003,"Oblique lie, head in iliac fossa"
+249065002,"Oblique lie, breech in iliac fossa"
+249089009,Fetal mouth presenting
+249090000,Fetal ear presenting
+249091001,Fetal nose presenting
+249093003,Presentation of orbital ridges of fetus
+249098007,Knee presentation
+249099004,Single knee presentation
+249100007,Double knee presentation
+249104003,Dorsoanterior shoulder presentation
+249105002,Dorsoposterior shoulder presentation
+249122000,Baby overdue
+249145006,Uterine observation in labor
+249146007,Segments of uterus distinguishable in labor
+249147003,State of upper segment retraction during labor
+249148008,Hypertonic lower uterine segment during labor
+249149000,Contraction of uterus during labor
+249150000,Transmission of uterine contraction wave
+249151001,Reversal of uterine contraction wave
+25026004,"Gestation period, 18 weeks"
+25032009,Failed attempted abortion with laceration of cervix
+25113000,Chorea gravidarum
+25749005,Disproportion between fetus and pelvis
+25825004,Hemorrhage in early pregnancy
+26224003,Failed attempted abortion complicated by genital-pelvic infection
+26623000,Failed attempted termination of pregnancy complicated by delayed and/or excessive hemorrhage
+26690008,"Gestation period, 8 weeks"
+267197003,"Antepartum hemorrhage, abruptio placentae and placenta previa"
+267199000,Antepartum hemorrhage with coagulation defect
+267335003,Fetoplacental problems
+26828006,Rectocele affecting pregnancy
+268445003,Ultrasound scan - obstetric
+268585006,Placental infarct
+270498000,Malposition and malpresentation of fetus
+27068000,Failed attempted abortion with afibrinogenemia
+271442007,Fetal anatomy study
+27152008,Hyperemesis gravidarum before end of 22 week gestation with carbohydrate depletion
+271954000,Failed attempted medical abortion
+27388005,Partial placenta previa with intrapartum hemorrhage
+273982004,Obstetric problem affecting fetus
+274117006,Pregnancy and infectious disease
+274118001,Venereal disease in pregnancy
+274119009,Rubella in pregnancy
+274121004,Cardiac disease in pregnancy
+274122006,Gravid uterus - retroverted
+275412000,Cystitis of pregnancy
+275425008,Retained products after miscarriage
+275426009,Pelvic disproportion
+275427000,Retained membrane without hemorrhage
+276367008,Wanted pregnancy
+276445008,Antenatal risk factors
+276479009,Retained membrane
+276641008,Intrauterine asphyxia
+276642001,Antepartum fetal asphyxia
+280732008,Obstetric disorder of uterus
+281307002,Uncertain viability of pregnancy
+284075002,Spotting per vagina in pregnancy
+28701003,Low maternal weight gain
+289203002,Finding of pattern of pregnancy
+289204008,Finding of quantity of pregnancy
+289205009,Finding of measures of pregnancy
+289208006,Finding of viability of pregnancy
+289209003,Pregnancy problem
+289257009,Mother not delivered
+289355004,Oblique lie head in right iliac fossa
+289356003,Oblique lie head in left iliac fossa
+289357007,Oblique lie breech in right iliac fossa
+289358002,Oblique lie breech in left iliac fossa
+289572007,No liquor observed vaginally
+289573002,Finding of passing of operculum
+289574008,Operculum passed
+289575009,Operculum not passed
+289675001,Finding of gravid uterus
+289676000,Gravid uterus present
+289679007,Finding of size of gravid uterus
+289680005,Gravid uterus large-for-dates
+289681009,Gravid uterus small-for-dates
+289682002,Finding of height of gravid uterus
+289683007,Fundal height high for dates
+289684001,Fundal height equal to dates
+289685000,Fundal height low for dates
+289686004,Ovoid pregnant abdomen
+289687008,Rounded pregnant abdomen
+289688003,Transversely enlarged pregnant abdomen
+289689006,Finding of arrangement of gravid uterus
+289690002,Gravid uterus central
+289691003,Gravid uterus deviated to left
+289692005,Gravid uterus deviated to right
+289693000,Normal position of gravid uterus
+289694006,Finding of sensation of gravid uterus
+289699001,Finding of uterine contractions
+289700000,Uterine contractions present
+289701001,Uterine contractions absent
+289702008,Uterine contractions ceased
+289703003,Finding of pattern of uterine contractions
+289704009,Finding of frequency of uterine contraction
+289705005,Intermittent uterine contractions
+289706006,Occasional uterine tightenings
+289707002,Finding of regularity of uterine contraction
+289708007,Regular uterine contractions
+289709004,Finding of quantity of uterine contraction
+289710009,Excessive uterine contraction
+289711008,Reduced uterine contraction
+289712001,Niggling uterine contractions
+289714000,Finding of strength of uterine contraction
+289715004,Mild uterine contractions
+289716003,Moderate uterine contractions
+289717007,Fair uterine contractions
+289718002,Good uterine contractions
+289719005,Strong uterine contractions
+289720004,Very strong uterine contractions
+289721000,Variable strength uterine contractions
+289722007,Normal strength uterine contractions
+289723002,Finding of duration of uterine contraction
+289724008,Continuous contractions
+289725009,Hypertonic contractions
+289726005,Finding of effectiveness of uterine contraction
+289727001,Effective uterine contractions
+289728006,Non-effective uterine contractions
+289729003,Expulsive uterine contractions
+289730008,Finding of painfulness of uterine contraction
+289731007,Painless uterine contractions
+289732000,Painful uterine contractions
+289733005,Premature uterine contraction
+289734004,Delayed uterine contraction
+289735003,Persistent uterine contraction
+289736002,Inappropriate uterine contraction
+289737006,Finding of measures of uterine contractions
+289738001,Uterine contractions normal
+289739009,Uterine contractions problem
+289740006,Finding of contraction state of uterus
+289741005,Uterus contracted
+289742003,Uterus relaxed
+289743008,Finding of upper segment retraction
+289744002,Poor retraction of upper segment
+289745001,Excessive retraction of upper segment
+289746000,Normal retraction of upper segment
+289747009,Finding of measures of gravid uterus
+289748004,Gravid uterus normal
+289749007,Gravid uterus problem
+289765008,Ripe cervix
+289766009,Finding of thickness of cervix
+289768005,Cervix thick
+289769002,Cervix thinning
+289770001,Cervix thin
+289771002,Cervix paper thin
+289827009,Finding of cervical cerclage suture
+289828004,Cervical cerclage suture absent
+29399001,Elderly primigravida
+29421008,Failed attempted abortion complicated by renal failure
+29851005,Halo sign
+301801008,Finding of position of pregnancy
+307534009,Urinary tract infection in pregnancy
+307813007,Antenatal ultrasound scan at 22-40 weeks
+308140006,Hemorrhoids in pregnancy
+30850008,"Hemorrhage in early pregnancy, antepartum"
+310248000,Antenatal care midwifery led
+310592002,Pregnancy prolonged - 41 weeks
+310594001,Pregnancy prolonged - 42 weeks
+313178001,Gestation less than 24 weeks
+313179009,"Gestation period, 24 weeks"
+313180007,Gestation greater than 24 weeks
+31383003,Tumor of vagina affecting pregnancy
+314204000,Early stage of pregnancy
+31563000,Asymptomatic bacteriuria in pregnancy
+31601007,Combined pregnancy
+31805001,Fetal disproportion
+31821006,Uterine scar from previous surgery affecting pregnancy
+31998007,"Echography, scan B-mode for fetal growth rate"
+32644009,Braxton Hicks contractions
+33340004,Multiple conception
+33370009,Hyperemesis gravidarum before end of 22 week gestation with electrolyte imbalance
+33490001,Failed attempted abortion with fat embolism
+34367002,Failed attempted abortion with perforation of bowel
+34478009,Failed attempted abortion with defibrination syndrome
+34530006,Failed attempted abortion with electrolyte imbalance
+34842007,Antepartum hemorrhage
+35381000119101,Quadruplet pregnancy with loss of one or more fetuses
+35537000,Ladin's sign
+35746009,Uterine fibroids affecting pregnancy
+36144008,McClintock's sign
+36297009,Septate vagina affecting pregnancy
+36428009,"Gestation period, 42 weeks"
+366323009,Finding of length of gestation
+36801000119105,Continuing triplet pregnancy after spontaneous abortion of one or more fetuses
+36813001,Placenta previa
+36854009,Inlet contraction of pelvis
+37005007,"Gestation period, 5 weeks"
+370352001,Antenatal screening finding
+371106008,Idiopathic maternal thrombocytopenia
+371374003,Retained products of conception
+371375002,Retained secundines
+373663005,Perinatal period
+38039008,"Gestation period, 10 weeks"
+38099005,Failed attempted abortion with endometritis
+386235000,Childbirth preparation
+386322007,High risk pregnancy care
+38720006,Septuplet pregnancy
+3885002,ABO isoimmunization affecting pregnancy
+38951007,Failed attempted abortion with laceration of bowel
+39101000119109,Pregnancy with isoimmunization from irregular blood group incompatibility
+391131000119106,Ultrasonography for qualitative amniotic fluid volume
+39120007,Failed attempted abortion with salpingo-oophoritis
+39121000119100,Pelvic mass in pregnancy
+39208009,Fetal hydrops causing disproportion
+39249009,Placentitis
+394211000119109,Ultrasonography for fetal biophysical profile with non-stress testing
+394221000119102,Ultrasonography for fetal biophysical profile without non-stress testing
+3944006,Placental sulfatase deficiency (X-linked steryl-sulfatase deficiency) in a female
+397949005,Poor fetal growth affecting management
+4006006,Fetal tachycardia affecting management of mother
+402836009,Spider telangiectasis in association with pregnancy
+405736009,Accidental antepartum hemorrhage
+40801000119106,Gestational diabetes mellitus complicating pregnancy
+408783007,Antenatal Anti-D prophylaxis status
+408814002,Ultrasound scan for fetal anomaly
+408815001,Ultrasound scan for fetal nuchal translucency
+408823004,Antenatal hepatitis B blood screening test status
+408825006,Antenatal hepatitis B blood screening test sent
+408827003,Antenatal human immunodeficiency virus blood screening test status
+408828008,Antenatal human immunodeficiency virus blood screening test sent
+408831009,Antenatal thalassemia blood screening test status
+408833007,Antenatal thalassemia blood screening test sent
+408842000,Antenatal human immunodeficiency virus blood screening test requested
+408843005,Antenatal thalassemia blood screening test requested
+41215002,"Congenital abnormality of uterus, affecting pregnancy"
+41438001,"Gestation period, 21 weeks"
+414880004,Nuchal ultrasound scan
+415105001,Placental abruption
+41587001,Third trimester pregnancy
+416402001,Gestational trophoblastic disease
+416413003,Advanced maternal age gravida
+417006004,Twin reversal arterial perfusion syndrome
+417044008,"Hydatidiform mole, benign"
+417570003,Gestational choriocarcinoma
+418090003,Ultrasound obstetric doppler
+42102002,"Pre-admission observation, undelivered mother"
+422808006,Prenatal continuous visit
+423445003,Difficulty following prenatal diet
+423834007,Difficulty with prenatal rest pattern
+424037008,Difficulty following prenatal exercise routine
+424441002,Prenatal initial visit
+424525001,Antenatal care
+424619006,Prenatal visit
+42553009,Deficiency of placental barrier function
+425551008,Antenatal ultrasound scan for possible abnormality
+425708006,Placental aromatase deficiency
+426295007,Obstetric uterine artery Doppler
+426403007,Late entry into prenatal care
+426840007,Fetal biometry using ultrasound
+42686001,Chromosomal abnormality in fetus affecting obstetrical care
+426997005,Traumatic injury during pregnancy
+427013000,Alcohol consumption during pregnancy
+427139004,Third trimester bleeding
+427623005,Obstetric umbilical artery Doppler
+428017002,Condyloma acuminata of vulva in pregnancy
+428058009,Gestation less than 9 weeks
+428164004,Mitral valve disorder in pregnancy
+428230005,Trichomonal vaginitis in pregnancy
+428252001,Vaginitis in pregnancy
+428511009,Multiple pregnancy with one fetal loss
+428566005,Gestation less than 20 weeks
+428567001,Gestation 14 - 20 weeks
+428930004,Gestation 9- 13 weeks
+429187001,Continuing pregnancy after intrauterine death of twin fetus
+429240000,Third trimester pregnancy less than 36 weeks
+429715006,Gestation greater than 20 weeks
+430063002,Transvaginal nuchal ultrasonography
+430064008,Transvaginal obstetric ultrasonography
+430881000,Second trimester bleeding
+430933008,Gravid uterus size for dates discrepancy
+432246004,Transvaginal obstetric doppler ultrasonography
+43293004,Failed attempted abortion with septic embolism
+433153009,Chorionic villus sampling using obstetric ultrasound guidance
+43651009,Acquired stenosis of vagina affecting pregnancy
+43673002,Fetal souffle
+43697006,"Gestation period, 37 weeks"
+439311009,Intends to continue pregnancy
+43970002,Congenital stenosis of vagina affecting pregnancy
+43990006,Sextuplet pregnancy
+441697004,Thrombophilia associated with pregnancy
+441924001,Gestational age unknown
+442478007,Multiple pregnancy involving intrauterine pregnancy and tubal pregnancy
+443006,Cystocele affecting pregnancy
+443460007,Multigravida of advanced maternal age
+44398003,"Gestation period, 4 weeks"
+444661007,High risk pregnancy due to history of preterm labor
+445866007,Ultrasonography of multiple pregnancy for fetal anomaly
+446208007,Ultrasonography in second trimester
+446353007,Ultrasonography in third trimester
+44640004,Failed attempted abortion with parametritis
+446522006,Ultrasonography in first trimester
+446810002,Ultrasonography of multiple pregnancy for fetal nuchal translucency
+446920006,Transvaginal ultrasonography to determine the estimated date of confinement
+44772007,Maternal obesity syndrome
+44795003,Rhesus isoimmunization affecting pregnancy
+44992005,Failed attempted abortion with intravascular hemolysis
+45139008,"Gestation period, 29 weeks"
+45307008,Extrachorial pregnancy
+45759004,Rigid perineum affecting pregnancy
+459166009,Dichorionic diamniotic twin pregnancy
+459167000,Monochorionic twin pregnancy
+459168005,Monochorionic diamniotic twin pregnancy
+459169002,Monochorionic diamniotic twin pregnancy with similar amniotic fluid volumes
+459170001,Monochorionic diamniotic twin pregnancy with dissimilar amniotic fluid volumes
+459171002,Monochorionic monoamniotic twin pregnancy
+46022004,Bearing down reflex
+46230007,"Gestation period, 40 weeks"
+46365005,Failed attempted abortion with perforation of periurethral tissue
+46894009,"Gestational diabetes mellitus, class A>2<"
+46906003,"Gestation period, 27 weeks"
+47161002,Failed attempted abortion with perforation of cervix
+47200007,High risk pregnancy
+472321009,Continuing pregnancy after intrauterine death of one twin with intrauterine retention of dead twin
+480571000119102,Doppler ultrasound velocimetry of umbilical artery of fetus
+48688005,"Gestation period, 26 weeks"
+49342001,Stricture of vagina affecting pregnancy
+49416000,Failed attempted abortion
+49956009,Antepartum deep phlebothrombosis
+49964003,Ectopic fetus
+50367001,"Gestation period, 11 weeks"
+50557007,Healed pelvic floor repair affecting pregnancy
+50726009,Failed attempted abortion with perforation of uterus
+50844007,Failed attempted abortion with pelvic peritonitis
+51885006,Morning sickness
+521000119104,"Acute cystitis in pregnancy, antepartum"
+522101000000109,Fetal death before 24 weeks with retention of dead fetus
+5231000179108,Three dimensional obstetric ultrasonography
+52327008,Fetal myelomeningocele causing disproportion
+5241000179100,Three dimensional obstetric ultrasonography in third trimester
+52588004,Robert's sign
+53024001,Insufficient weight gain of pregnancy
+53111003,Failed attempted abortion with postoperative shock
+54318006,"Gestation period, 19 weeks"
+54559004,Uterine souffle
+54844002,Prolapse of gravid uterus
+55052008,Diagnostic ultrasound of gravid uterus
+55187005,Tarnier's sign
+55639004,Failed attempted abortion with laceration of vagina
+56160003,Hydrorrhea gravidarum
+56425003,Placenta edematous
+56451001,Failed attempted abortion with perforation of broad ligament
+56462001,Failed attempted abortion with soap embolism
+57296000,Incarcerated gravid uterus
+57576007,Retroverted gravid uterus
+57630001,First trimester pregnancy
+57907009,"Gestation period, 36 weeks"
+58123006,Failed attempted abortion with pulmonary embolism
+58532003,Unwanted pregnancy
+58881007,Polyp of cervix affecting pregnancy
+5939002,Failed attempted abortion complicated by metabolic disorder
+59466002,Second trimester pregnancy
+59919008,Failed attempted abortion with complication
+60755004,Persistent hymen affecting pregnancy
+60810003,Quadruplet pregnancy
+609133009,Short cervical length in pregnancy
+609442008,Antenatal care for woman with history of recurrent miscarriage
+609443003,Retained products of conception following induced termination of pregnancy
+609496007,Complication occurring during pregnancy
+609515005,Epithelioid trophoblastic tumor
+609519004,Gestational trophoblastic neoplasia
+61452007,Failed attempted abortion with laceration of uterus
+61881000,Osiander's sign
+61951009,Failed attempted abortion with laceration of periurethral tissue
+62333002,"Gestation period, 13 weeks"
+62531004,Placenta previa marginalis
+62612003,Fibrosis of perineum affecting pregnancy
+63110000,"Gestation period, 7 weeks"
+63503002,"Gestation period, 41 weeks"
+63637002,Failed attempted abortion with laceration of broad ligament
+63750008,Oblique lie
+64181003,Failed attempted abortion with perforation of vagina
+64254006,Triplet pregnancy
+64920003,"Gestation period, 31 weeks"
+65035007,"Gestation period, 22 weeks"
+65147003,Twin pregnancy
+65539006,Impetigo herpetiformis
+65683006,"Gestation period, 17 weeks"
+65727000,Intrauterine pregnancy
+66231000,"Fetal OR intrauterine asphyxia, not clear if noted before OR after onset of labor in liveborn infant"
+6678005,"Gestation period, 15 weeks"
+66892003,Failed attempted abortion with urinary tract infection
+66958002,"Isoimmunization from non-ABO, non-Rh blood-group incompatibility affecting pregnancy"
+67042008,Failed attempted abortion complicated by shock
+67802002,"Malpresentation other than breech, successfully converted to cephalic presentation"
+68635007,Deficiency of placental function
+69217004,Outlet contraction of pelvis
+69338007,Kanter's sign
+69802008,Cervical cerclage suture present
+698632006,Pregnancy induced edema
+698708006,Antepartum hemorrhage due to placenta previa type I
+698709003,Antepartum hemorrhage due to placenta previa type II
+698710008,Antepartum hemorrhage due to placenta previa type III
+698711007,Antepartum hemorrhage due to placenta previa type IV
+698712000,Antepartum hemorrhage due to cervical polyp
+698713005,Antepartum haemorrhage due to cervical erosion
+699240001,Combined intrauterine and ovarian pregnancy
+699950009,Anti-D isoimmunization affecting pregnancy
+700442004,Ultrasonography of fetal ductus venosus
+70137000,Deficiency of placental endocrine function
+702736005,Supervision of high risk pregnancy with history of previous cesarean section
+702737001,Supervision of high risk pregnancy with history of gestational diabetes mellitus
+702738006,Supervision of high risk pregnancy
+702739003,Supervision of high risk pregnancy with history of previous molar pregnancy
+702740001,Supervision of high risk pregnancy with history of previous precipitate labor
+702741002,Supervision of high risk pregnancy for multigravida
+702742009,Supervision of high risk pregnancy for social problem
+702743004,Supervision of high risk pregnancy for multigravida age 15 years or younger
+702744005,Supervision of high risk pregnancy for primigravida age 15 years or younger
+702985005,Ultrasonography of fetal shunt
+70425008,Piskacek's sign
+70537007,Hegar's sign
+70651004,Calkin's sign
+710165007,Ultrasonography of fetal head
+71028008,Fetal-maternal hemorrhage
+710911000000102,Infant feeding antenatal checklist completed
+713233004,Supervision of high risk pregnancy with history of previous neonatal death
+713234005,Supervision of high risk pregnancy with history of previous intrauterine death
+713235006,Supervision of high risk pregnancy with history of previous antepartum hemorrhage
+713237003,Supervision of high risk pregnancy with history of previous big baby
+713238008,Supervision of high risk pregnancy with history of previous abnormal baby
+713239000,Supervision of high risk pregnancy with history of previous primary postpartum hemorrhage
+713240003,Supervision of high risk pregnancy with poor obstetric history
+713241004,Supervision of high risk pregnancy with history of previous fetal distress
+713242006,Supervision of high risk pregnancy with poor reproductive history
+713249002,Pyogenic granuloma of gingiva co-occurrent and due to pregnancy
+713386003,Supervision of high risk pregnancy for maternal short stature
+713387007,Supervision of high risk pregnancy with family history of diabetes mellitus
+71355009,"Gestation period, 30 weeks"
+713575004,Dizygotic twin pregnancy
+713576003,Monozygotic twin pregnancy
+716379000,Acute fatty liver of pregnancy
+717794008,Supervision of pregnancy with history of infertility
+717795009,Supervision of pregnancy with history of insufficient antenatal care
+717797001,Antenatal care of elderly primigravida
+718475004,Ultrasonography for amniotic fluid index
+71848002,Bolt's sign
+71901000,Congenital contracted pelvis
+721177006,Injury complicating pregnancy
+72161000119100,Antiphospholipid syndrome in pregnancy
+723541004,Disease of respiratory system complicating pregnancy
+723665008,Vaginal bleeding complicating early pregnancy
+724483001,Concern about body image related to pregnancy
+724486009,Venous disorder co-occurrent with pregnancy
+72544005,"Gestation period, 25 weeks"
+7266006,Total placenta previa with intrapartum hemorrhage
+72846000,"Gestation period, 14 weeks"
+72892002,Normal pregnancy
+73161006,Transverse lie
+73837001,Failed attempted abortion with cardiac arrest AND/OR failure
+74437002,Ahlfeld's sign
+74952004,"Gestation period, 3 weeks"
+75022004,"Gestational diabetes mellitus, class A>1<"
+75094005,Hydrops of placenta
+75933004,Threatened abortion in second trimester
+76037007,Rigid cervix uteri affecting pregnancy
+76871004,Previous surgery to vagina affecting pregnancy
+76889003,Failed attempted abortion with cerebral anoxia
+7707000,"Gestation period, 32 weeks"
+77186001,Failed attempted abortion with renal tubular necrosis
+77285007,Placental infarct affecting management of mother
+77376005,Gestational edema without hypertension
+77386006,Pregnant
+7792000,Placenta previa without hemorrhage
+7822001,Failed attempted abortion complicated by damage to pelvic organs AND/OR tissues
+78395001,"Gestation period, 33 weeks"
+786067000,Intramural ectopic pregnancy of myometrium
+78808002,Essential hypertension complicating AND/OR reason for care during pregnancy
+788290007,Hemangioma of skin in pregnancy
+79255005,Mentum presentation of fetus
+79586000,Tubal pregnancy
+79992004,"Gestation period, 12 weeks"
+80002007,Malpresentation of fetus
+8014007,Brow presentation of fetus
+80224003,Multiple gestation with one OR more fetal malpresentations
+80228000,Lightening of fetus
+80487005,"Gestation period, 39 weeks"
+80818002,Previous surgery to perineum AND/OR vulva affecting pregnancy
+80997009,Quintuplet pregnancy
+81328008,Fundal dominance of uterine contraction
+813541000000100,Pregnancy resulting from assisted conception
+81521003,Failed attempted abortion with salpingitis
+816148008,Disproportion between fetus and pelvis due to conjoined twins
+82118009,"Gestation period, 2 weeks"
+82661006,Abdominal pregnancy
+83074005,Unplanned pregnancy
+83243004,Rigid pelvic floor affecting pregnancy
+84032005,Halban's sign
+840625002,Gravid uterus at 12-16 weeks size
+840626001,Gravid uterus at 16-20 weeks size
+840627005,Gravid uterus at 20-24 weeks size
+840628000,Gravid uterus at 24-28 weeks size
+840629008,Gravid uterus at 28-32 weeks size
+840630003,Gravid uterus at 32-34 weeks size
+840631004,Gravid uterus at 34-36 weeks size
+840632006,Gravid uterus at 36-38 weeks size
+840633001,Gravid uterus at term size
+84132007,"Gestation period, 35 weeks"
+84235001,Cephalic version
+8445003,Tumor of vulva affecting pregnancy
+855021000000107,Ultrasonography of multiple pregnancy
+855031000000109,Doppler ultrasonography of multiple pregnancy
+858901000000108,Pregnancy of unknown location
+86081009,Herpes gestationis
+861281000000109,Antenatal 22 week examination
+861301000000105,Antenatal 25 week examination
+861321000000101,Antenatal 31 week examination
+86356004,Unstable lie
+863897005,Failed attempted termination of pregnancy complicated by acute necrosis of liver
+86599005,"Echography, scan B-mode for placental localization"
+866481000000104,Ultrasonography to determine estimated date of confinement
+86801005,"Gestation period, 6 weeks"
+86883006,"Gestation period, 23 weeks"
+871005,Contracted pelvis
+87178007,"Gestation period, 1 week"
+87527008,Term pregnancy
+87621000,Hyperemesis gravidarum before end of 22 week gestation with dehydration
+879817000,Disproportion between fetus and pelvis due to fetal neoplasm
+879819002,Disproportion between fetus and pelvis due to fetal sacral teratoma
+88697005,Papular dermatitis of pregnancy
+8884000,Fetal ascites causing disproportion
+88895004,Fatigue during pregnancy
+890096007,Pregnancy with implant contraceptive
+904002,Pinard's sign
+90645002,Failed attempted abortion without complication
+90797000,"Gestation period, 28 weeks"
+90968009,Prolonged pregnancy
+91162000,Necrosis of liver of pregnancy
+9121000119106,Low back pain in pregnancy
+91271004,Superfetation
+91957002,Back pain complicating pregnancy
+925561000000100,Gestation less than 28 weeks
+9279009,Extra-amniotic pregnancy
+9297001,Uterus bicornis affecting pregnancy
+931004,"Gestation period, 9 weeks"
+9442009,Parturient hemorrhage associated with afibrinogenemia
+95606005,Maternal drug exposure
+95607001,Maternal drug use
+95608006,Necrosis of placenta
+9686009,Goodell's sign
+9720009,Cicatrix of cervix affecting pregnancy

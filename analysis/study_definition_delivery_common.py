@@ -27,7 +27,7 @@ common_variables = dict(
         age>=16
         """,
         registered=patients.registered_as_of(
-            index_date, 
+            index_date,
         ),
         has_died=patients.died_from_any_cause(
             on_or_before=index_date,
@@ -40,19 +40,19 @@ common_variables = dict(
         end_date=index_date,
         return_expectations={"incidence": 0.90},
     ),
-    
 
-    
-    ### PRIMIS care home flag 
-    care_home = patients.with_these_clinical_events(
+
+
+    # PRIMIS care home flag
+    care_home=patients.with_these_clinical_events(
         care_home_snomed_codes,
-        return_expectations={"incidence": 0.15,}
+        return_expectations={"incidence": 0.15, }
     ),
-    
+
 
     # Demographic information
     age=patients.age_as_of(
-        index_date, 
+        index_date,
         return_expectations={
             "rate": "universal",
             "int": {"distribution": "population_ages"},
@@ -67,7 +67,7 @@ common_variables = dict(
             "50-59": """ age >= 50 AND age < 60""",
             "60-69": """ age >= 60 AND age < 70""",
             "70-79": """ age >= 70 AND age < 80""",
-            "80+": """ age >=  80 AND age < 120""",  
+            "80+": """ age >=  80 AND age < 120""",
         },
         return_expectations={
             "rate": "universal",
@@ -84,11 +84,11 @@ common_variables = dict(
             },
         },
     ),
-    
-        # 5 year age bands
+
+    # 5 year age bands
     ageband_5yr=patients.categorised_as(
         {
-            "0" : "DEFAULT",
+            "0": "DEFAULT",
             "0-15": """ age >= 0 AND age < 16 """,
             "16-17": """ age >= 16 AND age < 18 """,
             "18-29": """ age >= 18 AND age < 30 """,
@@ -110,7 +110,7 @@ common_variables = dict(
             "rate": "universal",
             "category": {
                 "ratios": {
-                    "0":0.0125,
+                    "0": 0.0125,
                     "0-15": 0.065,
                     "16-17": 0.065,
                     "18-29": 0.065,
@@ -140,7 +140,7 @@ common_variables = dict(
     ),
     # practice pseudo id
     practice_id=patients.registered_practice_as_of(
-        index_date, 
+        index_date,
         returning="pseudo_id",
         return_expectations={
             "int": {"distribution": "normal", "mean": 1000, "stddev": 100},
@@ -193,12 +193,12 @@ common_variables = dict(
     # IMD - quintile
     imd=patients.categorised_as(
         {
-            "0": "DEFAULT", 
-            "1": """index_of_multiple_deprivation >=1 AND index_of_multiple_deprivation < 32844*1/5""",
-            "2": """index_of_multiple_deprivation >= 32844*1/5 AND index_of_multiple_deprivation < 32844*2/5""",
-            "3": """index_of_multiple_deprivation >= 32844*2/5 AND index_of_multiple_deprivation < 32844*3/5""",
-            "4": """index_of_multiple_deprivation >= 32844*3/5 AND index_of_multiple_deprivation < 32844*4/5""",
-            "5": """index_of_multiple_deprivation >= 32844*4/5 AND index_of_multiple_deprivation < 32844""",
+            "0": "DEFAULT",
+            "1": "index_of_multiple_deprivation >= 0 AND index_of_multiple_deprivation < 32844*1/5",
+            "2": "index_of_multiple_deprivation >= 32844*1/5 AND index_of_multiple_deprivation < 32844*2/5",
+            "3": "index_of_multiple_deprivation >= 32844*2/5 AND index_of_multiple_deprivation < 32844*3/5",
+            "4": "index_of_multiple_deprivation >= 32844*3/5 AND index_of_multiple_deprivation < 32844*4/5",
+            "5": "index_of_multiple_deprivation >= 32844*4/5 AND index_of_multiple_deprivation <= 32844",
         },
         index_of_multiple_deprivation=patients.address_as_of(
             index_date,
@@ -220,21 +220,21 @@ common_variables = dict(
         },
     ),
 
-            
-            
+
+
     # BMI
     bmi=patients.categorised_as(
         {
             "Not obese": "DEFAULT",
             "Obese I (30-34.9)": """ bmi_value >= 30 AND bmi_value < 35""",
             "Obese II (35-39.9)": """ bmi_value >= 35 AND bmi_value < 40""",
-            "Obese III (40+)": """ bmi_value >= 40 AND bmi_value < 100""", 
+            "Obese III (40+)": """ bmi_value >= 40 AND bmi_value < 100""",
             # set maximum to avoid any impossibly extreme values being classified as obese
         },
         bmi_value=patients.most_recent_bmi(
             on_or_after="index_date - 60 months",
             minimum_age_at_measurement=16
-            ),
+        ),
         return_expectations={
             "rate": "universal",
             "category": {
@@ -247,90 +247,90 @@ common_variables = dict(
             },
         },
     ),
-            
+
     # Medications
     dmards=patients.with_these_medications(
-        dmards_codes, 
+        dmards_codes,
         on_or_before=index_date,
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.01,},
+        returning="binary_flag",
+        return_expectations={"incidence": 0.01, },
     ),
     ssri=patients.with_these_medications(
-        ssri_codes, 
+        ssri_codes,
         between=["index_date - 12 months", index_date],
-        returning="binary_flag", 
-        return_expectations={"incidence": 0.01,},
+        returning="binary_flag",
+        return_expectations={"incidence": 0.01, },
     ),
 
 
 
-    ### PRIMIS overall flag for shielded group
+    # PRIMIS overall flag for shielded group
     shielded=patients.satisfying(
-            """ severely_clinically_vulnerable
-            AND NOT less_vulnerable""", 
+        """ severely_clinically_vulnerable
+            AND NOT less_vulnerable""",
         return_expectations={
             "incidence": 0.01,
-                },
+        },
 
-            ### SHIELDED GROUP - first flag all patients with "high risk" codes
+        # SHIELDED GROUP - first flag all patients with "high risk" codes
         severely_clinically_vulnerable=patients.with_these_clinical_events(
-            high_risk_codes, # note no date limits set
-            find_last_match_in_period = True,
-            return_expectations={"incidence": 0.02,},
+            high_risk_codes,  # note no date limits set
+            find_last_match_in_period=True,
+            return_expectations={"incidence": 0.02, },
         ),
 
         # find date at which the high risk code was added
         date_severely_clinically_vulnerable=patients.date_of(
-            "severely_clinically_vulnerable", 
-            date_format="YYYY-MM-DD",   
+            "severely_clinically_vulnerable",
+            date_format="YYYY-MM-DD",
         ),
 
-        ### NOT SHIELDED GROUP (medium and low risk) - only flag if later than 'shielded'
+        # NOT SHIELDED GROUP (medium and low risk) - only flag if later than 'shielded'
         less_vulnerable=patients.with_these_clinical_events(
-            not_high_risk_codes, 
+            not_high_risk_codes,
             on_or_after="date_severely_clinically_vulnerable",
-            return_expectations={"incidence": 0.01,},
+            return_expectations={"incidence": 0.01, },
         ),
     ),
-    
-    
+
+
     # flag the newly expanded shielding group as of 15 feb (should be a subset of the previous flag)
-    shielded_since_feb_15 = patients.satisfying(
-            """severely_clinically_vulnerable_since_feb_15
+    shielded_since_feb_15=patients.satisfying(
+        """severely_clinically_vulnerable_since_feb_15
                 AND NOT new_shielding_status_reduced
                 AND NOT previous_flag
             """,
         return_expectations={
             "incidence": 0.01,
-                },
-        
-        ### SHIELDED GROUP - first flag all patients with "high risk" codes
+        },
+
+        # SHIELDED GROUP - first flag all patients with "high risk" codes
         severely_clinically_vulnerable_since_feb_15=patients.with_these_clinical_events(
-            high_risk_codes, 
-            on_or_after= "2021-02-15",
-            find_last_match_in_period = False,
-            return_expectations={"incidence": 0.02,},
+            high_risk_codes,
+            on_or_after="2021-02-15",
+            find_last_match_in_period=False,
+            return_expectations={"incidence": 0.02, },
         ),
 
         # find date at which the high risk code was added
         date_vulnerable_since_feb_15=patients.date_of(
-            "severely_clinically_vulnerable_since_feb_15", 
-            date_format="YYYY-MM-DD",   
+            "severely_clinically_vulnerable_since_feb_15",
+            date_format="YYYY-MM-DD",
         ),
 
-        ### check that patient's shielding status has not since been reduced to a lower risk level 
-         # e.g. due to improved clinical condition of patient
+        # check that patient's shielding status has not since been reduced to a lower risk level
+        # e.g. due to improved clinical condition of patient
         new_shielding_status_reduced=patients.with_these_clinical_events(
             not_high_risk_codes,
             on_or_after="date_vulnerable_since_feb_15",
-            return_expectations={"incidence": 0.01,},
+            return_expectations={"incidence": 0.01, },
         ),
-        
+
         # anyone with a previous flag of any risk level will not be added to the new shielding group
         previous_flag=patients.with_these_clinical_events(
             combine_codelists(high_risk_codes, not_high_risk_codes),
             on_or_before="2021-02-14",
-            return_expectations={"incidence": 0.01,},
+            return_expectations={"incidence": 0.01, },
         ),
     ),
 
@@ -340,7 +340,7 @@ common_variables = dict(
     # IF CKD15_DAT = NULL  (No stages)   | Reject | Next
     # IF CKD35_DAT>=CKD15_DAT            | Select | Reject
     # (i.e. any diagnostic code, or most recent stage recorded >=3)
-    ckd = patients.satisfying(
+    ckd=patients.satisfying(
         """ckd_cov_dat 
             OR
             ckd35_dat
@@ -371,54 +371,54 @@ common_variables = dict(
             date_format="YYYY-MM-DD",
         ),
     ),
-        
-    housebound = patients.satisfying(
-            """housebound_date
+
+    housebound=patients.satisfying(
+        """housebound_date
                 AND NOT no_longer_housebound
                 AND NOT moved_into_care_home""",
         return_expectations={
             "incidence": 0.01,
-                },
-        
-        housebound_date=patients.with_these_clinical_events( 
-            housebound_codes, 
+        },
+
+        housebound_date=patients.with_these_clinical_events(
+            housebound_codes,
             on_or_before=index_date,
-            find_last_match_in_period = True,
+            find_last_match_in_period=True,
             returning="date",
             date_format="YYYY-MM-DD",
-        ),   
-        no_longer_housebound=patients.with_these_clinical_events( 
-            no_longer_housebound_codes, 
+        ),
+        no_longer_housebound=patients.with_these_clinical_events(
+            no_longer_housebound_codes,
             on_or_after="housebound_date",
         ),
         moved_into_care_home=patients.with_these_clinical_events(
             care_home_snomed_codes,
             on_or_after="housebound_date",
         ),
-        
+
     ),
 
-    LD = patients.with_these_clinical_events(
-            wider_ld_codes, 
-            return_expectations={"incidence": 0.02,},
+    LD=patients.with_these_clinical_events(
+        wider_ld_codes,
+        return_expectations={"incidence": 0.02, },
     ),
 
     # declined vaccination / vaccination course / first dose (not including declined second dose)
-    covid_vacc_declined_date = patients.with_these_clinical_events(
+    covid_vacc_declined_date=patients.with_these_clinical_events(
         covid_vacc_declined,
         returning="date",
         find_first_match_in_period=True,
-        date_format = "YYYY-MM-DD",
+        date_format="YYYY-MM-DD",
         return_expectations={
             "date": {
                 "earliest": "2020-12-08",  # first vaccine administered on the 8/12
                 "latest": index_date,
             },
-                "incidence":0.04
+            "incidence": 0.04
         },
     ),
-    
-    imid = patients.satisfying(
+
+    imid=patients.satisfying(
         """crohns_disease 
             OR
             ulcerative_colitis
@@ -498,7 +498,7 @@ common_variables = dict(
             on_or_before="index_date",
             date_format="YYYY-MM-DD",
         ),
-        
+
     ),
-            
+
 )

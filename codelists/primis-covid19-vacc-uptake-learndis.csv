@@ -1,5 +1,6 @@
 code,term
 10007009,Coffin-Siris syndrome
+1010630006,X-linked complicated corpus callosum dysgenesis
 1089701000000105,Profound intellectual development disorder without impairment of behaviour
 1089711000000107,Profound intellectual development disorder with significant impairment of behaviour
 1089721000000101,Profound intellectual development disorder with minimal impairment of behaviour
@@ -24,6 +25,10 @@ code,term
 110359009,Intellectual disability
 1239331000000100,Significant intellectual disability
 17827007,Cross syndrome
+191689008,Active infantile autism
+191690004,Residual infantile autism
+191692007,Active disintegrative psychoses
+191693002,Residual disintegrative psychoses
 205615000,Trisomy 21- meiotic nondisjunction
 205619006,"Trisomy 13, meiotic nondisjunction"
 205620000,Trisomy 13 - mitotic nondisjunction mosaicism
@@ -31,8 +36,10 @@ code,term
 205624009,Trisomy 18 - mitotic nondisjunction mosaicism
 21111006,Complete trisomy 13 syndrome
 21634003,Borjeson-Forssman-Lehmann syndrome
+231536004,Atypical autism
 232059000,Laurence-Moon syndrome
 234146006,Hennekam lymphangiectasia-lymphedema syndrome
+23560001,Asperger's disorder
 236529001,"Prune belly syndrome with pulmonic stenosis, mental retardation and deafness"
 253176002,Gillespie syndrome
 254264002,Partial trisomy 21 in Down's syndrome
@@ -40,12 +47,19 @@ code,term
 254268004,Partial trisomy 13 in Patau's syndrome
 31216003,Profound intellectual disability
 33982008,Hyperphosphatasemia with intellectual disability
+35919005,Pervasive developmental disorder
+373618009,Autistic spectrum disorder with isolated skills
+39951000119105,Pervasive developmental disorder of residual state
 40700009,Severe intellectual disability
+408856003,Autistic disorder
+408857007,Infantile autism
 41040004,Complete trisomy 21 syndrome
 412787009,"Intellectual disability, congenital heart disease, blepharophimosis, blepharoptosis and hypoplastic teeth"
 416075005,On learning disability register
 422437002,X-linked intellectual disability with marfanoid habitus
 432091002,Savant syndrome
+43614003,Autistic disorder of childhood onset
+442314000,Active but odd autism
 508171000000105,Severe learning disability
 51500006,Complete trisomy 18 syndrome
 5619004,Bardet-Biedl syndrome
@@ -63,11 +77,15 @@ code,term
 702412005,X-linked intellectual deficit-dystonia-dysarthria syndrome
 702416008,X-linked intellectual disability Snyder type
 702441001,Fatal X-linked ataxia with deafness and loss of vision
+702450004,FOXG1 syndrome
+702732007,High-functioning autism
 702816000,Methyl-cytosine phosphate guanine binding protein-2 duplication syndrome
 703389002,Calcium/calmodulin-dependent serine protein kinase related intellectual disability
 703526007,Progressive epilepsy-intellectual disability syndrome Finnish type
 703535000,Mowat-Wilson syndrome
+708037001,Residual Asperger's disorder
 709469005,Periodontitis co-occurrent with Down syndrome
+712884004,Pathological demand avoidance
 715409005,Trigonocephaly C syndrome
 715428003,Skeletal dysplasia with epilepsy and short stature syndrome
 715441004,McDonough syndrome
@@ -92,6 +110,7 @@ code,term
 717913006,Blepharonasofacial malformation syndrome
 717945001,"Brain anomaly, severe mental retardation, ectodermal dysplasia, skeletal deformity, ear anomaly, kidney dysplasia syndrome"
 718226002,Wolf Hirschhorn syndrome
+718393002,Atypical Rett syndrome
 718573009,Achalasia microcephaly syndrome
 718577005,X-linked intellectual disability Atkin type
 718680001,Oro-facial digital syndrome type 9
@@ -143,6 +162,7 @@ code,term
 719583002,17q11.2 microduplication syndrome
 719599008,19q13.11 microdeletion syndrome
 719600006,1p21.3 microdeletion syndrome
+71961003,Childhood disintegrative disorder
 719800009,"Deafness, onychodystrophy, osteodystrophy, intellectual disability syndrome"
 719808002,Chromosome Xp11.3 microdeletion syndrome
 719810000,X-linked intellectual disability with seizure and psoriasis syndrome
@@ -208,6 +228,7 @@ code,term
 722213009,Severe X-linked intellectual disability Gustavson type
 722281001,"Agammaglobulinemia, microcephaly, craniosynostosis, severe dermatitis syndrome"
 722282008,"Agenesis of corpus callosum, intellectual disability, coloboma, micrognathia syndrome"
+722287002,Autism and facial port-wine stain syndrome
 722378009,Congenital cataract with deafness and hypogonadism syndrome
 722379001,Congenital cataract with hypertrichosis and intellectual disability syndrome
 722380003,Congenital cataract with intellectual disability and hypogonadotropic hypogonadism syndrome
@@ -277,6 +298,7 @@ code,term
 733455003,"Spastic paraplegia, glaucoma, intellectual disability syndrome"
 733472005,"Microcephalus, glomerulonephritis, marfanoid habitus syndrome"
 733522005,Megalocornea with intellectual disability syndrome
+733623005,"Autism spectrum disorder, epilepsy, arthrogryposis syndrome"
 734017008,"Ectodermal dysplasia, intellectual disability, central nervous system malformation syndrome"
 734173003,"Skeletal abnormality, cutis laxa, craniostenosis, ambiguous genitalia, retardation, facial abnormality syndrome"
 734349003,Alpha-thalassemia intellectual disability syndrome linked to chromosome 16
@@ -435,7 +457,28 @@ code,term
 838441009,"Mental retardation, adducted thumbs, shuffling gait, aphasia syndrome"
 840505007,Down syndrome co-occurrent with leukemoid reaction associated transient neonatal pustulosis
 86765009,Mild intellectual disability
+870260008,Pervasive developmental disorder with marked impairment of functional language with loss of previously acquired skills
+870261007,Pervasive developmental disorder with marked impairment of functional language without loss of previously acquired skills
+870262000,Pervasive developmental disorder with disorder of intellectual development without loss of previously acquired skills
+870263005,Pervasive developmental disorder with impairment of functional language
+870264004,Pervasive developmental disorder with disorder of intellectual development and pervasive impairment of functional language without loss of previously acquired skills
+870265003,Pervasive developmental disorder with disorder of intellectual development with loss of previously acquired skills
+870266002,Pervasive developmental disorder with disorder of intellectual development and marked impairment of functional language with loss of previously acquired skills
+870267006,Pervasive developmental disorder with disorder of intellectual development and marked impairment of functional language without loss of previously acquired skills
+870268001,Pervasive developmental disorder with disorder of intellectual development and complete impairment of functional language without loss of previously acquired skills
+870269009,Pervasive developmental disorder with disorder of intellectual development and absence of functional language with loss of previously acquired skills
+870270005,Pervasive developmental disorder with disorder of intellectual development and complete impairment of functional language with loss of previously acquired skills
+870280009,Pervasive developmental disorder with severe impairment of functional language with loss of previously acquired skills
+870282001,Pervasive developmental disorder with severe impairment of functional language without loss of previously acquired skills
+870303005,Pervasive developmental disorder with complete impairment of functional language with loss of previously acquired skills
+870304004,Pervasive developmental disorder with complete impairment of functional language without loss of previously acquired skills
+870305003,Pervasive developmental disorder with cognitive developmental delay and marked impairment of functional language
+870306002,Pervasive developmental disorder with complete impairment of functional language
+870307006,Pervasive developmental disorder with abscence of functional language
+870308001,Pervasive developmental disorder with cognitive developmental delay and complete impairment of functional language
+879939002,14q32 deletion syndrome
 889211000000104,Specific learning disability
+890118006,Mowat-Wilson syndrome due to monosomy 2q22
 931001000000105,Significant learning disability
 984661000000105,Mild learning disability
 984671000000103,Moderate learning disability

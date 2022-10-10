@@ -1,0 +1,17 @@
+### Group definitions
+- Patient age is calculated on the date of extraction from date of birth; note that, to minimise risk of disclosure, all dates of birth are rounded down to the first of the month in OpenSAFELY.
+- The patients who are 'In a risk group' have been identified using the criteria in Table 4 of [the Green Book](https://assets.publishing.service.gov.uk/government/uploads/system/uploads/attachment_data/file/1057798/Greenbook-chapter-14a-28Feb22.pdf) and codelists from SARS-CoV2 (COVID-19) Vaccine Uptake Reporting Specification Collection 2020/2021 (v1.5.3) as [distributed by PRIMIS](https://www.nottingham.ac.uk/primis/data-specification/covid-19/covid-19.aspx). This includes patients with:
+  * Immunosuppression
+  * Chronic kidney disease
+  * Chronic liver disease
+  * Chronic heart disease
+  * Chronic respiratory disease
+  * Chronic neurological disease (including stroke/TIA, cerebral palsy, or MS)
+  * Asplenia or dysfunction of the spleen
+  * Asthma
+  * Diabetes
+  * Severe mental illness
+  * Learning disabilities
+  * Pregnancy
+- Any patient who does not belong to a risk group mentioned above are described as 'Not in a risk group'.
+  
