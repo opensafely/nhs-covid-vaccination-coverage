@@ -1,13 +1,18 @@
 # OpenSAFELY COVID-19 Vaccine Coverage Report
 
-This is the code and configuration of our initial pre-print paper available on the [OpenSAFELY website here](https://opensafely.org/research/2021/covid-vaccine-coverage/) and on [MedRxiv here](https://www.medrxiv.org/content/10.1101/2021.01.25.21250356v2). 
+This is the code and configuration for our vaccine reports, summarised as "Paper 1" [here](https://opensafely.org/research/2021/covid-vaccine-coverage/) and on [MedRxiv here](https://www.medrxiv.org/content/10.1101/2021.01.25.21250356v2). 
 
 ## About this code and other related work
 
-* This analysis drives our [weekly vaccine coverage report](https://reports.opensafely.org/reports/vaccine-coverage/) and the related report on [second doses](https://reports.opensafely.org/reports/vaccine-coverage-second-doses/). 
+* This analysis drives our [vaccine coverage reports](https://reports.opensafely.org/reports/vaccine-coverage-index/), including:
+    - [First doses for adults (over 16s)](https://reports.opensafely.org/reports/vaccine-coverage/)
+    - [Second doses for adults (over 16s)](https://reports.opensafely.org/reports/vaccine-coverage-second-doses/)
+    - [Boosters/third doses for adults (over 16s)](https://reports.opensafely.org/reports/vaccine-coverage-thirdbooster-doses/)
+    - [First doses for children and adolescents (5-15 year olds)](https://reports.opensafely.org/reports/vaccine-coverage-children-1st-dose/)
+    - [Second doses for children and adolescents (5-15 year olds)](https://reports.opensafely.org/reports/vaccine-coverage-children-2nd-dose/)
 * It runs on the TPP backend only and reflects the JCVI priority groups to a limited extent. 
-* The [latest version of our paper](https://www.medrxiv.org/content/10.1101/2021.01.25.21250356v3.full), running on both EMIS and TPP backends and utilising the official JCVI specification, is based on [this](https://github.com/opensafely/covid19-vaccine-coverage-tpp-emis) repo. 
-* You may also be interested in our work on vaccines being recorded as declined ([preprint](https://www.medrxiv.org/content/10.1101/2021.08.05.21259863v1) / [repo](https://github.com/opensafely/covid-vaccine-not-received)). 
+* [Our paper](https://bjgp.org/content/72/714/e51), running on both EMIS and TPP backends and utilising the official JCVI specification, is based on [this](https://github.com/opensafely/covid19-vaccine-coverage-tpp-emis) repo. 
+* You may also be interested in our work on vaccines being recorded as declined ([preprint](https://www.medrxiv.org/content/10.1101/2021.08.05.21259863v1) / [repo](https://github.com/opensafely/covid-vaccine-not-received)).
 
 You can sign up for the [OpenSAFELY email newsletter here](https://opensafely.org/contact/) for updates about the COVID-19 vaccine reports and other OpenSAFELY projects.
 
