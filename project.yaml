@@ -85,3 +85,12 @@ actions:
       moderately_sensitive:
         notebook: output/second_doses_u16.html
         tables: output/machine_readable_outputs/second_doses/*_u16*.csv
+
+  generate_u16_publication_objects:
+    run: r:latest analysis/generate_u16_publication_objects.R
+    needs: [generate_u16_notebook]
+    outputs:
+      moderately_sensitive:
+        table: interim-outputs/u16/tables/u16_publication_table.csv
+        figure_option1: interim-outputs/u16/figures/u16_publication_figure.png
+        figure_option2: interim-outputs/u16/figures/u16_publication_figure_labels.png
