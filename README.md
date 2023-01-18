@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.7547923.svg)](https://doi.org/10.5281/zenodo.7547923)
+
 # OpenSAFELY COVID-19 Vaccine Coverage Report
 
 This is the code and configuration for our vaccine reports, summarised as "Paper 1" [here](https://opensafely.org/research/2021/covid-vaccine-coverage/) and on [MedRxiv here](https://www.medrxiv.org/content/10.1101/2021.01.25.21250356v2). 
