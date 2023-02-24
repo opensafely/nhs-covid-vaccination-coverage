@@ -1,7 +1,6 @@
 """ This module cleans the patient-level data containing COVID vaccination dates and other relevant information"""
 
 # Import statements
-from tkinter import Variable
 import pandas as pd
 import numpy as np
 import os
